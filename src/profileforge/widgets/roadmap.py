@@ -24,7 +24,7 @@ class RoadmapWidget(Widget):
             label_row = Row(
                 children=[
                     Text(skill, style=Style(font_weight="600", color="text")),
-                    Text(f"{progress}%", style=Style(font_size=12, color="muted")),
+                    Text(f"{progress}%", style=Style(font_size=13, color="muted")),
                 ],
                 style=Style(width="fill", justify="space-between", align="end"),
             )
@@ -34,7 +34,7 @@ class RoadmapWidget(Widget):
             )
 
             item_col = Column(
-                children=[label_row, bar], spacing=4, style=Style(width="fill")
+                children=[label_row, bar], spacing=6, style=Style(width="fill")
             )
             rows.append(item_col)
 
@@ -42,5 +42,5 @@ class RoadmapWidget(Widget):
         return Card(
             title="Learning Roadmap",
             child=Padding(child=content, value=24, style=Style(width="fill")),
-            style=Style(width=480, elevation="medium", variant="solid"),
+            style=Style(width=480, height=300, elevation="medium", variant="solid"),
         )

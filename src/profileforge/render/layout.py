@@ -170,7 +170,7 @@ class LayoutEngine:
 
         elif isinstance(component, Badge):
             component.computed_width = resolved_w or (
-                int(len(component.label) * 7.5) + 24
+                int(len(component.label) * 7.5) + 40
             )
             component.computed_height = resolved_h or 24
 
