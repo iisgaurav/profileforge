@@ -16,14 +16,23 @@ class ExpertiseWidget(Widget):
 
         rows = []
         for item in data:
-            label = Text(item, style=Style(font_weight="600", color="text"))
-            bar = ProgressBar(100, style=Style(width="fill", height=6, color="accent"))
-            item_col = Column(
-                children=[label, bar], spacing=8, style=Style(width="fill")
+            # Bullet point character for the list
+            bullet = Text(
+                "•", style=Style(font_weight="800", color="primary", font_size=18)
             )
-            rows.append(item_col)
+            label = Text(
+                item, style=Style(font_weight="600", color="text", font_size=16)
+            )
 
-        content = Column(children=rows, spacing=24, style=Style(width="fill"))
+            # Place bullet and label in a row
+            item_row = Row(
+                children=[bullet, label],
+                spacing=12,
+                style=Style(width="fill", align="center"),
+            )
+            rows.append(item_row)
+
+        content = Column(children=rows, spacing=16, style=Style(width="fill"))
         return Card(
             title="Backend Expertise",
             child=Padding(child=content, value=24, style=Style(width="fill")),
