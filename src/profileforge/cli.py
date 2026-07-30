@@ -3,6 +3,12 @@ import os
 import sys
 from pathlib import Path
 
+# Ensure registries populate via side-effects
+import profileforge.datasources.local
+import profileforge.widgets.expertise
+import profileforge.widgets.focus
+import profileforge.widgets.roadmap  # noqa: F401
+
 # Ensure registries populate
 from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
@@ -10,12 +16,6 @@ from profileforge.core.exceptions import ProfileForgeError
 from profileforge.core.registry import DATASOURCE_REGISTRY, WIDGET_REGISTRY
 from profileforge.render.layout import LayoutEngine
 from profileforge.render.svg.renderer import SVGRenderer
-
-# Ensure registries populate via side-effects
-import profileforge.datasources.local  # noqa: F401
-import profileforge.widgets.roadmap  # noqa: F401
-import profileforge.widgets.focus  # noqa: F401
-import profileforge.widgets.expertise  # noqa: F401
 
 
 def print_success(msg: str):
