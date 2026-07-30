@@ -17,13 +17,15 @@ class ExpertiseWidget(Widget):
         rows = []
         for item in data:
             label = Text(item, style=Style(font_weight="600", color="text"))
-            bar = ProgressBar(100, style=Style(width=350, height=8))
-            item_col = Column(children=[label, bar], spacing=10)
+            bar = ProgressBar(100, style=Style(width="fill", height=6, color="accent"))
+            item_col = Column(
+                children=[label, bar], spacing=8, style=Style(width="fill")
+            )
             rows.append(item_col)
 
-        content = Column(children=rows, spacing=25)
+        content = Column(children=rows, spacing=24, style=Style(width="fill"))
         return Card(
             title="Backend Expertise",
-            child=Padding(child=content, value=25),
-            style=Style(width=400),
+            child=Padding(child=content, value=24),
+            style=Style(width=420, elevation="medium", variant="solid"),
         )

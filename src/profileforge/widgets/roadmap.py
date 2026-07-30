@@ -15,7 +15,7 @@ class RoadmapWidget(Widget):
         request = DataRequest(resource="roadmap.yaml")
         data = datasource.fetch(request) if datasource else []
 
-        # Build declarative layout tree
+        # Build declarative layout tree using v0.2 layout system
         rows = []
         for item in data:
             skill = item.get("skill", "Unknown")
@@ -24,20 +24,23 @@ class RoadmapWidget(Widget):
             label_row = Row(
                 children=[
                     Text(skill, style=Style(font_weight="600", color="text")),
-                    Spacer(width=300 - (len(skill) * 8)),  # Simplistic alignment spacer
-                    Text(f"{progress}%", style=Style(font_size=12, color="text_muted")),
+                    Text(f"{progress}%", style=Style(font_size=12, color="muted")),
                 ],
-                spacing=5,
+                style=Style(width="fill", justify="space-between", align="end"),
             )
 
-            bar = ProgressBar(progress, style=Style(width=350, height=8))
+            bar = ProgressBar(
+                progress, style=Style(width="fill", height=6, color="primary")
+            )
 
-            item_col = Column(children=[label_row, bar], spacing=10)
+            item_col = Column(
+                children=[label_row, bar], spacing=8, style=Style(width="fill")
+            )
             rows.append(item_col)
 
-        content = Column(children=rows, spacing=25)
+        content = Column(children=rows, spacing=24, style=Style(width="fill"))
         return Card(
             title="Learning Roadmap",
-            child=Padding(child=content, value=25),
-            style=Style(width=400),
+            child=Padding(child=content, value=24),
+            style=Style(width=420, elevation="medium", variant="solid"),
         )
