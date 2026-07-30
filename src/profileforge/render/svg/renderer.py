@@ -1,3 +1,5 @@
+import html
+
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
@@ -24,6 +26,8 @@ class SVGRenderer:
             border = self.get_color("border")
             title_color = self.get_color("text")
 
+            escaped_title = html.escape(component.title)
+
             return f"""
 <svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
@@ -31,7 +35,7 @@ class SVGRenderer:
         .title {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: {title_color}; }}
     </style>
     <rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" class="card-bg" />
-    <text x="25" y="35" class="title">{component.title}</text>
+    <text x="25" y="35" class="title">{escaped_title}</text>
     {child_svg}
 </svg>"""
 
@@ -39,7 +43,8 @@ class SVGRenderer:
             color = self.get_color(component.style.color or "text")
             fs = component.style.font_size or 14
             fw = component.style.font_weight or "normal"
-            return f'<text x="{x}" y="{y + fs}" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', Helvetica, Arial, sans-serif" font-size="{fs}" font-weight="{fw}" fill="{color}">{component.value}</text>'
+            escaped_value = html.escape(component.value)
+            return f'<text x="{x}" y="{y + fs}" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', Helvetica, Arial, sans-serif" font-size="{fs}" font-weight="{fw}" fill="{color}">{escaped_value}</text>'
 
         elif isinstance(component, ProgressBar):
             bg = self.get_color("progress_bg")
