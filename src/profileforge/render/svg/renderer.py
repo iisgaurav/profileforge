@@ -128,7 +128,11 @@ class SVGRenderer(Renderer):
             else:
                 accent_bar = title_el = sep = ""
 
-            bg_fill = "url(#pf-card-gradient)" if component.style.variant == "hero" else "url(#pf-card-bg)"
+            bg_fill = (
+                "url(#pf-card-gradient)"
+                if component.style.variant == "hero"
+                else "url(#pf-card-bg)"
+            )
 
             return f"""
 <svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="group" filter="url(#pf-card-shadow)">

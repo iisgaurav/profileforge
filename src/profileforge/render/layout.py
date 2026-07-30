@@ -10,6 +10,18 @@ class LayoutEngine:
     """Calculates absolute X, Y coordinates and dimensions for all components in the tree."""
 
     @staticmethod
+    def shift(component: Component, dx: int, dy: int):
+        if dx == 0 and dy == 0:
+            return
+        component.computed_x += dx
+        component.computed_y += dy
+        if hasattr(component, "child") and component.child:
+            LayoutEngine.shift(component.child, dx, dy)
+        if hasattr(component, "children") and component.children:
+            for child in component.children:
+                LayoutEngine.shift(child, dx, dy)
+
+    @staticmethod
     def calculate(
         component: Component,
         start_x: int = 0,
@@ -72,14 +84,17 @@ class LayoutEngine:
             if align in ("center", "end"):
                 for child in component.children:
                     if align == "center":
-                        child.computed_x = (
+                        target_x = (
                             start_x
                             + (component.computed_width - child.computed_width) // 2
                         )
                     elif align == "end":
-                        child.computed_x = (
+                        target_x = (
                             start_x + component.computed_width - child.computed_width
                         )
+
+                    if target_x != child.computed_x:
+                        LayoutEngine.shift(child, target_x - child.computed_x, 0)
 
             # Justify content (main-axis)
             justify = component.style.justify or "start"
@@ -97,15 +112,15 @@ class LayoutEngine:
                     if justify == "center":
                         offset = free_space // 2
                         for c in component.children:
-                            c.computed_y += offset
+                            LayoutEngine.shift(c, 0, offset)
                     elif justify == "end":
                         for c in component.children:
-                            c.computed_y += free_space
+                            LayoutEngine.shift(c, 0, free_space)
                     elif justify == "space-between" and len(component.children) > 1:
                         step = free_space // (len(component.children) - 1)
                         acc = 0
                         for i, c in enumerate(component.children):
-                            c.computed_y += acc
+                            LayoutEngine.shift(c, 0, acc)
                             acc += step
 
         elif isinstance(component, Row):
@@ -126,14 +141,17 @@ class LayoutEngine:
             if align in ("center", "end"):
                 for child in component.children:
                     if align == "center":
-                        child.computed_y = (
+                        target_y = (
                             start_y
                             + (component.computed_height - child.computed_height) // 2
                         )
                     elif align == "end":
-                        child.computed_y = (
+                        target_y = (
                             start_y + component.computed_height - child.computed_height
                         )
+
+                    if target_y != child.computed_y:
+                        LayoutEngine.shift(child, 0, target_y - child.computed_y)
 
             # Justify content (main-axis)
             justify = component.style.justify or "start"
@@ -151,15 +169,15 @@ class LayoutEngine:
                     if justify == "center":
                         offset = free_space // 2
                         for c in component.children:
-                            c.computed_x += offset
+                            LayoutEngine.shift(c, offset, 0)
                     elif justify == "end":
                         for c in component.children:
-                            c.computed_x += free_space
+                            LayoutEngine.shift(c, free_space, 0)
                     elif justify == "space-between" and len(component.children) > 1:
                         step = free_space // (len(component.children) - 1)
                         acc = 0
                         for i, c in enumerate(component.children):
-                            c.computed_x += acc
+                            LayoutEngine.shift(c, acc, 0)
                             acc += step
 
         elif isinstance(component, Wrap):

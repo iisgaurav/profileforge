@@ -1,4 +1,4 @@
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Row, Spacer
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
@@ -26,34 +26,41 @@ class AboutWidget(Widget):
         location = data.get("location", "")
 
         name_text = Text(
-            f"Hi, I'm {name} 👋", style=Style(font_size=32, font_weight="800", color="text")
+            f"Hi, I'm {name} 👋",
+            style=Style(font_size=32, font_weight="800", color="text"),
         )
-        
+
         # Center badge next to role
-        role_text = Text(role, style=Style(font_size=15, font_weight="600", color="text"))
-        status_badge = Badge(f"● {status}", style=Style())
-        
-        role_row = Row(
-            children=[role_text, status_badge],
-            spacing=12,
-            style=Style(align="center")
+        role_text = Text(
+            role, style=Style(font_size=15, font_weight="600", color="text")
         )
-        
+        status_badge = Badge(f"● {status}", style=Style())
+
+        role_row = Row(
+            children=[role_text, status_badge], spacing=12, style=Style(align="center")
+        )
+
         tagline_text = Text(
             f'"{tagline}"',
             style=Style(font_size=14, color="muted", font_weight="normal"),
         )
-        
-        children = [name_text, Spacer(style=Style(height=16)), role_row, Spacer(style=Style(height=12)), tagline_text]
+
+        children = [
+            name_text,
+            Spacer(style=Style(height=16)),
+            role_row,
+            Spacer(style=Style(height=12)),
+            tagline_text,
+        ]
 
         if location:
             loc_text = Text(f"📍 {location}", style=Style(font_size=13, color="muted"))
             children.extend([Spacer(style=Style(height=8)), loc_text])
 
         content = Column(
-            children=children, 
-            spacing=0, 
-            style=Style(width="fill", height="fill", justify="center", align="center")
+            children=children,
+            spacing=0,
+            style=Style(width="fill", height="fill", justify="center", align="center"),
         )
 
         return Card(
