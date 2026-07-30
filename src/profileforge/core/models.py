@@ -5,15 +5,70 @@ from typing import Any
 
 
 @dataclass
-class Theme:
-    name: str
-    background: str
+class ColorTokens:
     primary: str
     secondary: str
-    text: str
-    text_muted: str
+    background: str
+    surface: str
     border: str
-    progress_bg: str
+    text: str
+    muted: str
+    success: str
+    warning: str
+    info: str
+    accent: str
+
+
+@dataclass
+class TypographyTokens:
+    font_family: str
+    heading: int
+    body: int
+    small: int
+
+
+@dataclass
+class SpacingTokens:
+    xs: int
+    sm: int
+    md: int
+    lg: int
+    xl: int
+
+
+@dataclass
+class RadiusTokens:
+    card: int
+    progress: int
+    badge: int
+
+
+@dataclass
+class ShadowTokens:
+    none: str
+    low: str
+    medium: str
+    high: str
+
+
+@dataclass
+class MotionTokens:
+    duration_fast: int
+    duration_normal: int
+    duration_slow: int
+    easing: str
+
+
+@dataclass
+class Theme:
+    name: str
+    mode: str  # "minimal", "modern", "showcase"
+    colors: ColorTokens
+    typography: TypographyTokens
+    spacing: SpacingTokens
+    radius: RadiusTokens
+    shadows: ShadowTokens
+    motion: MotionTokens
     extends: str | None = None
 
 
@@ -21,6 +76,9 @@ class Theme:
 class OutputConfig:
     enabled: bool = False
     dir: str = ""
+    animations: bool = False
+    width: int | str = 420
+    height: int | str = "auto"
 
 
 @dataclass

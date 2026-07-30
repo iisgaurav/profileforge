@@ -4,10 +4,16 @@ import yaml
 
 from profileforge.core.exceptions import ConfigurationError, ThemeError
 from profileforge.core.models import (
+    ColorTokens,
+    MotionTokens,
     OutputConfig,
     Outputs,
     ProfileForgeConfig,
+    RadiusTokens,
+    ShadowTokens,
+    SpacingTokens,
     Theme,
+    TypographyTokens,
     WidgetConfig,
 )
 
@@ -82,14 +88,21 @@ class ConfigLoader:
 
         # Future implementation would handle `extends` logic here
 
+        colors = ColorTokens(**data.get("colors", {}))
+        typography = TypographyTokens(**data.get("typography", {}))
+        spacing = SpacingTokens(**data.get("spacing", {}))
+        radius = RadiusTokens(**data.get("radius", {}))
+        shadows = ShadowTokens(**data.get("shadows", {}))
+        motion = MotionTokens(**data.get("motion", {}))
+
         return Theme(
             name=data.get("name", theme_name),
-            background=data.get("background", "#0D1117"),
-            primary=data.get("primary", "#58A6FF"),
-            secondary=data.get("secondary", "#8B5CF6"),
-            text=data.get("text", "#C9D1D9"),
-            text_muted=data.get("text_muted", "#8B949E"),
-            border=data.get("border", "#30363D"),
-            progress_bg=data.get("progress_bg", "#21262D"),
+            mode=data.get("mode", "modern"),
+            colors=colors,
+            typography=typography,
+            spacing=spacing,
+            radius=radius,
+            shadows=shadows,
+            motion=motion,
             extends=data.get("extends"),
         )

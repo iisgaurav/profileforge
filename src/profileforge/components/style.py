@@ -15,5 +15,10 @@ class Style:
     border_color: str | None = None
     font_size: int | None = None
     font_weight: str | None = None
-    width: int | None = None
-    height: int | None = None
+    width: int | str | None = None
+    height: int | str | None = None
+    variant: str | None = None
+    state: str | None = None
+    elevation: str | None = None
+    justify: str | None = None
+    align: str | None = None
