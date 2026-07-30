@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Padding, Row, Spacer, Wrap
 from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 
 
@@ -161,6 +161,44 @@ class LayoutEngine:
                         for i, c in enumerate(component.children):
                             c.computed_x += acc
                             acc += step
+
+        elif isinstance(component, Wrap):
+            current_x = start_x
+            current_y = start_y
+            max_h_in_run = 0
+            max_w = 0
+
+            for child in component.children:
+                # Pre-calculate to get child dimensions
+                LayoutEngine.calculate(child, 0, 0, None, None)
+                cw = child.computed_width
+                ch = child.computed_height
+
+                # Check wrap condition
+                if (
+                    resolved_w
+                    and (current_x + cw - start_x > resolved_w)
+                    and current_x > start_x
+                ):
+                    current_x = start_x
+                    current_y += max_h_in_run + component.run_spacing
+                    max_h_in_run = 0
+
+                # Assign actual positions
+                child.computed_x = current_x
+                child.computed_y = current_y
+
+                # Advance layout engine over the child (recursive recalculation not needed if dimensions are fixed, but let's do it to set absolute coords for its children)
+                LayoutEngine.calculate(child, current_x, current_y, None, None)
+
+                current_x += cw + component.spacing
+                max_w = max(max_w, current_x - start_x - component.spacing)
+                max_h_in_run = max(max_h_in_run, ch)
+
+            component.computed_width = resolved_w or max_w
+            component.computed_height = resolved_h or (
+                current_y - start_y + max_h_in_run
+            )
 
         elif isinstance(component, Text):
             component.computed_width = resolved_w or int(len(component.value) * 7.5)

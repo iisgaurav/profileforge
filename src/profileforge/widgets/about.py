@@ -59,5 +59,5 @@ class AboutWidget(Widget):
         return Card(
             title="",
             child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=992, elevation="medium", variant="solid"),
+            style=Style(width=820, height=250, elevation="medium", variant="solid"),
         )

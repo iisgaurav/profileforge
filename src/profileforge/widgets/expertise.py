@@ -1,4 +1,4 @@
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Padding, Spacer
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
@@ -20,6 +20,8 @@ class ExpertiseWidget(Widget):
         else:
             skills_dict = data.get("skills", {})
 
+        from profileforge.components.layout import Wrap
+
         rows = []
         for category, items in skills_dict.items():
             cat_title = Text(
@@ -29,11 +31,9 @@ class ExpertiseWidget(Widget):
             rows.append(cat_title)
 
             badges = [Badge(item) for item in items]
-            # Chunk into rows of 3 to fit nicely in the 480px card
-            for i in range(0, len(badges), 3):
-                chunk = badges[i : i + 3]
-                rows.append(Row(children=chunk, spacing=8))
 
+            # Use the new Wrap component for dynamic badge flow
+            rows.append(Wrap(children=badges, spacing=8, run_spacing=8))
             rows.append(Spacer(style=Style(height=12)))
 
         # Remove trailing spacer
@@ -44,5 +44,5 @@ class ExpertiseWidget(Widget):
         return Card(
             title="My Expertise",
             child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=480, elevation="medium", variant="solid"),
+            style=Style(width=400, height=250, elevation="medium", variant="solid"),
         )

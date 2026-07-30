@@ -48,3 +48,17 @@ class Spacer(Component):
         super().__init__(style)
         self.style.width = width
         self.style.height = height
+
+
+class Wrap(Component):
+    def __init__(
+        self,
+        children: list[Component],
+        spacing: int = 0,
+        run_spacing: int = 0,
+        style: Style | None = None,
+    ):
+        super().__init__(style)
+        self.children = children
+        self.spacing = spacing
+        self.run_spacing = run_spacing
