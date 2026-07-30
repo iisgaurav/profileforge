@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
-from profileforge.components.widgets import Card, ProgressBar, Text
+from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 
 
 class LayoutEngine:
@@ -168,8 +168,12 @@ class LayoutEngine:
             component.computed_width = resolved_w or 300
             component.computed_height = resolved_h or 8
 
+        elif isinstance(component, Badge):
+            component.computed_width = resolved_w or (len(component.label) * 8 + 24)
+            component.computed_height = resolved_h or 24
+
         elif isinstance(component, Card):
-            title_offset = 50
+            title_offset = 40
             child_pw = resolved_w - 40 if resolved_w else None
             child_ph = resolved_h - title_offset - 20 if resolved_h else None
 

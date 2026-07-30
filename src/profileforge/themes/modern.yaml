@@ -14,8 +14,8 @@ colors:
   accent: "#EC4899"
 typography:
   font_family: "Inter, sans-serif"
-  heading: 28
-  body: 16
+  heading: 20
+  body: 14
   small: 12
 spacing:
   xs: 6

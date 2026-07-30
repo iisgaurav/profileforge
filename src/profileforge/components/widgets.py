@@ -27,3 +27,9 @@ class Icon(Component):
     def __init__(self, svg_path: str, style: Style | None = None):
         super().__init__(style)
         self.svg_path = svg_path
+
+
+class Badge(Component):
+    def __init__(self, label: str, style: Style | None = None):
+        super().__init__(style)
+        self.label = label

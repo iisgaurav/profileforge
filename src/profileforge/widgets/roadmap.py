@@ -30,11 +30,11 @@ class RoadmapWidget(Widget):
             )
 
             bar = ProgressBar(
-                progress, style=Style(width="fill", height=6, color="primary")
+                progress, style=Style(width="fill", height=8, color="primary")
             )
 
             item_col = Column(
-                children=[label_row, bar], spacing=8, style=Style(width="fill")
+                children=[label_row, bar], spacing=4, style=Style(width="fill")
             )
             rows.append(item_col)
 

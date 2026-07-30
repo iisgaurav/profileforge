@@ -1,7 +1,7 @@
 import html
 
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
-from profileforge.components.widgets import Card, ProgressBar, Text
+from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 from profileforge.render.base import Renderer
 
 
@@ -56,7 +56,7 @@ class SVGRenderer(Renderer):
         .title {{ font-family: {self.theme.typography.font_family}; font-size: {self.theme.typography.heading}px; font-weight: 600; fill: {title_color}; }}
     </style>
     <rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" class="card-bg" />
-    <text x="25" y="35" class="title">{escaped_title}</text>
+    <text x="24" y="30" class="title">{escaped_title}</text>
     {child_svg}
 </svg>"""
 
@@ -93,6 +93,21 @@ class SVGRenderer(Renderer):
     {desc_tag}
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" rx="{radius}" />
     <rect x="{x}" y="{y}" width="{filled_w}" height="{h}" fill="{fill}" rx="{radius}" />
+</g>"""
+
+        elif isinstance(component, Badge):
+            primary = self.get_color("primary")
+            escaped_label = html.escape(component.label)
+
+            title_tag = "<title>Badge</title>"
+            desc_tag = f"<desc>Badge: {escaped_label}</desc>"
+
+            return f"""
+<g role="term">
+    {title_tag}
+    {desc_tag}
+    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="{primary}" fill-opacity="0.15" />
+    <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.theme.typography.font_family}" font-size="12" fill="{primary}" text-anchor="middle" dominant-baseline="central">{escaped_label}</text>
 </g>"""
 
         elif isinstance(component, (Row, Column, Padding)):

@@ -1,0 +1,19 @@
+name: "github-dark"
+mode: "dark"
+colors:
+  primary: "#58A6FF"
+  secondary: "#8B949E"
+  background: "transparent"
+  surface: "#0D1117"
+  border: "#30363D"
+  text: "#C9D1D9"
+  muted: "#8B949E"
+  accent: "#D2A8FF"
+typography:
+  font_family: "Inter, -apple-system, sans-serif"
+  heading: 20
+  body: 14
+  small: 12
+spacing: {xs: 4, sm: 8, md: 16, lg: 24, xl: 32}
+radius: {card: 6, progress: 4, badge: 12}
+shadows: {none: "none", low: "none", medium: "none", high: "none"}
