@@ -219,16 +219,19 @@ class LayoutEngine:
             )
 
         elif isinstance(component, Text):
-            component.computed_width = resolved_w or int(len(component.value) * 7.5)
-            component.computed_height = resolved_h or (component.style.font_size or 14)
+            fs = component.style.font_size or 14
+            component.computed_width = resolved_w or int(
+                len(component.value) * (fs * 0.55)
+            )
+            component.computed_height = resolved_h or fs
 
         elif isinstance(component, ProgressBar):
             component.computed_width = resolved_w or 300
             component.computed_height = resolved_h or 8
 
         elif isinstance(component, Badge):
-            component.computed_width = resolved_w or (
-                int(len(component.label) * 7.5) + 40
+            component.computed_width = (
+                resolved_w or int(len(component.label) * (12 * 0.55)) + 40
             )
             component.computed_height = resolved_h or 24
 
