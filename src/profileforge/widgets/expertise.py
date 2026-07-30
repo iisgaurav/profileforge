@@ -1,6 +1,6 @@
 from profileforge.components.layout import Column, Component, Padding, Row
 from profileforge.components.style import Style
-from profileforge.components.widgets import Card, ProgressBar, Text
+from profileforge.components.widgets import Card, Text
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget

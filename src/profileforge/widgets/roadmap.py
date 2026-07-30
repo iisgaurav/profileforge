@@ -1,4 +1,4 @@
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Padding, Row
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
