@@ -5,7 +5,7 @@ project:
   title: "Python Backend Developer"
 
 themes:
-  active: "github-dark"
+  active: "modern"
 
 outputs:
   svg:

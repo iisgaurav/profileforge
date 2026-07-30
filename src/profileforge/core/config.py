@@ -78,7 +78,16 @@ class ConfigLoader:
     def load_theme(theme_name: str, themes_dir: str = "themes") -> Theme:
         theme_file = Path(themes_dir) / f"{theme_name}.yaml"
         if not theme_file.exists():
-            raise ThemeError(f"Theme file not found: {theme_file}")
+            # Fallback to built-in themes in the profileforge package
+            builtin_theme = (
+                Path(__file__).parent.parent / "themes" / f"{theme_name}.yaml"
+            )
+            if builtin_theme.exists():
+                theme_file = builtin_theme
+            else:
+                raise ThemeError(
+                    f"Theme file not found: {theme_name}.yaml in {themes_dir} or built-in themes."
+                )
 
         with open(theme_file, "r", encoding="utf-8") as f:
             try:
