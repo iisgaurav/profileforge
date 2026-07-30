@@ -13,8 +13,8 @@ colors:
   warning: "#D29922"
   info: "#388BFD"
 typography:
-  font_family: "Inter, -apple-system, sans-serif"
-  heading: 20
+  font_family: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+  heading: 18
   body: 14
   small: 12
 spacing: {xs: 4, sm: 8, md: 16, lg: 24, xl: 32}
