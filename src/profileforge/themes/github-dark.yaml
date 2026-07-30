@@ -9,6 +9,9 @@ colors:
   text: "#C9D1D9"
   muted: "#8B949E"
   accent: "#D2A8FF"
+  success: "#2EA043"
+  warning: "#D29922"
+  info: "#388BFD"
 typography:
   font_family: "Inter, -apple-system, sans-serif"
   heading: 20
