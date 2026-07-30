@@ -57,7 +57,7 @@ class SVGRenderer:
                 children_svgs = [self.render(c) for c in component.children]
             elif hasattr(component, "child"):
                 children_svgs = [self.render(component.child)]
-            return "\\n".join(children_svgs)
+            return "\n".join(children_svgs)
 
         elif isinstance(component, Spacer):
             return ""  # Spacers just take up space in the layout engine
