@@ -90,9 +90,12 @@ def cmd_build(args):
             LayoutEngine.calculate(component_tree)
 
             if config.outputs.svg.enabled:
+                import html as html_mod
+
                 inner_svg = svg_renderer.render(component_tree)
                 total_w = component_tree.computed_width
                 total_h = component_tree.computed_height
+                escaped_title = html_mod.escape(config.dashboard.title or "Dashboard")
 
                 # Wrap in a valid root <svg> so GitHub Camo can render it
                 svg_content = (
@@ -100,7 +103,7 @@ def cmd_build(args):
                     f'viewBox="0 0 {total_w} {total_h}" '
                     f'xmlns="http://www.w3.org/2000/svg" '
                     f'role="img">\n'
-                    f"  <title>{config.dashboard.title or 'Dashboard'}</title>\n"
+                    f"  <title>{escaped_title}</title>\n"
                     f"  {inner_svg}\n"
                     f"</svg>"
                 )
