@@ -10,8 +10,8 @@ Inspired by modern UI frameworks, it combines reusable components, a Flex-style 
 ## Preview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg" alt="Roadmap Widget Example" width="48%"/>
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg" alt="Expertise Widget Example" width="48%"/>
+  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg?v=" alt="Roadmap Widget Example" width="48%"/>
+  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg?v=" alt="Expertise Widget Example" width="48%"/>
 </div>
 
 ## Features
