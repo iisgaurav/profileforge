@@ -1,4 +1,4 @@
-from profileforge.components.layout import Column, Component, Row, Spacer
+from profileforge.components.layout import Column, Component, Spacer
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
@@ -30,15 +30,10 @@ class AboutWidget(Widget):
             style=Style(font_size=32, font_weight="800", color="text"),
         )
 
-        # Center badge next to role
         role_text = Text(
             role, style=Style(font_size=15, font_weight="600", color="text")
         )
         status_badge = Badge(f"● {status}", style=Style())
-
-        role_row = Row(
-            children=[role_text, status_badge], spacing=12, style=Style(align="center")
-        )
 
         tagline_text = Text(
             f'"{tagline}"',
@@ -47,15 +42,17 @@ class AboutWidget(Widget):
 
         children = [
             name_text,
-            Spacer(style=Style(height=16)),
-            role_row,
-            Spacer(style=Style(height=12)),
+            Spacer(height=8),
+            role_text,
+            Spacer(height=16),
+            status_badge,
+            Spacer(height=16),
             tagline_text,
         ]
 
         if location:
             loc_text = Text(f"📍 {location}", style=Style(font_size=13, color="muted"))
-            children.extend([Spacer(style=Style(height=8)), loc_text])
+            children.extend([Spacer(height=8), loc_text])
 
         content = Column(
             children=children,
