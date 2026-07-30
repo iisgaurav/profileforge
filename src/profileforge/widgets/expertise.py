@@ -18,11 +18,11 @@ class ExpertiseWidget(Widget):
         rows = []
         for i in range(0, len(badges), 2):
             chunk = badges[i : i + 2]
-            rows.append(Row(children=chunk, spacing=8))
+            rows.append(Row(children=chunk, spacing=10))
 
-        content = Column(children=rows, spacing=8, style=Style(width="fill"))
+        content = Column(children=rows, spacing=10, style=Style(width="fill"))
         return Card(
-            title="Backend Expertise",
-            child=Padding(child=content, value=24, style=Style(width="fill")),
-            style=Style(width=480, height=300, elevation="medium", variant="solid"),
+            title="Tech Stack",
+            child=Padding(child=content, value=20, style=Style(width="fill")),
+            style=Style(width=480, height=380, elevation="medium", variant="solid"),
         )

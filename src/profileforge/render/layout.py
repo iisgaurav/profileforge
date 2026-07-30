@@ -177,9 +177,9 @@ class LayoutEngine:
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
-            title_offset = 40
+            title_offset = 52
             child_pw = resolved_w - 40 if resolved_w else None
-            child_ph = resolved_h - title_offset - 20 if resolved_h else None
+            child_ph = resolved_h - title_offset - 16 if resolved_h else None
 
             LayoutEngine.calculate(
                 component.child, start_x, start_y + title_offset, child_pw, child_ph

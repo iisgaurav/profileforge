@@ -1,8 +1,21 @@
 import html
+from typing import List, Tuple
 
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
 from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 from profileforge.render.base import Renderer
+
+# Tech-specific color palette for badges — makes expertise feel rich and varied
+TECH_COLORS: List[Tuple[str, str]] = [
+    ("#3B82F6", "#1D3557"),  # blue / deep navy
+    ("#10B981", "#064E3B"),  # emerald / dark green
+    ("#8B5CF6", "#2E1065"),  # violet / deep purple
+    ("#F59E0B", "#451A03"),  # amber / dark orange
+    ("#EF4444", "#450A0A"),  # red / dark red
+    ("#06B6D4", "#083344"),  # cyan / dark cyan
+    ("#EC4899", "#500724"),  # pink / dark pink
+    ("#84CC16", "#1A2E05"),  # lime / dark lime
+]
 
 
 class SVGRenderer(Renderer):
@@ -10,75 +23,108 @@ class SVGRenderer(Renderer):
         return getattr(self.theme.colors, color_key, color_key)
 
     def get_defs(self) -> str:
-        """Return SVG <defs> block with shared gradients and filters for premium visuals."""
+        """Return SVG <defs> with shared gradients and filters for premium visuals."""
         primary = self.get_color("primary")
         accent = self.get_color("accent")
         surface = self.get_color("surface")
         border = self.get_color("border")
+        muted = self.get_color("muted")
+
+        # Build per-badge gradient defs
+        badge_grads = []
+        for i, (fg, bg_dark) in enumerate(TECH_COLORS):
+            badge_grads.append(f"""  <linearGradient id="pf-badge-{i}" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="{fg}" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="{fg}" stop-opacity="0.1"/>
+  </linearGradient>""")
+        badge_grad_xml = "\n".join(badge_grads)
 
         return f"""<defs>
-  <!-- Progress bar gradient -->
+  <!-- Animated gradient for progress bar fill -->
   <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="{primary}" stop-opacity="0.7"/>
-    <stop offset="100%" stop-color="{primary}"/>
+    <stop offset="0%" stop-color="{primary}" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="{primary}"/>
+    <stop offset="100%" stop-color="{accent}" stop-opacity="0.9"/>
   </linearGradient>
 
-  <!-- Badge fill gradient -->
-  <linearGradient id="pf-badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="{primary}" stop-opacity="0.22"/>
-    <stop offset="100%" stop-color="{accent}" stop-opacity="0.08"/>
-  </linearGradient>
-
-  <!-- Card border gradient -->
+  <!-- Card border: subtle blue-to-transparent gradient -->
   <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="{primary}" stop-opacity="0.5"/>
-    <stop offset="100%" stop-color="{border}" stop-opacity="0.8"/>
+    <stop offset="0%" stop-color="{primary}" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="{border}" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="{border}" stop-opacity="0.4"/>
   </linearGradient>
 
-  <!-- Card background gradient -->
+  <!-- Card background: very subtle top-to-bottom gradient -->
   <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="{surface}"/>
-    <stop offset="100%" stop-color="{surface}" stop-opacity="0.85"/>
+    <stop offset="0%" stop-color="{surface}" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="{surface}" stop-opacity="0.8"/>
   </linearGradient>
 
-  <!-- Progress bar glow filter -->
-  <filter id="pf-progress-glow" x="-5%" y="-80%" width="110%" height="260%">
-    <feGaussianBlur stdDeviation="2" result="blur"/>
+  <!-- Glow for progress bar fill -->
+  <filter id="pf-progress-glow" x="-5%" y="-100%" width="110%" height="300%">
+    <feGaussianBlur stdDeviation="1.5" result="blur"/>
     <feComposite in="SourceGraphic" in2="blur" operator="over"/>
   </filter>
 
-  <!-- Card shadow filter -->
-  <filter id="pf-card-shadow" x="-3%" y="-3%" width="106%" height="110%">
-    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="{primary}" flood-opacity="0.08"/>
+  <!-- Soft drop shadow for cards -->
+  <filter id="pf-card-shadow" x="-4%" y="-4%" width="108%" height="114%">
+    <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="{primary}" flood-opacity="0.07"/>
   </filter>
+
+  <!-- Progress bar track background -->
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="{muted}" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="{muted}" stop-opacity="0.08"/>
+  </linearGradient>
+
+{badge_grad_xml}
 </defs>"""
 
-    def render(self, component: Component) -> str:
+    def _badge_color(self, index: int) -> Tuple[str, str]:
+        """Return (fg_color, grad_id) for badge at given index."""
+        fg, _ = TECH_COLORS[index % len(TECH_COLORS)]
+        return fg, f"pf-badge-{index % len(TECH_COLORS)}"
+
+    def render(self, component: Component, _badge_idx: List[int] = None) -> str:
+        if _badge_idx is None:
+            _badge_idx = [0]
+
         x = component.computed_x
         y = component.computed_y
         w = component.computed_width
         h = component.computed_height
 
         if isinstance(component, Card):
-            child_svg = self.render(component.child)
-            radius = component.style.border_radius or getattr(self.theme.radius, "card", 8)
-            title_color = self.get_color("text")
+            child_svg = self.render(component.child, _badge_idx)
+            radius = component.style.border_radius or getattr(self.theme.radius, "card", 10)
+            text_color = self.get_color("text")
             primary = self.get_color("primary")
 
             escaped_title = html.escape(component.title)
-            title_tag = f"<title>{escaped_title} Card</title>"
-            desc_tag = f"<desc>Card component for {escaped_title}</desc>"
 
-            # Accent line under the title
-            accent_line = f'<rect x="{x + 24}" y="{y + 38}" width="32" height="2" rx="1" fill="{primary}" opacity="0.7"/>'
+            # Decorative left accent bar
+            accent_bar = f'<rect x="{x + 20}" y="{y + 16}" width="3" height="20" rx="1.5" fill="{primary}" opacity="0.9"/>'
+            title_el = (
+                f'<text x="{x + 32}" y="{y + 31}" '
+                f'font-family="{self.theme.typography.font_family}" '
+                f'font-size="{self.theme.typography.heading}" '
+                f'font-weight="700" fill="{text_color}" '
+                f'letter-spacing="0.3">{escaped_title}</text>'
+            )
+            # Thin separator line under header
+            sep = (
+                f'<line x1="{x + 20}" y1="{y + 44}" x2="{x + w - 20}" y2="{y + 44}" '
+                f'stroke="{primary}" stroke-width="0.5" stroke-opacity="0.25"/>'
+            )
 
             return f"""
 <svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="group" filter="url(#pf-card-shadow)">
-    {title_tag}
-    {desc_tag}
+    <title>{escaped_title} Card</title>
+    <desc>Card component for {escaped_title}</desc>
     <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{h - 1}" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
-    <text x="{x + 24}" y="{y + 30}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="700" fill="{title_color}" letter-spacing="0.2">{escaped_title}</text>
-    {accent_line}
+    {accent_bar}
+    {title_el}
+    {sep}
     {child_svg}
 </svg>"""
 
@@ -88,47 +134,46 @@ class SVGRenderer(Renderer):
             fw = component.style.font_weight or "normal"
             escaped_value = html.escape(component.value)
 
-            return f"""
-<g role="text">
-    <title>Text</title>
-    <desc>{escaped_value}</desc>
-    <text x="{x}" y="{y + fs}" font-family="{self.theme.typography.font_family}" font-size="{fs}" font-weight="{fw}" fill="{color}">{escaped_value}</text>
-</g>"""
+            return (
+                f'<text x="{x}" y="{y + fs}" '
+                f'font-family="{self.theme.typography.font_family}" '
+                f'font-size="{fs}" font-weight="{fw}" fill="{color}">{escaped_value}</text>'
+            )
 
         elif isinstance(component, ProgressBar):
-            bg = self.get_color("border")
-            filled_w = (component.progress / 100.0) * w
-            radius = component.style.border_radius or getattr(self.theme.radius, "progress", h / 2)
+            filled_w = max(4, (component.progress / 100.0) * w)
+            radius = component.style.border_radius or getattr(self.theme.radius, "progress", 4)
+            dur_s = 0.6 + (component.progress / 100.0) * 0.8
 
             return f"""
 <g role="meter" aria-valuenow="{component.progress}" aria-valuemin="0" aria-valuemax="100">
-    <title>Progress Bar</title>
-    <desc>Progress: {component.progress}%</desc>
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" rx="{radius}" opacity="0.6"/>
+    <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#pf-track-bg)" rx="{radius}"/>
     <rect x="{x}" y="{y}" width="{filled_w}" height="{h}" fill="url(#pf-progress-grad)" rx="{radius}" filter="url(#pf-progress-glow)">
-        <animate attributeName="width" from="0" to="{filled_w}" dur="1.1s" calcMode="spline" keySplines="0.4 0 0.2 1" fill="freeze"/>
+        <animate attributeName="width" from="0" to="{filled_w}" dur="{dur_s:.2f}s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>"""
 
         elif isinstance(component, Badge):
-            primary = self.get_color("primary")
+            idx = _badge_idx[0]
+            _badge_idx[0] += 1
+            fg_color, grad_id = self._badge_color(idx)
             escaped_label = html.escape(component.label)
+            br = h // 2
 
             return f"""
 <g role="term">
-    <title>Badge</title>
-    <desc>Badge: {escaped_label}</desc>
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h // 2}" fill="url(#pf-badge-grad)" stroke="{primary}" stroke-width="0.6" stroke-opacity="0.4"/>
-    <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.theme.typography.font_family}" font-size="12" fill="{primary}" text-anchor="middle" dominant-baseline="central" font-weight="500" letter-spacing="0.2">{escaped_label}</text>
+    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{br}" fill="url(#{grad_id})" stroke="{fg_color}" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.theme.typography.font_family}" font-size="12" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
 </g>"""
 
         elif isinstance(component, (Row, Column, Padding)):
-            children_svgs = []
+            parts = []
             if hasattr(component, "children"):
-                children_svgs = [self.render(c) for c in component.children]
+                for c in component.children:
+                    parts.append(self.render(c, _badge_idx))
             elif hasattr(component, "child"):
-                children_svgs = [self.render(component.child)]
-            return "\n".join(children_svgs)
+                parts.append(self.render(component.child, _badge_idx))
+            return "\n".join(parts)
 
         elif isinstance(component, Spacer):
             return ""
