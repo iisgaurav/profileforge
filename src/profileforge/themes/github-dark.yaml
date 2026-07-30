@@ -20,3 +20,8 @@ typography:
 spacing: {xs: 4, sm: 8, md: 16, lg: 24, xl: 32}
 radius: {card: 6, progress: 4, badge: 12}
 shadows: {none: "none", low: "none", medium: "none", high: "none"}
+motion:
+  duration_fast: 150
+  duration_normal: 300
+  duration_slow: 500
+  easing: "cubic-bezier(0.4, 0, 0.2, 1)"
