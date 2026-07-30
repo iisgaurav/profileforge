@@ -10,8 +10,7 @@ Inspired by modern UI frameworks, it combines reusable components, a Flex-style 
 ## Preview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg?v=" alt="Roadmap Widget Example" width="48%"/>
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg?v=" alt="Expertise Widget Example" width="48%"/>
+  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/dashboard.svg?v=20260731005400" alt="ProfileForge Dashboard Preview" width="100%"/>
 </div>
 
 ## Features
