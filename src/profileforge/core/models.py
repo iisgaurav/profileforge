@@ -89,9 +89,37 @@ class Outputs:
 
 
 @dataclass
+class GridConfig:
+    width: int = 1
+    height: int = 1
+
+
+@dataclass
 class WidgetConfig:
     name: str
     options: dict[str, Any] = field(default_factory=dict)
+    grid: GridConfig = field(default_factory=GridConfig)
+
+
+@dataclass
+class DashboardHeaderConfig:
+    enabled: bool = True
+
+
+@dataclass
+class DashboardFooterConfig:
+    enabled: bool = False
+    text: str = "Powered by ProfileForge"
+
+
+@dataclass
+class DashboardConfig:
+    enabled: bool = False
+    layout: str = "bento"
+    title: str = ""
+    subtitle: str | None = None
+    header: DashboardHeaderConfig = field(default_factory=DashboardHeaderConfig)
+    footer: DashboardFooterConfig = field(default_factory=DashboardFooterConfig)
 
 
 @dataclass
@@ -103,6 +131,7 @@ class ProfileForgeConfig:
     widgets: list[WidgetConfig]
     datasources_config: dict[str, Any]
     outputs: Outputs
+    dashboard: DashboardConfig = field(default_factory=DashboardConfig)
 
 
 @dataclass

@@ -5,6 +5,10 @@ import yaml
 from profileforge.core.exceptions import ConfigurationError, ThemeError
 from profileforge.core.models import (
     ColorTokens,
+    DashboardConfig,
+    DashboardFooterConfig,
+    DashboardHeaderConfig,
+    GridConfig,
     MotionTokens,
     OutputConfig,
     Outputs,
@@ -60,9 +64,41 @@ class ConfigLoader:
                 widgets.append(WidgetConfig(name=w))
             elif isinstance(w, dict) and "name" in w:
                 name = w.pop("name")
-                widgets.append(WidgetConfig(name=name, options=w))
+
+                # Parse grid metadata if present
+                grid_data = w.pop("grid", {})
+                grid = GridConfig(
+                    width=grid_data.get("width", 1), height=grid_data.get("height", 1)
+                )
+
+                widgets.append(WidgetConfig(name=name, options=w, grid=grid))
             else:
                 raise ConfigurationError(f"Invalid widget definition: {w}")
+
+        # Parse dashboard
+        dashboard_data = data.get("dashboard", {})
+        header_data = dashboard_data.get("header", {})
+        footer_data = dashboard_data.get("footer", {})
+
+        dashboard = DashboardConfig(
+            enabled=dashboard_data.get("enabled", False),
+            layout=dashboard_data.get("layout", "bento"),
+            title=dashboard_data.get("title", ""),
+            subtitle=dashboard_data.get("subtitle"),
+            header=DashboardHeaderConfig(
+                enabled=header_data.get("enabled", True)
+                if isinstance(header_data, dict)
+                else (header_data is not False)
+            ),
+            footer=DashboardFooterConfig(
+                enabled=footer_data.get("enabled", False)
+                if isinstance(footer_data, dict)
+                else (footer_data is not False),
+                text=footer_data.get("text", "Powered by ProfileForge")
+                if isinstance(footer_data, dict)
+                else "Powered by ProfileForge",
+            ),
+        )
 
         return ProfileForgeConfig(
             version=version,
@@ -72,6 +108,7 @@ class ConfigLoader:
             widgets=widgets,
             datasources_config=data.get("datasources", {}),
             outputs=outputs,
+            dashboard=dashboard,
         )
 
     @staticmethod

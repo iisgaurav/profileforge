@@ -110,8 +110,8 @@ Card(
             ProgressBar(progress=95),
             ProgressBar(progress=80),
         ],
-        spacing=8
-    )
+        spacing=8,
+    ),
 )
 ```
 
