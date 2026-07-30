@@ -169,7 +169,9 @@ class LayoutEngine:
             component.computed_height = resolved_h or 8
 
         elif isinstance(component, Badge):
-            component.computed_width = resolved_w or (int(len(component.label) * 7.5) + 24)
+            component.computed_width = resolved_w or (
+                int(len(component.label) * 7.5) + 24
+            )
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
