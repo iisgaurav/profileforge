@@ -33,7 +33,7 @@ class ExpertiseWidget(Widget):
             badges = [Badge(item) for item in items]
 
             # Use the new Wrap component for dynamic badge flow
-            rows.append(Wrap(children=badges, spacing=8, run_spacing=8))
+            rows.append(Wrap(children=badges, spacing=8, run_spacing=8, style=Style(width="fill")))
             rows.append(Spacer(style=Style(height=12)))
 
         # Remove trailing spacer
