@@ -96,7 +96,9 @@ class SVGRenderer(Renderer):
 
         if isinstance(component, Card):
             child_svg = self.render(component.child, _badge_idx)
-            radius = component.style.border_radius or getattr(self.theme.radius, "card", 10)
+            radius = component.style.border_radius or getattr(
+                self.theme.radius, "card", 10
+            )
             text_color = self.get_color("text")
             primary = self.get_color("primary")
 
@@ -142,7 +144,9 @@ class SVGRenderer(Renderer):
 
         elif isinstance(component, ProgressBar):
             filled_w = max(4, (component.progress / 100.0) * w)
-            radius = component.style.border_radius or getattr(self.theme.radius, "progress", 4)
+            radius = component.style.border_radius or getattr(
+                self.theme.radius, "progress", 4
+            )
             dur_s = 0.6 + (component.progress / 100.0) * 0.8
 
             return f"""
