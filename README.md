@@ -13,10 +13,25 @@ Inspired by modern UI frameworks, it combines reusable components, a Flex-style 
 ## Preview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/dashboard.svg?v=20260731011800" alt="ProfileForge Dashboard Preview" width="100%"/>
+  <picture>
+    <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/about.svg" alt="ProfileForge Hero Banner" width="100%" />
+  </picture>
+
+  <br />
+
+  <table>
+    <tr>
+      <td>
+        <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
+      </td>
+      <td>
+        <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
+      </td>
+    </tr>
+  </table>
 </div>
 
-> *The preview above is generated entirely by ProfileForge from a 30-line YAML config. No SVG written by hand.*
+> *The preview above is generated entirely by ProfileForge from a YAML config. No SVG written by hand. Users compose multiple SVGs in their README for maximum flexibility.*
 
 ---
 
@@ -89,25 +104,14 @@ themes:
 datasources:
   local:
     root: "./engine-config/config"
-widgets:
-  - name: roadmap
-    grid:
-      width: 1
-      height: 2
-  - name: expertise
-    grid:
-      width: 1
-      height: 1
 outputs:
   svg:
     enabled: true
     dir: "engine-config/assets"
-dashboard:
-  enabled: true
-  layout: bento
-  title: "Current Focus & Stack"
-  footer:
-    enabled: true
+widgets:
+  - name: about
+  - name: roadmap
+  - name: expertise
 ```
 
 **3. Add your data:**
@@ -141,8 +145,10 @@ profileforge build --config engine-config/profileforge.yaml
 ```
   + Loaded configuration
   + Loaded theme "github-dark"
-  + Registered 2 widgets
-  + Generated dashboard.svg
+  + Registered 3 widgets
+  + Generated about.svg
+  + Generated roadmap.svg
+  + Generated expertise.svg
 
 Done.
 ```
@@ -150,7 +156,24 @@ Done.
 **5. Embed in your GitHub profile README:**
 
 ```markdown
-![Dashboard](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/dashboard.svg)
+<div align="center">
+  <picture>
+    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/about.svg" alt="ProfileForge Hero Banner" width="100%" />
+  </picture>
+
+  <br />
+
+  <table>
+    <tr>
+      <td>
+        <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
+      </td>
+      <td>
+        <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
+      </td>
+    </tr>
+  </table>
+</div>
 ```
 
 ---
@@ -175,15 +198,11 @@ profileforge.yaml + config/*.yaml
                                (computed x, y, w, h)
                                          │
                                          ▼
-                                BentoLayout.compose()
-                               (multi-widget assembly)
-                                         │
-                                         ▼
                                    SVGRenderer
                              (defs, gradients, animation)
                                          │
                                          ▼
-                                   dashboard.svg
+                                widget_name.svg
 ```
 
 ---
@@ -280,15 +299,14 @@ pytest tests/ -v
 
 ## Roadmap
 
-- ✅ Declarative component system (`Card`, `Row`, `Column`, `Badge`, `ProgressBar`)
+- ✅ Declarative component system (`Card`, `Row`, `Column`, `Badge`, `ProgressBar`, `Wrap`)
 - ✅ Flex-style layout engine with justify / align / fill
 - ✅ Design token system (colors, typography, spacing, radius, shadows)
 - ✅ SVG renderer with gradients, glow filters, SMIL animations
-- ✅ Dashboard Engine (v0.3) — pluggable layout strategy architecture
-- ✅ Bento layout — grid-packing with `grid.width` / `grid.height`
+- ✅ Multi-SVG Engine (v0.2) — Individual modular widgets for maximum composition flexibility
 - ✅ Multi-color badge palette (8-color tech-specific scheme)
 - ✅ GitHub Camo compatible output (valid XML, proper SVG root)
-- 🚧 Masonry / Grid / Timeline layout strategies
+- 🚧 Auto-wrapping tag flows and badge grids
 - 🚧 Widget-level color overrides (`color:` in YAML)
 - 🚧 Plugin API for custom widgets
 - 🚧 HTML / PNG renderer
