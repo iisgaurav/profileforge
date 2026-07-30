@@ -48,11 +48,11 @@ class SVGRenderer(Renderer):
             desc_tag = f"<desc>Card component for {escaped_title}</desc>"
 
             return f"""
-<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     {title_tag}
     {desc_tag}
-    <rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="{bg}" stroke="{border}" stroke-width="1" rx="{radius}" style="{filter_css}" />
-    <text x="24" y="32" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="600" fill="{title_color}" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">{escaped_title}</text>
+    <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{h - 1}" fill="{bg}" stroke="{border}" stroke-width="1" rx="{radius}" style="{filter_css}" />
+    <text x="{x + 24}" y="{y + 32}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="600" fill="{title_color}" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">{escaped_title}</text>
     {child_svg}
 </svg>"""
 
