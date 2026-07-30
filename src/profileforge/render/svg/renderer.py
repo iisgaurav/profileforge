@@ -1,7 +1,7 @@
 import html
 from typing import List, Tuple
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Padding, Row, Spacer, Wrap
 from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 from profileforge.render.base import Renderer
 
@@ -185,7 +185,7 @@ class SVGRenderer(Renderer):
     <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.theme.typography.font_family}" font-size="12" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
 </g>"""
 
-        elif isinstance(component, (Row, Column, Padding)):
+        elif isinstance(component, (Row, Column, Padding, Wrap)):
             parts = []
             if hasattr(component, "children"):
                 for c in component.children:
