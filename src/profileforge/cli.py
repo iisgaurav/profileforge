@@ -93,6 +93,7 @@ def cmd_build(args):
                 import html as html_mod
 
                 inner_svg = svg_renderer.render(component_tree)
+                defs_block = svg_renderer.get_defs()
                 total_w = component_tree.computed_width
                 total_h = component_tree.computed_height
                 escaped_title = html_mod.escape(config.dashboard.title or "Dashboard")
@@ -104,6 +105,7 @@ def cmd_build(args):
                     f'xmlns="http://www.w3.org/2000/svg" '
                     f'role="img">\n'
                     f"  <title>{escaped_title}</title>\n"
+                    f"  {defs_block}\n"
                     f"  {inner_svg}\n"
                     f"</svg>"
                 )
