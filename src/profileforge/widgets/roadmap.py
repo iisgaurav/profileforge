@@ -2,7 +2,7 @@ from profileforge.widgets.base import Widget
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget
-from profileforge.components.layout import Column, Row, Spacer, Padding
+from profileforge.components.layout import Column, Row, Spacer, Padding, Component
 from profileforge.components.widgets import Card, Text, ProgressBar
 from profileforge.components.style import Style
 
