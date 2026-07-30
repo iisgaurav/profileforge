@@ -54,9 +54,10 @@ class SVGRenderer(Renderer):
     <style>
         .card-bg {{ fill: {bg}; stroke: {border}; stroke-width: 1px; rx: {radius}px; {filter_css} }}
         .title {{ font-family: {self.theme.typography.font_family}; font-size: {self.theme.typography.heading}px; font-weight: 600; fill: {title_color}; }}
+        text {{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }}
     </style>
     <rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" class="card-bg" />
-    <text x="24" y="30" class="title">{escaped_title}</text>
+    <text x="24" y="32" class="title">{escaped_title}</text>
     {child_svg}
 </svg>"""
 

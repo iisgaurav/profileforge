@@ -161,7 +161,7 @@ class LayoutEngine:
                             acc += step
 
         elif isinstance(component, Text):
-            component.computed_width = resolved_w or (len(component.value) * 8)
+            component.computed_width = resolved_w or int(len(component.value) * 7.5)
             component.computed_height = resolved_h or (component.style.font_size or 14)
 
         elif isinstance(component, ProgressBar):
@@ -169,7 +169,7 @@ class LayoutEngine:
             component.computed_height = resolved_h or 8
 
         elif isinstance(component, Badge):
-            component.computed_width = resolved_w or (len(component.label) * 8 + 24)
+            component.computed_width = resolved_w or (int(len(component.label) * 7.5) + 24)
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
