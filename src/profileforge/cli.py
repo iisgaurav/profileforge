@@ -122,8 +122,7 @@ def cmd_validate(args):
                 print(f'  X Widget "{w.name}"')
                 print("\nReason:\nUnknown widget")
                 print(
-                    "\nDid you mean:\n"
-                    + "\n".join([f"• {k}" for k in WIDGET_REGISTRY])
+                    "\nDid you mean:\n" + "\n".join([f"• {k}" for k in WIDGET_REGISTRY])
                 )
                 sys.exit(1)
 
