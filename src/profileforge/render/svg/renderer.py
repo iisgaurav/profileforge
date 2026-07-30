@@ -60,6 +60,13 @@ class SVGRenderer(Renderer):
     <stop offset="100%" stop-color="{surface}" stop-opacity="0.8"/>
   </linearGradient>
 
+  <!-- Card background: Hero vibrant gradient -->
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3b0918"/>
+    <stop offset="50%" stop-color="#1e1333"/>
+    <stop offset="100%" stop-color="#091629"/>
+  </linearGradient>
+
   <!-- Glow for progress bar fill -->
   <filter id="pf-progress-glow" x="-5%" y="-100%" width="110%" height="300%">
     <feGaussianBlur stdDeviation="1.5" result="blur"/>
@@ -121,11 +128,13 @@ class SVGRenderer(Renderer):
             else:
                 accent_bar = title_el = sep = ""
 
+            bg_fill = "url(#pf-card-gradient)" if component.style.variant == "hero" else "url(#pf-card-bg)"
+
             return f"""
 <svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="group" filter="url(#pf-card-shadow)">
     <title>{escaped_title} Card</title>
     <desc>Card component for {escaped_title}</desc>
-    <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{h - 1}" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
+    <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{h - 1}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
     {accent_bar}
     {title_el}
     {sep}

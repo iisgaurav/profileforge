@@ -26,38 +26,38 @@ class AboutWidget(Widget):
         location = data.get("location", "")
 
         name_text = Text(
-            name, style=Style(font_size=22, font_weight="700", color="text")
+            f"Hi, I'm {name} 👋", style=Style(font_size=32, font_weight="800", color="text")
         )
-        role_text = Text(role, style=Style(font_size=14, color="muted"))
+        
+        # Center badge next to role
+        role_text = Text(role, style=Style(font_size=15, font_weight="600", color="text"))
+        status_badge = Badge(f"● {status}", style=Style())
+        
+        role_row = Row(
+            children=[role_text, status_badge],
+            spacing=12,
+            style=Style(align="center")
+        )
+        
         tagline_text = Text(
             f'"{tagline}"',
-            style=Style(font_size=13, color="muted", font_weight="normal"),
+            style=Style(font_size=14, color="muted", font_weight="normal"),
         )
-        status_badge = Badge(f"● {status}", style=Style())
-
-        top_row = Row(
-            children=[
-                Column(
-                    children=[name_text, Spacer(style=Style(height=4)), role_text],
-                    spacing=2,
-                    style=Style(width="fill"),
-                ),
-                status_badge,
-            ],
-            style=Style(width="fill", justify="space-between", align="start"),
-        )
-
-        children = [top_row, Spacer(style=Style(height=10)), tagline_text]
+        
+        children = [name_text, Spacer(style=Style(height=16)), role_row, Spacer(style=Style(height=12)), tagline_text]
 
         if location:
-            loc_text = Text(f"📍 {location}", style=Style(font_size=12, color="muted"))
-            children.append(Spacer(style=Style(height=6)))
-            children.append(loc_text)
+            loc_text = Text(f"📍 {location}", style=Style(font_size=13, color="muted"))
+            children.extend([Spacer(style=Style(height=8)), loc_text])
 
-        content = Column(children=children, spacing=0, style=Style(width="fill"))
+        content = Column(
+            children=children, 
+            spacing=0, 
+            style=Style(width="fill", height="fill", justify="center", align="center")
+        )
 
         return Card(
             title="",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=820, height=250, elevation="medium", variant="solid"),
+            child=content,
+            style=Style(width=820, height=250, elevation="medium", variant="hero"),
         )
