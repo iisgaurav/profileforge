@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Optional
 
 from profileforge.core.models import (
     DashboardFooterConfig,
@@ -19,7 +20,7 @@ class DashboardItem:
 @dataclass
 class Dashboard:
     title: str
-    subtitle: str | None
+    subtitle: Optional[str]
     items: list[DashboardItem]
     header: DashboardHeaderConfig
     footer: DashboardFooterConfig

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Optional, Union
 
 
 @dataclass
@@ -69,7 +69,7 @@ class Theme:
     radius: RadiusTokens
     shadows: ShadowTokens
     motion: MotionTokens
-    extends: str | None = None
+    extends: Optional[str] = None
 
 
 @dataclass
@@ -77,8 +77,8 @@ class OutputConfig:
     enabled: bool = False
     dir: str = ""
     animations: bool = False
-    width: int | str = 420
-    height: int | str = "auto"
+    width: Union[int, str] = 420
+    height: Union[int, str] = "auto"
 
 
 @dataclass
@@ -117,7 +117,7 @@ class DashboardConfig:
     enabled: bool = False
     layout: str = "bento"
     title: str = ""
-    subtitle: str | None = None
+    subtitle: Optional[str] = None
     header: DashboardHeaderConfig = field(default_factory=DashboardHeaderConfig)
     footer: DashboardFooterConfig = field(default_factory=DashboardFooterConfig)
 

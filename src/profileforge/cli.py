@@ -100,7 +100,7 @@ def cmd_build(args):
                     f'viewBox="0 0 {total_w} {total_h}" '
                     f'xmlns="http://www.w3.org/2000/svg" '
                     f'role="img">\n'
-                    f'  <title>{config.dashboard.title or "Dashboard"}</title>\n'
+                    f"  <title>{config.dashboard.title or 'Dashboard'}</title>\n"
                     f"  {inner_svg}\n"
                     f"</svg>"
                 )

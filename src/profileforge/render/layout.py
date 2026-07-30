@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
 from profileforge.components.widgets import Badge, Card, ProgressBar, Text
 
@@ -12,8 +14,8 @@ class LayoutEngine:
         component: Component,
         start_x: int = 0,
         start_y: int = 0,
-        parent_width: int | None = None,
-        parent_height: int | None = None,
+        parent_width: Optional[int] = None,
+        parent_height: Optional[int] = None,
     ):
         component.computed_x = start_x
         component.computed_y = start_y
