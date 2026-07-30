@@ -5,6 +5,7 @@ from pathlib import Path
 
 # Ensure registries populate via side-effects
 import profileforge.datasources.local
+import profileforge.widgets.about
 import profileforge.widgets.expertise
 import profileforge.widgets.focus
 import profileforge.widgets.roadmap  # noqa: F401

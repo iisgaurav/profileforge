@@ -24,5 +24,5 @@ class ExpertiseWidget(Widget):
         return Card(
             title="Tech Stack",
             child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=480, height=380, elevation="medium", variant="solid"),
+            style=Style(width=480, elevation="medium", variant="solid"),
         )

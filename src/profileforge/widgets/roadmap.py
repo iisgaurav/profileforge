@@ -38,9 +38,9 @@ class RoadmapWidget(Widget):
             )
             rows.append(item_col)
 
-        content = Column(children=rows, spacing=18, style=Style(width="fill"))
+        content = Column(children=rows, spacing=16, style=Style(width="fill"))
         return Card(
             title="Learning Roadmap",
             child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=480, height=380, elevation="medium", variant="solid"),
+            style=Style(width=480, elevation="medium", variant="solid"),
         )
