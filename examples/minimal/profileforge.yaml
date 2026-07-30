@@ -1,0 +1,13 @@
+version: 1
+project:
+  name: "New Profile"
+themes:
+  active: "github-dark"
+datasources:
+  local:
+    root: "./config"
+widgets: []
+outputs:
+  svg:
+    enabled: true
+    dir: "assets"

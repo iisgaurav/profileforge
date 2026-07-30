@@ -1,0 +1,21 @@
+version: 1
+
+project:
+  name: "Gaurav Verma"
+  title: "Python Backend Developer"
+
+themes:
+  active: "github-dark"
+
+outputs:
+  svg:
+    enabled: true
+    dir: "assets/widgets"
+
+datasources:
+  local:
+    root: "./config"
+
+widgets:
+  - roadmap
+  - expertise

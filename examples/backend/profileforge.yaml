@@ -1,0 +1,14 @@
+version: 1
+project:
+  name: "Backend Pro"
+themes:
+  active: "github-dark"
+datasources:
+  local:
+    root: "./config"
+widgets:
+  - expertise
+outputs:
+  svg:
+    enabled: true
+    dir: "assets"
