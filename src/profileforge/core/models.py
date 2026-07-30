@@ -1,5 +1,8 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
+from typing import Any
+
 
 @dataclass
 class Theme:
@@ -11,12 +14,14 @@ class Theme:
     text_muted: str
     border: str
     progress_bg: str
-    extends: Optional[str] = None
+    extends: str | None = None
+
 
 @dataclass
 class OutputConfig:
     enabled: bool = False
     dir: str = ""
+
 
 @dataclass
 class Outputs:
@@ -24,10 +29,12 @@ class Outputs:
     markdown: OutputConfig = field(default_factory=OutputConfig)
     png: OutputConfig = field(default_factory=OutputConfig)
 
+
 @dataclass
 class WidgetConfig:
     name: str
-    options: Dict[str, Any] = field(default_factory=dict)
+    options: dict[str, Any] = field(default_factory=dict)
+
 
 @dataclass
 class ProfileForgeConfig:
@@ -35,11 +42,12 @@ class ProfileForgeConfig:
     project_name: str
     project_title: str
     active_theme: str
-    widgets: List[WidgetConfig]
-    datasources_config: Dict[str, Any]
+    widgets: list[WidgetConfig]
+    datasources_config: dict[str, Any]
     outputs: Outputs
+
 
 @dataclass
 class DataRequest:
     resource: str
-    options: Dict[str, Any] = field(default_factory=dict)
+    options: dict[str, Any] = field(default_factory=dict)

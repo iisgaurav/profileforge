@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
-from profileforge.core.context import BuildContext
+
 from profileforge.components.layout import Component
+from profileforge.core.context import BuildContext
+
 
 class Widget(ABC):
     @abstractmethod

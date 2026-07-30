@@ -1,13 +1,13 @@
-from profileforge.widgets.base import Widget
 from profileforge.components.layout import Component
-from profileforge.core.models import Theme
 from profileforge.core.context import BuildContext as Context
+from profileforge.core.models import Theme
 from profileforge.core.registry import register_widget
+from profileforge.widgets.base import Widget
 
 __all__ = [
-    "Widget",
     "Component",
-    "Theme",
     "Context",
+    "Theme",
+    "Widget",
     "register_widget",
 ]

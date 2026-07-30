@@ -1,15 +1,18 @@
 from dataclasses import dataclass, field
-from typing import Dict, Any
-from profileforge.core.models import Theme, ProfileForgeConfig
+from typing import Any
+
+from profileforge.core.models import ProfileForgeConfig, Theme
+
 
 @dataclass
 class Services:
-    datasources: Dict[str, Any] = field(default_factory=dict) # str -> DataSource
+    datasources: dict[str, Any] = field(default_factory=dict)  # str -> DataSource
     # renderer: Renderer will be injected later
+
 
 @dataclass
 class BuildContext:
     theme: Theme
     config: ProfileForgeConfig
     services: Services
-    cache: Dict[str, Any] = field(default_factory=dict)
+    cache: dict[str, Any] = field(default_factory=dict)

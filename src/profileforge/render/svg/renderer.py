@@ -1,6 +1,7 @@
+from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
-from profileforge.components.layout import Component, Row, Column, Padding, Spacer
-from profileforge.components.widgets import Card, Text, ProgressBar, Icon
+
 
 class SVGRenderer:
     def __init__(self, context: BuildContext):
@@ -22,7 +23,7 @@ class SVGRenderer:
             bg = self.get_color("background")
             border = self.get_color("border")
             title_color = self.get_color("text")
-            
+
             return f"""
 <svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
@@ -52,13 +53,13 @@ class SVGRenderer:
         elif isinstance(component, (Row, Column, Padding)):
             # These are purely structural, just render their children
             children_svgs = []
-            if hasattr(component, 'children'):
+            if hasattr(component, "children"):
                 children_svgs = [self.render(c) for c in component.children]
-            elif hasattr(component, 'child'):
+            elif hasattr(component, "child"):
                 children_svgs = [self.render(component.child)]
             return "\\n".join(children_svgs)
 
         elif isinstance(component, Spacer):
-            return "" # Spacers just take up space in the layout engine
+            return ""  # Spacers just take up space in the layout engine
 
         return ""

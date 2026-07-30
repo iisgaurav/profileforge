@@ -1,16 +1,19 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Optional
+
 
 @dataclass
 class Style:
     """Standardized styling properties for any component."""
-    color: Optional[str] = None
-    background_color: Optional[str] = None
-    padding: Optional[int] = None
-    margin: Optional[int] = None
-    border_radius: Optional[int] = None
-    border_color: Optional[str] = None
-    font_size: Optional[int] = None
-    font_weight: Optional[str] = None
-    width: Optional[int] = None
-    height: Optional[int] = None
+
+    color: str | None = None
+    background_color: str | None = None
+    padding: int | None = None
+    margin: int | None = None
+    border_radius: int | None = None
+    border_color: str | None = None
+    font_size: int | None = None
+    font_weight: str | None = None
+    width: int | None = None
+    height: int | None = None
