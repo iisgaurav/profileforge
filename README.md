@@ -10,7 +10,7 @@ Inspired by modern UI frameworks, it combines reusable components, a Flex-style 
 ## Preview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/dashboard.svg?v=20260731005400" alt="ProfileForge Dashboard Preview" width="100%"/>
+  <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/dashboard.svg?v=20260731010500" alt="ProfileForge Dashboard Preview" width="100%"/>
 </div>
 
 ## Features
@@ -64,8 +64,12 @@ profileforge build
 This generates the profile assets:
 
 ```bash
+# Individual widget mode
 ✓ Generated roadmap.svg
 ✓ Generated expertise.svg
+
+# Dashboard mode (enable dashboard: in profileforge.yaml)
+✓ Generated dashboard.svg
 ```
 
 ## Architecture
@@ -130,12 +134,24 @@ datasources:
   local:
     root: "./config"
 widgets:
-  - roadmap
-  - expertise
+  - name: roadmap
+    grid:
+      width: 1
+      height: 2
+  - name: expertise
+    grid:
+      width: 1
+      height: 1
 outputs:
   svg:
     enabled: true
     dir: "assets"
+dashboard:
+  enabled: true
+  layout: bento
+  title: "My Dashboard"
+  footer:
+    enabled: true
 ```
 
 ## Quality & Testing
@@ -153,6 +169,9 @@ ProfileForge enforces strict engineering discipline:
 - ✅ Declarative component system
 - ✅ SVG renderer
 - ✅ Design tokens
+- ✅ Dashboard Engine (v0.3) — generic layout strategy architecture
+- ✅ Bento layout — grid-packing with `grid.width` / `grid.height`
+- 🚧 Masonry / Grid / Timeline layouts
 - 🚧 Plugin API
 - 🚧 HTML renderer
 - 🚧 Third-party themes
