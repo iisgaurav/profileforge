@@ -1,6 +1,6 @@
 # ProfileForge
 
-![CI](https://github.com/profileforge/profileforge/workflows/ProfileForge%20CI/badge.svg)
+![CI](https://github.com/iisgaurav/profileforge/workflows/ProfileForge%20CI/badge.svg)
 ![Version](https://img.shields.io/badge/version-0.1.0--alpha-blue)
 
 **ProfileForge** is an extensible Python framework that generates developer profile assets (like SVG dashboards for your GitHub README) through a declarative component system, typed models, dependency injection, and a rendering pipeline.
