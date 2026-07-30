@@ -30,3 +30,8 @@ dev = [
 
 [project.scripts]
 profileforge = "profileforge.cli:main"
+
+[tool.black]
+target-version = ['py39']
+line-length = 88
+
