@@ -4,7 +4,7 @@ colors:
   primary: "#58A6FF"
   secondary: "#8B949E"
   background: "transparent"
-  surface: "#0D1117"
+  surface: "transparent"
   border: "#30363D"
   text: "#C9D1D9"
   muted: "#8B949E"

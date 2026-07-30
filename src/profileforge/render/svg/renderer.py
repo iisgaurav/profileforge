@@ -78,7 +78,7 @@ class SVGRenderer(Renderer):
 </g>"""
 
         elif isinstance(component, ProgressBar):
-            bg = self.get_color("surface")
+            bg = self.get_color("border")
             fill = self.get_color(component.style.color or "primary")
             filled_w = (component.progress / 100.0) * w
             radius = component.style.border_radius or getattr(
