@@ -1,4 +1,4 @@
-from profileforge.components.layout import Column, Component, Spacer
+from profileforge.components.layout import Column, Component, Row, Spacer
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, Text
 from profileforge.core.context import BuildContext
@@ -28,37 +28,47 @@ class GithubStatsWidget(Widget):
         prs = stats.prs if stats else 0
         commits = stats.commits if stats else 0
 
-        title_text = Text(
-            f"GitHub Stats ({username})",
-            style=Style(font_size=20, font_weight="bold", color="text"),
-        )
+        def create_stat_block(label: str, value: str, icon: str) -> Component:
+            return Column(
+                children=[
+                    Row(
+                        children=[
+                            Text(icon, style=Style(font_size=16)),
+                            Spacer(width=8),
+                            Text(
+                                label.upper(),
+                                style=Style(
+                                    font_size=12, font_weight="bold", color="muted"
+                                ),
+                            ),
+                        ],
+                        spacing=0,
+                        style=Style(align="center"),
+                    ),
+                    Spacer(height=12),
+                    Text(
+                        value,
+                        style=Style(font_size=32, font_weight="bold", color="text"),
+                    ),
+                ],
+                spacing=0,
+                style=Style(align="center"),
+            )
 
-        stars_text = Text(f"⭐ Stars: {stars}", style=Style(font_size=16, color="text"))
-        prs_text = Text(f"🔄 PRs: {prs}", style=Style(font_size=16, color="text"))
-        commits_text = Text(
-            f"🔥 Commits: {commits}", style=Style(font_size=16, color="text")
-        )
-
-        content = Column(
+        content = Row(
             children=[
-                title_text,
-                Spacer(height=16),
-                stars_text,
-                Spacer(height=8),
-                prs_text,
-                Spacer(height=8),
-                commits_text,
+                create_stat_block("Total Stars", str(stars), "⭐"),
+                create_stat_block("Pull Requests", str(prs), "🔄"),
+                create_stat_block("Total Commits", str(commits), "🔥"),
             ],
             spacing=0,
-            style=Style(width="fill", height="fill", justify="center", align="center"),
+            style=Style(width="fill", justify="space-between", align="center"),
         )
 
         from profileforge.components.layout import Padding
 
         return Card(
-            title="",
-            child=Padding(
-                child=content, value=20, style=Style(width="fill", height="fill")
-            ),
-            style=Style(width=820, elevation="medium", variant="default"),
+            title=f"GitHub Stats (@{username})",
+            child=Padding(child=content, value=40, style=Style(width="fill")),
+            style=Style(width=820, elevation="medium", variant="solid"),
         )
