@@ -11,7 +11,7 @@ from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_connector
 from profileforge.core.secrets import SecretStore
 
-from .models import GitHubLanguage, GitHubStats
+from .models import GitHubLanguageStats, GitHubRepository, GitHubStats
 
 
 @register_connector("github")
@@ -80,7 +80,7 @@ class GithubConnector(Connector):
         except Exception as e:
             raise ConnectorError(f"Failed to fetch GitHub stats: {e}")
 
-    def get_languages(self, username: str) -> list[GitHubLanguage]:
+    def get_repositories(self, username: str) -> list[GitHubRepository]:
         if httpx is None:
             raise ConnectorError(
                 "The 'github' connector requires httpx. "
@@ -97,39 +97,101 @@ class GithubConnector(Connector):
 
         try:
             with httpx.Client(headers=headers, timeout=10.0) as client:
+                if token:
+                    # GraphQL
+                    query = """
+                    query($username: String!) {
+                        user(login: $username) {
+                            repositories(first: 100, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
+                                nodes {
+                                    name
+                                    stargazerCount
+                                    primaryLanguage {
+                                        name
+                                    }
+                                    languages(first: 10) {
+                                        edges {
+                                            size
+                                            node {
+                                                name
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    """
+                    resp = client.post(
+                        "https://api.github.com/graphql",
+                        json={"query": query, "variables": {"username": username}},
+                    )
+
+                    if resp.status_code == 200 and "errors" not in resp.json():
+                        data = resp.json()
+                        nodes = (
+                            data.get("data", {})
+                            .get("user", {})
+                            .get("repositories", {})
+                            .get("nodes", [])
+                        )
+
+                        repos = []
+                        for node in nodes:
+                            name = node.get("name", "")
+                            stars = node.get("stargazerCount", 0)
+                            primary_lang = node.get("primaryLanguage")
+                            primary_language = (
+                                primary_lang.get("name") if primary_lang else None
+                            )
+
+                            lang_stats = []
+                            edges = node.get("languages", {}).get("edges", [])
+                            for edge in edges:
+                                size = edge.get("size", 0)
+                                lang_name = edge.get("node", {}).get("name", "")
+                                if lang_name and size > 0:
+                                    lang_stats.append(
+                                        GitHubLanguageStats(name=lang_name, bytes=size)
+                                    )
+
+                            repos.append(
+                                GitHubRepository(
+                                    name=name,
+                                    stars=stars,
+                                    primary_language=primary_language,
+                                    languages=lang_stats,
+                                )
+                            )
+                        return repos
+
+                # Fallback to REST
                 repos_resp = client.get(
                     f"https://api.github.com/users/{username}/repos?per_page=100"
                 )
                 if repos_resp.status_code != 200:
                     return []
 
-                repos = repos_resp.json()
-                lang_counts = {}
-                total_valid_repos = 0
-
-                for repo in repos:
+                raw_repos = repos_resp.json()
+                repos = []
+                for repo in raw_repos:
+                    name = repo.get("name", "")
+                    stars = repo.get("stargazers_count", 0)
                     lang = repo.get("language")
+
+                    lang_stats = []
                     if lang:
-                        if lang == "Jupyter Notebook":
-                            lang = "Python"
+                        lang_stats.append(GitHubLanguageStats(name=lang, bytes=1))
 
-                        lang_counts[lang] = lang_counts.get(lang, 0) + 1
-                        total_valid_repos += 1
-
-                if total_valid_repos == 0:
-                    return []
-
-                # Calculate percentages
-                languages = []
-                for lang, count in lang_counts.items():
-                    pct = (count / total_valid_repos) * 100
-                    languages.append(
-                        GitHubLanguage(name=lang, percentage=round(pct, 1))
+                    repos.append(
+                        GitHubRepository(
+                            name=name,
+                            stars=stars,
+                            primary_language=lang,
+                            languages=lang_stats,
+                        )
                     )
-
-                # Sort by percentage descending, take top 5
-                languages.sort(key=lambda x: x.percentage, reverse=True)
-                return languages[:5]
+                return repos
 
         except Exception as e:
-            raise ConnectorError(f"Failed to fetch GitHub languages: {e}")
+            raise ConnectorError(f"Failed to fetch GitHub repositories: {e}")
