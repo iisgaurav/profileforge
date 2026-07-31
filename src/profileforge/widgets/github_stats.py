@@ -1,8 +1,10 @@
-from profileforge.components.layout import Column, Component, Row, Spacer
+from profileforge.components.layout import Component, Padding, Row
 from profileforge.components.style import Style
-from profileforge.components.widgets import Card, Text
+from profileforge.components.widgets import Card, CircularMetric, Metric, MetricGroup
 from profileforge.core.context import BuildContext
+from profileforge.core.models import MetricsConfig
 from profileforge.core.registry import register_widget
+from profileforge.services.stats import ScoreCalculator
 from profileforge.widgets.base import Widget
 
 
@@ -28,44 +30,34 @@ class GithubStatsWidget(Widget):
         prs = stats.prs if stats else 0
         commits = stats.commits if stats else 0
 
-        def create_stat_block(label: str, value: str, icon: str) -> Component:
-            return Column(
-                children=[
-                    Row(
-                        children=[
-                            Text(icon, style=Style(font_size=16)),
-                            Spacer(width=8),
-                            Text(
-                                label.upper(),
-                                style=Style(
-                                    font_size=12, font_weight="bold", color="muted"
-                                ),
-                            ),
-                        ],
-                        spacing=0,
-                        style=Style(align="center"),
-                    ),
-                    Spacer(height=12),
-                    Text(
-                        value,
-                        style=Style(font_size=32, font_weight="bold", color="text"),
-                    ),
-                ],
-                spacing=0,
-                style=Style(align="center"),
-            )
+        stats_dict = {
+            "stars": stars,
+            "prs": prs,
+            "commits": commits,
+        }
 
-        content = Row(
-            children=[
-                create_stat_block("Total Stars", str(stars), "⭐"),
-                create_stat_block("Pull Requests", str(prs), "🔄"),
-                create_stat_block("Total Commits", str(commits), "🔥"),
-            ],
-            spacing=0,
-            style=Style(width="fill", justify="space-between", align="center"),
+        metrics_config = getattr(context.config, "metrics", MetricsConfig())
+        score_calc = ScoreCalculator(metrics_config)
+        score = score_calc.calculate(stats_dict)
+
+        circular = CircularMetric(
+            value=score, max_value=1000, label="Total Score", icon="star"
         )
 
-        from profileforge.components.layout import Padding
+        metrics = [
+            Metric(label="Total Stars", value=stars, icon="star"),
+            Metric(label="Pull Requests", value=prs, icon="pr"),
+            Metric(label="Total Commits", value=commits, icon="commit"),
+            Metric(label="Repositories", value="--", icon="repo"),  # dummy for layout
+        ]
+
+        group = MetricGroup(metrics=metrics, columns=2, spacing=16)
+
+        content = Row(
+            children=[circular, group],
+            spacing=64,
+            style=Style(width="fill", justify="center", align="center"),
+        )
 
         return Card(
             title=f"GitHub Stats (@{username})",

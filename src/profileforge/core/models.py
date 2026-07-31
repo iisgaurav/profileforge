@@ -60,6 +60,13 @@ class MotionTokens:
 
 
 @dataclass
+class EffectsTokens:
+    glow: str
+    shadow: str
+    glass: str
+
+
+@dataclass
 class Theme:
     name: str
     mode: str  # "minimal", "modern", "showcase"
@@ -69,6 +76,7 @@ class Theme:
     radius: RadiusTokens
     shadows: ShadowTokens
     motion: MotionTokens
+    effects: EffectsTokens
     extends: Optional[str] = None
 
 
@@ -123,6 +131,12 @@ class DashboardConfig:
 
 
 @dataclass
+class MetricsConfig:
+    enabled: bool = True
+    strategy: str = "weighted_sum"
+
+
+@dataclass
 class ProfileForgeConfig:
     version: int
     project_name: str
@@ -132,6 +146,7 @@ class ProfileForgeConfig:
     connectors_config: dict[str, Any]
     outputs: Outputs
     dashboard: DashboardConfig = field(default_factory=DashboardConfig)
+    metrics: MetricsConfig = field(default_factory=MetricsConfig)
 
 
 @dataclass

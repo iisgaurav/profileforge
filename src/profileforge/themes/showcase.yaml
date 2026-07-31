@@ -37,3 +37,8 @@ motion:
   duration_normal: 400
   duration_slow: 800
   easing: "cubic-bezier(0.68, -0.55, 0.27, 1.55)"
+effects:
+  glow: "none"
+  shadow: "none"
+  glass: "none"
+

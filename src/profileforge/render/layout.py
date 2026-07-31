@@ -3,7 +3,16 @@ from __future__ import annotations
 from typing import Optional
 
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer, Wrap
-from profileforge.components.widgets import Badge, Card, ProgressBar, Text
+from profileforge.components.widgets import (
+    Badge,
+    Card,
+    CircularMetric,
+    Icon,
+    Metric,
+    MetricGroup,
+    ProgressBar,
+    Text,
+)
 
 
 class LayoutEngine:
@@ -248,6 +257,47 @@ class LayoutEngine:
             )
             component.computed_height = resolved_h or (
                 component.child.computed_height + title_offset + 20
+            )
+
+        elif isinstance(component, Icon):
+            component.computed_width = resolved_w or 16
+            component.computed_height = resolved_h or 16
+
+        elif isinstance(component, Metric):
+            component.computed_width = resolved_w or 140
+            component.computed_height = resolved_h or 80
+
+        elif isinstance(component, CircularMetric):
+            component.computed_width = resolved_w or 120
+            component.computed_height = resolved_h or 120
+
+        elif isinstance(component, MetricGroup):
+            current_x = start_x
+            current_y = start_y
+            max_w = 0
+            max_h_in_row = 0
+
+            for i, child in enumerate(component.metrics):
+                if i > 0 and i % component.columns == 0:
+                    current_x = start_x
+                    current_y += max_h_in_row + component.spacing
+                    max_h_in_row = 0
+
+                LayoutEngine.calculate(child, 0, 0, None, None)
+                cw = child.computed_width
+                ch = child.computed_height
+
+                child.computed_x = current_x
+                child.computed_y = current_y
+                LayoutEngine.calculate(child, current_x, current_y, None, None)
+
+                current_x += cw + component.spacing
+                max_w = max(max_w, current_x - start_x - component.spacing)
+                max_h_in_row = max(max_h_in_row, ch)
+
+            component.computed_width = resolved_w or max_w
+            component.computed_height = resolved_h or (
+                current_y - start_y + max_h_in_row
             )
 
         # Enforce hard width/height if explicitly provided via style properties

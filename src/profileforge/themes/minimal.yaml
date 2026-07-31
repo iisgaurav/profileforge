@@ -37,3 +37,8 @@ motion:
   duration_normal: 200
   duration_slow: 300
   easing: "ease-in-out"
+effects:
+  glow: "none"
+  shadow: "none"
+  glass: "none"
+

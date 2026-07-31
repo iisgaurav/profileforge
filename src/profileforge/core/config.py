@@ -8,7 +8,9 @@ from profileforge.core.models import (
     DashboardConfig,
     DashboardFooterConfig,
     DashboardHeaderConfig,
+    EffectsTokens,
     GridConfig,
+    MetricsConfig,
     MotionTokens,
     OutputConfig,
     Outputs,
@@ -100,6 +102,12 @@ class ConfigLoader:
             ),
         )
 
+        metrics_data = data.get("metrics", {})
+        metrics = MetricsConfig(
+            enabled=metrics_data.get("enabled", True),
+            strategy=metrics_data.get("strategy", "weighted_sum"),
+        )
+
         return ProfileForgeConfig(
             version=version,
             project_name=project.get("name", "Profile"),
@@ -109,6 +117,7 @@ class ConfigLoader:
             connectors_config=data.get("connectors", {}),
             outputs=outputs,
             dashboard=dashboard,
+            metrics=metrics,
         )
 
     @staticmethod
@@ -140,6 +149,7 @@ class ConfigLoader:
         radius = RadiusTokens(**data.get("radius", {}))
         shadows = ShadowTokens(**data.get("shadows", {}))
         motion = MotionTokens(**data.get("motion", {}))
+        effects = EffectsTokens(**data.get("effects", {}))
 
         return Theme(
             name=data.get("name", theme_name),
@@ -150,5 +160,6 @@ class ConfigLoader:
             radius=radius,
             shadows=shadows,
             motion=motion,
+            effects=effects,
             extends=data.get("extends"),
         )
