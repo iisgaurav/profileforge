@@ -23,10 +23,15 @@ class GithubLanguagesWidget(Widget):
         if github_connector:
             try:
                 repos = github_connector.get_repositories(username)
-                ignore_list = self.config.get("ignore", [])
-                data, is_estimated = LanguageAggregator.aggregate(
-                    repos, ignore=ignore_list
-                )
+                
+                ignore_list = []
+                for w_cfg in context.config.widgets:
+                    if w_cfg.name == "github_languages":
+                        cfg = w_cfg.options.get("config", {})
+                        ignore_list = cfg.get("ignore", [])
+                        break
+                        
+                data, is_estimated = LanguageAggregator.aggregate(repos, ignore=ignore_list)
                 data = data[:5]
             except Exception:
                 pass
