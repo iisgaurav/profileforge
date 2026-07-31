@@ -53,8 +53,12 @@ class GithubStatsWidget(Widget):
             style=Style(width="fill", height="fill", justify="center", align="center"),
         )
 
+        from profileforge.components.layout import Padding
+
         return Card(
             title="",
-            child=content,
-            style=Style(width=820, height=200, elevation="medium", variant="default"),
+            child=Padding(
+                child=content, value=20, style=Style(width="fill", height="fill")
+            ),
+            style=Style(width=820, elevation="medium", variant="default"),
         )
