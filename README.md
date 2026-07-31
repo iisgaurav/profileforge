@@ -19,16 +19,15 @@ Inspired by modern UI frameworks, it combines reusable components, a Flex-style 
 
   <br />
 
-  <table>
-    <tr>
-      <td>
-        <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
-      </td>
-      <td>
-        <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
-      </td>
-    </tr>
-  </table>
+  <picture>
+    <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
+  </picture>
+
+  <br />
+
+  <picture>
+    <img src="https://raw.githubusercontent.com/iisgaurav/iisgaurav/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
+  </picture>
 </div>
 
 > *The preview above is generated entirely by ProfileForge from a YAML config. No SVG written by hand. Users compose multiple SVGs in their README for maximum flexibility.*
@@ -163,16 +162,15 @@ Done.
 
   <br />
 
-  <table>
-    <tr>
-      <td>
-        <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
-      </td>
-      <td>
-        <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
-      </td>
-    </tr>
-  </table>
+  <picture>
+    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/roadmap.svg" alt="Roadmap" width="100%">
+  </picture>
+
+  <br />
+
+  <picture>
+    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/engine-config/assets/expertise.svg" alt="Expertise" width="100%">
+  </picture>
 </div>
 ```
 
