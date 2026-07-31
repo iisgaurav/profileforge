@@ -15,12 +15,9 @@ class GithubStatsWidget(Widget):
         local_connector = context.services.connectors.get("local")
         github_connector = context.services.connectors.get("github")
 
-        request = DataRequest(resource="about.yaml")
-        data = local_connector.fetch(request) if local_connector else {}
-        if isinstance(data, list):
-            data = data[0] if data else {}
-
-        username = data.get("github_username", "octocat")
+        username = "octocat"
+        if github_connector:
+            username = github_connector.config.get("username", "octocat")
 
         stats = None
         if github_connector:
@@ -61,5 +58,5 @@ class GithubStatsWidget(Widget):
         return Card(
             title="",
             child=content,
-            style=Style(width=400, height=200, elevation="medium", variant="default"),
+            style=Style(width=820, height=200, elevation="medium", variant="default"),
         )
