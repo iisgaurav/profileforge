@@ -1,6 +1,9 @@
 from typing import Any
 
-import httpx
+try:
+    import httpx
+except ImportError:
+    httpx = None
 
 from profileforge.connectors.base import Connector
 from profileforge.core.exceptions import ConnectorError
@@ -18,6 +21,12 @@ class GithubConnector(Connector):
         return None
 
     def get_stats(self, username: str) -> GitHubStats:
+        if httpx is None:
+            raise ConnectorError(
+                "The 'github' connector requires httpx. "
+                "Please install it with: pip install profileforge[github]"
+            )
+
         token = SecretStore.get("GITHUB_TOKEN")
         headers = {
             "Accept": "application/vnd.github.v3+json",
