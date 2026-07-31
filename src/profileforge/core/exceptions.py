@@ -18,5 +18,5 @@ class RendererError(ProfileForgeError):
     """Raised when the layout engine or renderer fails"""
 
 
-class DataSourceError(ProfileForgeError):
-    """Raised when a datasource fails to fetch required data"""
+class ConnectorError(ProfileForgeError):
+    """Raised when a connector fails to fetch required data"""

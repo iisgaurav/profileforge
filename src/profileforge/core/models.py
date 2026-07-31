@@ -129,7 +129,7 @@ class ProfileForgeConfig:
     project_title: str
     active_theme: str
     widgets: list[WidgetConfig]
-    datasources_config: dict[str, Any]
+    connectors_config: dict[str, Any]
     outputs: Outputs
     dashboard: DashboardConfig = field(default_factory=DashboardConfig)
 

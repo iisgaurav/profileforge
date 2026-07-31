@@ -12,9 +12,9 @@ class AboutWidget(Widget):
     """Hero card: name, role, status badge, tagline, and quick links."""
 
     def build(self, context: BuildContext) -> Component:
-        datasource = context.services.datasources.get("local")
+        connector = context.services.connectors.get("local")
         request = DataRequest(resource="about.yaml")
-        data = datasource.fetch(request) if datasource else {}
+        data = connector.fetch(request) if connector else {}
 
         if isinstance(data, list):
             data = data[0] if data else {}

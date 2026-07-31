@@ -4,7 +4,7 @@ from typing import Any
 from profileforge.core.models import DataRequest
 
 
-class DataSource(ABC):
+class Connector(ABC):
     def __init__(self, config: dict[str, Any]):
         self.config = config
 

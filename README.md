@@ -221,7 +221,7 @@ Card(
         child=Column(
             children=[
                 Row(children=[Badge("Python"), Badge("FastAPI")], spacing=10),
-                Row(children=[Badge("Docker"), Badge("Redis")],   spacing=10),
+                Row(children=[Badge("Docker"), Badge("Redis")], spacing=10),
             ],
             spacing=10,
         ),

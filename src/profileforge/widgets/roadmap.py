@@ -10,10 +10,10 @@ from profileforge.widgets.base import Widget
 @register_widget("roadmap")
 class RoadmapWidget(Widget):
     def build(self, context: BuildContext) -> Component:
-        # Request data from Local DataSource
-        datasource = context.services.datasources.get("local")
+        # Request data from Local Connector
+        connector = context.services.connectors.get("local")
         request = DataRequest(resource="roadmap.yaml")
-        data = datasource.fetch(request) if datasource else []
+        data = connector.fetch(request) if connector else []
 
         # Build declarative layout tree using v0.2 layout system
         rows = []

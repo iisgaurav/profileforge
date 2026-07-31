@@ -3,18 +3,21 @@ import os
 import sys
 from pathlib import Path
 
+import profileforge.connectors.github.connector
+
 # Ensure registries populate via side-effects
-import profileforge.datasources.local
+import profileforge.connectors.local
 import profileforge.widgets.about
 import profileforge.widgets.expertise
 import profileforge.widgets.focus
+import profileforge.widgets.github_stats
 import profileforge.widgets.roadmap  # noqa: F401
 
 # Ensure registries populate
 from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
 from profileforge.core.exceptions import ProfileForgeError
-from profileforge.core.registry import DATASOURCE_REGISTRY, WIDGET_REGISTRY
+from profileforge.core.registry import WIDGET_REGISTRY, ConnectorRegistry
 from profileforge.render.layout import LayoutEngine
 from profileforge.render.svg.renderer import SVGRenderer
 
@@ -37,15 +40,15 @@ def cmd_build(args):
         theme = ConfigLoader.load_theme(config.active_theme, themes_dir=str(theme_dir))
         print_success(f'Loaded theme \\"{theme.name}\\"')
 
-        datasources = {}
-        for name, ds_config in config.datasources_config.items():
-            if name in DATASOURCE_REGISTRY:
+        connectors = {}
+        for name, ds_config in config.connectors_config.items():
+            if name in ConnectorRegistry:
                 # adjust relative path
                 if "root" in ds_config:
                     ds_config["root"] = str(config_path.parent / ds_config["root"])
-                datasources[name] = DATASOURCE_REGISTRY[name](ds_config)
+                connectors[name] = ConnectorRegistry[name](ds_config)
 
-        services = Services(datasources=datasources)
+        services = Services(connectors=connectors)
         context = BuildContext(theme=theme, config=config, services=services)
         svg_renderer = SVGRenderer(context)
 
@@ -124,7 +127,7 @@ def cmd_doctor(args):
         print("  - profileforge.yaml NOT found in current directory")
 
     print_success(f"Widgets registered: {list(WIDGET_REGISTRY.keys())}")
-    print_success(f"DataSources registered: {list(DATASOURCE_REGISTRY.keys())}")
+    print_success(f"Connectors registered: {list(ConnectorRegistry.keys())}")
     print("\nDiagnostics complete.")
 
 
@@ -191,7 +194,7 @@ project:
   name: "New Profile"
 themes:
   active: "github-dark"
-datasources:
+connectors:
   local:
     root: "./config"
 widgets: []

@@ -1,7 +1,7 @@
 from typing import Callable
 
 WIDGET_REGISTRY: dict[str, type] = {}
-DATASOURCE_REGISTRY: dict[str, type] = {}
+ConnectorRegistry: dict[str, type] = {}
 
 
 def register_widget(name: str) -> Callable:
@@ -12,9 +12,9 @@ def register_widget(name: str) -> Callable:
     return wrapper
 
 
-def register_datasource(name: str) -> Callable:
+def register_connector(name: str) -> Callable:
     def wrapper(cls):
-        DATASOURCE_REGISTRY[name] = cls
+        ConnectorRegistry[name] = cls
         return cls
 
     return wrapper

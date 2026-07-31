@@ -6,7 +6,7 @@ from profileforge.core.models import ProfileForgeConfig, Theme
 
 @dataclass
 class Services:
-    datasources: dict[str, Any] = field(default_factory=dict)  # str -> DataSource
+    connectors: dict[str, Any] = field(default_factory=dict)  # str -> Connector
     # renderer: Renderer will be injected later
 
 

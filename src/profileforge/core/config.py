@@ -106,7 +106,7 @@ class ConfigLoader:
             project_title=project.get("title", "Developer"),
             active_theme=themes.get("active", "github-dark"),
             widgets=widgets,
-            datasources_config=data.get("datasources", {}),
+            connectors_config=data.get("connectors", {}),
             outputs=outputs,
             dashboard=dashboard,
         )

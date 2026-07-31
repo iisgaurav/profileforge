@@ -10,9 +10,9 @@ from profileforge.widgets.base import Widget
 @register_widget("expertise")
 class ExpertiseWidget(Widget):
     def build(self, context: BuildContext) -> Component:
-        datasource = context.services.datasources.get("local")
+        connector = context.services.connectors.get("local")
         request = DataRequest(resource="expertise.yaml")
-        data = datasource.fetch(request) if datasource else {}
+        data = connector.fetch(request) if connector else {}
 
         # Fallback for old list format
         if isinstance(data, list):

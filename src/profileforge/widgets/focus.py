@@ -10,9 +10,9 @@ from profileforge.widgets.base import Widget
 @register_widget("focus")
 class FocusWidget(Widget):
     def build(self, context: BuildContext) -> Component:
-        datasource = context.services.datasources.get("local")
+        connector = context.services.connectors.get("local")
         request = DataRequest(resource="focus.yaml")
-        data = datasource.fetch(request) if datasource else {}
+        data = connector.fetch(request) if connector else {}
 
         sections = []
         for category, items in data.items():
