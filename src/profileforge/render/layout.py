@@ -29,6 +29,9 @@ class LayoutEngine:
         if hasattr(component, "children") and component.children:
             for child in component.children:
                 LayoutEngine.shift(child, dx, dy)
+        if hasattr(component, "metrics") and component.metrics:
+            for child in component.metrics:
+                LayoutEngine.shift(child, dx, dy)
 
     @staticmethod
     def calculate(
