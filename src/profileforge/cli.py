@@ -10,6 +10,7 @@ import profileforge.connectors.local
 import profileforge.widgets.about
 import profileforge.widgets.expertise
 import profileforge.widgets.focus
+import profileforge.widgets.github_languages
 import profileforge.widgets.github_stats
 import profileforge.widgets.roadmap  # noqa: F401
 

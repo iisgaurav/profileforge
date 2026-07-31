@@ -11,7 +11,7 @@ from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_connector
 from profileforge.core.secrets import SecretStore
 
-from .models import GitHubStats
+from .models import GitHubLanguage, GitHubStats
 
 
 @register_connector("github")
@@ -79,3 +79,57 @@ class GithubConnector(Connector):
                 return GitHubStats(stars=stars, prs=prs, commits=commits)
         except Exception as e:
             raise ConnectorError(f"Failed to fetch GitHub stats: {e}")
+
+    def get_languages(self, username: str) -> list[GitHubLanguage]:
+        if httpx is None:
+            raise ConnectorError(
+                "The 'github' connector requires httpx. "
+                "Please install it with: pip install profileforge[github]"
+            )
+
+        token = SecretStore.get("GITHUB_TOKEN")
+        headers = {
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": "ProfileForge",
+        }
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+
+        try:
+            with httpx.Client(headers=headers, timeout=10.0) as client:
+                repos_resp = client.get(
+                    f"https://api.github.com/users/{username}/repos?per_page=100"
+                )
+                if repos_resp.status_code != 200:
+                    return []
+
+                repos = repos_resp.json()
+                lang_counts = {}
+                total_valid_repos = 0
+
+                for repo in repos:
+                    lang = repo.get("language")
+                    if lang:
+                        if lang == "Jupyter Notebook":
+                            lang = "Python"
+
+                        lang_counts[lang] = lang_counts.get(lang, 0) + 1
+                        total_valid_repos += 1
+
+                if total_valid_repos == 0:
+                    return []
+
+                # Calculate percentages
+                languages = []
+                for lang, count in lang_counts.items():
+                    pct = (count / total_valid_repos) * 100
+                    languages.append(
+                        GitHubLanguage(name=lang, percentage=round(pct, 1))
+                    )
+
+                # Sort by percentage descending, take top 5
+                languages.sort(key=lambda x: x.percentage, reverse=True)
+                return languages[:5]
+
+        except Exception as e:
+            raise ConnectorError(f"Failed to fetch GitHub languages: {e}")
