@@ -1,0 +1,25 @@
+version: 1
+project:
+  name: "Backend Engineer Profile"
+  title: "Senior Backend & Distributed Systems Engineer"
+
+themes:
+  active: "github-dark"
+
+connectors:
+  local:
+    root: "./config"
+  github:
+    username: "octocat"
+
+widgets:
+  - name: hero
+  - name: skills
+  - name: repositories
+  - name: github_stats
+  - name: experience
+
+outputs:
+  svg:
+    enabled: true
+    dir: "assets"

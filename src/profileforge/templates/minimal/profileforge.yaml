@@ -1,0 +1,23 @@
+version: 1
+project:
+  name: "Minimal Developer Profile"
+  title: "Software Craftsman"
+
+themes:
+  active: "minimal"
+
+connectors:
+  local:
+    root: "./config"
+  github:
+    username: "octocat"
+
+widgets:
+  - name: hero
+  - name: about
+  - name: repositories
+
+outputs:
+  svg:
+    enabled: true
+    dir: "assets"

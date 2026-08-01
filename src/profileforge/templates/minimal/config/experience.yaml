@@ -1,0 +1,13 @@
+experience:
+  - role: "Independent Systems Consultant"
+    company: "Vance Engineering"
+    period: "2022 — Present"
+    description: "Designing deterministic state machines and low-latency storage engines."
+    highlights:
+      - "Reduced database query latency by 70% with customized index caching."
+  - role: "Senior Backend Engineer"
+    company: "Nordic Logic Labs"
+    period: "2019 — 2022"
+    description: "Architected distributed transaction management services."
+    highlights:
+      - "Maintained 99.999% uptime across production payment pipelines."

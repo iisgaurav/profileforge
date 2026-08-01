@@ -27,6 +27,11 @@ from profileforge.core.exceptions import ProfileForgeError
 from profileforge.core.registry import WIDGET_REGISTRY, ConnectorRegistry
 from profileforge.render.layout import LayoutEngine
 from profileforge.render.svg.renderer import SVGRenderer
+from profileforge.templates import (
+    get_template_info,
+    list_builtin_templates,
+    scaffold_template,
+)
 
 
 def print_success(msg: str):
@@ -175,6 +180,10 @@ def cmd_doctor(args):
                 print_error(f"Failed to load built-in theme {theme_file.name}: {e}")
         print_success(f"Validated {valid_builtin} built-in themes")
 
+    templates = list_builtin_templates()
+    if templates:
+        print_success(f"Built-in templates ({len(templates)}): {', '.join(templates)}")
+
     print("\nDiagnostics complete.")
 
 
@@ -225,41 +234,102 @@ def cmd_validate(args):
 
 
 def cmd_new(args):
-    target = Path(args.name)
-    if target.exists():
-        print_error(f"Directory '{args.name}' already exists.")
+    template_name = getattr(args, "template", "backend") or "backend"
+    available_templates = list_builtin_templates()
+
+    if template_name not in available_templates:
+        print_error(
+            f"Unknown template '{template_name}'.\n"
+            f"Available templates: {', '.join(available_templates)}\n"
+            f"Run 'profileforge templates list' to see details of all templates."
+        )
         sys.exit(1)
 
-    target.mkdir()
-    (target / "config").mkdir()
-    (target / "themes").mkdir()
-    (target / "assets").mkdir()
+    target = Path(args.name)
+    if target.exists() and any(target.iterdir()):
+        print_error(f"Directory '{args.name}' already exists and is not empty.")
+        sys.exit(1)
 
-    with open(target / "profileforge.yaml", "w") as f:
-        f.write("""version: 1
-project:
-  name: "New Profile"
-themes:
-  active: "github-dark"
-connectors:
-  local:
-    root: "./config"
-widgets: []
-outputs:
-  svg:
-    enabled: true
-    dir: "assets"
-""")
+    project_name = args.name.replace("-", " ").replace("_", " ").title() + " Profile"
 
-    with open(target / "themes" / "github-dark.yaml", "w") as f:
-        f.write("""name: github-dark
-background: "#0D1117"
-primary: "#58A6FF"
-text: "#C9D1D9"
-""")
+    try:
+        scaffold_template(
+            template_name=template_name,
+            target_dir=target,
+            project_name=project_name,
+        )
+        print_success(
+            f"Created new ProfileForge project in '{args.name}' using '{template_name}' template"
+        )
+        print_success(f"Config and starter widgets seeded in '{args.name}/config'")
+        print(
+            f"\nRun 'cd {args.name}' then 'profileforge build' to compile your profile widgets."
+        )
+    except Exception as e:
+        print_error(f"Failed to scaffold template: {e}")
+        sys.exit(1)
 
-    print_success(f"Created new ProfileForge project in '{args.name}'")
-    print(f"\nRun 'cd {args.name}' then 'profileforge build' to get started.")
+
+def cmd_init(args):
+    template_name = getattr(args, "template", "backend") or "backend"
+    available_templates = list_builtin_templates()
+
+    if template_name not in available_templates:
+        print_error(
+            f"Unknown template '{template_name}'.\n"
+            f"Available templates: {', '.join(available_templates)}\n"
+            f"Run 'profileforge templates list' to see details of all templates."
+        )
+        sys.exit(1)
+
+    target_dir = Path(args.directory).resolve()
+    config_file = target_dir / "profileforge.yaml"
+    if config_file.exists():
+        print_error(f"A ProfileForge project already exists at '{target_dir}'.")
+        sys.exit(1)
+
+    project_name = getattr(args, "name", None)
+    if not project_name:
+        dir_name = target_dir.name
+        project_name = (
+            "Developer Profile"
+            if dir_name in (".", "", "profileforge")
+            else f"{dir_name.replace('-', ' ').replace('_', ' ').title()} Profile"
+        )
+
+    try:
+        scaffold_template(
+            template_name=template_name,
+            target_dir=target_dir,
+            project_name=project_name,
+        )
+        print_success(
+            f"Initialized ProfileForge project in '{args.directory}' using '{template_name}' template"
+        )
+        print("\nRun 'profileforge build' to compile your profile widgets.")
+    except Exception as e:
+        print_error(f"Failed to initialize project: {e}")
+        sys.exit(1)
+
+
+def cmd_templates_list(args):
+    print("Available ProfileForge Starter Templates:\n")
+    template_ids = list_builtin_templates()
+    for t_id in template_ids:
+        info = get_template_info(t_id) or {}
+        name = info.get("name", t_id.title())
+        theme = info.get("default_theme", "github-dark")
+        desc = info.get("description", "")
+        widgets = ", ".join(info.get("widgets", []))
+        print(f"  * {t_id:<14} {name} (Default Theme: {theme})")
+        if widgets:
+            print(f"    Widgets:     {widgets}")
+        if desc:
+            print(f"    Description: {desc}")
+        print()
+    print("Scaffold a new project:")
+    print("  profileforge new <dir-name> --template <template-id>")
+    print("  profileforge init --template <template-id>\n")
 
 
 def cmd_themes_build(args):
@@ -335,11 +405,11 @@ def cmd_themes_build(args):
                     f'<svg width="{total_w}" height="{total_h}" '
                     f'viewBox="0 0 {total_w} {total_h}" '
                     f'xmlns="http://www.w3.org/2000/svg" '
-                    f'role="img">\\n'
-                    f"  <title>{escaped_title}</title>\\n"
-                    f"  <desc>ProfileForge widget preview</desc>\\n"
-                    f"  {defs_block}\\n"
-                    f"  {inner_svg}\\n"
+                    f'role="img">\n'
+                    f"  <title>{escaped_title}</title>\n"
+                    f"  <desc>ProfileForge widget preview</desc>\n"
+                    f"  {defs_block}\n"
+                    f"  {inner_svg}\n"
                     f"</svg>"
                 )
 
@@ -371,10 +441,35 @@ def main():
 
     subparsers.add_parser("doctor", help="Check dependencies and environment")
 
+    init_parser = subparsers.add_parser(
+        "init", help="Initialize a ProfileForge project in target directory"
+    )
+    init_parser.add_argument(
+        "directory",
+        nargs="?",
+        default=".",
+        help="Target directory (default: current directory)",
+    )
+    init_parser.add_argument(
+        "--template",
+        "-t",
+        default="backend",
+        help="Starter template to use (backend, frontend, minimal, student, opensource, ai-engineer)",
+    )
+    init_parser.add_argument(
+        "--name", default=None, help="Custom project name override"
+    )
+
     new_parser = subparsers.add_parser(
-        "new", help="Scaffold a new ProfileForge project"
+        "new", help="Scaffold a new ProfileForge project in a new directory"
     )
     new_parser.add_argument("name", help="Name of the new project directory")
+    new_parser.add_argument(
+        "--template",
+        "-t",
+        default="backend",
+        help="Starter template to use (backend, frontend, minimal, student, opensource, ai-engineer)",
+    )
 
     validate_parser = subparsers.add_parser(
         "validate", help="Validate a configuration file"
@@ -384,6 +479,12 @@ def main():
     )
     validate_parser.add_argument(
         "--output", default=None, help="Output directory to check write access"
+    )
+
+    templates_parser = subparsers.add_parser("templates", help="Template commands")
+    templates_subparsers = templates_parser.add_subparsers(dest="templates_command")
+    templates_subparsers.add_parser(
+        "list", help="List all available official starter templates"
     )
 
     themes_parser = subparsers.add_parser("themes", help="Theme commands")
@@ -403,10 +504,20 @@ def main():
         cmd_build(args)
     elif args.command == "doctor":
         cmd_doctor(args)
+    elif args.command == "init":
+        cmd_init(args)
     elif args.command == "validate":
         cmd_validate(args)
     elif args.command == "new":
         cmd_new(args)
+    elif args.command == "templates":
+        if args.templates_command in ("list", None):
+            cmd_templates_list(args)
+        else:
+            print_error(
+                f"Command 'templates {args.templates_command}' is not implemented."
+            )
+            sys.exit(1)
     elif args.command == "themes":
         if args.themes_command == "build":
             cmd_themes_build(args)

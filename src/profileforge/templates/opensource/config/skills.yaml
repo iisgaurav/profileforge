@@ -1,0 +1,19 @@
+categories:
+  Core Languages:
+    - "Rust"
+    - "TypeScript"
+    - "Go"
+    - "Python"
+    - "C"
+  Tooling & Ecosystem:
+    - "CLI Frameworks"
+    - "Cargo"
+    - "npm / pnpm"
+    - "GitHub Actions"
+    - "Docker"
+  OSS Standards:
+    - "Semantic Versioning"
+    - "Conventional Commits"
+    - "RFC Specifications"
+    - "API Snapshots"
+    - "Benchmark Harnesses"

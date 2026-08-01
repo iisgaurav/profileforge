@@ -21,7 +21,12 @@ dependencies = [
 ]
 
 [tool.setuptools.package-data]
-profileforge = ["themes/*.yaml"]
+profileforge = [
+    "themes/*.yaml",
+    "templates/*/*.yaml",
+    "templates/*/*.md",
+    "templates/*/config/*.yaml",
+]
 
 [project.optional-dependencies]
 dev = [

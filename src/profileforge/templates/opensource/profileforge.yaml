@@ -1,0 +1,25 @@
+version: 1
+project:
+  name: "Open Source Creator Profile"
+  title: "Open Source Maintainer & Tooling Architect"
+
+themes:
+  active: "github-dark"
+
+connectors:
+  local:
+    root: "./config"
+  github:
+    username: "octocat"
+
+widgets:
+  - name: hero
+  - name: repositories
+  - name: github_stats
+  - name: github_languages
+  - name: social
+
+outputs:
+  svg:
+    enabled: true
+    dir: "assets"

@@ -1,0 +1,8 @@
+- skill: "Custom FlashAttention CUDA Kernels"
+  progress: 85
+- skill: "Multi-Agent Verifiable Code Generation"
+  progress: 90
+- skill: "Speculative Decoding on Edge Devices"
+  progress: 70
+- skill: "RLHF & Direct Preference Optimization (DPO)"
+  progress: 80
