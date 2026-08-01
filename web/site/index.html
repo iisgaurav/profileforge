@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProfileForge — Declarative Framework for GitHub Profile Dashboards</title>
+  <meta name="description" content="ProfileForge is the declarative Python framework for building beautiful, animated GitHub profile dashboards with 15 composable widgets, 14 themes, and a zero-install Studio." />
+  <meta name="keywords" content="github profile, svg widgets, profile readme, profileforge, github readme generator, python framework" />
+  <meta name="author" content="ProfileForge Team" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProfileForge — Declarative Framework for GitHub Profile Dashboards" />
+  <meta property="og:description" content="Stop copy-pasting SVG templates. Build composable, themed GitHub profile dashboards with ProfileForge." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/iisgaurav/profileforge" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ProfileForge — Framework for GitHub Profile Dashboards" />
+  <meta name="twitter:description" content="15 widgets. 14 themes. Zero-install Studio. Build beautiful profiles declaratively." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230D1117'/><path d='M16,27 C11,23 9,17 11,11 C12,8 14,6 15,4 C15,4 15.5,10 17,12 C17,12 18.5,6 20,4 C22,9 22,15 20,19 C21,16 23,13 21,9 C24,13 24,19 21,23 C19,27 17,28 16,28 Z' fill='%23FF6B35'/></svg>" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="flame">🔥</span>
+      <span>Profile<span class="forge-text">Forge</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#showcase" class="nav-link">Showcase</a>
+      <a href="#widget-showcase" class="nav-link">Widgets</a>
+      <a href="#theme-gallery" class="nav-link">Themes</a>
+      <a href="../index.html" class="nav-link">Studio</a>
+      <a href="https://github.com/iisgaurav/profileforge#readme" class="nav-link" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/iisgaurav/profileforge" class="nav-link nav-link-github" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero" role="main">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        v1.0.0-rc1 — Now Available
+      </div>
+      <h1 class="hero-title">
+        Stop copy-pasting<br><span class="highlight">SVG templates.</span>
+      </h1>
+      <p class="hero-subtitle">
+        ProfileForge is the declarative Python framework for beautiful, animated GitHub profile dashboards.
+        15 composable widgets. 14 token-based themes. Zero-install Studio.
+      </p>
+      <div class="hero-ctas">
+        <a id="hero-cta-github" href="https://github.com/iisgaurav/profileforge" target="_blank" rel="noopener" class="btn btn-primary">
+          ⭐ Star on GitHub
+        </a>
+        <a id="hero-cta-studio" href="../index.html" class="btn btn-secondary">
+          Open Studio →
+        </a>
+      </div>
+      <!-- Badge Row -->
+      <div class="hero-badge-row" aria-label="Project status badges">
+        <img src="https://img.shields.io/github/actions/workflow/status/iisgaurav/profileforge/ci.yml?label=CI&style=flat-square&logo=github" alt="CI Status" loading="lazy" />
+        <img src="https://img.shields.io/badge/version-1.0.0--rc1-FF6B35?style=flat-square" alt="Version 1.0.0-rc1" loading="lazy" />
+        <img src="https://img.shields.io/badge/python-3.10%2B-58A6FF?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" loading="lazy" />
+        <img src="https://img.shields.io/badge/build%20time-%3C50ms-2EA043?style=flat-square&logo=lightning" alt="Build time under 50ms" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LIVE SHOWCASE ==================== -->
+<section id="showcase" aria-labelledby="showcase-heading">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 48px;">
+      <div class="section-label">✨ Live Preview</div>
+      <h2 id="showcase-heading" class="section-title">See what ProfileForge renders</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Real SVG output from the ProfileForge engine. Every card is a live widget rendered with a different theme.</p>
+    </div>
+    <div class="showcase-grid" role="list" aria-label="Widget preview cards">
+      <div class="showcase-card" role="listitem">
+        <div class="showcase-img-wrap">
+          <img src="../../gallery/assets/github_stats_dracula.svg" alt="GitHub Stats widget in Dracula theme" loading="lazy" />
+        </div>
+        <div class="showcase-caption">
+          <span class="showcase-widget-name">GitHub Stats</span>
+          <span class="showcase-theme-tag">dracula</span>
+        </div>
+        <p class="showcase-desc">Stars, PRs, commits, and developer score — rendered in Dracula's iconic purple palette.</p>
+      </div>
+      <div class="showcase-card" role="listitem">
+        <div class="showcase-img-wrap">
+          <img src="../../gallery/assets/skills_catppuccin-mocha.svg" alt="Technical Skills widget in Catppuccin Mocha theme" loading="lazy" />
+        </div>
+        <div class="showcase-caption">
+          <span class="showcase-widget-name">Technical Skills</span>
+          <span class="showcase-theme-tag">catppuccin-mocha</span>
+        </div>
+        <p class="showcase-desc">Categorized skill badges rendered with Catppuccin Mocha's soft lavender tokens.</p>
+      </div>
+      <div class="showcase-card" role="listitem">
+        <div class="showcase-img-wrap">
+          <img src="../../gallery/assets/streak_nord.svg" alt="Contribution Streak widget in Nord theme" loading="lazy" />
+        </div>
+        <div class="showcase-caption">
+          <span class="showcase-widget-name">Contribution Streak</span>
+          <span class="showcase-theme-tag">nord</span>
+        </div>
+        <p class="showcase-desc">Daily GitHub streak, longest run, and consistency rate — styled in Nord's arctic blues.</p>
+      </div>
+      <div class="showcase-card" role="listitem">
+        <div class="showcase-img-wrap">
+          <img src="../../gallery/assets/repositories_github-dark.svg" alt="Featured Repositories widget in GitHub Dark theme" loading="lazy" />
+        </div>
+        <div class="showcase-caption">
+          <span class="showcase-widget-name">Featured Repositories</span>
+          <span class="showcase-theme-tag">github-dark</span>
+        </div>
+        <p class="showcase-desc">Top pinned repos with stars, forks, and language badges in native GitHub Dark styling.</p>
+      </div>
+      <div class="showcase-card" role="listitem">
+        <div class="showcase-img-wrap">
+          <img src="../../gallery/assets/activity_timeline_apple.svg" alt="Activity Timeline widget in Apple theme" loading="lazy" />
+        </div>
+        <div class="showcase-caption">
+          <span class="showcase-widget-name">Activity Timeline</span>
+          <span class="showcase-theme-tag">apple</span>
+        </div>
+        <p class="showcase-desc">Commits, PRs and releases in a chronological timeline, rendered in Apple's clean light theme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 30-SECOND QUICKSTART ==================== -->
+<section id="quickstart" aria-labelledby="quickstart-heading">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 48px;">
+      <div class="section-label">🚀 30-Second Quickstart</div>
+      <h2 id="quickstart-heading" class="section-title">Up and running in seconds</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Pick the path that fits your workflow — CLI scaffold or zero-install Studio.</p>
+    </div>
+    <div class="qs-wrapper">
+      <!-- Tab bar -->
+      <div class="qs-tabs" role="tablist" aria-label="Quickstart options">
+        <button class="qs-tab active" id="tab-cli" role="tab" aria-selected="true" aria-controls="panel-cli" data-tab="cli">
+          <span class="qs-tab-icon">⌨️</span> CLI Scaffold
+        </button>
+        <button class="qs-tab" id="tab-studio" role="tab" aria-selected="false" aria-controls="panel-studio" data-tab="studio">
+          <span class="qs-tab-icon">🎨</span> Open Studio
+        </button>
+      </div>
+      <!-- Tab panels -->
+      <div class="qs-panel active" id="panel-cli" role="tabpanel" aria-labelledby="tab-cli">
+        <div class="qs-panel-header">
+          <div class="qs-window-dots">
+            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          </div>
+          <span class="qs-window-title">terminal</span>
+        </div>
+        <div class="qs-code-body">
+          <div class="qs-code-line"><span class="qs-step-num">1</span><span class="qs-comment"># Install ProfileForge</span></div>
+          <div class="qs-code-line"><span class="qs-prompt">$</span> <span class="qs-cmd">pip</span> <span class="qs-arg">install profileforge</span></div>
+          <div class="qs-code-line qs-gap"></div>
+          <div class="qs-code-line"><span class="qs-step-num">2</span><span class="qs-comment"># Scaffold a persona template</span></div>
+          <div class="qs-code-line"><span class="qs-prompt">$</span> <span class="qs-cmd">profileforge</span> <span class="qs-arg">scaffold backend</span></div>
+          <div class="qs-code-line qs-out">  ✔ Created config/hero.yaml</div>
+          <div class="qs-code-line qs-out">  ✔ Created config/skills.yaml</div>
+          <div class="qs-code-line qs-out">  ✔ Created profileforge.yaml</div>
+          <div class="qs-code-line qs-gap"></div>
+          <div class="qs-code-line"><span class="qs-step-num">3</span><span class="qs-comment"># Build your profile SVGs</span></div>
+          <div class="qs-code-line"><span class="qs-prompt">$</span> <span class="qs-cmd">profileforge</span> <span class="qs-arg">build</span></div>
+          <div class="qs-code-line qs-out">  ✔ 5 widgets built in 23ms  ⚡</div>
+        </div>
+        <div class="qs-tip">
+          💡 Available templates: <code>backend</code>, <code>frontend</code>, <code>ai-engineer</code>, <code>student</code>, <code>minimal</code> and 4 more.
+        </div>
+      </div>
+      <div class="qs-panel" id="panel-studio" role="tabpanel" aria-labelledby="tab-studio" hidden>
+        <div class="qs-studio-body">
+          <div class="qs-studio-icon">🎨</div>
+          <h3 class="qs-studio-title">Zero-install browser Studio</h3>
+          <p class="qs-studio-desc">No Python. No terminal. Open the Studio in your browser, pick a template, drag widgets, choose a theme — copy your README markdown in 30 seconds.</p>
+          <div class="qs-studio-steps">
+            <div class="qs-studio-step"><span class="qs-ss-num">1</span><span>Open Studio in your browser</span></div>
+            <div class="qs-studio-step"><span class="qs-ss-num">2</span><span>Select a persona template</span></div>
+            <div class="qs-studio-step"><span class="qs-ss-num">3</span><span>Choose a theme &amp; tweak widgets</span></div>
+            <div class="qs-studio-step"><span class="qs-ss-num">4</span><span>Copy Markdown → paste into GitHub</span></div>
+          </div>
+          <a href="../index.html" class="btn btn-primary qs-studio-cta" id="qs-studio-open-btn">
+            🚀 Open Studio — No Install Needed
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WIDGET GRID ==================== -->
+<section id="widget-showcase" aria-labelledby="widgets-heading">
+  <div class="container">
+    <div class="section-label">📦 15 Widgets</div>
+    <h2 id="widgets-heading" class="section-title">Every widget you need</h2>
+    <p class="section-subtitle">Each widget is an independent Python class. Combine freely. All stable for production.</p>
+    <div class="widget-grid" id="widget-showcase-grid" role="list"></div>
+  </div>
+</section>
+
+<!-- ==================== TEMPLATE SHOWCASE ==================== -->
+<section id="template-showcase" aria-labelledby="templates-heading">
+  <div class="container">
+    <div class="section-label">👥 9 Templates</div>
+    <h2 id="templates-heading" class="section-title">Start with your persona</h2>
+    <p class="section-subtitle">One command to scaffold a full profile config for your role. Fully customizable after.</p>
+    <div class="template-grid" id="template-grid" role="list"></div>
+  </div>
+</section>
+
+<!-- ==================== THEME GALLERY ==================== -->
+<section id="theme-gallery" aria-labelledby="themes-heading">
+  <div class="container">
+    <div class="section-label">🎨 14 Themes</div>
+    <h2 id="themes-heading" class="section-title">Token-based theming</h2>
+    <p class="section-subtitle">Every color is a design token. Swap any theme in your YAML config — no code changes.</p>
+    <div class="themes-grid" id="themes-grid" role="list"></div>
+  </div>
+</section>
+
+<!-- ==================== PERFORMANCE ==================== -->
+<section id="performance" aria-labelledby="perf-heading">
+  <div class="container">
+    <div class="section-label">⚡ Performance</div>
+    <h2 id="perf-heading" class="section-title">SLA-driven performance budgets</h2>
+    <p class="section-subtitle">Every release must pass all 6 performance budgets. Your profile builds in milliseconds, not seconds.</p>
+    <div class="perf-table-wrapper">
+      <table class="perf-table" aria-label="Performance benchmark results">
+        <thead>
+          <tr>
+            <th scope="col">Metric</th>
+            <th scope="col">Budget</th>
+            <th scope="col">Typical</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="perf-metric">Total Build</td><td class="perf-budget">≤ 50ms</td><td class="perf-typical">~23ms</td><td class="perf-pass">✅ Pass</td></tr>
+          <tr><td class="perf-metric">Widget Build</td><td class="perf-budget">≤ 5ms per widget</td><td class="perf-typical">~1.5ms</td><td class="perf-pass">✅ Pass</td></tr>
+          <tr><td class="perf-metric">Theme Load</td><td class="perf-budget">≤ 2ms</td><td class="perf-typical">~0.4ms</td><td class="perf-pass">✅ Pass</td></tr>
+          <tr><td class="perf-metric">Layout Pass</td><td class="perf-budget">≤ 10ms</td><td class="perf-typical">~3ms</td><td class="perf-pass">✅ Pass</td></tr>
+          <tr><td class="perf-metric">Render Pass</td><td class="perf-budget">≤ 10ms</td><td class="perf-typical">~5ms</td><td class="perf-pass">✅ Pass</td></tr>
+          <tr><td class="perf-metric">Config Parse</td><td class="perf-budget">≤ 5ms</td><td class="perf-typical">~1ms</td><td class="perf-pass">✅ Pass</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="perf-note">Benchmarks measured on GitHub Actions Ubuntu runner. Budget values from <code>budget.yaml</code>.</p>
+  </div>
+</section>
+
+<!-- ==================== VS ALTERNATIVES ==================== -->
+<section id="vs-alternatives" aria-labelledby="vs-heading">
+  <div class="container">
+    <div class="section-label">🔍 Comparison</div>
+    <h2 id="vs-heading" class="section-title">Framework vs. Generator</h2>
+    <p class="section-subtitle">ProfileForge is a different model — not a replacement for great generators, but a complement for developers who want more.</p>
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table" aria-label="Feature comparison with alternatives">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">github-readme-stats</th>
+            <th scope="col">metrics</th>
+            <th scope="col">ProfileForge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Model</td><td>Generator</td><td>Generator</td><td class="yes">Framework</td></tr>
+          <tr><td>Custom Layout</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+          <tr><td>Theme Inheritance</td><td class="partial">Limited params</td><td class="partial">Moderate</td><td class="yes">Token-based</td></tr>
+          <tr><td>Widget Lifecycle</td><td class="no">Monolithic</td><td class="partial">Partial</td><td class="yes">Independent</td></tr>
+          <tr><td>Failure Isolation</td><td class="no">No</td><td class="partial">Partial</td><td class="yes">Per-widget</td></tr>
+          <tr><td>Local Data / No API</td><td class="no">No</td><td class="partial">Optional</td><td class="yes">Yes (YAML)</td></tr>
+          <tr><td>Template System</td><td class="no">No</td><td class="no">No</td><td class="yes">9 personas</td></tr>
+          <tr><td>CLI Scaffold</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+          <tr><td>Self-Hosted</td><td class="partial">GitHub Pages only</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>Open Governance</td><td class="partial">Ad-hoc</td><td class="partial">Partial</td><td class="yes">RFC Process</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center; margin-top: 24px;">
+      <a href="./comparison.md" class="btn btn-secondary">📖 Read the Full Philosophy Comparison →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span>🔥</span>
+      <span>Profile<span style="color:var(--primary);">Forge</span></span>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="https://github.com/iisgaurav/profileforge" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="../index.html" class="footer-link">Studio</a>
+      <a href="https://github.com/iisgaurav/profileforge#readme" class="footer-link" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/iisgaurav/profileforge/blob/main/CONTRIBUTING.md" class="footer-link" target="_blank" rel="noopener">Contributing</a>
+      <a href="https://github.com/iisgaurav/profileforge/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      <a href="./comparison.md" class="footer-link">Comparison</a>
+    </nav>
+    <p class="footer-tagline">The declarative framework for beautiful, animated GitHub profile dashboards.</p>
+    <p class="footer-copy">© 2025 ProfileForge Team. Open source under MIT License.</p>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// ===== DATA =====
+const WIDGETS = [
+  { id: 'about', name: 'About', category: 'identity', connector: 'local', icon: '🪪', desc: 'Hero card: name, role, status badge, tagline, and location.' },
+  { id: 'achievements', name: 'Achievements', category: 'stats', connector: 'local', icon: '🏆', desc: 'Developer unlock badges showcasing milestones and GitHub awards.' },
+  { id: 'activity_timeline', name: 'Activity Timeline', category: 'development', connector: 'local', icon: '📅', desc: 'Recent commit events, PRs, releases in a chronological timeline.' },
+  { id: 'experience', name: 'Experience', category: 'career', connector: 'local', icon: '💼', desc: 'Career and work history timeline with roles, companies, dates.' },
+  { id: 'expertise', name: 'Expertise', category: 'career', connector: 'local', icon: '🎯', desc: 'Technical skills and expertise grouped by domain.' },
+  { id: 'focus', name: 'Current Focus', category: 'development', connector: 'local', icon: '🔭', desc: 'Displays current learning goals and projects with progress indicators.' },
+  { id: 'github_languages', name: 'GitHub Languages', category: 'stats', connector: 'github', icon: '🌐', desc: 'Top programming languages breakdown from GitHub repositories.' },
+  { id: 'github_stats', name: 'GitHub Stats', category: 'stats', connector: 'github', icon: '📊', desc: 'Summary of GitHub stars, PRs, commits, and developer score.' },
+  { id: 'hero', name: 'Hero', category: 'identity', connector: 'local', icon: '🦸', desc: 'Hero banner displaying developer name, role, status badge, and tagline.' },
+  { id: 'now', name: 'Now', category: 'development', connector: 'local', icon: '⏰', desc: "Derek Sivers-style 'Now' widget: building, reading, learning, focus." },
+  { id: 'repositories', name: 'Featured Repos', category: 'projects', connector: 'github', icon: '📦', desc: 'Showcases top GitHub repositories with stars, forks, and language badges.' },
+  { id: 'roadmap', name: 'Roadmap', category: 'development', connector: 'local', icon: '🗺️', desc: 'Learning and career milestones with progress bars.' },
+  { id: 'skills', name: 'Technical Skills', category: 'career', connector: 'local', icon: '🛠️', desc: 'Groups technical skills into categorized sections with badge chips.' },
+  { id: 'social', name: 'Social Links', category: 'social', connector: 'local', icon: '🔗', desc: 'Displays a clean row of social media links and profiles.' },
+  { id: 'streak', name: 'Contribution Streak', category: 'stats', connector: 'github', icon: '🔥', desc: 'Tracks daily GitHub contribution streaks and consistency rate.' },
+];
+
+const TEMPLATES = [
+  { name: 'AI & ML Engineer', theme: 'dracula', cmd: 'ai-engineer', themeColor: '#FF79C6', widgets: ['hero', 'skills', 'repositories', 'now', 'github_stats'] },
+  { name: 'Backend Engineer', theme: 'github-dark', cmd: 'backend', themeColor: '#58A6FF', widgets: ['hero', 'skills', 'repositories', 'github_stats', 'experience'] },
+  { name: 'Frontend Engineer', theme: 'modern', cmd: 'frontend', themeColor: '#3B82F6', widgets: ['hero', 'skills', 'repositories', 'github_stats', 'now'] },
+  { name: 'Indie Hacker', theme: 'modern', cmd: 'indie-hacker', themeColor: '#EC4899', widgets: ['hero', 'streak', 'repositories', 'focus', 'achievements'] },
+  { name: 'Minimalist', theme: 'minimal', cmd: 'minimal', themeColor: '#888888', widgets: ['hero', 'about', 'repositories'] },
+  { name: 'Open Source Maintainer', theme: 'dracula', cmd: 'open-source-maintainer', themeColor: '#FF79C6', widgets: ['hero', 'github_stats', 'repositories', 'activity_timeline', 'streak'] },
+  { name: 'Open Source Showcase', theme: 'github-dark', cmd: 'opensource', themeColor: '#58A6FF', widgets: ['hero', 'repositories', 'github_stats', 'github_languages', 'social'] },
+  { name: 'Security Engineer', theme: 'cyberpunk', cmd: 'security-engineer', themeColor: '#00FF41', widgets: ['hero', 'expertise', 'skills', 'achievements', 'repositories'] },
+  { name: 'Student & Learner', theme: 'catppuccin-mocha', cmd: 'student', themeColor: '#89b4fa', widgets: ['hero', 'skills', 'roadmap', 'repositories', 'social'] },
+];
+
+const THEMES = [
+  { id: 'apple', color: '#0071E3', mode: 'light', bg: '#F5F5F7' },
+  { id: 'catppuccin-base', color: '#58A6FF', mode: 'dark', bg: '#1e1e2e' },
+  { id: 'catppuccin-frappe', color: '#8caaee', mode: 'dark', bg: '#303446' },
+  { id: 'catppuccin-latte', color: '#1e66f5', mode: 'light', bg: '#eff1f5' },
+  { id: 'catppuccin-macchiato', color: '#8aadf4', mode: 'dark', bg: '#24273a' },
+  { id: 'catppuccin-mocha', color: '#89b4fa', mode: 'dark', bg: '#1e1e2e' },
+  { id: 'dracula', color: '#FF79C6', mode: 'dark', bg: '#282A36' },
+  { id: 'github-dark', color: '#58A6FF', mode: 'dark', bg: '#0D1117' },
+  { id: 'github-light', color: '#0969DA', mode: 'light', bg: '#ffffff' },
+  { id: 'minimal', color: '#000000', mode: 'light', bg: '#FFFFFF' },
+  { id: 'modern', color: '#3B82F6', mode: 'dark', bg: '#0F172A' },
+  { id: 'nord', color: '#88C0D0', mode: 'dark', bg: '#2E3440' },
+  { id: 'showcase', color: '#FFD700', mode: 'dark', bg: '#121212' },
+  { id: 'vercel', color: '#FFFFFF', mode: 'dark', bg: '#000000' },
+];
+
+// ===== WIDGET GRID =====
+const wGrid = document.getElementById('widget-showcase-grid');
+wGrid.innerHTML = WIDGETS.map(w => `
+  <div class="widget-card" role="listitem">
+    <div class="widget-card-header">
+      <span class="widget-icon">${w.icon}</span>
+      <span class="widget-connector connector-${w.connector}">${w.connector === 'github' ? '🐙 github' : '📁 local'}</span>
+    </div>
+    <div class="widget-id">${w.id}</div>
+    <div class="widget-name">${w.name}</div>
+    <div class="widget-desc">${w.desc}</div>
+    <div class="widget-footer">
+      <span class="category-chip chip-${w.category}">${w.category}</span>
+      <span class="stable-badge">✅ Stable</span>
+    </div>
+  </div>
+`).join('');
+
+// ===== TEMPLATE SHOWCASE =====
+const tGrid = document.getElementById('template-grid');
+tGrid.innerHTML = TEMPLATES.map(t => `
+  <div class="template-card" role="listitem">
+    <div class="template-name">${t.name}</div>
+    <span class="theme-badge" style="background:${t.themeColor}22; color:${t.themeColor}; border-color:${t.themeColor}44;">
+      🎨 ${t.theme}
+    </span>
+    <div class="template-widgets-list">
+      ${t.widgets.slice(0,3).map(wid => `<span class="template-widget-chip">${wid}</span>`).join('')}
+      ${t.widgets.length > 3 ? `<span class="template-widget-more">+${t.widgets.length - 3} more</span>` : ''}
+    </div>
+    <div class="template-command">
+      <span class="cmd-prefix">$</span>
+      <span class="cmd-tool">profileforge</span>
+      <span class="cmd-arg"> scaffold ${t.cmd}</span>
+    </div>
+  </div>
+`).join('');
+
+// ===== THEME GALLERY =====
+const thGrid = document.getElementById('themes-grid');
+thGrid.innerHTML = THEMES.map(t => `
+  <div class="theme-swatch-card" role="listitem" title="${t.id}">
+    <div class="swatch-circle-wrap" style="background:${t.bg};">
+      <div class="swatch-circle" style="background:${t.color};"></div>
+    </div>
+    <div class="theme-swatch-name">${t.id}</div>
+    <span class="mode-badge mode-${t.mode}">${t.mode}</span>
+  </div>
+`).join('');
+
+// ===== QUICKSTART TABS =====
+document.querySelectorAll('.qs-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetId = 'panel-' + tab.dataset.tab;
+    document.querySelectorAll('.qs-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.qs-panel').forEach(p => {
+      p.classList.remove('active');
+      p.hidden = true;
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    const panel = document.getElementById(targetId);
+    panel.classList.add('active');
+    panel.hidden = false;
+  });
+});
+
+// ===== PARTICLE ANIMATION =====
+(function initParticles() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function rand(min, max) { return min + Math.random() * (max - min); }
+
+  for (let i = 0; i < 55; i++) {
+    particles.push({
+      x: rand(0, W), y: rand(0, H),
+      r: rand(1, 3),
+      dx: rand(-0.3, 0.3), dy: rand(-0.5, -0.1),
+      alpha: rand(0.2, 0.8),
+      color: Math.random() > 0.5 ? '#FF6B35' : '#58A6FF'
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      ctx.save();
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+      p.x += p.dx; p.y += p.dy;
+      if (p.y < -10) { p.y = H + 10; p.x = rand(0, W); }
+      if (p.x < -10) p.x = W + 10;
+      if (p.x > W + 10) p.x = -10;
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ===== SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.widget-card, .template-card, .theme-swatch-card, .showcase-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
