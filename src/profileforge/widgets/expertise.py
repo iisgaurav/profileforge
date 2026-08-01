@@ -1,26 +1,44 @@
-from profileforge.components.layout import Column, Component, Padding, Spacer
+from typing import Any
+
+from profileforge.components.layout import Column, Component, Padding, Spacer, Wrap
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget
-from profileforge.widgets.base import Widget
+from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 
 
 @register_widget("expertise")
 class ExpertiseWidget(Widget):
-    def build(self, context: BuildContext) -> Component:
+    """Technical skills and expertise grouped by domain."""
+
+    def metadata(self) -> WidgetMetadata:
+        return WidgetMetadata(
+            id="expertise",
+            name="Expertise",
+            category=WidgetCategory.CAREER,
+            description="Technical skills and expertise grouped by domain.",
+            version="1.0.0",
+            author="ProfileForge Team",
+            tags=["skills", "expertise", "stack", "career"],
+            required_connectors=["local"],
+        )
+
+    def fetch(self, context: BuildContext) -> Any:
         connector = context.services.connectors.get("local")
         request = DataRequest(resource="expertise.yaml")
-        data = connector.fetch(request) if connector else {}
+        return connector.fetch(request) if connector else {}
 
-        # Fallback for old list format
+    def transform(self, data: Any, context: BuildContext) -> Any:
         if isinstance(data, list):
-            skills_dict = {"Skills": data}
-        else:
-            skills_dict = data.get("skills", {})
+            return {"Skills": data}
+        if isinstance(data, dict):
+            return data.get("skills", {})
+        return {}
 
-        from profileforge.components.layout import Wrap
+    def build(self, data: Any, context: BuildContext) -> Component:
+        skills_dict = data if isinstance(data, dict) else {}
 
         rows = []
         for category, items in skills_dict.items():
@@ -32,7 +50,7 @@ class ExpertiseWidget(Widget):
 
             badges = [Badge(item) for item in items]
 
-            # Use the new Wrap component for dynamic badge flow
+            # Use the Wrap component for dynamic badge flow
             rows.append(
                 Wrap(
                     children=badges, spacing=8, run_spacing=8, style=Style(width="fill")

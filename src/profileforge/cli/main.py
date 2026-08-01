@@ -74,7 +74,7 @@ def cmd_build(args):
                 continue
 
             widget = WIDGET_REGISTRY[w_config.name]()
-            component_tree = widget.build(context)
+            component_tree = widget.render_safe(context)
             LayoutEngine.calculate(component_tree)
 
             if config.outputs.svg.enabled:
@@ -315,7 +315,7 @@ def cmd_themes_build(args):
                 svg_renderer = SVGRenderer(context)
 
                 widget = WIDGET_REGISTRY["github_stats"]()
-                component_tree = widget.build(context)
+                component_tree = widget.render_safe(context)
                 LayoutEngine.calculate(component_tree)
 
                 inner_svg = svg_renderer.render(component_tree)

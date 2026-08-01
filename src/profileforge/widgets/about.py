@@ -1,24 +1,50 @@
+from typing import Any
+
 from profileforge.components.layout import Column, Component, Spacer
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget
-from profileforge.widgets.base import Widget
+from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 
 
 @register_widget("about")
 class AboutWidget(Widget):
     """Hero card: name, role, status badge, tagline, and quick links."""
 
-    def build(self, context: BuildContext) -> Component:
+    def metadata(self) -> WidgetMetadata:
+        return WidgetMetadata(
+            id="about",
+            name="About",
+            category=WidgetCategory.IDENTITY,
+            description="Hero card: name, role, status badge, tagline, and location.",
+            version="1.0.0",
+            author="ProfileForge Team",
+            tags=["about", "hero", "identity", "bio"],
+            required_connectors=["local"],
+        )
+
+    def fetch(self, context: BuildContext) -> Any:
         connector = context.services.connectors.get("local")
         request = DataRequest(resource="about.yaml")
-        data = connector.fetch(request) if connector else {}
+        return connector.fetch(request) if connector else {}
 
+    def transform(self, data: Any, context: BuildContext) -> Any:
         if isinstance(data, list):
             data = data[0] if data else {}
+        if not isinstance(data, dict):
+            data = {}
 
+        return {
+            "name": data.get("name", "Your Name"),
+            "role": data.get("role", "Software Engineer"),
+            "tagline": data.get("tagline", "Building things that matter."),
+            "status": data.get("status", "Open to collaborate"),
+            "location": data.get("location", ""),
+        }
+
+    def build(self, data: Any, context: BuildContext) -> Component:
         name = data.get("name", "Your Name")
         role = data.get("role", "Software Engineer")
         tagline = data.get("tagline", "Building things that matter.")

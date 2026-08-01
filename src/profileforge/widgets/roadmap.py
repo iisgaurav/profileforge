@@ -1,23 +1,45 @@
+from typing import Any
+
 from profileforge.components.layout import Column, Component, Padding, Row
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget
-from profileforge.widgets.base import Widget
+from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 
 
 @register_widget("roadmap")
 class RoadmapWidget(Widget):
-    def build(self, context: BuildContext) -> Component:
-        # Request data from Local Connector
+    """Learning and career milestones with progress bars."""
+
+    def metadata(self) -> WidgetMetadata:
+        return WidgetMetadata(
+            id="roadmap",
+            name="Roadmap",
+            category=WidgetCategory.DEVELOPMENT,
+            description="Learning and career milestones with progress bars.",
+            version="1.0.0",
+            author="ProfileForge Team",
+            tags=["roadmap", "milestones", "progress", "development"],
+            required_connectors=["local"],
+        )
+
+    def fetch(self, context: BuildContext) -> Any:
         connector = context.services.connectors.get("local")
         request = DataRequest(resource="roadmap.yaml")
-        data = connector.fetch(request) if connector else []
+        return connector.fetch(request) if connector else []
 
-        # Build declarative layout tree using v0.2 layout system
+    def transform(self, data: Any, context: BuildContext) -> Any:
+        if not isinstance(data, list):
+            return []
+        return data
+
+    def build(self, data: Any, context: BuildContext) -> Component:
+        items = data if isinstance(data, list) else []
+
         rows = []
-        for item in data:
+        for item in items:
             skill = item.get("skill", "Unknown")
             progress = item.get("progress", 0)
 

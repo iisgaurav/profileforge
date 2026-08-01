@@ -46,7 +46,7 @@ class BentoLayout(DashboardLayout):
         current_row_width = 0
 
         for item in dashboard.items:
-            widget_component = item.widget.build(context)
+            widget_component = item.widget.render_safe(context)
 
             # If widget asks for full width (width >= 2)
             if item.grid.width >= 2:

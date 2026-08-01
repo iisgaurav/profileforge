@@ -1,3 +1,5 @@
+from typing import Any
+
 from profileforge.components.layout import Component, Padding, Row
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, CircularMetric, Metric, MetricGroup
@@ -5,16 +7,27 @@ from profileforge.core.context import BuildContext
 from profileforge.core.models import MetricsConfig
 from profileforge.core.registry import register_widget
 from profileforge.services.stats import ScoreCalculator
-from profileforge.widgets.base import Widget
+from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 
 
 @register_widget("github_stats")
 class GithubStatsWidget(Widget):
     """Widget to display GitHub statistics."""
 
-    def build(self, context: BuildContext) -> Component:
-        github_connector = context.services.connectors.get("github")
+    def metadata(self) -> WidgetMetadata:
+        return WidgetMetadata(
+            id="github_stats",
+            name="GitHub Stats",
+            category=WidgetCategory.STATS,
+            description="Summary of GitHub stars, PRs, commits, and overall developer score.",
+            version="1.0.0",
+            author="ProfileForge Team",
+            tags=["github", "stats", "metrics", "analytics"],
+            required_connectors=["github"],
+        )
 
+    def fetch(self, context: BuildContext) -> Any:
+        github_connector = context.services.connectors.get("github")
         username = "octocat"
         if github_connector:
             username = github_connector.config.get("username", "octocat")
@@ -25,6 +38,14 @@ class GithubStatsWidget(Widget):
                 stats = github_connector.get_stats(username)
             except Exception:
                 pass
+
+        return {"username": username, "stats": stats}
+
+    def transform(self, data: Any, context: BuildContext) -> Any:
+        stats = data.get("stats") if isinstance(data, dict) else None
+        username = (
+            data.get("username", "octocat") if isinstance(data, dict) else "octocat"
+        )
 
         stars = stats.stars if stats else 0
         prs = stats.prs if stats else 0
@@ -39,6 +60,21 @@ class GithubStatsWidget(Widget):
         metrics_config = getattr(context.config, "metrics", MetricsConfig())
         score_calc = ScoreCalculator(metrics_config)
         score = score_calc.calculate(stats_dict)
+
+        return {
+            "username": username,
+            "score": score,
+            "stars": stars,
+            "prs": prs,
+            "commits": commits,
+        }
+
+    def build(self, data: Any, context: BuildContext) -> Component:
+        username = data.get("username", "octocat")
+        score = data.get("score", 0)
+        stars = data.get("stars", 0)
+        prs = data.get("prs", 0)
+        commits = data.get("commits", 0)
 
         circular = CircularMetric(
             value=score, max_value=1000, label="Total Score", icon="star"
