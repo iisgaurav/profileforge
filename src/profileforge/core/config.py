@@ -121,6 +121,20 @@ class ConfigLoader:
         )
 
     @staticmethod
+    def _deep_merge(base: dict, override: dict) -> dict:
+        merged = base.copy()
+        for key, value in override.items():
+            if (
+                isinstance(value, dict)
+                and key in merged
+                and isinstance(merged[key], dict)
+            ):
+                merged[key] = ConfigLoader._deep_merge(merged[key], value)
+            else:
+                merged[key] = value
+        return merged
+
+    @staticmethod
     def load_theme(theme_name: str, themes_dir: str = "themes") -> Theme:
         theme_file = Path(themes_dir) / f"{theme_name}.yaml"
         if not theme_file.exists():
@@ -141,7 +155,13 @@ class ConfigLoader:
             except yaml.YAMLError as e:
                 raise ThemeError(f"Invalid YAML syntax in theme {theme_name}: {e}")
 
-        # Future implementation would handle `extends` logic here
+        extends = data.get("extends")
+        if extends:
+            from dataclasses import asdict
+
+            base_theme = ConfigLoader.load_theme(extends, themes_dir)
+            base_data = asdict(base_theme)
+            data = ConfigLoader._deep_merge(base_data, data)
 
         colors = ColorTokens(**data.get("colors", {}))
         typography = TypographyTokens(**data.get("typography", {}))
@@ -161,5 +181,10 @@ class ConfigLoader:
             shadows=shadows,
             motion=motion,
             effects=effects,
-            extends=data.get("extends"),
+            extends=extends,
+            author=data.get("author"),
+            version=data.get("version"),
+            license=data.get("license"),
+            description=data.get("description"),
+            homepage=data.get("homepage"),
         )

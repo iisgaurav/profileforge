@@ -78,6 +78,11 @@ class Theme:
     motion: MotionTokens
     effects: EffectsTokens
     extends: Optional[str] = None
+    author: Optional[str] = None
+    version: Optional[str] = None
+    license: Optional[str] = None
+    description: Optional[str] = None
+    homepage: Optional[str] = None
 
 
 @dataclass

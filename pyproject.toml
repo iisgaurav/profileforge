@@ -35,7 +35,7 @@ github = [
 ]
 
 [project.scripts]
-profileforge = "profileforge.cli:main"
+profileforge = "profileforge.cli.main:main"
 
 [tool.black]
 target-version = ['py39']

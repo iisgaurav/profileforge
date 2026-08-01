@@ -1,0 +1,6 @@
+name: "catppuccin-base"
+mode: "dark"
+extends: "github-dark"
+typography:
+  font_family: "'Fira Code', 'JetBrains Mono', monospace"
+radius: {card: 16, progress: 8, badge: 16}

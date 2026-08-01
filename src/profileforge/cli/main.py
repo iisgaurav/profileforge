@@ -121,7 +121,19 @@ def cmd_doctor(args):
 
             theme_dir = config_path.parent / "themes"
             ConfigLoader.load_theme(config.active_theme, themes_dir=str(theme_dir))
-            print_success("Theme loaded successfully")
+            print_success(f"Active theme '{config.active_theme}' loaded successfully")
+
+            if theme_dir.exists():
+                valid_themes = 0
+                for theme_file in theme_dir.glob("*.yaml"):
+                    try:
+                        ConfigLoader.load_theme(
+                            theme_file.stem, themes_dir=str(theme_dir)
+                        )
+                        valid_themes += 1
+                    except Exception as e:
+                        print_error(f"Failed to load theme {theme_file.name}: {e}")
+                print_success(f"Validated {valid_themes} themes in {theme_dir}")
         except ProfileForgeError as e:
             print_error(f"Config/Theme error: {e}")
     else:
@@ -129,6 +141,20 @@ def cmd_doctor(args):
 
     print_success(f"Widgets registered: {list(WIDGET_REGISTRY.keys())}")
     print_success(f"Connectors registered: {list(ConnectorRegistry.keys())}")
+
+    builtin_themes_dir = Path(__file__).parent.parent / "themes"
+    if builtin_themes_dir.exists():
+        valid_builtin = 0
+        for theme_file in builtin_themes_dir.glob("*.yaml"):
+            try:
+                ConfigLoader.load_theme(
+                    theme_file.stem, themes_dir=str(builtin_themes_dir)
+                )
+                valid_builtin += 1
+            except Exception as e:
+                print_error(f"Failed to load built-in theme {theme_file.name}: {e}")
+        print_success(f"Validated {valid_builtin} built-in themes")
+
     print("\nDiagnostics complete.")
 
 
