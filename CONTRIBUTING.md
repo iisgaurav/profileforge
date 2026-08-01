@@ -1,51 +1,138 @@
-# Contributing to ProfileForge
+# Contributing to ProfileForge 🔥
 
-First off, thank you for considering contributing to ProfileForge!
-
-ProfileForge is a community-driven open source project. To keep the engine robust, maintainable, and backward-compatible, all contributions follow our architectural layers and governance guidelines.
+Thank you for your interest in contributing to ProfileForge! Whether you're fixing a typo, adding a new theme, optimizing SVG rendering, or building a custom widget, every contribution makes the ecosystem richer for developers worldwide. This guide will help you set up your environment and walk you through our contribution workflow.
 
 ---
 
-## 📖 Key Documentation
+## 🗺️ Quick Navigation
 
-Before starting your contribution, please review:
-- [Architecture Specification](file:///d:/WEB/profileforge/ARCHITECTURE.md) — Layer boundaries, dependency rules, and invariants.
-- [Architecture Decision Records (ADRs)](file:///d:/WEB/profileforge/docs/adr/) — Key technical decisions.
-- [RFC Process](file:///d:/WEB/profileforge/docs/RFC_PROCESS.md) — How to propose breaking changes or new layers.
-- [Widget Authoring Guide](file:///d:/WEB/profileforge/docs/WIDGET_AUTHORING.md) — How to create new widgets.
-- [Design System & Tokens](file:///d:/WEB/profileforge/docs/TOKENS.md) — Token definitions for theming.
-
----
-
-## 🛠️ Development Setup
-
-1. Clone the repository and navigate to the project directory.
-2. Install with development dependencies:
-   ```bash
-   pip install -e ".[dev]"
-   ```
-
-3. Code formatting and linting:
-   ```bash
-   ruff format src/ tests/ tools/
-   ruff check src/ tests/ tools/
-   ```
-
-4. Run the automated test suite:
-   ```bash
-   pytest
-   ```
-
-5. Verify API snapshot lock:
-   ```bash
-   python tools/api_lock.py --check
-   ```
+| I want to... | Guide |
+|---|---|
+| Make my first open-source contribution | [FIRST_CONTRIBUTION.md](docs/community/FIRST_CONTRIBUTION.md) |
+| Submit a new visual theme | [SUBMIT_THEME.md](docs/community/SUBMIT_THEME.md) |
+| Submit a custom SVG widget | [SUBMIT_WIDGET.md](docs/community/SUBMIT_WIDGET.md) |
+| Submit a persona profile template | [SUBMIT_TEMPLATE.md](docs/community/SUBMIT_TEMPLATE.md) |
+| Submit a data connector | [SUBMIT_CONNECTOR.md](docs/community/SUBMIT_CONNECTOR.md) |
+| Join the core team as a maintainer | [BECOME_MAINTAINER.md](docs/community/BECOME_MAINTAINER.md) |
+| Understand the overall architecture | [ECOSYSTEM.md](docs/community/ECOSYSTEM.md) |
 
 ---
 
-## 📋 Pull Request Guidelines
+## 🚀 Development Setup
 
-1. **Declare Layers**: When opening a PR, complete the **Layer Declaration Checklist** in the PR template.
-2. **Respect Frozen Layers**: Core/Models, Themes, Components, Layout, and Render APIs cannot be broken without an approved [RFC](file:///d:/WEB/profileforge/docs/RFC_PROCESS.md).
-3. **Verify API Lock**: Ensure `python tools/api_lock.py --check` passes cleanly in CI.
-4. **Include Tests**: Add unit tests in `tests/` covering new features, edge cases, and bug fixes.
+To get started developing ProfileForge locally, follow these setup steps:
+
+### 1. Prerequisites
+- Python 3.9, 3.10, 3.11, 3.12, or 3.13
+- Git 2.25+
+- Virtual environment tool (`venv` or `conda`)
+
+### 2. Clone and Setup Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/iisgaurav/profileforge.git
+cd profileforge
+
+# Create a virtual environment
+python -m venv .venv
+
+# Activate virtual environment
+# On Linux/macOS:
+source .venv/bin/activate
+# On Windows PowerShell:
+.\.venv\Scripts\Activate.ps1
+
+# Install package in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### 3. Run Self-Diagnostics & Tests
+
+Verify your setup by running the internal diagnostics tool and unit test suite:
+
+```bash
+# Run ProfileForge system doctor check
+profileforge doctor
+
+# Run full pytest test suite
+pytest tests/ -v
+
+# Run linter and formatter checks
+ruff check .
+ruff format --check .
+```
+
+---
+
+## 🎯 Ways to Contribute & Difficulty Levels
+
+We welcome contributions across all areas of the project! Here is a summary of contribution types and their typical difficulty:
+
+| Contribution Type | Focus Area | Difficulty | Primary Skills |
+|---|---|---|---|
+| **Themes** | Visual styling & color palettes | ⭐ Easy | YAML, CSS Colors |
+| **Templates** | Persona configs & scaffolds | ⭐ Easy | YAML, Scaffolding |
+| **Documentation** | Guides, RFCs, & CLI help strings | ⭐ Easy | Markdown, Technical Writing |
+| **Widgets** | New SVG visual components | ⭐⭐ Medium | Python, SVG XML |
+| **Connectors** | Data fetching APIs & RSS | ⭐⭐ Medium | Python, REST APIs |
+| **Layout Engine** | Two-pass sizing & grid arrangement | ⭐⭐⭐ Hard | Python, Geometry Math |
+| **Core Architecture** | CLI, rendering pipeline, plugin system | ⭐⭐⭐ Hard | Python, System Design |
+
+Looking for beginner-friendly tasks? Check out our curated list of **[Good First Issues](.github/good-first-issues/)**!
+
+---
+
+## 📦 Pull Request Guidelines
+
+To maintain architectural integrity and high test quality, please ensure your Pull Request follows these guidelines:
+
+### 1. Branch Naming & Layer Scoping
+Name your branch clearly according to the task type:
+- `feat/theme-tokyo-night`
+- `fix/layout-row-wrap`
+- `docs/widget-authoring-examples`
+
+### 2. Architectural Rules & Layer Hierarchy
+ProfileForge follows a strict layered architecture (`core` → `connectors` → `themes` → `layout` → `widgets` → `cli`).
+- **Layer Declaration**: Note which architectural layer your changes affect in the PR description.
+- **Frozen Layers**: Do not modify low-level core contracts (`src/profileforge/core/models.py`) without opening an RFC first.
+- **API Lock Check**: Ensure no public function signatures are changed without updating dependent callers.
+
+### 3. Code Standards & Linting
+- Run `ruff check .` and fix all warnings.
+- Format code using `ruff format .`.
+- Add type annotations (`typing`) to all new Python functions.
+
+### 4. Unit Testing Requirement
+- Every new feature or bug fix must include corresponding tests in `tests/`.
+- Ensure tests cover edge cases (e.g. empty data, missing API credentials).
+- Run `pytest --cov=src/profileforge` to ensure coverage does not decrease.
+
+---
+
+## 🏛️ Project Architecture & Design System
+
+Before submitting complex changes, take time to review our technical design docs:
+
+- **High-Level Architecture**: Read [`ARCHITECTURE.md`](ARCHITECTURE.md) to understand rendering lifecycle, two-pass layout math, and caching pipelines.
+- **Architectural Decision Records**: Browse [`docs/adr/`](docs/adr/) for historical design choices regarding SVG generation and YAML schema validation.
+- **Ecosystem Overview**: Read [`ECOSYSTEM.md`](docs/community/ECOSYSTEM.md) for details on plugins, connectors, and Studio web integrations.
+
+---
+
+## 🎖️ Recognition & Community
+
+Every contributor is valued!
+- All merged code and documentation contributions are automatically acknowledged in [`CHANGELOG.md`](CHANGELOG.md).
+- Significant contributors are invited to join the ProfileForge organization as maintainers (see [`BECOME_MAINTAINER.md`](docs/community/BECOME_MAINTAINER.md)).
+
+---
+
+## 📜 Code of Conduct
+
+We are committed to fostering a welcoming, respectful, and inclusive community for everyone. All contributors and maintainers are expected to adhere to our Code of Conduct in all project spaces, issues, and pull requests. Be kind, collaborative, and constructive!
+
+---
+
+Thank you again for building ProfileForge with us! Happy coding! 🚀

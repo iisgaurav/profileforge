@@ -1,0 +1,11 @@
+# Official color palette
+- Full table: Name | Hex | RGB | HSL | Usage
+  - Primary: #FF6B35 - ember orange - CTAs, accent, flame icon
+  - Secondary: #58A6FF - GitHub blue - links, interactive
+  - Background: #0D1117 - deep space - page backgrounds
+  - Surface: #161B22 - elevated surface - card backgrounds
+  - Border: #30363D - subtle border - dividers
+  - Text: #E6EDF3 - primary text - headings, body
+  - Muted: #8B949E - secondary text - captions
+- Usage rules, accessibility contrast ratios
+- Dark mode is default

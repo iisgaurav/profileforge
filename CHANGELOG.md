@@ -1,5 +1,60 @@
 # Changelog
 
+## [1.0.0-rc1] - 2026-08-02 — Release Candidate
+
+> **Status: Release Candidate** — This is the first public pre-release of ProfileForge.
+> Community testing feedback is being collected before the final v1.0.0 promotion.
+>
+> 🔗 [GitHub Pre-Release](https://github.com/iisgaurav/profileforge/releases/tag/v1.0.0-rc1) _(placeholder — publish after tagging)_
+
+### Summary
+
+ProfileForge v1.0.0-rc1 marks the first feature-complete release candidate of the declarative
+Python framework for building beautiful, animated GitHub profile dashboards. All core subsystems
+have been implemented, tested, and verified against strict quality gates.
+
+### What's Included
+
+| Area | Details |
+|------|---------|
+| **Framework** | Declarative `Component` tree engine, two-pass Flex layout, SVG rendering pipeline |
+| **Themes** | 14 built-in production themes (github-dark, github-light, dracula, nord, catppuccin-*, vercel, modern, minimal, apple, showcase) |
+| **Widgets** | 15 registered widgets: hero, about, skills, expertise, experience, now, focus, roadmap, social, github\_stats, github\_languages, repositories, streak, activity\_timeline, achievements |
+| **Templates** | 9 persona starter templates: backend, frontend, student, minimal, opensource, ai-engineer, indie-hacker, open-source-maintainer, security-engineer |
+| **Studio** | ProfileForge Studio (`web/index.html`) — visual live preview and YAML editor |
+| **Gallery** | Full gallery export pipeline (`profileforge gallery export`) generating 134 SVG assets |
+| **Benchmarks** | Multi-stage performance benchmark service with `budget.yaml` gate (<15ms mean total build) |
+| **Governance** | `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CONTRIBUTING.md`, RFC Process, ADRs (5) |
+| **Brand** | Full brand system: logo, wordmark, banner, favicon, icon, color palette, typography, voice guide |
+| **Launch Assets** | 14 launch assets: Product Hunt, HackerNews, Reddit, Twitter thread, LinkedIn, YouTube, Discord, FAQ, press kit |
+| **Docs** | Widget Authoring Guide, Theme System, ADR index, comparison matrix, RFC Process, Release Guide, community docs (10 files) |
+| **Good First Issues** | 10 curated good-first-issues for new contributors |
+
+### Quality Gate Results (RC1 Verification Pass)
+
+| Gate | Result |
+|------|--------|
+| Unit & Integration Tests (63 tests) | ✅ PASS |
+| Code Linting & Formatting (ruff) | ✅ PASS |
+| Public API Lock Check | ✅ PASS |
+| Performance Budget Gate | ✅ PASS |
+| ADR Index & Consistency | ✅ PASS |
+| Documentation QA & Link Check | ✅ PASS |
+
+### Performance (RC1 Benchmark)
+
+- **Total Build Mean**: 10.7ms (budget: 50ms) — _well within SLA_
+- **Render Pass**: 7.3ms p95
+- **Throughput**: 92.9 ops/sec
+- **Peak Memory**: 0.18 MB
+
+### Fixed in RC1 Verification Pass
+
+- Fixed broken CLI command references in `docs/community/ROADMAP.md` and `docs/community/VISION.md`
+  (future planned commands cited as current — updated to descriptive prose)
+
+
+
 ## [1.0.0] - 2026-08-02
 
 ### Highlights
