@@ -8,11 +8,17 @@ import profileforge.connectors.github.connector
 # Ensure registries populate via side-effects
 import profileforge.connectors.local
 import profileforge.widgets.about
+import profileforge.widgets.experience
 import profileforge.widgets.expertise
 import profileforge.widgets.focus
 import profileforge.widgets.github_languages
 import profileforge.widgets.github_stats
-import profileforge.widgets.roadmap  # noqa: F401
+import profileforge.widgets.hero
+import profileforge.widgets.now
+import profileforge.widgets.repositories
+import profileforge.widgets.roadmap
+import profileforge.widgets.skills
+import profileforge.widgets.social  # noqa: F401
 
 # Ensure registries populate
 from profileforge.core.config import ConfigLoader

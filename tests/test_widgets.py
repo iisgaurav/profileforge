@@ -150,11 +150,17 @@ def test_widget_render_safe_failure_isolation(mock_theme):
 def test_builtin_widgets_metadata():
     expected_widgets = [
         "about",
+        "experience",
         "expertise",
         "focus",
-        "roadmap",
-        "github_stats",
         "github_languages",
+        "github_stats",
+        "hero",
+        "now",
+        "repositories",
+        "roadmap",
+        "skills",
+        "social",
     ]
 
     for name in expected_widgets:
@@ -184,11 +190,17 @@ def test_builtin_widgets_render_safe(mock_theme):
 
     for name in [
         "about",
+        "experience",
         "expertise",
         "focus",
-        "roadmap",
-        "github_stats",
         "github_languages",
+        "github_stats",
+        "hero",
+        "now",
+        "repositories",
+        "roadmap",
+        "skills",
+        "social",
     ]:
         widget_cls = WIDGET_REGISTRY[name]
         widget = widget_cls()

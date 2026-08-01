@@ -105,7 +105,9 @@ class GithubConnector(Connector):
                             repositories(first: 100, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
                                 nodes {
                                     name
+                                    description
                                     stargazerCount
+                                    forkCount
                                     primaryLanguage {
                                         name
                                     }
@@ -139,7 +141,9 @@ class GithubConnector(Connector):
                         repos = []
                         for node in nodes:
                             name = node.get("name", "")
+                            description = node.get("description") or ""
                             stars = node.get("stargazerCount", 0)
+                            forks = node.get("forkCount", 0)
                             primary_lang = node.get("primaryLanguage")
                             primary_language = (
                                 primary_lang.get("name") if primary_lang else None
@@ -161,6 +165,8 @@ class GithubConnector(Connector):
                                     stars=stars,
                                     primary_language=primary_language,
                                     languages=lang_stats,
+                                    description=description,
+                                    forks=forks,
                                 )
                             )
                         return repos
@@ -176,7 +182,9 @@ class GithubConnector(Connector):
                 repos = []
                 for repo in raw_repos:
                     name = repo.get("name", "")
+                    description = repo.get("description") or ""
                     stars = repo.get("stargazers_count", 0)
+                    forks = repo.get("forks_count", 0)
                     lang = repo.get("language")
 
                     lang_stats = []
@@ -189,6 +197,8 @@ class GithubConnector(Connector):
                             stars=stars,
                             primary_language=lang,
                             languages=lang_stats,
+                            description=description,
+                            forks=forks,
                         )
                     )
                 return repos

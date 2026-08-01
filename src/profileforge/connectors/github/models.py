@@ -28,3 +28,5 @@ class GitHubRepository:
     stars: int
     primary_language: str | None
     languages: list[GitHubLanguageStats] = field(default_factory=list)
+    description: str = ""
+    forks: int = 0
