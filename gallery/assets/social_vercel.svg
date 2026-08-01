@@ -1,0 +1,108 @@
+<svg width="820" height="195" viewBox="0 0 820 195" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>social - vercel</title>
+  <desc>ProfileForge widget preview</desc>
+  <defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#FFFFFF"/>
+    <stop offset="100%" stop-color="#0070F3" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#333333" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#333333" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#111111" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#111111" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3b0918"/>
+    <stop offset="50%" stop-color="#1e1333"/>
+    <stop offset="100%" stop-color="#091629"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#A1A1AA" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#A1A1AA" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+  
+<svg x="0" y="0" width="820" height="195" viewBox="0 0 820 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+    <title>Connect &amp; Socials Card</title>
+    <desc>Card component for Connect &amp; Socials</desc>
+    <rect x="0.5" y="0.5" width="819" height="194" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
+    <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#FFFFFF" opacity="0.9"/>
+    <text x="32" y="31" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Connect &amp; Socials</text>
+    <line x1="20" y1="44" x2="800" y2="44" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="20" y="85" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A1A1AA">Let&#x27;s connect and build together:</text>
+
+
+<g role="term">
+    <rect x="20" y="97" width="158" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="99.0" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @octocat</text>
+</g>
+
+<g role="term">
+    <rect x="188" y="97" width="165" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="270.5" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @octocat</text>
+</g>
+
+<g role="term">
+    <rect x="363" y="97" width="185" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="455.5" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/octocat</text>
+</g>
+
+<g role="term">
+    <rect x="20" y="131" width="238" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="139.0" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://octocat.dev</text>
+</g>
+
+<g role="term">
+    <rect x="268" y="131" width="165" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="350.5" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: alex_dev</text>
+</g>
+
+<g role="term">
+    <rect x="443" y="131" width="211" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="548.5" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: alex@octocat.dev</text>
+</g>
+</svg>
+</svg>

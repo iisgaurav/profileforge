@@ -1,0 +1,309 @@
+[
+  {
+    "id": "about",
+    "name": "About",
+    "category": "identity",
+    "description": "Hero card: name, role, status badge, tagline, and location.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "about",
+      "hero",
+      "identity",
+      "bio"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "achievements",
+    "name": "Achievements",
+    "category": "stats",
+    "description": "Developer unlock badges showcasing milestones, GitHub awards, and technical accomplishments.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "achievements",
+      "badges",
+      "awards",
+      "stats",
+      "unlocks",
+      "gamification",
+      "github"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "activity_timeline",
+    "name": "Activity Timeline",
+    "category": "development",
+    "description": "Recent commit events, pull requests, releases, and development milestones in a chronological timeline.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "activity",
+      "timeline",
+      "milestones",
+      "commits",
+      "releases",
+      "development",
+      "events"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "experience",
+    "name": "Experience",
+    "category": "career",
+    "description": "Career and work history timeline showcasing roles, companies, dates, and highlights.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "experience",
+      "career",
+      "work",
+      "history",
+      "timeline",
+      "resume",
+      "jobs"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "expertise",
+    "name": "Expertise",
+    "category": "career",
+    "description": "Technical skills and expertise grouped by domain.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "skills",
+      "expertise",
+      "stack",
+      "career"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "focus",
+    "name": "Current Focus",
+    "category": "development",
+    "description": "Displays current learning goals and projects with progress indicators.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "focus",
+      "learning",
+      "development",
+      "goals"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "github_languages",
+    "name": "GitHub Languages",
+    "category": "stats",
+    "description": "Top programming languages breakdown from GitHub repositories.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "github",
+      "languages",
+      "code",
+      "stats"
+    ],
+    "required_connectors": [
+      "github"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "github_stats",
+    "name": "GitHub Stats",
+    "category": "stats",
+    "description": "Summary of GitHub stars, PRs, commits, and overall developer score.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "github",
+      "stats",
+      "metrics",
+      "analytics"
+    ],
+    "required_connectors": [
+      "github"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "hero",
+    "name": "Hero",
+    "category": "identity",
+    "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "hero",
+      "identity",
+      "bio",
+      "banner",
+      "developer"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "now",
+    "name": "Now",
+    "category": "development",
+    "description": "Derek Sivers-style 'Now' widget showing active building, reading, learning, and focus.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "now",
+      "current",
+      "building",
+      "reading",
+      "learning",
+      "development",
+      "focus"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "repositories",
+    "name": "Featured Repositories",
+    "category": "projects",
+    "description": "Showcases top GitHub repositories with stars, forks, and language badges.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "github",
+      "repositories",
+      "projects",
+      "stars",
+      "forks",
+      "open-source",
+      "showcase"
+    ],
+    "required_connectors": [
+      "github"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "roadmap",
+    "name": "Roadmap",
+    "category": "development",
+    "description": "Learning and career milestones with progress bars.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "roadmap",
+      "milestones",
+      "progress",
+      "development"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "skills",
+    "name": "Technical Skills",
+    "category": "career",
+    "description": "Groups technical skills into categorized sections with badge chips.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "skills",
+      "technologies",
+      "languages",
+      "frameworks",
+      "tools",
+      "career",
+      "stack"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "social",
+    "name": "Social Links",
+    "category": "social",
+    "description": "Displays a clean row and wrap of social media links and profiles.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "social",
+      "links",
+      "handles",
+      "contacts",
+      "community"
+    ],
+    "required_connectors": [
+      "local"
+    ],
+    "experimental": false,
+    "deprecated": false
+  },
+  {
+    "id": "streak",
+    "name": "Contribution Streak",
+    "category": "stats",
+    "description": "Tracks daily GitHub contribution streaks, longest continuous activity, and consistency rate.",
+    "version": "1.0.0",
+    "author": "ProfileForge Team",
+    "tags": [
+      "streak",
+      "stats",
+      "github",
+      "contributions",
+      "habits",
+      "activity"
+    ],
+    "required_connectors": [
+      "github"
+    ],
+    "experimental": false,
+    "deprecated": false
+  }
+]
