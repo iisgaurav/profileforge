@@ -1,0 +1,87 @@
+name: "🧩 Widget Submission"
+description: "Submit a new community widget to the ProfileForge ecosystem"
+title: "[Widget]: "
+labels: ["widget", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing a widget to ProfileForge! Please review `docs/WIDGET_AUTHORING.md` before submitting.
+  - type: input
+    id: widget_name
+    attributes:
+      label: "Widget Name & Slug"
+      description: "Human-readable name and snake_case slug ID"
+      placeholder: "WakaTime Stats (wakatime_stats)"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Widget Category"
+      options:
+        - "identity"
+        - "stats"
+        - "projects"
+        - "career"
+        - "development"
+        - "content"
+        - "social"
+        - "utility"
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: "Author"
+      description: "Your name and/or GitHub handle"
+      placeholder: "Your Name (@handle)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: connectors
+    attributes:
+      label: "Required Connectors"
+      options:
+        - label: "github (GitHub GraphQL / REST API)"
+        - label: "local (Local YAML/JSON files)"
+        - label: "custom connector (please specify in description)"
+  - type: textarea
+    id: description
+    attributes:
+      label: "Widget Description & Usage"
+      description: "Explain what data the widget displays and how to configure it in profileforge.yaml."
+    validations:
+      required: true
+  - type: textarea
+    id: sample_code
+    attributes:
+      label: "Widget Python Implementation"
+      description: "Provide the Python source code or a link to your branch/PR."
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: preview
+    attributes:
+      label: "Preview Screenshots / SVG Output"
+      description: "Provide preview images or links demonstrating the rendered widget under dark and light themes."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Authoring & Quality Checklist"
+      options:
+        - label: "Inherits from 'Widget' and implements 'metadata() -> WidgetMetadata'"
+          required: true
+        - label: "Adheres to the 6-phase lifecycle ('validate', 'fetch', 'transform', 'build')"
+          required: true
+        - label: "Uses only declarative components (Layer 3) without raw SVG string manipulation"
+          required: true
+        - label: "Uses theme tokens instead of hardcoded colors/dimensions"
+          required: true
+        - label: "Gracefully isolates errors via 'render_safe()'"
+          required: true
+        - label: "Includes unit tests in 'tests/test_widgets.py'"
+          required: true

@@ -1,0 +1,54 @@
+name: "💡 Feature Request"
+description: "Suggest a new feature, component, or enhancement for ProfileForge"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature! Please check existing issues and discussions before submitting.
+  - type: dropdown
+    id: layer
+    attributes:
+      label: "Target Architectural Layer"
+      description: "Which layer does this feature primarily target?"
+      options:
+        - "Layer 1: Core / Models"
+        - "Layer 2: Themes"
+        - "Layer 3: Components"
+        - "Layer 4: Layout"
+        - "Layer 5: Render / SVG"
+        - "Layer 6: Connectors"
+        - "Layer 7: Widgets"
+        - "Layer 8: CLI / Application"
+        - "Documentation / Tooling"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem or Use Case"
+      description: "Is your feature request related to a problem or a specific developer use case?"
+      placeholder: "I want to display my GitHub sponsorship tier directly on my profile dashboard..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Proposed Solution"
+      description: "Describe the proposed solution and how it should behave."
+      placeholder: "Add a new SponsorsWidget in Layer 7 that queries the GitHub GraphQL API via GitHubConnector..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Any alternative solutions or workarounds you have considered?"
+  - type: checkboxes
+    id: breaking
+    attributes:
+      label: "Breaking Change Declaration"
+      options:
+        - label: "This feature introduces breaking changes to existing frozen APIs (requires RFC process)"
+          required: false

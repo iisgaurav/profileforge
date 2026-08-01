@@ -1,0 +1,70 @@
+name: "🎨 Theme Submission"
+description: "Submit a new community theme for inclusion in ProfileForge"
+title: "[Theme]: "
+labels: ["theme", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating a ProfileForge theme! Please provide the YAML definition and preview details below.
+  - type: input
+    id: theme_name
+    attributes:
+      label: "Theme Name"
+      description: "Identifier and human-readable name of your theme"
+      placeholder: "catppuccin-latte / tokyo-night"
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: "Author"
+      description: "Your name and/or GitHub handle"
+      placeholder: "Your Name (@handle)"
+    validations:
+      required: true
+  - type: input
+    id: extends
+    attributes:
+      label: "Extends Base Theme (if any)"
+      description: "Base theme this theme inherits from (e.g., github-dark, minimal)"
+      placeholder: "github-dark"
+  - type: textarea
+    id: yaml_definition
+    attributes:
+      label: "Theme YAML Definition"
+      description: "Paste your theme YAML definition here"
+      render: yaml
+      placeholder: |
+        name: tokyo-night
+        mode: modern
+        extends: github-dark
+        colors:
+          primary: "#7aa2f7"
+          secondary: "#bb9af7"
+          background: "#1a1b26"
+          surface: "#24283b"
+          border: "#414868"
+          text: "#c0caf5"
+          muted: "#565f89"
+          accent: "#ff9e64"
+    validations:
+      required: true
+  - type: textarea
+    id: preview
+    attributes:
+      label: "Preview Screenshots / SVG Output"
+      description: "Paste an image URL or embed screenshots showcasing your theme on standard widgets."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Theme Authoring Checklist"
+      options:
+        - label: "I tested this theme locally using 'profileforge build' and 'profileforge preview'"
+          required: true
+        - label: "Colors meet WCAG contrast guidelines for body and heading text readability"
+          required: true
+        - label: "All token fields adhere to the schema in 'docs/TOKENS.md'"
+          required: true

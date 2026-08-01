@@ -1,0 +1,65 @@
+name: "📐 RFC Proposal"
+description: "Propose a major architectural change or breaking API modification"
+title: "[RFC]: "
+labels: ["rfc", "architecture"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to initiate a formal Request for Comments (RFC). Please review `docs/RFC_PROCESS.md` for guidelines and requirements.
+  - type: input
+    id: rfc_title
+    attributes:
+      label: "RFC Title"
+      description: "A short, descriptive title for the proposal"
+      placeholder: "Two-Tier Widget Caching and Offline Fallbacks"
+    validations:
+      required: true
+  - type: checkboxes
+    id: affected_layers
+    attributes:
+      label: "Affected Layers (Check all that apply)"
+      options:
+        - label: "Layer 1: Core / Models"
+        - label: "Layer 2: Themes"
+        - label: "Layer 3: Components"
+        - label: "Layer 4: Layout"
+        - label: "Layer 5: Render / SVG"
+        - label: "Layer 6: Connectors"
+        - label: "Layer 7: Widgets"
+        - label: "Layer 8: CLI / Application Orchestration"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Executive Summary"
+      description: "Brief overview of what you are proposing."
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation & Problem Statement"
+      description: "Why is this change necessary? What problem does it solve?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_design
+    attributes:
+      label: "Proposed Architectural Design"
+      description: "Explain the proposed solution, classes, data structures, and lifecycle interactions."
+    validations:
+      required: true
+  - type: textarea
+    id: breaking_changes
+    attributes:
+      label: "Breaking Changes & Migration Plan"
+      description: "Does this break existing APIs? How will existing widgets and configurations migrate?"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Drawbacks & Alternatives Considered"
+      description: "What other solutions were evaluated and why were they rejected?"
