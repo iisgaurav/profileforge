@@ -72,24 +72,24 @@
     <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#000000" opacity="0.9"/>
     <text x="32" y="31" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="20" y1="44" x2="800" y2="44" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="20" y="85" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🔨 Building</text>
+    <text x="40" y="85" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🔨 Building</text>
 
-<text x="20" y="101" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+<text x="40" y="101" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
 
-<text x="20" y="126" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🧠 Learning</text>
+<text x="40" y="126" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🧠 Learning</text>
 
-<text x="20" y="142" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+<text x="40" y="142" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
 
-<text x="20" y="167" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">📚 Reading</text>
+<text x="40" y="167" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">📚 Reading</text>
 
-<text x="20" y="183" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Designing Data-Intensive Applications by Martin Kleppmann</text>
+<text x="40" y="183" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Designing Data-Intensive Applications by Martin Kleppmann</text>
 
-<text x="20" y="208" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🎯 Focusing On</text>
+<text x="40" y="208" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🎯 Focusing On</text>
 
-<text x="20" y="224" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Developer tooling, open-source maintainability, and declarative UI design</text>
+<text x="40" y="224" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Developer tooling, open-source maintainability, and declarative UI design</text>
 
 
-<text x="20" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">📍 San Francisco, CA</text>
-<text x="615" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">🕒 Updated: August 2026</text>
+<text x="40" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">📍 San Francisco, CA</text>
+<text x="635" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">🕒 Updated: August 2026</text>
 </svg>
 </svg>

@@ -248,18 +248,21 @@ class LayoutEngine:
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
-            title_offset = 52 if component.title else 0
-            child_pw = resolved_w - 40 if resolved_w else None
-            child_ph = resolved_h - title_offset - 16 if resolved_h else None
+            pad_x = 20
+            pad_y_top = 52 if component.title else 20
+            pad_y_bottom = 20
+
+            child_pw = resolved_w - (pad_x * 2) if resolved_w else None
+            child_ph = resolved_h - pad_y_top - pad_y_bottom if resolved_h else None
 
             LayoutEngine.calculate(
-                component.child, start_x, start_y + title_offset, child_pw, child_ph
+                component.child, start_x + pad_x, start_y + pad_y_top, child_pw, child_ph
             )
             component.computed_width = resolved_w or (
-                component.child.computed_width + 40
+                component.child.computed_width + (pad_x * 2)
             )
             component.computed_height = resolved_h or (
-                component.child.computed_height + title_offset + 20
+                component.child.computed_height + pad_y_top + pad_y_bottom
             )
 
         elif isinstance(component, Icon):

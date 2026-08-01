@@ -72,18 +72,18 @@
     
     
     
-    <text x="205" y="76" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Alex Rivera 👋</text>
+    <text x="225" y="84" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Alex Rivera 👋</text>
 
-<text x="279" y="99" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#cdd6f4">Principal Systems Architect</text>
+<text x="299" y="107" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#cdd6f4">Principal Systems Architect</text>
 
 
 <g role="term">
-    <rect x="274" y="115" width="231" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="389.5" y="127.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
+    <rect x="294" y="123" width="231" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="409.5" y="135.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
 </g>
 
-<text x="101" y="169" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
+<text x="121" y="177" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
 
-<text x="322" y="190" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#a6adc8">📍 San Francisco, CA</text>
+<text x="342" y="198" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#a6adc8">📍 San Francisco, CA</text>
 </svg>
 </svg>
