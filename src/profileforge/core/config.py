@@ -31,9 +31,14 @@ class ConfigLoader:
         if not path.exists():
             raise ConfigurationError(f"Config file not found: {filepath}")
 
+        try:
+            from yaml import CSafeLoader as YAMLLoader
+        except ImportError:
+            from yaml import SafeLoader as YAMLLoader
+
         with open(path, "r", encoding="utf-8") as f:
             try:
-                data = yaml.safe_load(f) or {}
+                data = yaml.load(f, Loader=YAMLLoader) or {}
             except yaml.YAMLError as e:
                 raise ConfigurationError(f"Invalid YAML syntax in {filepath}: {e}")
 
@@ -135,9 +140,9 @@ class ConfigLoader:
         return merged
 
     @staticmethod
-    def load_theme(
+    def _load_raw_theme(
         theme_name: str, themes_dir: str = "themes", visited: set[str] = None
-    ) -> Theme:
+    ) -> tuple[dict, str | None]:
         if visited is None:
             visited = set()
 
@@ -161,19 +166,31 @@ class ConfigLoader:
                     f"Theme file not found: {theme_name}.yaml in {themes_dir} or built-in themes."
                 )
 
+        try:
+            from yaml import CSafeLoader as YAMLLoader
+        except ImportError:
+            from yaml import SafeLoader as YAMLLoader
+
         with open(theme_file, "r", encoding="utf-8") as f:
             try:
-                data = yaml.safe_load(f) or {}
+                data = yaml.load(f, Loader=YAMLLoader) or {}
             except yaml.YAMLError as e:
                 raise ThemeError(f"Invalid YAML syntax in theme {theme_name}: {e}")
 
         extends = data.get("extends")
         if extends:
-            from dataclasses import asdict
-
-            base_theme = ConfigLoader.load_theme(extends, themes_dir, visited.copy())
-            base_data = asdict(base_theme)
+            base_data, _ = ConfigLoader._load_raw_theme(
+                extends, themes_dir, visited.copy()
+            )
             data = ConfigLoader._deep_merge(base_data, data)
+
+        return data, extends
+
+    @staticmethod
+    def load_theme(
+        theme_name: str, themes_dir: str = "themes", visited: set[str] = None
+    ) -> Theme:
+        data, extends = ConfigLoader._load_raw_theme(theme_name, themes_dir, visited)
 
         colors = ColorTokens(**data.get("colors", {}))
         typography = TypographyTokens(**data.get("typography", {}))

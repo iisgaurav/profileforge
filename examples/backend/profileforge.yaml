@@ -1,14 +1,21 @@
 version: 1
 project:
-  name: "Backend Pro"
+  name: Backend Engineer Profile
+  title: Senior Backend & Distributed Systems Engineer
 themes:
-  active: "modern"
-datasources:
+  active: github-dark
+connectors:
   local:
-    root: "./config"
+    root: ./config
+  github:
+    username: octocat
 widgets:
-  - expertise
+- name: hero
+- name: skills
+- name: repositories
+- name: github_stats
+- name: experience
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

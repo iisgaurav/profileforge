@@ -1,0 +1,26 @@
+schema: 1
+id: "indie-hacker"
+name: "Indie Hacker & Solopreneur"
+description: "Tailored for indie hackers, bootstrappers, and solopreneurs building micro-SaaS and products in public."
+version: "1.0.0"
+minimum_profileforge: "1.0.0"
+author: "ProfileForge Team"
+license: "MIT"
+widgets:
+  - hero
+  - streak
+  - repositories
+  - focus
+  - achievements
+  - social
+themes:
+  - modern
+  - vercel
+  - github-dark
+tags:
+  - indie-hacker
+  - solopreneur
+  - saas
+  - build-in-public
+  - bootstrap
+  - micro-saas

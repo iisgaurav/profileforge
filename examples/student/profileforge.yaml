@@ -1,0 +1,21 @@
+version: 1
+project:
+  name: Student Developer Profile
+  title: CS Undergrad & Aspiring Software Engineer
+themes:
+  active: catppuccin-mocha
+connectors:
+  local:
+    root: ./config
+  github:
+    username: octocat
+widgets:
+- name: hero
+- name: skills
+- name: roadmap
+- name: repositories
+- name: social
+outputs:
+  svg:
+    enabled: true
+    dir: assets

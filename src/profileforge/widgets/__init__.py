@@ -1,5 +1,7 @@
 from profileforge.widgets import (  # noqa: F401
     about,
+    achievements,
+    activity_timeline,
     experience,
     expertise,
     focus,
@@ -11,6 +13,7 @@ from profileforge.widgets import (  # noqa: F401
     roadmap,
     skills,
     social,
+    streak,
 )
 from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 

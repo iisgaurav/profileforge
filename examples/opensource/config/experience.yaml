@@ -1,0 +1,14 @@
+experience:
+  - role: "Lead Maintainer & Core Contributor"
+    company: "Open Source Collective"
+    period: "2021 — Present"
+    description: "Maintaining multiple Tier-1 open-source developer toolkits with 2M+ combined monthly downloads."
+    highlights:
+      - "Reviewed and merged 1,200+ pull requests across 8 ecosystem repositories."
+      - "Built automated multi-architecture release pipeline with automated changelog generation."
+  - role: "Staff Developer Advocate"
+    company: "Cloud Foundation"
+    period: "2019 — 2021"
+    description: "Guided architectural RFCs and standard specifications for cloud-native interoperability."
+    highlights:
+      - "Published 15+ in-depth technical guides and spoke at global conferences."

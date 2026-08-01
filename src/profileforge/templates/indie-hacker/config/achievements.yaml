@@ -1,0 +1,13 @@
+achievements:
+  - name: "🚀 #1 Product of the Day"
+    tier: "Gold"
+    description: "Featured on Product Hunt top spot with 1,200+ upvotes."
+  - name: "💰 First $10k MRR"
+    tier: "Platinum"
+    description: "Bootstrapped micro-SaaS portfolio to sustainable profitability."
+  - name: "🦈 Pull Shark"
+    tier: "Gold (x3)"
+    description: "150+ pull requests merged in open-source developer tooling."
+  - name: "⚡ Rapid Prototyper"
+    tier: "Legendary"
+    description: "Built and launched 4 production apps in 12 months."

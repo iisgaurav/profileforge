@@ -1,0 +1,24 @@
+schema: 1
+id: "backend"
+name: "Backend Engineer"
+description: "Tailored for backend and distributed systems engineers with skills, repositories, stats, and work experience."
+version: "1.0.0"
+minimum_profileforge: "1.0.0"
+author: "ProfileForge Team"
+license: "MIT"
+widgets:
+  - hero
+  - skills
+  - repositories
+  - github_stats
+  - experience
+themes:
+  - github-dark
+  - modern
+  - dracula
+tags:
+  - backend
+  - systems
+  - distributed-systems
+  - python
+  - microservices

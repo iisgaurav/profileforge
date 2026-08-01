@@ -1,0 +1,21 @@
+version: 1
+project:
+  name: Frontend Engineer Profile
+  title: Senior Frontend Architect & UI/UX Engineer
+themes:
+  active: modern
+connectors:
+  local:
+    root: ./config
+  github:
+    username: octocat
+widgets:
+- name: hero
+- name: skills
+- name: repositories
+- name: github_stats
+- name: now
+outputs:
+  svg:
+    enabled: true
+    dir: assets

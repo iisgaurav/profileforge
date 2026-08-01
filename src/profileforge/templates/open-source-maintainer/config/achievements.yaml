@@ -1,0 +1,25 @@
+achievements:
+  - name: "8K GitHub Stars"
+    description: "asyncflow repository earned 8,000+ stars from the community"
+    unlocked: true
+  - name: "200+ Contributors"
+    description: "Open-source project grew to 200+ unique code contributors"
+    unlocked: true
+  - name: "npm 100K Weekly Downloads"
+    description: "asyncflow package reached 100,000 weekly npm downloads"
+    unlocked: true
+  - name: "Foundation Member"
+    description: "Elected as a voting member of the OpenJS Foundation"
+    unlocked: true
+  - name: "First v1.0 Release"
+    description: "Shipped the first stable, production-ready release"
+    unlocked: true
+  - name: "v4.0 Milestone"
+    description: "Ship asyncflow v4.0 with native WASM support"
+    unlocked: false
+  - name: "10K Stars"
+    description: "Reach 10,000 GitHub stars across all maintained repositories"
+    unlocked: false
+  - name: "1M Downloads"
+    description: "Achieve 1,000,000 cumulative npm package downloads"
+    unlocked: false

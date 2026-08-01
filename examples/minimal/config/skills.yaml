@@ -1,0 +1,12 @@
+categories:
+  Languages:
+    - "Rust"
+    - "Go"
+    - "C"
+    - "Python"
+  Systems & Tools:
+    - "Linux"
+    - "Git"
+    - "Docker"
+    - "PostgreSQL"
+    - "SQLite"

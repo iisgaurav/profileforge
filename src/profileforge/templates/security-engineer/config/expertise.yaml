@@ -1,0 +1,16 @@
+skills:
+  Application Security:
+    - "Threat Modeling (STRIDE)"
+    - "OAuth2 / OIDC Auditing"
+    - "GraphQL / REST SAST"
+    - "Supply Chain Security"
+  Vulnerability Research:
+    - "Ghidra / IDA Pro"
+    - "AFL++ / libFuzzer"
+    - "Memory Corruption Exploits"
+    - "eBPF Kernel Probing"
+  Cloud & Infrastructure Defense:
+    - "Kubernetes RBAC Hardening"
+    - "AWS IAM Least-Privilege"
+    - "Falco Runtime Detection"
+    - "Zero-Trust Architecture"

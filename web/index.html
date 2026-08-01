@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>ProfileForge Studio — Visual GitHub Profile Builder</title>
+  <meta name="description" content="Visually build your GitHub profile with 15 widgets, 9 persona templates, 14 themes, and instant SVG export. No code required." />
+  <meta name="keywords" content="github profile, svg widgets, profile readme, profileforge, github readme generator" />
+  <meta name="author" content="ProfileForge Team" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProfileForge Studio — Visual GitHub Profile Builder" />
+  <meta property="og:description" content="Build stunning GitHub profile READMEs with 15 widgets, 14 themes, and instant SVG export." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/iisgaurav/profileforge" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ProfileForge Studio" />
+  <meta name="twitter:description" content="Visual GitHub profile builder. 15 widgets. 14 themes. Zero code." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ==================== LOADING OVERLAY ==================== -->
+  <div id="loading-overlay" aria-label="Loading ProfileForge Studio" role="status">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading ProfileForge Studio…</div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="app-header" role="banner">
+    <div class="header-logo">
+      <span class="header-logo-icon" aria-hidden="true">🔥</span>
+      <div>
+        <h1>ProfileForge Studio</h1>
+        <span>Visual GitHub Profile Builder</span>
+      </div>
+    </div>
+    <nav class="header-actions" role="navigation" aria-label="Header links">
+      <a id="header-github-link"
+         href="https://github.com/iisgaurav/profileforge"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="header-link"
+         aria-label="View ProfileForge on GitHub">
+        ⭐ Star on GitHub
+      </a>
+      <a id="header-docs-link"
+         href="https://github.com/iisgaurav/profileforge#readme"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="header-link"
+         aria-label="Read the docs">
+        📄 Docs
+      </a>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN LAYOUT ==================== -->
+  <div id="app-layout">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside id="sidebar" role="complementary" aria-label="Profile configuration panel">
+
+      <!-- SECTION: Username -->
+      <section id="section-username" class="sidebar-section" aria-labelledby="username-section-title">
+        <div class="sidebar-section-title" id="username-section-title">
+          <span class="icon">👤</span> GitHub Username
+        </div>
+        <label for="username-input" class="visually-hidden">GitHub username</label>
+        <input
+          type="text"
+          id="username-input"
+          name="username"
+          placeholder="octocat"
+          value="octocat"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Enter your GitHub username"
+          title="Press Ctrl+K or Cmd+K to focus"
+        />
+        <small style="color:var(--text-muted);font-size:11px;margin-top:6px;display:block;">
+          ⌨️ <kbd style="background:var(--bg-elevated);padding:1px 4px;border-radius:3px;border:1px solid var(--border)">Ctrl+K</kbd> to focus
+        </small>
+      </section>
+
+      <!-- SECTION: Persona Template -->
+      <section id="section-template" class="sidebar-section" aria-labelledby="template-section-title">
+        <div class="sidebar-section-title" id="template-section-title">
+          <span class="icon">👥</span> Persona Template
+        </div>
+        <label for="template-select">Choose a starter persona</label>
+        <select id="template-select" name="template" aria-label="Select a persona template">
+          <option value="">— No Template —</option>
+        </select>
+        <small style="color:var(--text-muted);font-size:11px;margin-top:6px;display:block;">
+          Auto-selects widgets &amp; theme
+        </small>
+      </section>
+
+      <!-- SECTION: Widgets -->
+      <section id="section-widgets" class="sidebar-section" aria-labelledby="widgets-section-title">
+        <div class="sidebar-section-title" id="widgets-section-title">
+          <span class="icon">🧩</span> Widgets
+          <span id="widget-count-badge" aria-label="Active widget count">0</span>
+        </div>
+        <div id="widget-list" role="group" aria-label="Widget toggles"></div>
+      </section>
+
+      <!-- SECTION: Theme -->
+      <section id="section-theme" class="sidebar-section" aria-labelledby="theme-section-title">
+        <div class="sidebar-section-title" id="theme-section-title">
+          <span class="icon">🎨</span> Theme
+        </div>
+        <div id="theme-grid" role="radiogroup" aria-label="Theme selection"></div>
+      </section>
+
+    </aside>
+
+    <!-- ==================== MAIN CANVAS ==================== -->
+    <main id="main-canvas" role="main" aria-label="Profile preview canvas">
+
+      <!-- Preview Header -->
+      <div id="preview-header">
+        <div class="preview-title">
+          Live Preview
+          <span id="widget-count-badge" aria-live="polite" aria-label="Active widget count">0</span>
+        </div>
+        <div id="preview-username-display" aria-live="polite">@octocat · github-dark</div>
+      </div>
+
+      <!-- Widget Cards -->
+      <div id="preview-canvas" role="region" aria-label="Widget previews" aria-live="polite">
+        <div id="empty-state">
+          <div class="empty-icon">🔮</div>
+          <p>Select a persona template or enable widgets from the sidebar to preview your profile.</p>
+        </div>
+      </div>
+
+      <!-- Export Bar -->
+      <div id="export-bar" role="group" aria-label="Export actions">
+        <button
+          id="btn-copy-readme"
+          class="btn btn-primary"
+          type="button"
+          aria-label="Copy README markdown to clipboard"
+          title="Copy the ready-to-paste README snippet">
+          <span class="btn-icon">📋</span>
+          Copy README Markdown
+        </button>
+        <button
+          id="btn-export-yaml"
+          class="btn btn-accent"
+          type="button"
+          aria-label="Download profileforge.yaml configuration file"
+          title="Download profileforge.yaml for local use">
+          <span class="btn-icon">📥</span>
+          Export profileforge.yaml
+        </button>
+        <button
+          id="btn-download-svg"
+          class="btn btn-success"
+          type="button"
+          aria-label="Download all enabled widget SVG files"
+          title="Download all enabled widget SVGs">
+          <span class="btn-icon">📦</span>
+          Download SVG Bundle
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div id="toast-container" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- ==================== APP SCRIPT ==================== -->
+  <script src="./app.js"></script>
+</body>
+</html>

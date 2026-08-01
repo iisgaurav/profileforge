@@ -1,0 +1,27 @@
+schema: 1
+id: "security-engineer"
+name: "Security Engineer & AppSec"
+description: "Tailored for cybersecurity researchers, AppSec engineers, and bug bounty hunters with CTF rankings, CVEs, and security tooling."
+version: "1.0.0"
+minimum_profileforge: "1.0.0"
+author: "ProfileForge Team"
+license: "MIT"
+widgets:
+  - hero
+  - expertise
+  - skills
+  - achievements
+  - repositories
+  - social
+themes:
+  - cyberpunk
+  - tokyo-night
+  - dracula
+tags:
+  - security
+  - appsec
+  - ctf
+  - cve
+  - infosec
+  - penetration-testing
+  - cybersecurity

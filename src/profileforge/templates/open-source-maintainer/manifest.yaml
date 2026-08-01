@@ -1,0 +1,27 @@
+schema: 1
+id: "open-source-maintainer"
+name: "Open Source Maintainer"
+description: "Tailored for open-source library authors and foundation maintainers with pinned repositories, activity timeline, and streak stats."
+version: "1.0.0"
+minimum_profileforge: "1.0.0"
+author: "ProfileForge Team"
+license: "MIT"
+widgets:
+  - hero
+  - github_stats
+  - repositories
+  - activity_timeline
+  - streak
+  - achievements
+  - social
+themes:
+  - dracula
+  - github-dark
+  - nord
+tags:
+  - opensource
+  - maintainer
+  - libraries
+  - github
+  - community
+  - foundation

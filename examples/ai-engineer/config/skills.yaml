@@ -1,0 +1,25 @@
+categories:
+  Deep Learning & Core:
+    - "PyTorch"
+    - "CUDA"
+    - "JAX"
+    - "Python"
+    - "C++"
+  LLM & Agent Frameworks:
+    - "LangChain"
+    - "Transformers"
+    - "LlamaIndex"
+    - "DSPy"
+    - "Hugging Face"
+  Inference & Acceleration:
+    - "vLLM"
+    - "Triton"
+    - "TensorRT-LLM"
+    - "ONNX"
+    - "GGML / llama.cpp"
+  Vector Storage & Infrastructure:
+    - "Qdrant"
+    - "Milvus"
+    - "Chroma"
+    - "Ray / Ray Train"
+    - "Kubernetes"

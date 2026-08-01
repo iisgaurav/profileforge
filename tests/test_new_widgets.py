@@ -16,6 +16,8 @@ from profileforge.core.models import (
 from profileforge.core.registry import WIDGET_REGISTRY
 from profileforge.render.layout import LayoutEngine
 from profileforge.render.svg.renderer import SVGRenderer
+from profileforge.widgets.achievements import AchievementsWidget
+from profileforge.widgets.activity_timeline import ActivityTimelineWidget
 from profileforge.widgets.base import WidgetCategory, WidgetMetadata
 from profileforge.widgets.experience import ExperienceWidget
 from profileforge.widgets.hero import HeroWidget
@@ -23,6 +25,7 @@ from profileforge.widgets.now import NowWidget
 from profileforge.widgets.repositories import RepositoriesWidget
 from profileforge.widgets.skills import SkillsWidget
 from profileforge.widgets.social import SocialWidget
+from profileforge.widgets.streak import StreakWidget
 
 
 def create_test_context(mock_theme, widgets=None, connectors=None) -> BuildContext:
@@ -351,6 +354,60 @@ def test_repositories_widget_fallback_when_unauthenticated(mock_theme):
     assert "profileforge" in svg
 
 
+def test_streak_widget_metadata_and_render(mock_theme):
+    widget = StreakWidget()
+    meta = widget.metadata()
+    assert isinstance(meta, WidgetMetadata)
+    assert meta.id == "streak"
+    assert meta.category == WidgetCategory.STATS
+
+    context = create_test_context(mock_theme)
+    card = widget.render_safe(context)
+    assert isinstance(card, Card)
+
+    LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context)
+    svg = renderer.render(card)
+    assert "Contribution Streak" in svg
+    assert "Current Streak" in svg
+
+
+def test_activity_timeline_widget_metadata_and_render(mock_theme):
+    widget = ActivityTimelineWidget()
+    meta = widget.metadata()
+    assert isinstance(meta, WidgetMetadata)
+    assert meta.id == "activity_timeline"
+    assert meta.category == WidgetCategory.DEVELOPMENT
+
+    context = create_test_context(mock_theme)
+    card = widget.render_safe(context)
+    assert isinstance(card, Card)
+
+    LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context)
+    svg = renderer.render(card)
+    assert "Recent Activity" in svg
+    assert "PR Merge" in svg or "Release" in svg
+
+
+def test_achievements_widget_metadata_and_render(mock_theme):
+    widget = AchievementsWidget()
+    meta = widget.metadata()
+    assert isinstance(meta, WidgetMetadata)
+    assert meta.id == "achievements"
+    assert meta.category == WidgetCategory.STATS
+
+    context = create_test_context(mock_theme)
+    card = widget.render_safe(context)
+    assert isinstance(card, Card)
+
+    LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context)
+    svg = renderer.render(card)
+    assert "Developer Achievements" in svg
+    assert "Pull Shark" in svg
+
+
 def test_all_official_widgets_registered():
     official_widgets = [
         "hero",
@@ -359,6 +416,9 @@ def test_all_official_widgets_registered():
         "now",
         "experience",
         "repositories",
+        "streak",
+        "activity_timeline",
+        "achievements",
     ]
     for w in official_widgets:
         assert w in WIDGET_REGISTRY, f"Widget '{w}' must be present in WIDGET_REGISTRY"

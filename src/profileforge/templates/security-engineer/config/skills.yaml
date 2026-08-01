@@ -1,0 +1,20 @@
+Languages:
+  - "Rust"
+  - "C"
+  - "Python"
+  - "Go"
+  - "x86_64 Assembly"
+
+Security Tools:
+  - "Burp Suite Pro"
+  - "Ghidra"
+  - "Semgrep"
+  - "Trivy"
+  - "Wireshark"
+  - "Radare2"
+
+Defensive Frameworks:
+  - "OWASP Top 10"
+  - "CIS Benchmarks"
+  - "MITRE ATT&CK"
+  - "Cosign / Sigstore"

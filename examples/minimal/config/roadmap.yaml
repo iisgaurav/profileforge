@@ -1,0 +1,6 @@
+- skill: "Zero-Allocation Parsing Primitives"
+  progress: 90
+- skill: "Formal Verification (TLA+)"
+  progress: 65
+- skill: "Custom Memory Allocators"
+  progress: 80
