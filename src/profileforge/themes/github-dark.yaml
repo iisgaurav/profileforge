@@ -1,32 +1,49 @@
-name: "github-dark"
-mode: "dark"
+name: github-dark
+id: github-dark
+schema: 1
+tags:
+- official
+- core
+mode: dark
 colors:
-  primary: "#58A6FF"
-  secondary: "#8B949E"
-  background: "transparent"
-  surface: "transparent"
-  border: "#30363D"
-  text: "#C9D1D9"
-  muted: "#8B949E"
-  accent: "#D2A8FF"
-  success: "#2EA043"
-  warning: "#D29922"
-  info: "#388BFD"
+  primary: '#58A6FF'
+  secondary: '#8B949E'
+  background: transparent
+  surface: transparent
+  border: '#30363D'
+  text: '#C9D1D9'
+  muted: '#8B949E'
+  accent: '#D2A8FF'
+  success: '#2EA043'
+  warning: '#D29922'
+  info: '#388BFD'
 typography:
-  font_family: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+  font_family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif
   heading: 18
   body: 14
   small: 12
-spacing: {xs: 4, sm: 8, md: 16, lg: 24, xl: 32}
-radius: {card: 6, progress: 4, badge: 12}
-shadows: {none: "none", low: "none", medium: "none", high: "none"}
+spacing:
+  xs: 4
+  sm: 8
+  md: 16
+  lg: 24
+  xl: 32
+radius:
+  card: 6
+  progress: 4
+  badge: 12
+shadows:
+  none: none
+  low: none
+  medium: none
+  high: none
 motion:
   duration_fast: 150
   duration_normal: 300
   duration_slow: 500
-  easing: "cubic-bezier(0.4, 0, 0.2, 1)"
+  easing: cubic-bezier(0.4, 0, 0.2, 1)
 effects:
-  glow: "none"
-  shadow: "none"
-  glass: "none"
-
+  glow: none
+  shadow: none
+  glass: none

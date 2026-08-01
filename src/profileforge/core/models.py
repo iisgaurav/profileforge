@@ -77,12 +77,20 @@ class Theme:
     shadows: ShadowTokens
     motion: MotionTokens
     effects: EffectsTokens
+    schema: int = 1
+    id: Optional[str] = None
+    tags: list[str] = field(default_factory=list)
     extends: Optional[str] = None
     author: Optional[str] = None
     version: Optional[str] = None
     license: Optional[str] = None
     description: Optional[str] = None
     homepage: Optional[str] = None
+    animations: Optional[dict[str, Any]] = None
+    icons: Optional[dict[str, Any]] = None
+    fonts: Optional[dict[str, Any]] = None
+    assets: Optional[dict[str, Any]] = None
+    variables: Optional[dict[str, Any]] = None
 
 
 @dataclass

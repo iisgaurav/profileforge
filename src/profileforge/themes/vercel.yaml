@@ -1,18 +1,25 @@
-name: "vercel"
-mode: "dark"
-extends: "github-dark"
+name: vercel
+id: vercel
+schema: 1
+tags:
+- official
+mode: dark
+extends: github-dark
 typography:
-  font_family: "Inter, 'SF Pro Display', -apple-system, sans-serif"
+  font_family: Inter, 'SF Pro Display', -apple-system, sans-serif
 colors:
-  primary: "#FFFFFF"
-  secondary: "#888888"
-  background: "#000000"
-  surface: "#111111"
-  border: "#333333"
-  text: "#EDEDED"
-  muted: "#A1A1AA"
-  accent: "#0070F3"
-  success: "#3291FF"
-  warning: "#F5A623"
-  info: "#0070F3"
-radius: {card: 12, progress: 6, badge: 12}
+  primary: '#FFFFFF'
+  secondary: '#888888'
+  background: '#000000'
+  surface: '#111111'
+  border: '#333333'
+  text: '#EDEDED'
+  muted: '#A1A1AA'
+  accent: '#0070F3'
+  success: '#3291FF'
+  warning: '#F5A623'
+  info: '#0070F3'
+radius:
+  card: 12
+  progress: 6
+  badge: 12

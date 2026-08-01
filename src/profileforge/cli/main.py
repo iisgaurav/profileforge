@@ -127,10 +127,18 @@ def cmd_doctor(args):
                 valid_themes = 0
                 for theme_file in theme_dir.glob("*.yaml"):
                     try:
-                        ConfigLoader.load_theme(
+                        theme = ConfigLoader.load_theme(
                             theme_file.stem, themes_dir=str(theme_dir)
                         )
                         valid_themes += 1
+                        meta_ok = bool(theme.id and theme.schema and theme.tags)
+                        tokens_ok = bool(
+                            theme.colors and theme.typography and theme.spacing
+                        )
+                        inherits = theme.extends if theme.extends else "None"
+                        print_success(
+                            f"Theme '{theme.name}': Metadata {'OK' if meta_ok else 'MISSING'}, Tokens {'OK' if tokens_ok else 'MISSING'}, Inheritance: {inherits}"
+                        )
                     except Exception as e:
                         print_error(f"Failed to load theme {theme_file.name}: {e}")
                 print_success(f"Validated {valid_themes} themes in {theme_dir}")
@@ -147,10 +155,16 @@ def cmd_doctor(args):
         valid_builtin = 0
         for theme_file in builtin_themes_dir.glob("*.yaml"):
             try:
-                ConfigLoader.load_theme(
+                theme = ConfigLoader.load_theme(
                     theme_file.stem, themes_dir=str(builtin_themes_dir)
                 )
                 valid_builtin += 1
+                meta_ok = bool(theme.id and theme.schema and theme.tags)
+                tokens_ok = bool(theme.colors and theme.typography and theme.spacing)
+                inherits = theme.extends if theme.extends else "None"
+                print_success(
+                    f"Built-in Theme '{theme.name}': Metadata {'OK' if meta_ok else 'MISSING'}, Tokens {'OK' if tokens_ok else 'MISSING'}, Inheritance: {inherits}"
+                )
             except Exception as e:
                 print_error(f"Failed to load built-in theme {theme_file.name}: {e}")
         print_success(f"Validated {valid_builtin} built-in themes")
@@ -242,6 +256,99 @@ text: "#C9D1D9"
     print(f"\nRun 'cd {args.name}' then 'profileforge build' to get started.")
 
 
+def cmd_themes_build(args):
+    config_path = Path(args.config)
+    try:
+        if not config_path.exists():
+            print_error(f"Config file not found: {args.config}")
+            sys.exit(1)
+
+        config = ConfigLoader.load_main_config(str(config_path))
+        print_success("Loaded configuration")
+
+        theme_dir = config_path.parent / "themes"
+        if not theme_dir.exists():
+            theme_dir = Path(__file__).parent.parent / "themes"
+
+        gallery_dir = config_path.parent / "gallery"
+        gallery_dir.mkdir(parents=True, exist_ok=True)
+
+        # We need to render the `github_stats` widget
+        from profileforge.core.models import WidgetConfig
+
+        widget_config = WidgetConfig(name="github_stats")
+        config.widgets = [widget_config]
+
+        connectors = {}
+        for name, ds_config in config.connectors_config.items():
+            if name in ConnectorRegistry:
+                if "root" in ds_config:
+                    ds_config["root"] = str(config_path.parent / ds_config["root"])
+                connectors[name] = ConnectorRegistry[name](ds_config)
+        services = Services(connectors=connectors)
+
+        if "github_stats" not in WIDGET_REGISTRY:
+            print_error("Widget 'github_stats' not found in registry.")
+            sys.exit(1)
+
+        theme_files = []
+        if theme_dir.exists():
+            theme_files.extend(list(theme_dir.glob("*.yaml")))
+
+        builtin_themes_dir = Path(__file__).parent.parent / "themes"
+        if builtin_themes_dir.exists():
+            theme_files.extend(list(builtin_themes_dir.glob("*.yaml")))
+
+        import html as html_mod
+
+        seen_themes = set()
+        for theme_file in theme_files:
+            theme_name = theme_file.stem
+            if theme_name in seen_themes:
+                continue
+            seen_themes.add(theme_name)
+            try:
+                theme = ConfigLoader.load_theme(theme_name, themes_dir=str(theme_dir))
+
+                config.active_theme = theme_name
+                context = BuildContext(theme=theme, config=config, services=services)
+                svg_renderer = SVGRenderer(context)
+
+                widget = WIDGET_REGISTRY["github_stats"]()
+                component_tree = widget.build(context)
+                LayoutEngine.calculate(component_tree)
+
+                inner_svg = svg_renderer.render(component_tree)
+                defs_block = svg_renderer.get_defs()
+                total_w = component_tree.computed_width
+                total_h = component_tree.computed_height
+
+                escaped_title = html_mod.escape(f"github_stats - {theme_name}")
+
+                svg_content = (
+                    f'<svg width="{total_w}" height="{total_h}" '
+                    f'viewBox="0 0 {total_w} {total_h}" '
+                    f'xmlns="http://www.w3.org/2000/svg" '
+                    f'role="img">\\n'
+                    f"  <title>{escaped_title}</title>\\n"
+                    f"  <desc>ProfileForge widget preview</desc>\\n"
+                    f"  {defs_block}\\n"
+                    f"  {inner_svg}\\n"
+                    f"</svg>"
+                )
+
+                out_file = gallery_dir / f"{theme_name}.svg"
+                with open(out_file, "w", encoding="utf-8") as f:
+                    f.write(svg_content)
+                print_success(f"Generated gallery/{theme_name}.svg")
+            except Exception as e:
+                print_error(f"Failed to build gallery for theme {theme_name}: {e}")
+
+    except ProfileForgeError as e:
+        print_error(str(e))
+        sys.exit(1)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="ProfileForge: Open-Source GitHub Profile Engine"
@@ -273,6 +380,17 @@ def main():
         "--output", default=None, help="Output directory to check write access"
     )
 
+    themes_parser = subparsers.add_parser("themes", help="Theme commands")
+    themes_subparsers = themes_parser.add_subparsers(
+        dest="themes_command", required=True
+    )
+    themes_build_parser = themes_subparsers.add_parser(
+        "build", help="Build theme gallery"
+    )
+    themes_build_parser.add_argument(
+        "--config", default="profileforge.yaml", help="Path to config file"
+    )
+
     args = parser.parse_args()
 
     if args.command == "build":
@@ -283,6 +401,12 @@ def main():
         cmd_validate(args)
     elif args.command == "new":
         cmd_new(args)
+    elif args.command == "themes":
+        if args.themes_command == "build":
+            cmd_themes_build(args)
+        else:
+            print_error(f"Command 'themes {args.themes_command}' is not implemented.")
+            sys.exit(1)
     else:
         print_error(f"Command '{args.command}' is not implemented.")
         sys.exit(1)

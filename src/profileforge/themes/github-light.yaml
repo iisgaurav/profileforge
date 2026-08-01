@@ -1,15 +1,20 @@
-name: "github-light"
-mode: "light"
-extends: "github-dark"
+name: github-light
+id: github-light
+schema: 1
+tags:
+- official
+- core
+mode: light
+extends: github-dark
 colors:
-  primary: "#0969DA"
-  secondary: "#57606A"
-  background: "transparent"
-  surface: "transparent"
-  border: "#D0D7DE"
-  text: "#24292F"
-  muted: "#57606A"
-  accent: "#8250DF"
-  success: "#1A7F37"
-  warning: "#BF8700"
-  info: "#0969DA"
+  primary: '#0969DA'
+  secondary: '#57606A'
+  background: transparent
+  surface: transparent
+  border: '#D0D7DE'
+  text: '#24292F'
+  muted: '#57606A'
+  accent: '#8250DF'
+  success: '#1A7F37'
+  warning: '#BF8700'
+  info: '#0969DA'

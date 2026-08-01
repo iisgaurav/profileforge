@@ -1,19 +1,30 @@
-name: "apple"
-mode: "light"
-extends: "github-dark"
+name: apple
+id: apple
+schema: 1
+tags:
+- official
+mode: light
+extends: github-dark
 typography:
-  font_family: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif"
+  font_family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif
 colors:
-  primary: "#0071E3"
-  secondary: "#86868B"
-  background: "#F5F5F7"
-  surface: "#FFFFFF"
-  border: "#D2D2D7"
-  text: "#1D1D1F"
-  muted: "#86868B"
-  accent: "#AF52DE"
-  success: "#34C759"
-  warning: "#FF9500"
-  info: "#5AC8FA"
-radius: {card: 18, progress: 8, badge: 14}
-shadows: {none: "none", low: "0 2px 8px rgba(0,0,0,0.04)", medium: "0 4px 16px rgba(0,0,0,0.08)", high: "0 8px 24px rgba(0,0,0,0.12)"}
+  primary: '#0071E3'
+  secondary: '#86868B'
+  background: '#F5F5F7'
+  surface: '#FFFFFF'
+  border: '#D2D2D7'
+  text: '#1D1D1F'
+  muted: '#86868B'
+  accent: '#AF52DE'
+  success: '#34C759'
+  warning: '#FF9500'
+  info: '#5AC8FA'
+radius:
+  card: 18
+  progress: 8
+  badge: 14
+shadows:
+  none: none
+  low: 0 2px 8px rgba(0,0,0,0.04)
+  medium: 0 4px 16px rgba(0,0,0,0.08)
+  high: 0 8px 24px rgba(0,0,0,0.12)

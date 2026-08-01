@@ -135,7 +135,19 @@ class ConfigLoader:
         return merged
 
     @staticmethod
-    def load_theme(theme_name: str, themes_dir: str = "themes") -> Theme:
+    def load_theme(
+        theme_name: str, themes_dir: str = "themes", visited: set[str] = None
+    ) -> Theme:
+        if visited is None:
+            visited = set()
+
+        if theme_name in visited:
+            raise ThemeError(
+                f"Inheritance cycle detected: {' -> '.join(visited)} -> {theme_name}"
+            )
+
+        visited.add(theme_name)
+
         theme_file = Path(themes_dir) / f"{theme_name}.yaml"
         if not theme_file.exists():
             # Fallback to built-in themes in the profileforge package
@@ -159,7 +171,7 @@ class ConfigLoader:
         if extends:
             from dataclasses import asdict
 
-            base_theme = ConfigLoader.load_theme(extends, themes_dir)
+            base_theme = ConfigLoader.load_theme(extends, themes_dir, visited.copy())
             base_data = asdict(base_theme)
             data = ConfigLoader._deep_merge(base_data, data)
 
@@ -181,10 +193,18 @@ class ConfigLoader:
             shadows=shadows,
             motion=motion,
             effects=effects,
+            schema=data.get("schema", 1),
+            id=data.get("id"),
+            tags=data.get("tags", []),
             extends=extends,
             author=data.get("author"),
             version=data.get("version"),
             license=data.get("license"),
             description=data.get("description"),
             homepage=data.get("homepage"),
+            animations=data.get("animations"),
+            icons=data.get("icons"),
+            fonts=data.get("fonts"),
+            assets=data.get("assets"),
+            variables=data.get("variables"),
         )
