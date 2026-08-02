@@ -4,7 +4,7 @@ Version: 1
 Theme: github-dark
 Widget: experience
 -->
-<svg width="820" height="304" viewBox="0 0 820 304" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="262" viewBox="0 0 820 262" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Experience Widget</title>
   <desc>ProfileForge Experience widget</desc>
   <defs>
@@ -71,30 +71,30 @@ Widget: experience
   </linearGradient>
 </defs>
   
-<svg x="0" y="0" width="820" height="304" viewBox="0 0 820 304" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="0" y="0" width="820" height="262" viewBox="0 0 820 262" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     <title>Work Experience Card</title>
     <desc>Card component for Work Experience</desc>
-    <rect x="0.5" y="0.5" width="819" height="303" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
-    <rect x="40" y="32" width="4" height="24" rx="2" fill="#58A6FF" opacity="0.9"/>
-    <text x="56" y="49" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#C9D1D9" letter-spacing="0.3">Work Experience</text>
-    <line x1="40" y1="72" x2="780" y2="72" stroke="#58A6FF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="60" y="124" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#C9D1D9">Staff Backend Engineer · CloudScale Systems</text>
-<text x="668" y="123" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#58A6FF">2023 — Present</text>
+    <rect x="0.5" y="0.5" width="819" height="261" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
+    <rect x="24" y="24" width="4" height="20" rx="2" fill="#58A6FF" opacity="0.9"/>
+    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#C9D1D9" letter-spacing="0.3">Work Experience</text>
+    <line x1="24" y1="60" x2="796" y2="60" stroke="#58A6FF" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="44" y="98" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#C9D1D9">Staff Backend Engineer · CloudScale Systems</text>
+<text x="684" y="97" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#58A6FF">2023 — Present</text>
 
-<text x="60" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Leading the core distributed streaming platform processing over 2.5 million events per second.</text>
+<text x="44" y="114" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Leading the core distributed streaming platform processing over 2.5 million events per second.</text>
 
-<text x="60" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Architected zero-copy Kafka ingestion pipeline reducing P99 latency by 58%.</text>
+<text x="44" y="129" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Architected zero-copy Kafka ingestion pipeline reducing P99 latency by 58%.</text>
 
-<text x="60" y="169" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Designed automated consensus reconciliation engine using Raft in Go.</text>
+<text x="44" y="143" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Designed automated consensus reconciliation engine using Raft in Go.</text>
 
 
-<text x="60" y="199" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#C9D1D9">Senior Systems Engineer · DataMesh Infrastructure</text>
-<text x="688" y="198" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#58A6FF">2020 — 2023</text>
+<text x="44" y="173" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#C9D1D9">Senior Systems Engineer · DataMesh Infrastructure</text>
+<text x="704" y="172" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#58A6FF">2020 — 2023</text>
 
-<text x="60" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Built high-reliability telemetry pipelines and distributed database clustering services.</text>
+<text x="44" y="189" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Built high-reliability telemetry pipelines and distributed database clustering services.</text>
 
-<text x="60" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Scaled multi-region PostgreSQL clusters with active-active logical replication.</text>
+<text x="44" y="204" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Scaled multi-region PostgreSQL clusters with active-active logical replication.</text>
 
-<text x="60" y="244" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Implemented eBPF observability agent saving $350k/year in monitoring compute costs.</text>
+<text x="44" y="218" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">▸ Implemented eBPF observability agent saving $350k/year in monitoring compute costs.</text>
 </svg>
 </svg>

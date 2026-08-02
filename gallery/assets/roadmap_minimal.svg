@@ -69,34 +69,34 @@
     <title>Learning Roadmap Card</title>
     <desc>Card component for Learning Roadmap</desc>
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="4"/>
-    <rect x="40" y="32" width="4" height="24" rx="2" fill="#000000" opacity="0.9"/>
-    <text x="56" y="49" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">Learning Roadmap</text>
-    <line x1="40" y1="72" x2="780" y2="72" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="60" y="124" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Distributed Stream Processing Engine</text>
-<text x="739" y="124" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">90%</text>
+    <rect x="24" y="24" width="4" height="20" rx="2" fill="#000000" opacity="0.9"/>
+    <text x="36" y="40" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">Learning Roadmap</text>
+    <line x1="24" y1="60" x2="796" y2="60" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="44" y="98" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Distributed Stream Processing Engine</text>
+<text x="755" y="98" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">90%</text>
 
 <g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <rect x="60" y="130" width="700" height="8" fill="url(#pf-track-bg)" rx="2"/>
-    <rect x="60" y="130" width="630.0" height="8" fill="url(#pf-progress-grad)" rx="2">
-        <animate attributeName="width" from="0" to="630.0" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="44" y="104" width="732" height="8" fill="url(#pf-track-bg)" rx="2"/>
+    <rect x="44" y="104" width="658.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="2">
+        <animate attributeName="width" from="0" to="658.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
-<text x="60" y="168" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Custom JIT Compiler in Rust</text>
-<text x="739" y="168" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">65%</text>
+<text x="44" y="142" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Custom JIT Compiler in Rust</text>
+<text x="755" y="142" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">65%</text>
 
 <g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-    <rect x="60" y="174" width="700" height="8" fill="url(#pf-track-bg)" rx="2"/>
-    <rect x="60" y="174" width="455.0" height="8" fill="url(#pf-progress-grad)" rx="2">
-        <animate attributeName="width" from="0" to="455.0" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="44" y="148" width="732" height="8" fill="url(#pf-track-bg)" rx="2"/>
+    <rect x="44" y="148" width="475.8" height="8" fill="url(#pf-progress-grad)" rx="2">
+        <animate attributeName="width" from="0" to="475.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
-<text x="60" y="212" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Vector Database Indexing Primitives</text>
-<text x="739" y="212" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">40%</text>
+<text x="44" y="186" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111">Vector Database Indexing Primitives</text>
+<text x="755" y="186" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888">40%</text>
 
 <g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-    <rect x="60" y="218" width="700" height="8" fill="url(#pf-track-bg)" rx="2"/>
-    <rect x="60" y="218" width="280.0" height="8" fill="url(#pf-progress-grad)" rx="2">
-        <animate attributeName="width" from="0" to="280.0" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="44" y="192" width="732" height="8" fill="url(#pf-track-bg)" rx="2"/>
+    <rect x="44" y="192" width="292.8" height="8" fill="url(#pf-progress-grad)" rx="2">
+        <animate attributeName="width" from="0" to="292.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
 </svg>

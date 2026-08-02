@@ -6,6 +6,7 @@ from profileforge.components.widgets import (
     Badge,
     Card,
     CircularMetric,
+    Divider,
     Icon,
     Metric,
     MetricGroup,
@@ -118,16 +119,16 @@ class SVGRenderer(Renderer):
             escaped_title = html.escape(component.title)
 
             if escaped_title:
-                accent_bar = f'<rect x="{x + 40}" y="{y + 32}" width="4" height="24" rx="2" fill="{primary}" opacity="0.9"/>'
+                accent_bar = f'<rect x="{x + 24}" y="{y + 24}" width="4" height="20" rx="2" fill="{primary}" opacity="0.9"/>'
                 title_el = (
-                    f'<text x="{x + 56}" y="{y + 49}" '
+                    f'<text x="{x + 36}" y="{y + 40}" '
                     f'font-family="{self.theme.typography.font_family}" '
                     f'font-size="{self.theme.typography.heading}" '
                     f'font-weight="700" fill="{text_color}" '
                     f'letter-spacing="0.3">{escaped_title}</text>'
                 )
                 sep = (
-                    f'<line x1="{x + 40}" y1="{y + 72}" x2="{x + w - 40}" y2="{y + 72}" '
+                    f'<line x1="{x + 24}" y1="{y + 60}" x2="{x + w - 24}" y2="{y + 60}" '
                     f'stroke="{primary}" stroke-width="0.5" stroke-opacity="0.25"/>'
                 )
             else:
@@ -170,11 +171,18 @@ class SVGRenderer(Renderer):
             primary = self.get_color("primary")
             escaped_label = html.escape(component.label)
             escaped_value = html.escape(str(component.value))
+            
+            try:
+                formatted_value = f"{int(component.value):,}"
+            except ValueError:
+                formatted_value = escaped_value
 
             icon_svg = ""
+            label_x = x + 16
             if component.icon:
                 path = IconRegistry.get(component.icon) or component.icon
-                icon_svg = f'<svg x="{x + 12}" y="{y + 12}" width="20" height="20" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+                icon_svg = f'<svg x="{x + 16}" y="{y + 16}" width="18" height="18" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+                label_x += 18 + 10
 
             filter_attr = (
                 ' filter="url(#pf-shadow)"'
@@ -194,14 +202,14 @@ class SVGRenderer(Renderer):
                     if component.trend > 0
                     else f"{component.trend}%"
                 )
-                trend_svg = f'<text x="{x + w - 12}" y="{y + h - 16}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.small}" font-weight="600" fill="{trend_color}" text-anchor="end">{trend_text}</text>'
+                trend_svg = f'<text x="{x + w - 16}" y="{y + h - 20}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.small}" font-weight="600" fill="{trend_color}" text-anchor="end">{trend_text}</text>'
 
             return f"""
 <g{filter_attr}>
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
     {icon_svg}
-    <text x="{x + 12}" y="{y + h - 16}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="700" fill="{text_color}">{escaped_value}</text>
-    <text x="{x + 12}" y="{y + h - 38}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.small}" fill="{muted}">{escaped_label}</text>
+    <text x="{label_x}" y="{y + 30}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.small}" fill="{muted}" font-weight="600">{escaped_label}</text>
+    <text x="{x + 16}" y="{y + h - 20}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="700" fill="{text_color}">{formatted_value}</text>
     {trend_svg}
 </g>"""
 
@@ -225,7 +233,12 @@ class SVGRenderer(Renderer):
             icon_svg = ""
             if component.icon:
                 path = IconRegistry.get(component.icon) or component.icon
-                icon_svg = f'<svg x="{cx - 12}" y="{cy - 24}" width="24" height="24" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+                icon_svg = f'<svg x="{cx - 10}" y="{cy - 24}" width="20" height="20" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+                
+            try:
+                formatted_value = f"{int(component.value):,}"
+            except ValueError:
+                formatted_value = str(int(component.value))
 
             return f"""
 <g>
@@ -234,7 +247,7 @@ class SVGRenderer(Renderer):
         <animate attributeName="stroke-dashoffset" from="{circumference}" to="{dashoffset}" dur="1s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
     </circle>
     {icon_svg}
-    <text x="{cx}" y="{cy + 12}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="700" fill="{text_color}" text-anchor="middle">{int(component.value)}</text>
+    <text x="{cx}" y="{cy + 12}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.heading}" font-weight="700" fill="{text_color}" text-anchor="middle">{formatted_value}</text>
     <text x="{cx}" y="{cy + 28}" font-family="{self.theme.typography.font_family}" font-size="{self.theme.typography.small}" fill="{muted}" text-anchor="middle">{html.escape(component.label)}</text>
 </g>"""
 
@@ -276,6 +289,10 @@ class SVGRenderer(Renderer):
     <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{br}" fill="url(#{grad_id})" stroke="{fg_color}" stroke-width="0.8" stroke-opacity="0.5"/>
     <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.theme.typography.font_family}" font-size="12" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
 </g>"""
+
+        elif isinstance(component, Divider):
+            primary = self.get_color("primary")
+            return f'<line x1="{x}" y1="{y + h/2}" x2="{x + w}" y2="{y + h/2}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}"/>'
 
         elif isinstance(component, MetricGroup):
             parts = []

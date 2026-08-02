@@ -78,21 +78,23 @@ Widget: hero
     
     
     
-    <text x="252" y="96" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Maya Lin 👋</text>
+    <text x="252" y="81" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Maya Lin 👋</text>
 
-<text x="203" y="120" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#89b4fa">CS Undergrad @ MIT &amp; Aspiring Software Engineer</text>
+<text x="203" y="105" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#89b4fa">CS Undergrad @ MIT &amp; Aspiring Software Engineer</text>
 
 
 <g role="term">
-    <rect x="170" y="136" width="350" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="345.0" y="148.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Seeking Software Engineering Internships 2027</text>
+    <rect x="170" y="121" width="350" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="345.0" y="133.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Seeking Software Engineering Internships 2027</text>
 </g>
 
 <g role="term">
-    <rect x="530" y="136" width="119" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="589.5" y="148.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 Boston, MA</text>
+    <rect x="530" y="121" width="119" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="589.5" y="133.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 Boston, MA</text>
 </g>
 
-<text x="21" y="190" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Passionate about algorithms, distributed systems, open-source software, and full-stack development.&quot;</text>
+<line x1="110" y1="169.5" x2="710" y2="169.5" stroke="#89b4fa" stroke-width="1" stroke-opacity="0.4"/>
+
+<text x="21" y="200" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Passionate about algorithms, distributed systems, open-source software, and full-stack development.&quot;</text>
 </svg>
 </svg>

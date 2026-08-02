@@ -2,7 +2,7 @@ from typing import Any
 
 from profileforge.components.layout import Column, Component, Padding, Row, Spacer
 from profileforge.components.style import Style
-from profileforge.components.widgets import Badge, Card, Text
+from profileforge.components.widgets import Badge, Card, Text, Divider
 from profileforge.core.context import BuildContext
 from profileforge.core.models import DataRequest
 from profileforge.core.registry import register_widget
@@ -106,6 +106,8 @@ class HeroWidget(Widget):
             role_text,
             Spacer(height=16),
             badge_row,
+            Spacer(height=24),
+            Divider(opacity=0.4, style=Style(width=600)),
             Spacer(height=16),
             tagline_text,
         ]

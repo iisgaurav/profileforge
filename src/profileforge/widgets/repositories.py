@@ -143,7 +143,7 @@ class RepositoriesWidget(Widget):
                 style=Style(font_size=14, font_weight="700", color="primary"),
             )
             stats_text = Text(
-                f"★ {repo['stars']}   ⑂ {repo['forks']}",
+                f"★  {repo['stars']:,}    ⑂  {repo['forks']:,}",
                 style=Style(font_size=12, font_weight="600", color="text"),
             )
 

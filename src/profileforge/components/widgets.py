@@ -79,3 +79,9 @@ class CircularMetric(Component):
         self.max_value = max_value
         self.label = label
         self.icon = icon
+
+
+class Divider(Component):
+    def __init__(self, opacity: float = 0.4, style: Style | None = None):
+        super().__init__(style)
+        self.opacity = opacity

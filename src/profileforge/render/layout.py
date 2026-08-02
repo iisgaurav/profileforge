@@ -7,6 +7,7 @@ from profileforge.components.widgets import (
     Badge,
     Card,
     CircularMetric,
+    Divider,
     Icon,
     Metric,
     MetricGroup,
@@ -241,6 +242,10 @@ class LayoutEngine:
             component.computed_width = resolved_w or 300
             component.computed_height = resolved_h or 8
 
+        elif isinstance(component, Divider):
+            component.computed_width = resolved_w or 400
+            component.computed_height = resolved_h or 1
+
         elif isinstance(component, Badge):
             component.computed_width = (
                 resolved_w or int(len(component.label) * (12 * 0.55)) + 40
@@ -248,9 +253,9 @@ class LayoutEngine:
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
-            pad_x = 40
-            pad_y_top = 90 if component.title else 40
-            pad_y_bottom = 40
+            pad_x = 24
+            pad_y_top = 64 if component.title else 24
+            pad_y_bottom = 24
 
             child_pw = resolved_w - (pad_x * 2) if resolved_w else None
             child_ph = resolved_h - pad_y_top - pad_y_bottom if resolved_h else None

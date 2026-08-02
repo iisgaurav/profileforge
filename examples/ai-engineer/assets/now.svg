@@ -4,7 +4,7 @@ Version: 1
 Theme: dracula
 Widget: now
 -->
-<svg width="820" height="350" viewBox="0 0 820 350" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="308" viewBox="0 0 820 308" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Now Widget</title>
   <desc>ProfileForge Now widget</desc>
   <defs>
@@ -71,31 +71,31 @@ Widget: now
   </linearGradient>
 </defs>
   
-<svg x="0" y="0" width="820" height="350" viewBox="0 0 820 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="0" y="0" width="820" height="308" viewBox="0 0 820 308" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     <title>What I&#x27;m Doing Now Card</title>
     <desc>Card component for What I&#x27;m Doing Now</desc>
-    <rect x="0.5" y="0.5" width="819" height="349" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
-    <rect x="40" y="32" width="4" height="24" rx="2" fill="#FF79C6" opacity="0.9"/>
-    <text x="56" y="49" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">What I&#x27;m Doing Now</text>
-    <line x1="40" y1="72" x2="780" y2="72" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="60" y="123" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🔨 Building</text>
+    <rect x="0.5" y="0.5" width="819" height="307" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
+    <rect x="24" y="24" width="4" height="20" rx="2" fill="#FF79C6" opacity="0.9"/>
+    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">What I&#x27;m Doing Now</text>
+    <line x1="24" y1="60" x2="796" y2="60" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="44" y="97" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🔨 Building</text>
 
-<text x="60" y="139" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Multi-agent autonomous coding harness with verifiable execution environments</text>
+<text x="44" y="113" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Multi-agent autonomous coding harness with verifiable execution environments</text>
 
-<text x="60" y="164" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🧠 Learning</text>
+<text x="44" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🧠 Learning</text>
 
-<text x="60" y="180" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Custom CUDA kernel fusing for attention mechanisms using FlashAttention-3</text>
+<text x="44" y="154" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Custom CUDA kernel fusing for attention mechanisms using FlashAttention-3</text>
 
-<text x="60" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">📚 Reading</text>
+<text x="44" y="179" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">📚 Reading</text>
 
-<text x="60" y="221" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</text>
+<text x="44" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</text>
 
-<text x="60" y="246" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🎯 Focusing On</text>
+<text x="44" y="220" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🎯 Focusing On</text>
 
-<text x="60" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Low-latency speculative decoding, distillation of reasoning LLMs, and synthetic data generation</text>
+<text x="44" y="236" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Low-latency speculative decoding, distillation of reasoning LLMs, and synthetic data generation</text>
 
 
-<text x="60" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">📍 Seattle, WA</text>
-<text x="615" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">🕒 Updated: August 2026</text>
+<text x="44" y="264" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">📍 Seattle, WA</text>
+<text x="631" y="264" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">🕒 Updated: August 2026</text>
 </svg>
 </svg>
