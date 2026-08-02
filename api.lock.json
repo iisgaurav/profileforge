@@ -1934,6 +1934,57 @@
             }
           }
         },
+        "Divider": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "float",
+                  "default": "0.4",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "opacity"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
         "Icon": {
           "attributes": {
             "computed_height": {
@@ -4444,6 +4495,57 @@
             }
           }
         },
+        "Divider": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "float",
+                  "default": "0.4",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "opacity"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
         "Icon": {
           "attributes": {
             "computed_height": {
@@ -5303,6 +5405,57 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Divider": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "float",
+                  "default": "0.4",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "opacity"
                 },
                 {
                   "annotation": "Style | None",

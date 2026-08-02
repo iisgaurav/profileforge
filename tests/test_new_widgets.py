@@ -335,7 +335,7 @@ def test_repositories_widget_fetch_and_render(mock_theme):
     renderer = SVGRenderer(context)
     svg = renderer.render(card)
     assert "linux" in svg
-    assert "180000" in svg
+    assert "180,000" in svg
 
 
 def test_repositories_widget_fallback_when_unauthenticated(mock_theme):
