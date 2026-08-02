@@ -73,10 +73,10 @@ class SocialWidget(Widget):
         # Fallback default items if none provided
         if not items:
             items = [
-                {"platform": "github", "handle": "octocat"},
-                {"platform": "twitter", "handle": "octocat"},
-                {"platform": "linkedin", "handle": "in/octocat"},
-                {"platform": "website", "handle": "https://octocat.dev"},
+                {"platform": "github", "handle": "iisgaurav"},
+                {"platform": "twitter", "handle": "iisgaurav"},
+                {"platform": "linkedin", "handle": "in/iisgaurav"},
+                {"platform": "website", "handle": "https://iisgaurav.dev"},
             ]
 
         formatted = []

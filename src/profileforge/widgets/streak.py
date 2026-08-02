@@ -29,10 +29,10 @@ class StreakWidget(Widget):
 
     def fetch(self, context: BuildContext) -> Any:
         github_connector = context.services.connectors.get("github")
-        username = "octocat"
+        username = "iisgaurav"
         if github_connector:
             username = getattr(github_connector, "config", {}).get(
-                "username", "octocat"
+                "username", "iisgaurav"
             )
 
         local_connector = context.services.connectors.get("local")
@@ -51,7 +51,7 @@ class StreakWidget(Widget):
     def transform(self, data: Any, context: BuildContext) -> dict[str, Any]:
         local_data = data.get("local_data") if isinstance(data, dict) else None
         username = (
-            data.get("username", "octocat") if isinstance(data, dict) else "octocat"
+            data.get("username", "iisgaurav") if isinstance(data, dict) else "iisgaurav"
         )
 
         if isinstance(local_data, dict) and local_data:
@@ -74,7 +74,7 @@ class StreakWidget(Widget):
         }
 
     def build(self, data: Any, context: BuildContext) -> Component:
-        username = data.get("username", "octocat")
+        username = data.get("username", "iisgaurav")
         current_streak = data.get("current_streak", 42)
         longest_streak = data.get("longest_streak", 180)
         total_active_days = data.get("total_active_days", 312)

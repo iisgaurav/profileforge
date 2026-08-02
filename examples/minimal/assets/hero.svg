@@ -78,21 +78,21 @@ Widget: hero
     
     
     
-    <text x="196" y="86" font-family="sans-serif" font-size="32" font-weight="800" fill="#111111">Hi, I&#x27;m Marcus Vance 👋</text>
+    <text x="216" y="94" font-family="sans-serif" font-size="32" font-weight="800" fill="#111111">Hi, I&#x27;m Marcus Vance 👋</text>
 
-<text x="232" y="110" font-family="sans-serif" font-size="16" font-weight="600" fill="#000000">Software Craftsman &amp; Systems Builder</text>
+<text x="252" y="118" font-family="sans-serif" font-size="16" font-weight="600" fill="#000000">Software Craftsman &amp; Systems Builder</text>
 
 
 <g role="term">
-    <rect x="164" y="126" width="277" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="302.5" y="138.0" font-family="sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for technical consulting</text>
+    <rect x="184" y="134" width="277" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="322.5" y="146.0" font-family="sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for technical consulting</text>
 </g>
 
 <g role="term">
-    <rect x="451" y="126" width="165" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="533.5" y="138.0" font-family="sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 Stockholm, Sweden</text>
+    <rect x="471" y="134" width="165" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="553.5" y="146.0" font-family="sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 Stockholm, Sweden</text>
 </g>
 
-<text x="36" y="180" font-family="sans-serif" font-size="14" font-weight="normal" fill="#888888">&quot;Simplicity is prerequisite for reliability. Building robust tools with clean abstractions.&quot;</text>
+<text x="56" y="188" font-family="sans-serif" font-size="14" font-weight="normal" fill="#888888">&quot;Simplicity is prerequisite for reliability. Building robust tools with clean abstractions.&quot;</text>
 </svg>
 </svg>

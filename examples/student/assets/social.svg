@@ -78,32 +78,32 @@ Widget: social
     <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#89b4fa" opacity="0.9"/>
     <text x="32" y="31" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">Connect &amp; Socials</text>
     <line x1="20" y1="44" x2="800" y2="44" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="20" y="85" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="500" fill="#a6adc8">Let&#x27;s connect and build together:</text>
+    <text x="40" y="85" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="500" fill="#a6adc8">Let&#x27;s connect and build together:</text>
 
 
 <g role="term">
-    <rect x="20" y="97" width="158" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="99.0" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @octocat</text>
+    <rect x="40" y="97" width="172" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="126.0" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
 </g>
 
 <g role="term">
-    <rect x="188" y="97" width="211" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="293.5" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/maya-lin-cs</text>
+    <rect x="222" y="97" width="211" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="327.5" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/maya-lin-cs</text>
 </g>
 
 <g role="term">
-    <rect x="409" y="97" width="191" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="504.5" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @mayalin_dev</text>
+    <rect x="443" y="97" width="191" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="538.5" y="109.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @mayalin_dev</text>
 </g>
 
 <g role="term">
-    <rect x="20" y="131" width="191" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="115.5" y="143.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: mayadev#1337</text>
+    <rect x="40" y="131" width="191" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="135.5" y="143.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: mayadev#1337</text>
 </g>
 
 <g role="term">
-    <rect x="221" y="131" width="257" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="349.5" y="143.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: maya.lin@university.edu</text>
+    <rect x="241" y="131" width="257" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="369.5" y="143.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: maya.lin@university.edu</text>
 </g>
 </svg>
 </svg>

@@ -79,11 +79,11 @@ def test_benchmark_connector_wrapper():
     assert wrapper.fetch("test_res") == {"fetched": True}
 
     # Test stats & repos fallbacks
-    stats = wrapper.get_stats("octocat")
+    stats = wrapper.get_stats("iisgaurav")
     assert stats.commits > 0
-    repos = wrapper.get_repositories("octocat")
+    repos = wrapper.get_repositories("iisgaurav")
     assert len(repos) > 0
-    langs = wrapper.get_languages("octocat")
+    langs = wrapper.get_languages("iisgaurav")
     assert len(langs) > 0
     assert langs[0].name == "Python"
 

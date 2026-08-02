@@ -10,7 +10,7 @@ connectors:
   local:
     root: "./config"
   github:
-    username: "octocat"
+    username: "iisgaurav"
 
 widgets:
   - name: hero

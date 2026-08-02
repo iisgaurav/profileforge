@@ -78,24 +78,24 @@ Widget: now
     <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#3B82F6" opacity="0.9"/>
     <text x="32" y="31" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="20" y1="44" x2="800" y2="44" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="20" y="85" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🔨 Building</text>
+    <text x="40" y="85" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🔨 Building</text>
 
-<text x="20" y="101" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Accessible declarative UI component system with cross-platform token compilation</text>
+<text x="40" y="101" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Accessible declarative UI component system with cross-platform token compilation</text>
 
-<text x="20" y="126" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🧠 Learning</text>
+<text x="40" y="126" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🧠 Learning</text>
 
-<text x="20" y="142" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">WebGPU shaders, canvas rendering optimizations, and spatial audio interfaces</text>
+<text x="40" y="142" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">WebGPU shaders, canvas rendering optimizations, and spatial audio interfaces</text>
 
-<text x="20" y="167" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">📚 Reading</text>
+<text x="40" y="167" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">📚 Reading</text>
 
-<text x="20" y="183" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Refactoring UI by Adam Wathan &amp; Steve Schoger</text>
+<text x="40" y="183" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Refactoring UI by Adam Wathan &amp; Steve Schoger</text>
 
-<text x="20" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🎯 Focusing On</text>
+<text x="40" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B82F6">🎯 Focusing On</text>
 
-<text x="20" y="224" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Zero-CLS animations, fluid typography, and sub-millisecond interaction feedback</text>
+<text x="40" y="224" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#F8FAFC">Zero-CLS animations, fluid typography, and sub-millisecond interaction feedback</text>
 
 
-<text x="20" y="252" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8">📍 New York, NY</text>
-<text x="615" y="252" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8">🕒 Updated: August 2026</text>
+<text x="40" y="252" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8">📍 New York, NY</text>
+<text x="635" y="252" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8">🕒 Updated: August 2026</text>
 </svg>
 </svg>

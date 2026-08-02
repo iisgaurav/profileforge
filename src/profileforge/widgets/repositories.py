@@ -34,9 +34,9 @@ class RepositoriesWidget(Widget):
 
     def fetch(self, context: BuildContext) -> Any:
         github_connector = context.services.connectors.get("github")
-        username = "octocat"
+        username = "iisgaurav"
         if github_connector:
-            username = github_connector.config.get("username", "octocat")
+            username = github_connector.config.get("username", "iisgaurav")
 
         repos = []
         if github_connector:
@@ -49,7 +49,7 @@ class RepositoriesWidget(Widget):
 
     def transform(self, data: Any, context: BuildContext) -> dict[str, Any]:
         username = (
-            data.get("username", "octocat") if isinstance(data, dict) else "octocat"
+            data.get("username", "iisgaurav") if isinstance(data, dict) else "iisgaurav"
         )
         raw_repos = data.get("repos", []) if isinstance(data, dict) else []
 
@@ -132,7 +132,7 @@ class RepositoriesWidget(Widget):
 
     def build(self, data: Any, context: BuildContext) -> Component:
         username = (
-            data.get("username", "octocat") if isinstance(data, dict) else "octocat"
+            data.get("username", "iisgaurav") if isinstance(data, dict) else "iisgaurav"
         )
         repos = data.get("repos", []) if isinstance(data, dict) else []
 

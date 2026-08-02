@@ -1,0 +1,95 @@
+<svg width="820" height="292" viewBox="0 0 820 292" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>now - minimal</title>
+  <desc>ProfileForge widget preview</desc>
+  <defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#000000"/>
+    <stop offset="100%" stop-color="#FF0055" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#EEEEEE" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#EEEEEE" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#F9F9F9" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#F9F9F9" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3b0918"/>
+    <stop offset="50%" stop-color="#1e1333"/>
+    <stop offset="100%" stop-color="#091629"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#888888" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#888888" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+  
+<svg x="0" y="0" width="820" height="292" viewBox="0 0 820 292" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+    <title>What I&#x27;m Doing Now Card</title>
+    <desc>Card component for What I&#x27;m Doing Now</desc>
+    <rect x="0.5" y="0.5" width="819" height="291" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="4"/>
+    <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#000000" opacity="0.9"/>
+    <text x="32" y="31" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">What I&#x27;m Doing Now</text>
+    <line x1="20" y1="44" x2="800" y2="44" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="20" y="85" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🔨 Building</text>
+
+<text x="20" y="101" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+
+<text x="20" y="126" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🧠 Learning</text>
+
+<text x="20" y="142" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+
+<text x="20" y="167" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">📚 Reading</text>
+
+<text x="20" y="183" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Designing Data-Intensive Applications by Martin Kleppmann</text>
+
+<text x="20" y="208" font-family="sans-serif" font-size="13" font-weight="700" fill="#000000">🎯 Focusing On</text>
+
+<text x="20" y="224" font-family="sans-serif" font-size="13" font-weight="normal" fill="#111111">Developer tooling, open-source maintainability, and declarative UI design</text>
+
+
+<text x="20" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">📍 San Francisco, CA</text>
+<text x="615" y="252" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888">🕒 Updated: August 2026</text>
+</svg>
+</svg>

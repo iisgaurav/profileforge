@@ -1,0 +1,1215 @@
+{
+  "version": "1.0.0",
+  "schema": "profileforge-gallery-v1",
+  "themes": [
+    {
+      "id": "apple",
+      "name": "apple",
+      "mode": "light",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official apple theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#0071E3",
+        "secondary": "#86868B",
+        "background": "#F5F5F7",
+        "surface": "#FFFFFF",
+        "border": "#D2D2D7",
+        "text": "#1D1D1F",
+        "muted": "#86868B",
+        "success": "#34C759",
+        "warning": "#FF9500",
+        "info": "#5AC8FA",
+        "accent": "#AF52DE"
+      },
+      "typography": {
+        "font_family": "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/apple.svg"
+    },
+    {
+      "id": "catppuccin-base",
+      "name": "catppuccin-base",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official catppuccin-base theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#58A6FF",
+        "secondary": "#8B949E",
+        "background": "transparent",
+        "surface": "transparent",
+        "border": "#30363D",
+        "text": "#C9D1D9",
+        "muted": "#8B949E",
+        "success": "#2EA043",
+        "warning": "#D29922",
+        "info": "#388BFD",
+        "accent": "#D2A8FF"
+      },
+      "typography": {
+        "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/catppuccin-base.svg"
+    },
+    {
+      "id": "catppuccin-frappe",
+      "name": "catppuccin-frappe",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official catppuccin-frappe theme for ProfileForge.",
+      "extends": "catppuccin-base",
+      "colors": {
+        "primary": "#8caaee",
+        "secondary": "#85c1dc",
+        "background": "#303446",
+        "surface": "#292c3c",
+        "border": "#414559",
+        "text": "#c6d0f5",
+        "muted": "#a5adce",
+        "success": "#a6d189",
+        "warning": "#e5c890",
+        "info": "#81c8be",
+        "accent": "#ca9ee6"
+      },
+      "typography": {
+        "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/catppuccin-frappe.svg"
+    },
+    {
+      "id": "catppuccin-latte",
+      "name": "catppuccin-latte",
+      "mode": "light",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official catppuccin-latte theme for ProfileForge.",
+      "extends": "catppuccin-base",
+      "colors": {
+        "primary": "#1e66f5",
+        "secondary": "#04a5e5",
+        "background": "#eff1f5",
+        "surface": "#e6e9ef",
+        "border": "#ccd0da",
+        "text": "#4c4f69",
+        "muted": "#7c7f93",
+        "success": "#40a02b",
+        "warning": "#df8e1d",
+        "info": "#209fb5",
+        "accent": "#8839ef"
+      },
+      "typography": {
+        "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/catppuccin-latte.svg"
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "name": "catppuccin-macchiato",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official catppuccin-macchiato theme for ProfileForge.",
+      "extends": "catppuccin-base",
+      "colors": {
+        "primary": "#8aadf4",
+        "secondary": "#7dc4e4",
+        "background": "#24273a",
+        "surface": "#1e2030",
+        "border": "#363a4f",
+        "text": "#cad3f5",
+        "muted": "#a5adcb",
+        "success": "#a6da95",
+        "warning": "#eed49f",
+        "info": "#8bd5ca",
+        "accent": "#c6a0f6"
+      },
+      "typography": {
+        "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/catppuccin-macchiato.svg"
+    },
+    {
+      "id": "catppuccin-mocha",
+      "name": "catppuccin-mocha",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official catppuccin-mocha theme for ProfileForge.",
+      "extends": "catppuccin-base",
+      "colors": {
+        "primary": "#89b4fa",
+        "secondary": "#89dceb",
+        "background": "#1e1e2e",
+        "surface": "#181825",
+        "border": "#313244",
+        "text": "#cdd6f4",
+        "muted": "#a6adc8",
+        "success": "#a6e3a1",
+        "warning": "#f9e2af",
+        "info": "#94e2d5",
+        "accent": "#cba6f7"
+      },
+      "typography": {
+        "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/catppuccin-mocha.svg"
+    },
+    {
+      "id": "dracula",
+      "name": "dracula",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official dracula theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#FF79C6",
+        "secondary": "#BD93F9",
+        "background": "#282A36",
+        "surface": "#44475A",
+        "border": "#6272A4",
+        "text": "#F8F8F2",
+        "muted": "#6272A4",
+        "success": "#50FA7B",
+        "warning": "#F1FA8C",
+        "info": "#8BE9FD",
+        "accent": "#FFB86C"
+      },
+      "typography": {
+        "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/dracula.svg"
+    },
+    {
+      "id": "github-dark",
+      "name": "github-dark",
+      "mode": "dark",
+      "tags": [
+        "official",
+        "core"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official github-dark theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#58A6FF",
+        "secondary": "#8B949E",
+        "background": "transparent",
+        "surface": "transparent",
+        "border": "#30363D",
+        "text": "#C9D1D9",
+        "muted": "#8B949E",
+        "success": "#2EA043",
+        "warning": "#D29922",
+        "info": "#388BFD",
+        "accent": "#D2A8FF"
+      },
+      "typography": {
+        "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/github-dark.svg"
+    },
+    {
+      "id": "github-light",
+      "name": "github-light",
+      "mode": "light",
+      "tags": [
+        "official",
+        "core"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official github-light theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#0969DA",
+        "secondary": "#57606A",
+        "background": "transparent",
+        "surface": "transparent",
+        "border": "#D0D7DE",
+        "text": "#24292F",
+        "muted": "#57606A",
+        "success": "#1A7F37",
+        "warning": "#BF8700",
+        "info": "#0969DA",
+        "accent": "#8250DF"
+      },
+      "typography": {
+        "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/github-light.svg"
+    },
+    {
+      "id": "minimal",
+      "name": "minimal",
+      "mode": "minimal",
+      "tags": [
+        "official",
+        "core"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official minimal theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#666666",
+        "background": "#FFFFFF",
+        "surface": "#F9F9F9",
+        "border": "#EEEEEE",
+        "text": "#111111",
+        "muted": "#888888",
+        "success": "#00CC00",
+        "warning": "#FFCC00",
+        "info": "#0099FF",
+        "accent": "#FF0055"
+      },
+      "typography": {
+        "font_family": "sans-serif",
+        "heading": 24,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/minimal.svg"
+    },
+    {
+      "id": "modern",
+      "name": "modern",
+      "mode": "modern",
+      "tags": [
+        "official",
+        "core"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official modern theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "background": "#0F172A",
+        "surface": "#1E293B",
+        "border": "#334155",
+        "text": "#F8FAFC",
+        "muted": "#94A3B8",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "info": "#0EA5E9",
+        "accent": "#EC4899"
+      },
+      "typography": {
+        "font_family": "Inter, sans-serif",
+        "heading": 20,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/modern.svg"
+    },
+    {
+      "id": "nord",
+      "name": "nord",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official nord theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#88C0D0",
+        "secondary": "#81A1C1",
+        "background": "#2E3440",
+        "surface": "#3B4252",
+        "border": "#434C5E",
+        "text": "#ECEFF4",
+        "muted": "#D8DEE9",
+        "success": "#A3BE8C",
+        "warning": "#EBCB8B",
+        "info": "#81A1C1",
+        "accent": "#B48EAD"
+      },
+      "typography": {
+        "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/nord.svg"
+    },
+    {
+      "id": "showcase",
+      "name": "showcase",
+      "mode": "showcase",
+      "tags": [
+        "official",
+        "core"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official showcase theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#FFD700",
+        "secondary": "#FF8C00",
+        "background": "#121212",
+        "surface": "#242424",
+        "border": "#424242",
+        "text": "#E0E0E0",
+        "muted": "#757575",
+        "success": "#4CAF50",
+        "warning": "#FFC107",
+        "info": "#2196F3",
+        "accent": "#E91E63"
+      },
+      "typography": {
+        "font_family": "Roboto, sans-serif",
+        "heading": 32,
+        "body": 18,
+        "small": 14
+      },
+      "preview_url": "assets/showcase.svg"
+    },
+    {
+      "id": "vercel",
+      "name": "vercel",
+      "mode": "dark",
+      "tags": [
+        "official"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official vercel theme for ProfileForge.",
+      "extends": "github-dark",
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#888888",
+        "background": "#000000",
+        "surface": "#111111",
+        "border": "#333333",
+        "text": "#EDEDED",
+        "muted": "#A1A1AA",
+        "success": "#3291FF",
+        "warning": "#F5A623",
+        "info": "#0070F3",
+        "accent": "#0070F3"
+      },
+      "typography": {
+        "font_family": "Inter, 'SF Pro Display', -apple-system, sans-serif",
+        "heading": 18,
+        "body": 14,
+        "small": 12
+      },
+      "preview_url": "assets/vercel.svg"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "about",
+      "name": "About",
+      "category": "identity",
+      "description": "Hero card: name, role, status badge, tagline, and location.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "about",
+        "hero",
+        "identity",
+        "bio"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/about_github-dark.svg",
+        "vercel": "assets/about_vercel.svg",
+        "apple": "assets/about_apple.svg",
+        "dracula": "assets/about_dracula.svg",
+        "nord": "assets/about_nord.svg",
+        "modern": "assets/about_modern.svg",
+        "minimal": "assets/about_minimal.svg",
+        "catppuccin-mocha": "assets/about_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "achievements",
+      "name": "Achievements",
+      "category": "stats",
+      "description": "Developer unlock badges showcasing milestones, GitHub awards, and technical accomplishments.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "achievements",
+        "badges",
+        "awards",
+        "stats",
+        "unlocks",
+        "gamification",
+        "github"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/achievements_github-dark.svg",
+        "vercel": "assets/achievements_vercel.svg",
+        "apple": "assets/achievements_apple.svg",
+        "dracula": "assets/achievements_dracula.svg",
+        "nord": "assets/achievements_nord.svg",
+        "modern": "assets/achievements_modern.svg",
+        "minimal": "assets/achievements_minimal.svg",
+        "catppuccin-mocha": "assets/achievements_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "activity_timeline",
+      "name": "Activity Timeline",
+      "category": "development",
+      "description": "Recent commit events, pull requests, releases, and development milestones in a chronological timeline.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "activity",
+        "timeline",
+        "milestones",
+        "commits",
+        "releases",
+        "development",
+        "events"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/activity_timeline_github-dark.svg",
+        "vercel": "assets/activity_timeline_vercel.svg",
+        "apple": "assets/activity_timeline_apple.svg",
+        "dracula": "assets/activity_timeline_dracula.svg",
+        "nord": "assets/activity_timeline_nord.svg",
+        "modern": "assets/activity_timeline_modern.svg",
+        "minimal": "assets/activity_timeline_minimal.svg",
+        "catppuccin-mocha": "assets/activity_timeline_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "experience",
+      "name": "Experience",
+      "category": "career",
+      "description": "Career and work history timeline showcasing roles, companies, dates, and highlights.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "experience",
+        "career",
+        "work",
+        "history",
+        "timeline",
+        "resume",
+        "jobs"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/experience_github-dark.svg",
+        "vercel": "assets/experience_vercel.svg",
+        "apple": "assets/experience_apple.svg",
+        "dracula": "assets/experience_dracula.svg",
+        "nord": "assets/experience_nord.svg",
+        "modern": "assets/experience_modern.svg",
+        "minimal": "assets/experience_minimal.svg",
+        "catppuccin-mocha": "assets/experience_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "expertise",
+      "name": "Expertise",
+      "category": "career",
+      "description": "Technical skills and expertise grouped by domain.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "skills",
+        "expertise",
+        "stack",
+        "career"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/expertise_github-dark.svg",
+        "vercel": "assets/expertise_vercel.svg",
+        "apple": "assets/expertise_apple.svg",
+        "dracula": "assets/expertise_dracula.svg",
+        "nord": "assets/expertise_nord.svg",
+        "modern": "assets/expertise_modern.svg",
+        "minimal": "assets/expertise_minimal.svg",
+        "catppuccin-mocha": "assets/expertise_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "focus",
+      "name": "Current Focus",
+      "category": "development",
+      "description": "Displays current learning goals and projects with progress indicators.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "focus",
+        "learning",
+        "development",
+        "goals"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/focus_github-dark.svg",
+        "vercel": "assets/focus_vercel.svg",
+        "apple": "assets/focus_apple.svg",
+        "dracula": "assets/focus_dracula.svg",
+        "nord": "assets/focus_nord.svg",
+        "modern": "assets/focus_modern.svg",
+        "minimal": "assets/focus_minimal.svg",
+        "catppuccin-mocha": "assets/focus_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "github_languages",
+      "name": "GitHub Languages",
+      "category": "stats",
+      "description": "Top programming languages breakdown from GitHub repositories.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "github",
+        "languages",
+        "code",
+        "stats"
+      ],
+      "required_connectors": [
+        "github"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/github_languages_github-dark.svg",
+        "vercel": "assets/github_languages_vercel.svg",
+        "apple": "assets/github_languages_apple.svg",
+        "dracula": "assets/github_languages_dracula.svg",
+        "nord": "assets/github_languages_nord.svg",
+        "modern": "assets/github_languages_modern.svg",
+        "minimal": "assets/github_languages_minimal.svg",
+        "catppuccin-mocha": "assets/github_languages_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "github_stats",
+      "name": "GitHub Stats",
+      "category": "stats",
+      "description": "Summary of GitHub stars, PRs, commits, and overall developer score.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "github",
+        "stats",
+        "metrics",
+        "analytics"
+      ],
+      "required_connectors": [
+        "github"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/github_stats_github-dark.svg",
+        "vercel": "assets/github_stats_vercel.svg",
+        "apple": "assets/github_stats_apple.svg",
+        "dracula": "assets/github_stats_dracula.svg",
+        "nord": "assets/github_stats_nord.svg",
+        "modern": "assets/github_stats_modern.svg",
+        "minimal": "assets/github_stats_minimal.svg",
+        "catppuccin-mocha": "assets/github_stats_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "category": "identity",
+      "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "hero",
+        "identity",
+        "bio",
+        "banner",
+        "developer"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/hero_github-dark.svg",
+        "vercel": "assets/hero_vercel.svg",
+        "apple": "assets/hero_apple.svg",
+        "dracula": "assets/hero_dracula.svg",
+        "nord": "assets/hero_nord.svg",
+        "modern": "assets/hero_modern.svg",
+        "minimal": "assets/hero_minimal.svg",
+        "catppuccin-mocha": "assets/hero_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "now",
+      "name": "Now",
+      "category": "development",
+      "description": "Derek Sivers-style 'Now' widget showing active building, reading, learning, and focus.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "now",
+        "current",
+        "building",
+        "reading",
+        "learning",
+        "development",
+        "focus"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/now_github-dark.svg",
+        "vercel": "assets/now_vercel.svg",
+        "apple": "assets/now_apple.svg",
+        "dracula": "assets/now_dracula.svg",
+        "nord": "assets/now_nord.svg",
+        "modern": "assets/now_modern.svg",
+        "minimal": "assets/now_minimal.svg",
+        "catppuccin-mocha": "assets/now_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "repositories",
+      "name": "Featured Repositories",
+      "category": "projects",
+      "description": "Showcases top GitHub repositories with stars, forks, and language badges.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "github",
+        "repositories",
+        "projects",
+        "stars",
+        "forks",
+        "open-source",
+        "showcase"
+      ],
+      "required_connectors": [
+        "github"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/repositories_github-dark.svg",
+        "vercel": "assets/repositories_vercel.svg",
+        "apple": "assets/repositories_apple.svg",
+        "dracula": "assets/repositories_dracula.svg",
+        "nord": "assets/repositories_nord.svg",
+        "modern": "assets/repositories_modern.svg",
+        "minimal": "assets/repositories_minimal.svg",
+        "catppuccin-mocha": "assets/repositories_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "roadmap",
+      "name": "Roadmap",
+      "category": "development",
+      "description": "Learning and career milestones with progress bars.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "roadmap",
+        "milestones",
+        "progress",
+        "development"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/roadmap_github-dark.svg",
+        "vercel": "assets/roadmap_vercel.svg",
+        "apple": "assets/roadmap_apple.svg",
+        "dracula": "assets/roadmap_dracula.svg",
+        "nord": "assets/roadmap_nord.svg",
+        "modern": "assets/roadmap_modern.svg",
+        "minimal": "assets/roadmap_minimal.svg",
+        "catppuccin-mocha": "assets/roadmap_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "skills",
+      "name": "Technical Skills",
+      "category": "career",
+      "description": "Groups technical skills into categorized sections with badge chips.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "skills",
+        "technologies",
+        "languages",
+        "frameworks",
+        "tools",
+        "career",
+        "stack"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/skills_github-dark.svg",
+        "vercel": "assets/skills_vercel.svg",
+        "apple": "assets/skills_apple.svg",
+        "dracula": "assets/skills_dracula.svg",
+        "nord": "assets/skills_nord.svg",
+        "modern": "assets/skills_modern.svg",
+        "minimal": "assets/skills_minimal.svg",
+        "catppuccin-mocha": "assets/skills_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "social",
+      "name": "Social Links",
+      "category": "social",
+      "description": "Displays a clean row and wrap of social media links and profiles.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "social",
+        "links",
+        "handles",
+        "contacts",
+        "community"
+      ],
+      "required_connectors": [
+        "local"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/social_github-dark.svg",
+        "vercel": "assets/social_vercel.svg",
+        "apple": "assets/social_apple.svg",
+        "dracula": "assets/social_dracula.svg",
+        "nord": "assets/social_nord.svg",
+        "modern": "assets/social_modern.svg",
+        "minimal": "assets/social_minimal.svg",
+        "catppuccin-mocha": "assets/social_catppuccin-mocha.svg"
+      }
+    },
+    {
+      "id": "streak",
+      "name": "Contribution Streak",
+      "category": "stats",
+      "description": "Tracks daily GitHub contribution streaks, longest continuous activity, and consistency rate.",
+      "version": "1.0.0",
+      "author": "ProfileForge Team",
+      "tags": [
+        "streak",
+        "stats",
+        "github",
+        "contributions",
+        "habits",
+        "activity"
+      ],
+      "required_connectors": [
+        "github"
+      ],
+      "experimental": false,
+      "deprecated": false,
+      "renders": {
+        "github-dark": "assets/streak_github-dark.svg",
+        "vercel": "assets/streak_vercel.svg",
+        "apple": "assets/streak_apple.svg",
+        "dracula": "assets/streak_dracula.svg",
+        "nord": "assets/streak_nord.svg",
+        "modern": "assets/streak_modern.svg",
+        "minimal": "assets/streak_minimal.svg",
+        "catppuccin-mocha": "assets/streak_catppuccin-mocha.svg"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "ai-engineer",
+      "name": "AI & Machine Learning Engineer",
+      "description": "Specialized for AI/ML engineers and researchers featuring deep learning frameworks, CUDA, LLM agents, and active research focus.",
+      "active_theme": "dracula",
+      "widgets": [
+        "hero",
+        "skills",
+        "repositories",
+        "now",
+        "github_stats"
+      ],
+      "file_list": [
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_dracula.svg",
+        "skills": "assets/skills_dracula.svg",
+        "repositories": "assets/repositories_dracula.svg",
+        "now": "assets/now_dracula.svg",
+        "github_stats": "assets/github_stats_dracula.svg"
+      }
+    },
+    {
+      "id": "backend",
+      "name": "Backend Engineer",
+      "description": "Tailored for backend and distributed systems engineers with skills, repositories, stats, and work experience.",
+      "active_theme": "github-dark",
+      "widgets": [
+        "hero",
+        "skills",
+        "repositories",
+        "github_stats",
+        "experience"
+      ],
+      "file_list": [
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_github-dark.svg",
+        "skills": "assets/skills_github-dark.svg",
+        "repositories": "assets/repositories_github-dark.svg",
+        "github_stats": "assets/github_stats_github-dark.svg",
+        "experience": "assets/experience_github-dark.svg"
+      }
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend Engineer",
+      "description": "Tailored for frontend, design technologist, and UI/UX developers with modern UI stack, projects, and now widget.",
+      "active_theme": "modern",
+      "widgets": [
+        "hero",
+        "skills",
+        "repositories",
+        "github_stats",
+        "now"
+      ],
+      "file_list": [
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_modern.svg",
+        "skills": "assets/skills_modern.svg",
+        "repositories": "assets/repositories_modern.svg",
+        "github_stats": "assets/github_stats_modern.svg",
+        "now": "assets/now_modern.svg"
+      }
+    },
+    {
+      "id": "indie-hacker",
+      "name": "Indie Hacker & Solopreneur",
+      "description": "Tailored for indie hackers, bootstrappers, and solopreneurs building micro-SaaS and products in public.",
+      "active_theme": "modern",
+      "widgets": [
+        "hero",
+        "streak",
+        "repositories",
+        "focus",
+        "achievements",
+        "social"
+      ],
+      "file_list": [
+        "config/achievements.yaml",
+        "config/focus.yaml",
+        "config/hero.yaml",
+        "config/social.yaml",
+        "config/streak.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_modern.svg",
+        "streak": "assets/streak_modern.svg",
+        "repositories": "assets/repositories_modern.svg",
+        "focus": "assets/focus_modern.svg",
+        "achievements": "assets/achievements_modern.svg",
+        "social": "assets/social_modern.svg"
+      }
+    },
+    {
+      "id": "minimal",
+      "name": "Minimalist",
+      "description": "Clean, elegant monochromatic layout with essential hero identity, about bio, and featured repositories.",
+      "active_theme": "minimal",
+      "widgets": [
+        "hero",
+        "about",
+        "repositories"
+      ],
+      "file_list": [
+        "config/about.yaml",
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_minimal.svg",
+        "about": "assets/about_minimal.svg",
+        "repositories": "assets/repositories_minimal.svg"
+      }
+    },
+    {
+      "id": "open-source-maintainer",
+      "name": "Open Source Maintainer",
+      "description": "Tailored for open-source library authors and foundation maintainers with pinned repositories, activity timeline, and streak stats.",
+      "active_theme": "dracula",
+      "widgets": [
+        "hero",
+        "github_stats",
+        "repositories",
+        "activity_timeline",
+        "streak",
+        "achievements",
+        "social"
+      ],
+      "file_list": [
+        "config/achievements.yaml",
+        "config/activity_timeline.yaml",
+        "config/hero.yaml",
+        "config/social.yaml",
+        "config/streak.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_dracula.svg",
+        "github_stats": "assets/github_stats_dracula.svg",
+        "repositories": "assets/repositories_dracula.svg",
+        "activity_timeline": "assets/activity_timeline_dracula.svg",
+        "streak": "assets/streak_dracula.svg",
+        "achievements": "assets/achievements_dracula.svg",
+        "social": "assets/social_dracula.svg"
+      }
+    },
+    {
+      "id": "opensource",
+      "name": "Open Source Maintainer",
+      "description": "Showcase-focused template highlighting pinned OSS repositories, language breakdowns, GitHub stats, and community channels.",
+      "active_theme": "github-dark",
+      "widgets": [
+        "hero",
+        "repositories",
+        "github_stats",
+        "github_languages",
+        "social"
+      ],
+      "file_list": [
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_github-dark.svg",
+        "repositories": "assets/repositories_github-dark.svg",
+        "github_stats": "assets/github_stats_github-dark.svg",
+        "github_languages": "assets/github_languages_github-dark.svg",
+        "social": "assets/social_github-dark.svg"
+      }
+    },
+    {
+      "id": "security-engineer",
+      "name": "Security Engineer & AppSec",
+      "description": "Tailored for cybersecurity researchers, AppSec engineers, and bug bounty hunters with CTF rankings, CVEs, and security tooling.",
+      "active_theme": "cyberpunk",
+      "widgets": [
+        "hero",
+        "expertise",
+        "skills",
+        "achievements",
+        "repositories",
+        "social"
+      ],
+      "file_list": [
+        "config/achievements.yaml",
+        "config/expertise.yaml",
+        "config/hero.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_github-dark.svg",
+        "expertise": "assets/expertise_github-dark.svg",
+        "skills": "assets/skills_github-dark.svg",
+        "achievements": "assets/achievements_github-dark.svg",
+        "repositories": "assets/repositories_github-dark.svg",
+        "social": "assets/social_github-dark.svg"
+      }
+    },
+    {
+      "id": "student",
+      "name": "Student & Learner",
+      "description": "Designed for students and early-career developers with learning roadmaps, skills, projects, and social contacts.",
+      "active_theme": "catppuccin-mocha",
+      "widgets": [
+        "hero",
+        "skills",
+        "roadmap",
+        "repositories",
+        "social"
+      ],
+      "file_list": [
+        "config/experience.yaml",
+        "config/hero.yaml",
+        "config/now.yaml",
+        "config/roadmap.yaml",
+        "config/skills.yaml",
+        "config/social.yaml",
+        "manifest.yaml",
+        "profileforge.yaml",
+        "README.md"
+      ],
+      "renders": {
+        "hero": "assets/hero_catppuccin-mocha.svg",
+        "skills": "assets/skills_catppuccin-mocha.svg",
+        "roadmap": "assets/roadmap_catppuccin-mocha.svg",
+        "repositories": "assets/repositories_catppuccin-mocha.svg",
+        "social": "assets/social_catppuccin-mocha.svg"
+      }
+    }
+  ]
+}

@@ -27,9 +27,9 @@ class GithubLanguagesWidget(Widget):
 
     def fetch(self, context: BuildContext) -> Any:
         github_connector = context.services.connectors.get("github")
-        username = "octocat"
+        username = "iisgaurav"
         if github_connector:
-            username = github_connector.config.get("username", "octocat")
+            username = github_connector.config.get("username", "iisgaurav")
 
         repos = []
         if github_connector:

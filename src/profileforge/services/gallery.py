@@ -112,14 +112,14 @@ SAMPLE_REPOSITORIES = [
 
 SAMPLE_LOCAL_DATA = {
     "about.yaml": {
-        "name": "Alex Rivera",
+        "name": "Gaurav Verma",
         "role": "Principal Systems Architect",
         "tagline": "Building resilient distributed systems and open-source developer tooling.",
         "status": "Available for opportunities",
         "location": "San Francisco, CA",
     },
     "hero.yaml": {
-        "name": "Alex Rivera",
+        "name": "Gaurav Verma",
         "role": "Principal Systems Architect",
         "tagline": "Building resilient distributed systems and open-source developer tooling.",
         "status": "Available for opportunities",
@@ -220,12 +220,12 @@ SAMPLE_LOCAL_DATA = {
         },
     ],
     "social.yaml": {
-        "github": "octocat",
-        "twitter": "octocat",
-        "linkedin": "in/octocat",
-        "website": "https://octocat.dev",
+        "github": "iisgaurav",
+        "twitter": "iisgaurav",
+        "linkedin": "in/iisgaurav",
+        "website": "https://iisgaurav.dev",
         "discord": "alex_dev",
-        "email": "alex@octocat.dev",
+        "email": "alex@iisgaurav.dev",
     },
     "streak.yaml": {
         "current_streak": 42,
@@ -507,7 +507,7 @@ class GalleryExporter:
         # Base config for context
         base_config = ProfileForgeConfig(
             version=1,
-            project_name="Alex Rivera",
+            project_name="Gaurav Verma",
             project_title="Principal Systems Architect",
             active_theme="github-dark",
             widgets=[],

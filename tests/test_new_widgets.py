@@ -119,11 +119,11 @@ def test_social_widget_transform_and_render(mock_theme):
 
     # Test dict input
     test_dict = {
-        "github": "octocat",
-        "twitter": "octocat_x",
-        "linkedin": "in/octocat",
-        "website": "https://octocat.dev",
-        "discord": "octocat#0001",
+        "github": "iisgaurav",
+        "twitter": "iisgaurav_x",
+        "linkedin": "in/iisgaurav",
+        "website": "https://iisgaurav.dev",
+        "discord": "iisgaurav#0001",
     }
     context = create_test_context(mock_theme)
     items = widget.transform(test_dict, context)

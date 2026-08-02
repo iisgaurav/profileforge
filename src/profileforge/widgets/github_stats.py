@@ -28,9 +28,9 @@ class GithubStatsWidget(Widget):
 
     def fetch(self, context: BuildContext) -> Any:
         github_connector = context.services.connectors.get("github")
-        username = "octocat"
+        username = "iisgaurav"
         if github_connector:
-            username = github_connector.config.get("username", "octocat")
+            username = github_connector.config.get("username", "iisgaurav")
 
         stats = None
         if github_connector:
@@ -44,7 +44,7 @@ class GithubStatsWidget(Widget):
     def transform(self, data: Any, context: BuildContext) -> Any:
         stats = data.get("stats") if isinstance(data, dict) else None
         username = (
-            data.get("username", "octocat") if isinstance(data, dict) else "octocat"
+            data.get("username", "iisgaurav") if isinstance(data, dict) else "iisgaurav"
         )
 
         stars = stats.stars if stats else 0
@@ -70,7 +70,7 @@ class GithubStatsWidget(Widget):
         }
 
     def build(self, data: Any, context: BuildContext) -> Component:
-        username = data.get("username", "octocat")
+        username = data.get("username", "iisgaurav")
         score = data.get("score", 0)
         stars = data.get("stars", 0)
         prs = data.get("prs", 0)

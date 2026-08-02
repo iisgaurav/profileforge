@@ -91,7 +91,7 @@ def test_template_configs_load_and_build(tmp_path):
 
         # Setup local connector pointing to template config dir
         local_conn = LocalConnector({"root": str(template_path / "config")})
-        gh_conn = GithubConnector({"username": "octocat"})
+        gh_conn = GithubConnector({"username": "iisgaurav"})
         services = Services(connectors={"local": local_conn, "github": gh_conn})
         context = BuildContext(theme=theme, config=config, services=services)
 

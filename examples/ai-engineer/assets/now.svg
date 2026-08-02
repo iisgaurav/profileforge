@@ -78,24 +78,24 @@ Widget: now
     <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#FF79C6" opacity="0.9"/>
     <text x="32" y="31" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="20" y1="44" x2="800" y2="44" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="20" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🔨 Building</text>
+    <text x="40" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🔨 Building</text>
 
-<text x="20" y="101" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Multi-agent autonomous coding harness with verifiable execution environments</text>
+<text x="40" y="101" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Multi-agent autonomous coding harness with verifiable execution environments</text>
 
-<text x="20" y="126" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🧠 Learning</text>
+<text x="40" y="126" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🧠 Learning</text>
 
-<text x="20" y="142" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Custom CUDA kernel fusing for attention mechanisms using FlashAttention-3</text>
+<text x="40" y="142" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Custom CUDA kernel fusing for attention mechanisms using FlashAttention-3</text>
 
-<text x="20" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">📚 Reading</text>
+<text x="40" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">📚 Reading</text>
 
-<text x="20" y="183" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</text>
+<text x="40" y="183" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</text>
 
-<text x="20" y="208" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🎯 Focusing On</text>
+<text x="40" y="208" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FF79C6">🎯 Focusing On</text>
 
-<text x="20" y="224" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Low-latency speculative decoding, distillation of reasoning LLMs, and synthetic data generation</text>
+<text x="40" y="224" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#F8F8F2">Low-latency speculative decoding, distillation of reasoning LLMs, and synthetic data generation</text>
 
 
-<text x="20" y="252" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">📍 Seattle, WA</text>
-<text x="615" y="252" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">🕒 Updated: August 2026</text>
+<text x="40" y="252" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">📍 Seattle, WA</text>
+<text x="635" y="252" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4">🕒 Updated: August 2026</text>
 </svg>
 </svg>

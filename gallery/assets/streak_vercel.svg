@@ -66,11 +66,11 @@
 </defs>
   
 <svg x="0" y="0" width="820" height="328" viewBox="0 0 820 328" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
-    <title>Contribution Streak 🔥 (@octocat) Card</title>
-    <desc>Card component for Contribution Streak 🔥 (@octocat)</desc>
+    <title>Contribution Streak 🔥 (@iisgaurav) Card</title>
+    <desc>Card component for Contribution Streak 🔥 (@iisgaurav)</desc>
     <rect x="0.5" y="0.5" width="819" height="327" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#FFFFFF" opacity="0.9"/>
-    <text x="32" y="31" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Contribution Streak 🔥 (@octocat)</text>
+    <text x="32" y="31" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Contribution Streak 🔥 (@iisgaurav)</text>
     <line x1="20" y1="44" x2="800" y2="44" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
     
 <g>
