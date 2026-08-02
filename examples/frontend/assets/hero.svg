@@ -78,21 +78,21 @@ Widget: hero
     
     
     
-    <text x="208" y="94" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#F8FAFC">Hi, I&#x27;m Elena Rostova 👋</text>
+    <text x="208" y="96" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#F8FAFC">Hi, I&#x27;m Elena Rostova 👋</text>
 
-<text x="225" y="118" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#3B82F6">Senior Frontend Architect &amp; UI/UX Engineer</text>
+<text x="225" y="120" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#3B82F6">Senior Frontend Architect &amp; UI/UX Engineer</text>
 
 
 <g role="term">
-    <rect x="207" y="134" width="264" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="339.0" y="146.0" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Building next-gen design systems</text>
+    <rect x="207" y="136" width="264" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="339.0" y="148.0" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Building next-gen design systems</text>
 </g>
 
 <g role="term">
-    <rect x="481" y="134" width="132" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="547.0" y="146.0" font-family="Inter, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 New York, NY</text>
+    <rect x="481" y="136" width="132" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="547.0" y="148.0" font-family="Inter, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 New York, NY</text>
 </g>
 
-<text x="52" y="188" font-family="Inter, sans-serif" font-size="14" font-weight="normal" fill="#94A3B8">&quot;Crafting intuitive, accessible, and high-performance web experiences with pixel perfection.&quot;</text>
+<text x="52" y="190" font-family="Inter, sans-serif" font-size="14" font-weight="normal" fill="#94A3B8">&quot;Crafting intuitive, accessible, and high-performance web experiences with pixel perfection.&quot;</text>
 </svg>
 </svg>

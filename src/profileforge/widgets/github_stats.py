@@ -87,7 +87,7 @@ class GithubStatsWidget(Widget):
             Metric(label="Repositories", value="--", icon="repo"),  # dummy for layout
         ]
 
-        group = MetricGroup(metrics=metrics, columns=2, spacing=16)
+        group = MetricGroup(metrics=metrics, columns=2, spacing=24)
 
         content = Row(
             children=[circular, group],

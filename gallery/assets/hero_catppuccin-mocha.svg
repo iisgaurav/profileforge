@@ -72,21 +72,21 @@
     
     
     
-    <text x="216" y="94" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Gaurav Verma 👋</text>
+    <text x="216" y="96" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#cdd6f4">Hi, I&#x27;m Gaurav Verma 👋</text>
 
-<text x="291" y="118" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#89b4fa">Principal Systems Architect</text>
+<text x="291" y="120" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#89b4fa">Principal Systems Architect</text>
 
 
 <g role="term">
-    <rect x="207" y="134" width="231" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="322.5" y="146.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
+    <rect x="207" y="136" width="231" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="322.5" y="148.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
 </g>
 
 <g role="term">
-    <rect x="448" y="134" width="165" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="530.5" y="146.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
+    <rect x="448" y="136" width="165" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="530.5" y="148.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
 </g>
 
-<text x="121" y="188" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
+<text x="121" y="190" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#a6adc8">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
 </svg>
 </svg>

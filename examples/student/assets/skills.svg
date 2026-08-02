@@ -4,7 +4,7 @@ Version: 1
 Theme: catppuccin-mocha
 Widget: skills
 -->
-<svg width="820" height="269" viewBox="0 0 820 269" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="327" viewBox="0 0 820 327" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Skills Widget</title>
   <desc>ProfileForge Skills widget</desc>
   <defs>
@@ -71,95 +71,95 @@ Widget: skills
   </linearGradient>
 </defs>
   
-<svg x="0" y="0" width="820" height="269" viewBox="0 0 820 269" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="0" y="0" width="820" height="327" viewBox="0 0 820 327" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     <title>Technical Skills Card</title>
     <desc>Card component for Technical Skills</desc>
-    <rect x="0.5" y="0.5" width="819" height="268" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
-    <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#89b4fa" opacity="0.9"/>
-    <text x="32" y="31" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">Technical Skills</text>
-    <line x1="20" y1="44" x2="800" y2="44" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="40" y="85" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Foundations &amp; Languages</text>
+    <rect x="0.5" y="0.5" width="819" height="326" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
+    <rect x="40" y="32" width="4" height="24" rx="2" fill="#89b4fa" opacity="0.9"/>
+    <text x="56" y="49" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">Technical Skills</text>
+    <line x1="40" y1="72" x2="780" y2="72" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="60" y="123" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Foundations &amp; Languages</text>
 
 
 <g role="term">
-    <rect x="40" y="91" width="79" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="79.5" y="103.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
+    <rect x="60" y="129" width="79" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="99.5" y="141.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g>
 
 <g role="term">
-    <rect x="127" y="91" width="66" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="160.0" y="103.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Java</text>
+    <rect x="147" y="129" width="66" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="180.0" y="141.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Java</text>
 </g>
 
 <g role="term">
-    <rect x="201" y="91" width="86" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="244.0" y="103.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">C / C++</text>
+    <rect x="221" y="129" width="86" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="264.0" y="141.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">C / C++</text>
 </g>
 
 <g role="term">
-    <rect x="295" y="91" width="106" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="348.0" y="103.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
+    <rect x="315" y="129" width="106" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="368.0" y="141.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g>
 
 <g role="term">
-    <rect x="409" y="91" width="59" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="438.5" y="103.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">SQL</text>
+    <rect x="429" y="129" width="59" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="458.5" y="141.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">SQL</text>
 </g>
 
-<text x="40" y="142" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Web &amp; Full-Stack</text>
+<text x="60" y="180" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Web &amp; Full-Stack</text>
 
 
 <g role="term">
-    <rect x="40" y="148" width="73" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="76.5" y="160.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">React</text>
+    <rect x="60" y="186" width="73" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="96.5" y="198.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">React</text>
 </g>
 
 <g role="term">
-    <rect x="121" y="148" width="86" height="24" rx="12" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="164.0" y="160.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Next.js</text>
+    <rect x="141" y="186" width="86" height="24" rx="12" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="184.0" y="198.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Next.js</text>
 </g>
 
 <g role="term">
-    <rect x="215" y="148" width="86" height="24" rx="12" fill="url(#pf-badge-7)" stroke="#84CC16" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="258.0" y="160.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#84CC16" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">FastAPI</text>
+    <rect x="235" y="186" width="86" height="24" rx="12" fill="url(#pf-badge-7)" stroke="#84CC16" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="278.0" y="198.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#84CC16" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">FastAPI</text>
 </g>
 
 <g role="term">
-    <rect x="309" y="148" width="86" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="352.0" y="160.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Node.js</text>
+    <rect x="329" y="186" width="86" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="372.0" y="198.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Node.js</text>
 </g>
 
 <g role="term">
-    <rect x="403" y="148" width="119" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="462.5" y="160.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Tailwind CSS</text>
+    <rect x="423" y="186" width="119" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="482.5" y="198.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Tailwind CSS</text>
 </g>
 
-<text x="40" y="199" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Tools &amp; Devops</text>
+<text x="60" y="237" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">Tools &amp; Devops</text>
 
 
 <g role="term">
-    <rect x="40" y="205" width="119" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="99.5" y="217.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Git / GitHub</text>
+    <rect x="60" y="243" width="119" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="119.5" y="255.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Git / GitHub</text>
 </g>
 
 <g role="term">
-    <rect x="167" y="205" width="79" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="206.5" y="217.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Docker</text>
+    <rect x="187" y="243" width="79" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="226.5" y="255.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Docker</text>
 </g>
 
 <g role="term">
-    <rect x="254" y="205" width="119" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="313.5" y="217.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Linux / Bash</text>
+    <rect x="274" y="243" width="119" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="333.5" y="255.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Linux / Bash</text>
 </g>
 
 <g role="term">
-    <rect x="381" y="205" width="106" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="434.0" y="217.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">PostgreSQL</text>
+    <rect x="401" y="243" width="106" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="454.0" y="255.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">PostgreSQL</text>
 </g>
 
 <g role="term">
-    <rect x="495" y="205" width="86" height="24" rx="12" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="538.0" y="217.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">VS Code</text>
+    <rect x="515" y="243" width="86" height="24" rx="12" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="558.0" y="255.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">VS Code</text>
 </g>
 </svg>
 </svg>

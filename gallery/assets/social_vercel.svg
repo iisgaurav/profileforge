@@ -1,4 +1,4 @@
-<svg width="820" height="195" viewBox="0 0 820 195" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="253" viewBox="0 0 820 253" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>social - vercel</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -65,44 +65,44 @@
   </linearGradient>
 </defs>
   
-<svg x="0" y="0" width="820" height="195" viewBox="0 0 820 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="0" y="0" width="820" height="253" viewBox="0 0 820 253" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     <title>Connect &amp; Socials Card</title>
     <desc>Card component for Connect &amp; Socials</desc>
-    <rect x="0.5" y="0.5" width="819" height="194" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
-    <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#FFFFFF" opacity="0.9"/>
-    <text x="32" y="31" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Connect &amp; Socials</text>
-    <line x1="20" y1="44" x2="800" y2="44" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="40" y="85" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A1A1AA">Let&#x27;s connect and build together:</text>
+    <rect x="0.5" y="0.5" width="819" height="252" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
+    <rect x="40" y="32" width="4" height="24" rx="2" fill="#FFFFFF" opacity="0.9"/>
+    <text x="56" y="49" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Connect &amp; Socials</text>
+    <line x1="40" y1="72" x2="780" y2="72" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="60" y="123" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A1A1AA">Let&#x27;s connect and build together:</text>
 
 
 <g role="term">
-    <rect x="40" y="97" width="172" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="126.0" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
+    <rect x="60" y="135" width="172" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="146.0" y="147.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
 </g>
 
 <g role="term">
-    <rect x="222" y="97" width="178" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="311.0" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
+    <rect x="242" y="135" width="178" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="331.0" y="147.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
 </g>
 
 <g role="term">
-    <rect x="410" y="97" width="198" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="509.0" y="109.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/iisgaurav</text>
+    <rect x="430" y="135" width="198" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="529.0" y="147.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/iisgaurav</text>
 </g>
 
 <g role="term">
-    <rect x="40" y="131" width="251" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="165.5" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.dev</text>
+    <rect x="60" y="169" width="251" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="185.5" y="181.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.dev</text>
 </g>
 
 <g role="term">
-    <rect x="301" y="131" width="165" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="383.5" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: alex_dev</text>
+    <rect x="321" y="169" width="165" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="403.5" y="181.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: alex_dev</text>
 </g>
 
 <g role="term">
-    <rect x="476" y="131" width="224" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="588.0" y="143.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: alex@iisgaurav.dev</text>
+    <rect x="496" y="169" width="224" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="608.0" y="181.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: alex@iisgaurav.dev</text>
 </g>
 </svg>
 </svg>

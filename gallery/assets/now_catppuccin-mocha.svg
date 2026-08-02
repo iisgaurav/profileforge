@@ -1,4 +1,4 @@
-<svg width="820" height="292" viewBox="0 0 820 292" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="350" viewBox="0 0 820 350" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>now - catppuccin-mocha</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -65,31 +65,31 @@
   </linearGradient>
 </defs>
   
-<svg x="0" y="0" width="820" height="292" viewBox="0 0 820 292" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
+<svg x="0" y="0" width="820" height="350" viewBox="0 0 820 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
     <title>What I&#x27;m Doing Now Card</title>
     <desc>Card component for What I&#x27;m Doing Now</desc>
-    <rect x="0.5" y="0.5" width="819" height="291" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
-    <rect x="20" y="16" width="3" height="20" rx="1.5" fill="#89b4fa" opacity="0.9"/>
-    <text x="32" y="31" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">What I&#x27;m Doing Now</text>
-    <line x1="20" y1="44" x2="800" y2="44" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="40" y="85" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🔨 Building</text>
+    <rect x="0.5" y="0.5" width="819" height="349" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
+    <rect x="40" y="32" width="4" height="24" rx="2" fill="#89b4fa" opacity="0.9"/>
+    <text x="56" y="49" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">What I&#x27;m Doing Now</text>
+    <line x1="40" y1="72" x2="780" y2="72" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="60" y="123" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🔨 Building</text>
 
-<text x="40" y="101" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+<text x="60" y="139" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
 
-<text x="40" y="126" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🧠 Learning</text>
+<text x="60" y="164" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🧠 Learning</text>
 
-<text x="40" y="142" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+<text x="60" y="180" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
 
-<text x="40" y="167" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">📚 Reading</text>
+<text x="60" y="205" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">📚 Reading</text>
 
-<text x="40" y="183" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Designing Data-Intensive Applications by Martin Kleppmann</text>
+<text x="60" y="221" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Designing Data-Intensive Applications by Martin Kleppmann</text>
 
-<text x="40" y="208" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🎯 Focusing On</text>
+<text x="60" y="246" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa">🎯 Focusing On</text>
 
-<text x="40" y="224" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Developer tooling, open-source maintainability, and declarative UI design</text>
+<text x="60" y="262" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#cdd6f4">Developer tooling, open-source maintainability, and declarative UI design</text>
 
 
-<text x="40" y="252" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#a6adc8">📍 San Francisco, CA</text>
-<text x="635" y="252" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#a6adc8">🕒 Updated: August 2026</text>
+<text x="60" y="290" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#a6adc8">📍 San Francisco, CA</text>
+<text x="615" y="290" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#a6adc8">🕒 Updated: August 2026</text>
 </svg>
 </svg>

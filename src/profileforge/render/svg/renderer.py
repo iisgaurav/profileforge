@@ -118,16 +118,16 @@ class SVGRenderer(Renderer):
             escaped_title = html.escape(component.title)
 
             if escaped_title:
-                accent_bar = f'<rect x="{x + 20}" y="{y + 16}" width="3" height="20" rx="1.5" fill="{primary}" opacity="0.9"/>'
+                accent_bar = f'<rect x="{x + 40}" y="{y + 32}" width="4" height="24" rx="2" fill="{primary}" opacity="0.9"/>'
                 title_el = (
-                    f'<text x="{x + 32}" y="{y + 31}" '
+                    f'<text x="{x + 56}" y="{y + 49}" '
                     f'font-family="{self.theme.typography.font_family}" '
                     f'font-size="{self.theme.typography.heading}" '
                     f'font-weight="700" fill="{text_color}" '
                     f'letter-spacing="0.3">{escaped_title}</text>'
                 )
                 sep = (
-                    f'<line x1="{x + 20}" y1="{y + 44}" x2="{x + w - 20}" y2="{y + 44}" '
+                    f'<line x1="{x + 40}" y1="{y + 72}" x2="{x + w - 40}" y2="{y + 72}" '
                     f'stroke="{primary}" stroke-width="0.5" stroke-opacity="0.25"/>'
                 )
             else:

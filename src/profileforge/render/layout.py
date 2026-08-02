@@ -248,9 +248,9 @@ class LayoutEngine:
             component.computed_height = resolved_h or 24
 
         elif isinstance(component, Card):
-            pad_x = 20
-            pad_y_top = 52 if component.title else 20
-            pad_y_bottom = 20
+            pad_x = 40
+            pad_y_top = 90 if component.title else 40
+            pad_y_bottom = 40
 
             child_pw = resolved_w - (pad_x * 2) if resolved_w else None
             child_ph = resolved_h - pad_y_top - pad_y_bottom if resolved_h else None
@@ -282,6 +282,10 @@ class LayoutEngine:
             current_y = start_y
             max_w = 0
             max_h_in_row = 0
+            
+            col_w = None
+            if resolved_w:
+                col_w = (resolved_w - (component.spacing * (component.columns - 1))) // component.columns
 
             for i, child in enumerate(component.metrics):
                 if i > 0 and i % component.columns == 0:
@@ -289,13 +293,13 @@ class LayoutEngine:
                     current_y += max_h_in_row + component.spacing
                     max_h_in_row = 0
 
-                LayoutEngine.calculate(child, 0, 0, None, None)
+                LayoutEngine.calculate(child, 0, 0, col_w, None)
                 cw = child.computed_width
                 ch = child.computed_height
 
                 child.computed_x = current_x
                 child.computed_y = current_y
-                LayoutEngine.calculate(child, current_x, current_y, None, None)
+                LayoutEngine.calculate(child, current_x, current_y, col_w, None)
 
                 current_x += cw + component.spacing
                 max_w = max(max_w, current_x - start_x - component.spacing)
