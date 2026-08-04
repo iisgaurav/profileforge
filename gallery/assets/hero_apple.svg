@@ -72,9 +72,9 @@
     
     
     
-    <text x="216" y="81" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="32" font-weight="800" fill="#1D1D1F">Hi, I&#x27;m Gaurav Verma 👋</text>
+    <text x="409.5" y="81" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="32" font-weight="800" fill="#1D1D1F" text-anchor="middle">Hi, I&#x27;m Gaurav Verma 👋</text>
 
-<text x="291" y="105" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16" font-weight="600" fill="#0071E3">Principal Systems Architect</text>
+<text x="409.5" y="105" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16" font-weight="600" fill="#0071E3" text-anchor="middle">Principal Systems Architect</text>
 
 
 <g role="term">
@@ -89,6 +89,6 @@
 
 <line x1="110" y1="169.5" x2="710" y2="169.5" stroke="#0071E3" stroke-width="1" stroke-opacity="0.4"/>
 
-<text x="121" y="200" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="normal" fill="#86868B">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
+<text x="409.5" y="200" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="normal" fill="#86868B" text-anchor="middle">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
 </svg>
 </svg>

@@ -53,17 +53,17 @@ class AboutWidget(Widget):
 
         name_text = Text(
             f"Hi, I'm {name} 👋",
-            style=Style(font_size=32, font_weight="800", color="text"),
+            style=Style(font_size=32, font_weight="800", color="text", align="center"),
         )
 
         role_text = Text(
-            role, style=Style(font_size=15, font_weight="600", color="text")
+            role, style=Style(font_size=15, font_weight="600", color="text", align="center")
         )
         status_badge = Badge(f"● {status}", style=Style())
 
         tagline_text = Text(
             f'"{tagline}"',
-            style=Style(font_size=14, color="muted", font_weight="normal"),
+            style=Style(font_size=14, color="muted", font_weight="normal", align="center"),
         )
 
         children = [

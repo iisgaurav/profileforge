@@ -72,7 +72,7 @@
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#89b4fa" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">Connect &amp; Socials</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="24" y="77" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="500" fill="#a6adc8">Let&#x27;s connect and build together:</text>
+    <text x="141.5" y="77" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="500" fill="#a6adc8" text-anchor="middle">Let&#x27;s connect and build together:</text>
 
 
 <g role="term">

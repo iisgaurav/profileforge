@@ -72,7 +72,7 @@
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Connect &amp; Socials</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="24" y="77" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A1A1AA">Let&#x27;s connect and build together:</text>
+    <text x="141.5" y="77" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A1A1AA" text-anchor="middle">Let&#x27;s connect and build together:</text>
 
 
 <g role="term">

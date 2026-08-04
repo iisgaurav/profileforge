@@ -120,7 +120,7 @@ class SocialWidget(Widget):
 
         subtitle = Text(
             "Let's connect and build together:",
-            style=Style(font_size=13, font_weight="500", color="muted"),
+            style=Style(font_size=13, font_weight="500", color="muted", align="center"),
         )
 
         badges = [Badge(item["label"], style=Style()) for item in items]

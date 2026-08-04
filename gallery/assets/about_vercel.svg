@@ -72,9 +72,9 @@
     
     
     
-    <text x="216" y="84" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#EDEDED">Hi, I&#x27;m Gaurav Verma 👋</text>
+    <text x="409.5" y="84" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#EDEDED" text-anchor="middle">Hi, I&#x27;m Gaurav Verma 👋</text>
 
-<text x="299" y="107" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#EDEDED">Principal Systems Architect</text>
+<text x="410.0" y="107" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#EDEDED" text-anchor="middle">Principal Systems Architect</text>
 
 
 <g role="term">
@@ -82,7 +82,7 @@
     <text x="409.5" y="135.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
 </g>
 
-<text x="121" y="177" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="normal" fill="#A1A1AA">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
+<text x="409.5" y="177" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="normal" fill="#A1A1AA" text-anchor="middle">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text>
 
 <text x="342" y="198" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">📍 San Francisco, CA</text>
 </svg>

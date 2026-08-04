@@ -255,9 +255,20 @@ class SVGRenderer(Renderer):
             color = self.get_color(component.style.color or "text")
             fs = component.style.font_size or self.theme.typography.body
             fw = component.style.font_weight or "normal"
+            align = component.style.align or "start"
             escaped_value = html.escape(component.value)
 
-            return f'<text x="{x}" y="{y + fs}" font-family="{self.theme.typography.font_family}" font-size="{fs}" font-weight="{fw}" fill="{color}">{escaped_value}</text>'
+            font_family = self.theme.typography.font_family
+            base_attr = f'y="{y + fs}" font-family="{font_family}" font-size="{fs}" font-weight="{fw}" fill="{color}"'
+
+            if align == "center":
+                cx = x + w / 2
+                return f'<text x="{cx}" {base_attr} text-anchor="middle">{escaped_value}</text>'
+            elif align == "end":
+                ex = x + w
+                return f'<text x="{ex}" {base_attr} text-anchor="end">{escaped_value}</text>'
+            else:
+                return f'<text x="{x}" {base_attr}>{escaped_value}</text>'
 
         elif isinstance(component, ProgressBar):
             filled_w = max(4, (component.progress / 100.0) * w)

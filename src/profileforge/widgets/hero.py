@@ -77,12 +77,12 @@ class HeroWidget(Widget):
 
         name_text = Text(
             f"Hi, I'm {name} 👋",
-            style=Style(font_size=32, font_weight="800", color="text"),
+            style=Style(font_size=32, font_weight="800", color="text", align="center"),
         )
 
         role_text = Text(
             role,
-            style=Style(font_size=16, font_weight="600", color="primary"),
+            style=Style(font_size=16, font_weight="600", color="primary", align="center"),
         )
 
         badges = [Badge(f"● {status}", style=Style())]
@@ -97,7 +97,7 @@ class HeroWidget(Widget):
 
         tagline_text = Text(
             f'"{tagline}"',
-            style=Style(font_size=14, color="muted", font_weight="normal"),
+            style=Style(font_size=14, color="muted", font_weight="normal", align="center"),
         )
 
         children = [
