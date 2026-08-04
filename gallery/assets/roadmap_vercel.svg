@@ -72,31 +72,31 @@
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Learning Roadmap</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="44" y="98" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Distributed Stream Processing Engine</text>
-<text x="755" y="98" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">90%</text>
+    <text x="24" y="78" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Distributed Stream Processing Engine</text>
+<text x="775" y="78" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">90%</text>
 
 <g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <rect x="44" y="104" width="732" height="8" fill="url(#pf-track-bg)" rx="6"/>
-    <rect x="44" y="104" width="658.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="6">
-        <animate attributeName="width" from="0" to="658.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="24" y="84" width="772" height="8" fill="url(#pf-track-bg)" rx="6"/>
+    <rect x="24" y="84" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="6">
+        <animate attributeName="width" from="0" to="694.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
-<text x="44" y="142" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Custom JIT Compiler in Rust</text>
-<text x="755" y="142" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">65%</text>
+<text x="24" y="122" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Custom JIT Compiler in Rust</text>
+<text x="775" y="122" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">65%</text>
 
 <g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-    <rect x="44" y="148" width="732" height="8" fill="url(#pf-track-bg)" rx="6"/>
-    <rect x="44" y="148" width="475.8" height="8" fill="url(#pf-progress-grad)" rx="6">
-        <animate attributeName="width" from="0" to="475.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="24" y="128" width="772" height="8" fill="url(#pf-track-bg)" rx="6"/>
+    <rect x="24" y="128" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="6">
+        <animate attributeName="width" from="0" to="501.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
-<text x="44" y="186" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Vector Database Indexing Primitives</text>
-<text x="755" y="186" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">40%</text>
+<text x="24" y="166" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#EDEDED">Vector Database Indexing Primitives</text>
+<text x="775" y="166" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#A1A1AA">40%</text>
 
 <g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-    <rect x="44" y="192" width="732" height="8" fill="url(#pf-track-bg)" rx="6"/>
-    <rect x="44" y="192" width="292.8" height="8" fill="url(#pf-progress-grad)" rx="6">
-        <animate attributeName="width" from="0" to="292.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    <rect x="24" y="172" width="772" height="8" fill="url(#pf-track-bg)" rx="6"/>
+    <rect x="24" y="172" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="6">
+        <animate attributeName="width" from="0" to="308.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g>
 </svg>

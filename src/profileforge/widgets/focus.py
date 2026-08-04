@@ -63,6 +63,6 @@ class FocusWidget(Widget):
         content = Column(children=sections, spacing=30)
         return Card(
             title="Currently Doing",
-            child=Padding(child=content, value=25),
+            child=content,
             style=Style(width=400),
         )

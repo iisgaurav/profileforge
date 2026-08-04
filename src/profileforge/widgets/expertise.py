@@ -65,6 +65,6 @@ class ExpertiseWidget(Widget):
         content = Column(children=rows, spacing=8, style=Style(width="fill"))
         return Card(
             title="My Expertise",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, height=250, elevation="medium", variant="solid"),
         )

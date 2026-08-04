@@ -143,6 +143,6 @@ class SocialWidget(Widget):
 
         return Card(
             title="Connect & Socials",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, elevation="medium", variant="solid"),
         )

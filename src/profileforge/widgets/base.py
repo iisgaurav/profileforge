@@ -147,6 +147,6 @@ class Widget(ABC):
 
         return Card(
             title=f"Error: {widget_name}",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, height=140, elevation="medium", variant="solid"),
         )

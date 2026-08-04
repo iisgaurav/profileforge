@@ -140,6 +140,6 @@ class SkillsWidget(Widget):
 
         return Card(
             title="Technical Skills",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, elevation="medium", variant="solid"),
         )

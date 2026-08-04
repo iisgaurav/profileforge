@@ -150,6 +150,6 @@ class AchievementsWidget(Widget):
 
         return Card(
             title="Developer Achievements & Unlock Badges 🏆",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, elevation="medium", variant="solid"),
         )

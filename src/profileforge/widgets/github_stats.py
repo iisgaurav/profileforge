@@ -97,6 +97,6 @@ class GithubStatsWidget(Widget):
 
         return Card(
             title=f"GitHub Stats (@{username})",
-            child=Padding(child=content, value=40, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, elevation="medium", variant="solid"),
         )

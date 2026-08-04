@@ -224,8 +224,8 @@ SAMPLE_LOCAL_DATA = {
         "twitter": "iisgaurav",
         "linkedin": "in/iisgaurav",
         "website": "https://iisgaurav.dev",
-        "discord": "alex_dev",
-        "email": "alex@iisgaurav.dev",
+        "discord": "iisgaurav",
+        "email": "hello@iisgaurav.dev",
     },
     "streak.yaml": {
         "current_streak": 42,

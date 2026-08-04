@@ -120,8 +120,6 @@ class HeroWidget(Widget):
 
         return Card(
             title="",
-            child=Padding(
-                child=content, value=24, style=Style(width="fill", height="fill")
-            ),
+            child=content,
             style=Style(width=820, height=250, elevation="medium", variant="hero"),
         )

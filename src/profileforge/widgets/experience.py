@@ -160,6 +160,6 @@ class ExperienceWidget(Widget):
 
         return Card(
             title="Work Experience",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
+            child=content,
             style=Style(width=820, elevation="medium", variant="solid"),
         )
