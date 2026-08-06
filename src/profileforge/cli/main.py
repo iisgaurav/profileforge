@@ -100,7 +100,7 @@ def cmd_build(args):
 
         services = Services(connectors=connectors)
         context = BuildContext(theme=theme, config=config, services=services)
-        svg_renderer = SVGRenderer(context)
+        svg_renderer = SVGRenderer(context.get_render_context())
 
         out_dir = (
             Path(args.output)
@@ -127,11 +127,11 @@ def cmd_build(args):
 
                 widget = WIDGET_REGISTRY[w_config.name]()
                 component_tree = widget.render_safe(context)
-                LayoutEngine.calculate(component_tree)
+                render_node = LayoutEngine.calculate(component_tree)
 
-                inner_svg = svg_renderer.render(component_tree)
-                total_w = component_tree.computed_width
-                total_h = component_tree.computed_height
+                inner_svg = svg_renderer.render(render_node)
+                total_w = render_node.width
+                total_h = render_node.height
                 escaped_title = html_mod.escape(w_config.name.title())
 
                 svg_content = (
@@ -487,16 +487,16 @@ def cmd_themes_build(args):
 
                 config.active_theme = theme_name
                 context = BuildContext(theme=theme, config=config, services=services)
-                svg_renderer = SVGRenderer(context)
+                svg_renderer = SVGRenderer(context.get_render_context())
 
                 widget = WIDGET_REGISTRY["github_stats"]()
                 component_tree = widget.render_safe(context)
-                LayoutEngine.calculate(component_tree)
+                render_node = LayoutEngine.calculate(component_tree)
 
-                inner_svg = svg_renderer.render(component_tree)
+                inner_svg = svg_renderer.render(render_node)
                 defs_block = svg_renderer.get_defs()
-                total_w = component_tree.computed_width
-                total_h = component_tree.computed_height
+                total_w = render_node.width
+                total_h = render_node.height
 
                 escaped_title = html_mod.escape(f"github_stats - {theme_name}")
 

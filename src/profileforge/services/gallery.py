@@ -459,17 +459,17 @@ class GalleryExporter:
         config.active_theme = theme.name
 
         context = BuildContext(theme=theme, config=config, services=services)
-        svg_renderer = SVGRenderer(context)
+        svg_renderer = SVGRenderer(context.get_render_context())
 
         widget_cls = WIDGET_REGISTRY[widget_name]
         widget = widget_cls()
         component_tree = widget.render_safe(context)
-        LayoutEngine.calculate(component_tree)
+        render_node = LayoutEngine.calculate(component_tree)
 
-        inner_svg = svg_renderer.render(component_tree)
+        inner_svg = svg_renderer.render(render_node)
         defs_block = svg_renderer.get_defs()
-        total_w = component_tree.computed_width
-        total_h = component_tree.computed_height
+        total_w = render_node.width
+        total_h = render_node.height
         escaped_title = html_mod.escape(f"{widget_name} - {theme.name}")
 
         svg_content = (

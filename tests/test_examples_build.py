@@ -83,7 +83,7 @@ def test_example_builds_and_generates_valid_svgs(example_name: str, tmp_path: Pa
 
     services = Services(connectors=connectors)
     context = BuildContext(theme=theme, config=config, services=services)
-    svg_renderer = SVGRenderer(context)
+    svg_renderer = SVGRenderer(context.get_render_context())
 
     out_dir = tmp_path / f"output_{example_name}"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -97,11 +97,11 @@ def test_example_builds_and_generates_valid_svgs(example_name: str, tmp_path: Pa
         )
         widget = WIDGET_REGISTRY[w_config.name]()
         component_tree = widget.render_safe(context)
-        LayoutEngine.calculate(component_tree)
+        render_node = LayoutEngine.calculate(component_tree)
 
-        inner_svg = svg_renderer.render(component_tree)
-        total_w = component_tree.computed_width
-        total_h = component_tree.computed_height
+        inner_svg = svg_renderer.render(render_node)
+        total_w = render_node.width
+        total_h = render_node.height
 
         assert total_w > 0, f"Widget '{w_config.name}' width must be > 0"
         assert total_h > 0, f"Widget '{w_config.name}' height must be > 0"

@@ -22,7 +22,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -47,6 +47,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -73,7 +79,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -104,6 +110,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -130,7 +142,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -173,6 +185,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -199,7 +217,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -223,6 +241,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -230,6 +254,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -258,7 +288,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -269,6 +299,12 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",
@@ -301,7 +337,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -326,6 +362,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -352,7 +394,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -395,6 +437,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -421,7 +469,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -458,6 +506,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -484,7 +538,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -515,6 +569,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -541,7 +601,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -566,6 +626,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -592,7 +658,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -616,6 +682,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -623,6 +695,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -649,7 +727,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -680,6 +758,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -694,7 +778,7 @@
             "align": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, VerticalAlign, str, None]"
             },
             "background_color": {
               "default": "None",
@@ -724,7 +808,7 @@
             "font_size": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "int | None"
+              "type": "Union[TypographyRole, int, None]"
             },
             "font_weight": {
               "default": "None",
@@ -739,7 +823,7 @@
             "justify": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, str, None]"
             },
             "margin": {
               "default": "None",
@@ -755,6 +839,11 @@
               "default": "None",
               "default_factory": "<empty>",
               "type": "str | None"
+            },
+            "valign": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "Union[VerticalAlign, str, None]"
             },
             "variant": {
               "default": "None",
@@ -814,7 +903,7 @@
                   "name": "border_color"
                 },
                 {
-                  "annotation": "int | None",
+                  "annotation": "Union[TypographyRole, int, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "font_size"
@@ -856,16 +945,22 @@
                   "name": "elevation"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "justify"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, VerticalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "align"
+                },
+                {
+                  "annotation": "Union[VerticalAlign, str, None]",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "valign"
                 }
               ],
               "return_annotation": "None"
@@ -892,7 +987,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -917,6 +1012,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -943,7 +1044,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -980,6 +1081,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1012,7 +1119,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1036,6 +1143,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -1043,6 +1156,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1071,7 +1190,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -1082,6 +1201,254 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Constraints": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Universal constraints for any component.",
+          "fields": {
+            "fill": {
+              "default": "False",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "max_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "min_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "preferred_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "min_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "max_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "preferred_width"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "False",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "fill"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "Grid": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Inline": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "LayoutComponent": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "Base class for all components that manage layout but do not render visual appearance.",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",
@@ -1114,7 +1481,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1145,6 +1512,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1171,7 +1544,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1195,6 +1568,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -1202,6 +1581,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1228,7 +1613,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1259,6 +1644,69 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Stack": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1273,7 +1721,7 @@
             "align": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, VerticalAlign, str, None]"
             },
             "background_color": {
               "default": "None",
@@ -1303,7 +1751,7 @@
             "font_size": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "int | None"
+              "type": "Union[TypographyRole, int, None]"
             },
             "font_weight": {
               "default": "None",
@@ -1318,7 +1766,7 @@
             "justify": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, str, None]"
             },
             "margin": {
               "default": "None",
@@ -1334,6 +1782,11 @@
               "default": "None",
               "default_factory": "<empty>",
               "type": "str | None"
+            },
+            "valign": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "Union[VerticalAlign, str, None]"
             },
             "variant": {
               "default": "None",
@@ -1393,7 +1846,7 @@
                   "name": "border_color"
                 },
                 {
-                  "annotation": "int | None",
+                  "annotation": "Union[TypographyRole, int, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "font_size"
@@ -1435,19 +1888,76 @@
                   "name": "elevation"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "justify"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, VerticalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "align"
+                },
+                {
+                  "annotation": "Union[VerticalAlign, str, None]",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "valign"
                 }
               ],
               "return_annotation": "None"
+            }
+          }
+        },
+        "VisualComponent": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "Base class for all components that render visual appearance but do not manage layout.",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                }
+              ],
+              "return_annotation": "<empty>"
             }
           }
         },
@@ -1471,7 +1981,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1508,6 +2018,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1520,6 +2036,81 @@
     },
     "profileforge.components.style": {
       "classes": {
+        "Constraints": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Universal constraints for any component.",
+          "fields": {
+            "fill": {
+              "default": "False",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "max_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "min_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "preferred_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "min_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "max_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "preferred_width"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "False",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "fill"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "HorizontalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
         "Style": {
           "attributes": {},
           "bases": [],
@@ -1528,7 +2119,7 @@
             "align": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, VerticalAlign, str, None]"
             },
             "background_color": {
               "default": "None",
@@ -1558,7 +2149,7 @@
             "font_size": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "int | None"
+              "type": "Union[TypographyRole, int, None]"
             },
             "font_weight": {
               "default": "None",
@@ -1573,7 +2164,7 @@
             "justify": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, str, None]"
             },
             "margin": {
               "default": "None",
@@ -1589,6 +2180,11 @@
               "default": "None",
               "default_factory": "<empty>",
               "type": "str | None"
+            },
+            "valign": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "Union[VerticalAlign, str, None]"
             },
             "variant": {
               "default": "None",
@@ -1648,7 +2244,7 @@
                   "name": "border_color"
                 },
                 {
-                  "annotation": "int | None",
+                  "annotation": "Union[TypographyRole, int, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "font_size"
@@ -1690,21 +2286,47 @@
                   "name": "elevation"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "justify"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, VerticalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "align"
+                },
+                {
+                  "annotation": "Union[VerticalAlign, str, None]",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "valign"
                 }
               ],
               "return_annotation": "None"
             }
           }
+        },
+        "TypographyRole": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
+        "VerticalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         }
       },
       "constants": {},
@@ -1732,7 +2354,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1757,6 +2379,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1783,7 +2411,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1814,6 +2442,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1840,7 +2474,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1883,6 +2517,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -1911,7 +2551,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -1924,6 +2564,12 @@
                   "name": "self"
                 },
                 {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                },
+                {
                   "annotation": "Style | None",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
@@ -1931,6 +2577,71 @@
                 }
               ],
               "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Constraints": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Universal constraints for any component.",
+          "fields": {
+            "fill": {
+              "default": "False",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "max_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "min_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            },
+            "preferred_width": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "int | None"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "min_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "max_width"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "preferred_width"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "False",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "fill"
+                }
+              ],
+              "return_annotation": "None"
             }
           }
         },
@@ -1954,7 +2665,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -1979,6 +2690,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -2005,7 +2722,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -2030,6 +2747,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -2056,7 +2779,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -2099,6 +2822,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -2125,7 +2854,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -2162,11 +2891,27 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "PercentageDisplay": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "ProgressBar": {
           "attributes": {
@@ -2188,7 +2933,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -2213,6 +2958,81 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "ProgressMetric": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "VisualComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "str",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "label"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "value"
+                },
+                {
+                  "annotation": "PercentageDisplay",
+                  "default": "<PercentageDisplay.RIGHT: 'right'>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "display"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -2227,7 +3047,7 @@
             "align": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, VerticalAlign, str, None]"
             },
             "background_color": {
               "default": "None",
@@ -2257,7 +3077,7 @@
             "font_size": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "int | None"
+              "type": "Union[TypographyRole, int, None]"
             },
             "font_weight": {
               "default": "None",
@@ -2272,7 +3092,7 @@
             "justify": {
               "default": "None",
               "default_factory": "<empty>",
-              "type": "str | None"
+              "type": "Union[HorizontalAlign, str, None]"
             },
             "margin": {
               "default": "None",
@@ -2288,6 +3108,11 @@
               "default": "None",
               "default_factory": "<empty>",
               "type": "str | None"
+            },
+            "valign": {
+              "default": "None",
+              "default_factory": "<empty>",
+              "type": "Union[VerticalAlign, str, None]"
             },
             "variant": {
               "default": "None",
@@ -2347,7 +3172,7 @@
                   "name": "border_color"
                 },
                 {
-                  "annotation": "int | None",
+                  "annotation": "Union[TypographyRole, int, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "font_size"
@@ -2389,16 +3214,22 @@
                   "name": "elevation"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "justify"
                 },
                 {
-                  "annotation": "str | None",
+                  "annotation": "Union[HorizontalAlign, VerticalAlign, str, None]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "align"
+                },
+                {
+                  "annotation": "Union[VerticalAlign, str, None]",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "valign"
                 }
               ],
               "return_annotation": "None"
@@ -2425,7 +3256,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -2444,6 +3275,63 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "value"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "VisualComponent": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "Component"
+          ],
+          "doc": "Base class for all components that render visual appearance but do not manage layout.",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",
@@ -2906,6 +3794,16 @@
             }
           }
         },
+        "HorizontalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
         "MetricsConfig": {
           "attributes": {},
           "bases": [],
@@ -3008,6 +3906,60 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "easing"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "OpticalSpacingTokens": {
+          "attributes": {},
+          "bases": [],
+          "doc": "OpticalSpacingTokens(text_icon: 'int' = 10, label_value: 'int' = 6, badge_icon: 'int' = 8)",
+          "fields": {
+            "badge_icon": {
+              "default": "8",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "label_value": {
+              "default": "6",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "text_icon": {
+              "default": "10",
+              "default_factory": "<empty>",
+              "type": "int"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "int",
+                  "default": "10",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "text_icon"
+                },
+                {
+                  "annotation": "int",
+                  "default": "6",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "label_value"
+                },
+                {
+                  "annotation": "int",
+                  "default": "8",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "badge_icon"
                 }
               ],
               "return_annotation": "None"
@@ -3143,6 +4095,16 @@
               "return_annotation": "None"
             }
           }
+        },
+        "PercentageDisplay": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "ProfileForgeConfig": {
           "attributes": {},
@@ -3318,6 +4280,289 @@
             }
           }
         },
+        "RenderContext": {
+          "attributes": {},
+          "bases": [],
+          "doc": "RenderContext(theme: 'ResolvedTheme', typography: 'TypographyTokens', spacing: 'SpacingTokens', effects: 'EffectsTokens', renderer: 'str' = 'svg', api_version: 'int' = 1, capabilities: 'RendererCapabilities' = <factory>)",
+          "fields": {
+            "api_version": {
+              "default": "1",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "capabilities": {
+              "default": "<MISSING>",
+              "default_factory": "RendererCapabilities",
+              "type": "RendererCapabilities"
+            },
+            "effects": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "EffectsTokens"
+            },
+            "renderer": {
+              "default": "'svg'",
+              "default_factory": "<empty>",
+              "type": "str"
+            },
+            "spacing": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "SpacingTokens"
+            },
+            "theme": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "ResolvedTheme"
+            },
+            "typography": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "TypographyTokens"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "ResolvedTheme",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "theme"
+                },
+                {
+                  "annotation": "TypographyTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "typography"
+                },
+                {
+                  "annotation": "SpacingTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "spacing"
+                },
+                {
+                  "annotation": "EffectsTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "effects"
+                },
+                {
+                  "annotation": "str",
+                  "default": "'svg'",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "renderer"
+                },
+                {
+                  "annotation": "int",
+                  "default": "1",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "api_version"
+                },
+                {
+                  "annotation": "RendererCapabilities",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "capabilities"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "RendererCapabilities": {
+          "attributes": {},
+          "bases": [],
+          "doc": "RendererCapabilities(supports_gradients: 'bool' = True, supports_filters: 'bool' = True, supports_animation: 'bool' = True, supports_masks: 'bool' = True, supports_fonts: 'bool' = True, supports_accessibility: 'bool' = True)",
+          "fields": {
+            "supports_accessibility": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "supports_animation": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "supports_filters": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "supports_fonts": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "supports_gradients": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            },
+            "supports_masks": {
+              "default": "True",
+              "default_factory": "<empty>",
+              "type": "bool"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_gradients"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_filters"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_animation"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_masks"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_fonts"
+                },
+                {
+                  "annotation": "bool",
+                  "default": "True",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "supports_accessibility"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "ResolvedTheme": {
+          "attributes": {},
+          "bases": [],
+          "doc": "ResolvedTheme(colors: 'ColorTokens', typography: 'TypographyTokens', spacing: 'SpacingTokens', radius: 'RadiusTokens', shadows: 'ShadowTokens', motion: 'MotionTokens', effects: 'EffectsTokens')",
+          "fields": {
+            "colors": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "ColorTokens"
+            },
+            "effects": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "EffectsTokens"
+            },
+            "motion": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "MotionTokens"
+            },
+            "radius": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "RadiusTokens"
+            },
+            "shadows": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "ShadowTokens"
+            },
+            "spacing": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "SpacingTokens"
+            },
+            "typography": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "TypographyTokens"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "ColorTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "colors"
+                },
+                {
+                  "annotation": "TypographyTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "typography"
+                },
+                {
+                  "annotation": "SpacingTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "spacing"
+                },
+                {
+                  "annotation": "RadiusTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "radius"
+                },
+                {
+                  "annotation": "ShadowTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "shadows"
+                },
+                {
+                  "annotation": "MotionTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "motion"
+                },
+                {
+                  "annotation": "EffectsTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "effects"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
         "ShadowTokens": {
           "attributes": {},
           "bases": [],
@@ -3383,33 +4628,68 @@
             }
           }
         },
+        "Size": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
         "SpacingTokens": {
           "attributes": {},
           "bases": [],
-          "doc": "SpacingTokens(xs: 'int', sm: 'int', md: 'int', lg: 'int', xl: 'int')",
+          "doc": "SpacingTokens(xs: 'int' = 4, sm: 'int' = 8, md: 'int' = 16, lg: 'int' = 24, xl: 'int' = 32, card_padding: 'int' = 24, inline_gap: 'int' = 10, section_gap: 'int' = 18, group_gap: 'int' = 24, optical: 'OpticalSpacingTokens' = <factory>)",
           "fields": {
+            "card_padding": {
+              "default": "24",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "group_gap": {
+              "default": "24",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "inline_gap": {
+              "default": "10",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
             "lg": {
-              "default": "<MISSING>",
+              "default": "24",
               "default_factory": "<empty>",
               "type": "int"
             },
             "md": {
+              "default": "16",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "optical": {
               "default": "<MISSING>",
+              "default_factory": "OpticalSpacingTokens",
+              "type": "OpticalSpacingTokens"
+            },
+            "section_gap": {
+              "default": "18",
               "default_factory": "<empty>",
               "type": "int"
             },
             "sm": {
-              "default": "<MISSING>",
+              "default": "8",
               "default_factory": "<empty>",
               "type": "int"
             },
             "xl": {
-              "default": "<MISSING>",
+              "default": "32",
               "default_factory": "<empty>",
               "type": "int"
             },
             "xs": {
-              "default": "<MISSING>",
+              "default": "4",
               "default_factory": "<empty>",
               "type": "int"
             }
@@ -3426,33 +4706,63 @@
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "4",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "xs"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "8",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "sm"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "16",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "md"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "24",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "lg"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "32",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "xl"
+                },
+                {
+                  "annotation": "int",
+                  "default": "24",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "card_padding"
+                },
+                {
+                  "annotation": "int",
+                  "default": "10",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "inline_gap"
+                },
+                {
+                  "annotation": "int",
+                  "default": "18",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "section_gap"
+                },
+                {
+                  "annotation": "int",
+                  "default": "24",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "group_gap"
+                },
+                {
+                  "annotation": "OpticalSpacingTokens",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "optical"
                 }
               ],
               "return_annotation": "None"
@@ -3733,13 +5043,28 @@
             }
           }
         },
+        "TypographyRole": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
         "TypographyTokens": {
           "attributes": {},
           "bases": [],
-          "doc": "TypographyTokens(font_family: 'str', heading: 'int', body: 'int', small: 'int')",
+          "doc": "TypographyTokens(font_family: 'str', title: 'int' = 24, heading: 'int' = 18, label: 'int' = 14, value: 'int' = 28, body: 'int' = 15, caption: 'int' = 13, small: 'int' = 12)",
           "fields": {
             "body": {
-              "default": "<MISSING>",
+              "default": "15",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "caption": {
+              "default": "13",
               "default_factory": "<empty>",
               "type": "int"
             },
@@ -3749,12 +5074,27 @@
               "type": "str"
             },
             "heading": {
-              "default": "<MISSING>",
+              "default": "18",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "label": {
+              "default": "14",
               "default_factory": "<empty>",
               "type": "int"
             },
             "small": {
-              "default": "<MISSING>",
+              "default": "12",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "title": {
+              "default": "24",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "value": {
+              "default": "28",
               "default_factory": "<empty>",
               "type": "int"
             }
@@ -3777,19 +5117,43 @@
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "24",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "title"
+                },
+                {
+                  "annotation": "int",
+                  "default": "18",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "heading"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "14",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "label"
+                },
+                {
+                  "annotation": "int",
+                  "default": "28",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "value"
+                },
+                {
+                  "annotation": "int",
+                  "default": "15",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "body"
                 },
                 {
                   "annotation": "int",
-                  "default": "<empty>",
+                  "default": "13",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "caption"
+                },
+                {
+                  "annotation": "int",
+                  "default": "12",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "small"
                 }
@@ -3797,6 +5161,16 @@
               "return_annotation": "None"
             }
           }
+        },
+        "VerticalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "WidgetConfig": {
           "attributes": {},
@@ -3861,7 +5235,7 @@
         "LayoutEngine": {
           "attributes": {},
           "bases": [],
-          "doc": "Calculates absolute X, Y coordinates and dimensions for all components in the tree.",
+          "doc": "Deterministic Layout Engine calculating constraints and producing an immutable RenderNode AST.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -3877,51 +5251,28 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "start_x"
+                  "name": "x"
                 },
                 {
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "start_y"
+                  "name": "y"
                 },
                 {
                   "annotation": "Optional[int]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "parent_width"
+                  "name": "parent_w"
                 },
                 {
                   "annotation": "Optional[int]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "parent_height"
+                  "name": "parent_h"
                 }
               ],
-              "return_annotation": "<empty>"
-            },
-            "shift": {
-              "parameters": [
-                {
-                  "annotation": "Component",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
-                },
-                {
-                  "annotation": "int",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "dx"
-                },
-                {
-                  "annotation": "int",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "dy"
-                }
-              ],
-              "return_annotation": "<empty>"
+              "return_annotation": "RenderNode"
             }
           }
         },
@@ -3943,7 +5294,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "BuildContext",
+                  "annotation": "RenderContext",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "context"
@@ -3960,10 +5311,10 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "Component",
+                  "annotation": "RenderNode",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
+                  "name": "node"
                 }
               ],
               "return_annotation": "str"
@@ -3988,7 +5339,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "BuildContext",
+                  "annotation": "RenderContext",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "context"
@@ -4024,6 +5375,23 @@
               ],
               "return_annotation": "str"
             },
+            "get_typography_size": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Union",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "role_or_int"
+                }
+              ],
+              "return_annotation": "int"
+            },
             "render": {
               "parameters": [
                 {
@@ -4033,16 +5401,10 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "Component",
+                  "annotation": "RenderNode",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
-                },
-                {
-                  "annotation": "List",
-                  "default": "None",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "_badge_idx"
+                  "name": "root_node"
                 }
               ],
               "return_annotation": "str"
@@ -4055,71 +5417,6 @@
     },
     "profileforge.render.base": {
       "classes": {
-        "BuildContext": {
-          "attributes": {},
-          "bases": [],
-          "doc": "BuildContext(theme: profileforge.core.models.Theme, config: profileforge.core.models.ProfileForgeConfig, services: profileforge.core.context.Services, cache: dict[str, typing.Any] = <factory>)",
-          "fields": {
-            "cache": {
-              "default": "<MISSING>",
-              "default_factory": "dict",
-              "type": "dict"
-            },
-            "config": {
-              "default": "<MISSING>",
-              "default_factory": "<empty>",
-              "type": "ProfileForgeConfig"
-            },
-            "services": {
-              "default": "<MISSING>",
-              "default_factory": "<empty>",
-              "type": "Services"
-            },
-            "theme": {
-              "default": "<MISSING>",
-              "default_factory": "<empty>",
-              "type": "Theme"
-            }
-          },
-          "is_dataclass": true,
-          "methods": {
-            "__init__": {
-              "parameters": [
-                {
-                  "annotation": "<empty>",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "self"
-                },
-                {
-                  "annotation": "Theme",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "theme"
-                },
-                {
-                  "annotation": "ProfileForgeConfig",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "config"
-                },
-                {
-                  "annotation": "Services",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "services"
-                },
-                {
-                  "annotation": "dict",
-                  "default": "<factory>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "cache"
-                }
-              ],
-              "return_annotation": "None"
-            }
-          }
-        },
         "Component": {
           "attributes": {
             "computed_height": {
@@ -4142,7 +5439,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -4155,6 +5452,12 @@
                   "name": "self"
                 },
                 {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                },
+                {
                   "annotation": "Style | None",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
@@ -4162,6 +5465,202 @@
                 }
               ],
               "return_annotation": "<empty>"
+            }
+          }
+        },
+        "RenderContext": {
+          "attributes": {},
+          "bases": [],
+          "doc": "RenderContext(theme: 'ResolvedTheme', typography: 'TypographyTokens', spacing: 'SpacingTokens', effects: 'EffectsTokens', renderer: 'str' = 'svg', api_version: 'int' = 1, capabilities: 'RendererCapabilities' = <factory>)",
+          "fields": {
+            "api_version": {
+              "default": "1",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "capabilities": {
+              "default": "<MISSING>",
+              "default_factory": "RendererCapabilities",
+              "type": "RendererCapabilities"
+            },
+            "effects": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "EffectsTokens"
+            },
+            "renderer": {
+              "default": "'svg'",
+              "default_factory": "<empty>",
+              "type": "str"
+            },
+            "spacing": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "SpacingTokens"
+            },
+            "theme": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "ResolvedTheme"
+            },
+            "typography": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "TypographyTokens"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "ResolvedTheme",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "theme"
+                },
+                {
+                  "annotation": "TypographyTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "typography"
+                },
+                {
+                  "annotation": "SpacingTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "spacing"
+                },
+                {
+                  "annotation": "EffectsTokens",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "effects"
+                },
+                {
+                  "annotation": "str",
+                  "default": "'svg'",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "renderer"
+                },
+                {
+                  "annotation": "int",
+                  "default": "1",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "api_version"
+                },
+                {
+                  "annotation": "RendererCapabilities",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "capabilities"
+                }
+              ],
+              "return_annotation": "None"
+            }
+          }
+        },
+        "RenderNode": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Immutable AST node representing a resolved component in the layout tree.",
+          "fields": {
+            "children": {
+              "default": "<MISSING>",
+              "default_factory": "list",
+              "type": "list[RenderNode]"
+            },
+            "component": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "Component"
+            },
+            "debug": {
+              "default": "<MISSING>",
+              "default_factory": "dict",
+              "type": "dict[str, Any]"
+            },
+            "height": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "width": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "x": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "y": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Component",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "component"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "x"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "y"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "width"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "height"
+                },
+                {
+                  "annotation": "list[RenderNode]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "dict[str, Any]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "debug"
+                }
+              ],
+              "return_annotation": "None"
             }
           }
         },
@@ -4183,7 +5682,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "BuildContext",
+                  "annotation": "RenderContext",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "context"
@@ -4200,10 +5699,10 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "Component",
+                  "annotation": "RenderNode",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
+                  "name": "node"
                 }
               ],
               "return_annotation": "str"
@@ -4236,7 +5735,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4261,6 +5760,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4287,7 +5792,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4318,6 +5823,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4344,7 +5855,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4387,6 +5898,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4413,7 +5930,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4437,6 +5954,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -4444,6 +5967,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4472,7 +6001,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -4483,6 +6012,12 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",
@@ -4515,7 +6050,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4540,11 +6075,90 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "Grid": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "HorizontalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "Icon": {
           "attributes": {
@@ -4566,7 +6180,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4591,6 +6205,75 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Inline": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4600,7 +6283,7 @@
         "LayoutEngine": {
           "attributes": {},
           "bases": [],
-          "doc": "Calculates absolute X, Y coordinates and dimensions for all components in the tree.",
+          "doc": "Deterministic Layout Engine calculating constraints and producing an immutable RenderNode AST.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -4616,51 +6299,28 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "start_x"
+                  "name": "x"
                 },
                 {
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "start_y"
+                  "name": "y"
                 },
                 {
                   "annotation": "Optional[int]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "parent_width"
+                  "name": "parent_w"
                 },
                 {
                   "annotation": "Optional[int]",
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "parent_height"
+                  "name": "parent_h"
                 }
               ],
-              "return_annotation": "<empty>"
-            },
-            "shift": {
-              "parameters": [
-                {
-                  "annotation": "Component",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
-                },
-                {
-                  "annotation": "int",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "dx"
-                },
-                {
-                  "annotation": "int",
-                  "default": "<empty>",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "dy"
-                }
-              ],
-              "return_annotation": "<empty>"
+              "return_annotation": "RenderNode"
             }
           }
         },
@@ -4684,7 +6344,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4727,6 +6387,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4753,7 +6419,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4790,6 +6456,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4816,7 +6488,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4847,6 +6519,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4873,7 +6551,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4898,9 +6576,182 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
+            }
+          }
+        },
+        "ProgressMetric": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "VisualComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "str",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "label"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "value"
+                },
+                {
+                  "annotation": "PercentageDisplay",
+                  "default": "<PercentageDisplay.RIGHT: 'right'>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "display"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "RenderNode": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Immutable AST node representing a resolved component in the layout tree.",
+          "fields": {
+            "children": {
+              "default": "<MISSING>",
+              "default_factory": "list",
+              "type": "list[RenderNode]"
+            },
+            "component": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "Component"
+            },
+            "debug": {
+              "default": "<MISSING>",
+              "default_factory": "dict",
+              "type": "dict[str, Any]"
+            },
+            "height": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "width": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "x": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "y": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Component",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "component"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "x"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "y"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "width"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "height"
+                },
+                {
+                  "annotation": "list[RenderNode]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "dict[str, Any]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "debug"
+                }
+              ],
+              "return_annotation": "None"
             }
           }
         },
@@ -4924,7 +6775,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -4948,6 +6799,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -4955,6 +6812,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -4981,7 +6844,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5012,6 +6875,69 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Stack": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5038,7 +6964,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5063,11 +6989,27 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "VerticalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "Wrap": {
           "attributes": {
@@ -5089,7 +7031,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5126,6 +7068,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5158,7 +7106,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5183,6 +7131,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5209,7 +7163,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5240,6 +7194,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5266,7 +7226,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5309,6 +7269,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5335,7 +7301,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5359,6 +7325,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -5366,6 +7338,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5394,7 +7372,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -5405,6 +7383,12 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",
@@ -5437,7 +7421,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5462,11 +7446,90 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "Grid": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "HorizontalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "Icon": {
           "attributes": {
@@ -5488,7 +7551,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5513,6 +7576,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5544,6 +7613,69 @@
             }
           }
         },
+        "Inline": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "int",
+                  "default": "0",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
         "Metric": {
           "attributes": {
             "computed_height": {
@@ -5564,7 +7696,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5607,6 +7739,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5633,7 +7771,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5670,6 +7808,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5696,7 +7840,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5727,11 +7871,27 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "PercentageDisplay": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "ProgressBar": {
           "attributes": {
@@ -5753,7 +7913,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5778,9 +7938,182 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
+            }
+          }
+        },
+        "ProgressMetric": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "VisualComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "str",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "label"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "value"
+                },
+                {
+                  "annotation": "PercentageDisplay",
+                  "default": "<PercentageDisplay.RIGHT: 'right'>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "display"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "RenderNode": {
+          "attributes": {},
+          "bases": [],
+          "doc": "Immutable AST node representing a resolved component in the layout tree.",
+          "fields": {
+            "children": {
+              "default": "<MISSING>",
+              "default_factory": "list",
+              "type": "list[RenderNode]"
+            },
+            "component": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "Component"
+            },
+            "debug": {
+              "default": "<MISSING>",
+              "default_factory": "dict",
+              "type": "dict[str, Any]"
+            },
+            "height": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "width": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "x": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            },
+            "y": {
+              "default": "<MISSING>",
+              "default_factory": "<empty>",
+              "type": "int"
+            }
+          },
+          "is_dataclass": true,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Component",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "component"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "x"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "y"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "width"
+                },
+                {
+                  "annotation": "int",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "height"
+                },
+                {
+                  "annotation": "list[RenderNode]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "dict[str, Any]",
+                  "default": "<factory>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "debug"
+                }
+              ],
+              "return_annotation": "None"
             }
           }
         },
@@ -5802,7 +8135,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "BuildContext",
+                  "annotation": "RenderContext",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "context"
@@ -5819,10 +8152,10 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "Component",
+                  "annotation": "RenderNode",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
+                  "name": "node"
                 }
               ],
               "return_annotation": "str"
@@ -5849,7 +8182,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -5873,6 +8206,12 @@
                   "annotation": "int",
                   "default": "0",
                   "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "gap"
+                },
+                {
+                  "annotation": "int | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "spacing"
                 },
                 {
@@ -5880,6 +8219,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -5904,7 +8249,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "BuildContext",
+                  "annotation": "RenderContext",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "context"
@@ -5940,6 +8285,23 @@
               ],
               "return_annotation": "str"
             },
+            "get_typography_size": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "Union",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "role_or_int"
+                }
+              ],
+              "return_annotation": "int"
+            },
             "render": {
               "parameters": [
                 {
@@ -5949,16 +8311,10 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "Component",
+                  "annotation": "RenderNode",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "component"
-                },
-                {
-                  "annotation": "List",
-                  "default": "None",
-                  "kind": "POSITIONAL_OR_KEYWORD",
-                  "name": "_badge_idx"
+                  "name": "root_node"
                 }
               ],
               "return_annotation": "str"
@@ -5985,7 +8341,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -6016,6 +8372,69 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
+                }
+              ],
+              "return_annotation": "<empty>"
+            }
+          }
+        },
+        "Stack": {
+          "attributes": {
+            "computed_height": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_width": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_x": {
+              "type": "int",
+              "value": "0"
+            },
+            "computed_y": {
+              "type": "int",
+              "value": "0"
+            }
+          },
+          "bases": [
+            "LayoutComponent"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {
+            "__init__": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                },
+                {
+                  "annotation": "list[Component]",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "children"
+                },
+                {
+                  "annotation": "Style | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -6042,7 +8461,7 @@
             }
           },
           "bases": [
-            "Component"
+            "VisualComponent"
           ],
           "doc": "",
           "fields": {},
@@ -6067,11 +8486,37 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
             }
           }
+        },
+        "TypographyRole": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
+        },
+        "VerticalAlign": {
+          "attributes": {},
+          "bases": [
+            "Enum"
+          ],
+          "doc": "",
+          "fields": {},
+          "is_dataclass": false,
+          "methods": {}
         },
         "Wrap": {
           "attributes": {
@@ -6093,7 +8538,7 @@
             }
           },
           "bases": [
-            "Component"
+            "LayoutComponent"
           ],
           "doc": "",
           "fields": {},
@@ -6130,6 +8575,12 @@
                   "default": "None",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "style"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 }
               ],
               "return_annotation": "<empty>"
@@ -6230,6 +8681,17 @@
                 }
               ],
               "return_annotation": "None"
+            },
+            "get_render_context": {
+              "parameters": [
+                {
+                  "annotation": "<empty>",
+                  "default": "<empty>",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "self"
+                }
+              ],
+              "return_annotation": "RenderContext"
             }
           }
         },
@@ -6255,7 +8717,7 @@
           "bases": [
             "ABC"
           ],
-          "doc": "Base class for all layout and visual components.",
+          "doc": "Base class for all components.",
           "fields": {},
           "is_dataclass": false,
           "methods": {
@@ -6266,6 +8728,12 @@
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "self"
+                },
+                {
+                  "annotation": "Constraints | None",
+                  "default": "None",
+                  "kind": "POSITIONAL_OR_KEYWORD",
+                  "name": "constraints"
                 },
                 {
                   "annotation": "Style | None",

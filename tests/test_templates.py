@@ -96,7 +96,7 @@ def test_template_configs_load_and_build(tmp_path):
         context = BuildContext(theme=theme, config=config, services=services)
 
         # Render all widgets in template
-        svg_renderer = SVGRenderer(context)
+        svg_renderer = SVGRenderer(context.get_render_context())
         for w_conf in config.widgets:
             assert w_conf.name in WIDGET_REGISTRY, (
                 f"Widget '{w_conf.name}' not registered"
@@ -105,8 +105,8 @@ def test_template_configs_load_and_build(tmp_path):
             widget = widget_cls()
             tree = widget.render_safe(context)
             assert tree is not None
-            LayoutEngine.calculate(tree)
-            svg = svg_renderer.render(tree)
+            node = render_node = LayoutEngine.calculate(tree)
+            svg = svg_renderer.render(node)
             assert svg is not None
             assert len(svg) > 0
 

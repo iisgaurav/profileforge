@@ -98,9 +98,9 @@ def test_hero_widget_lifecycle_and_fallbacks(mock_theme):
 
     card = widget.render_safe(context_with_data)
     assert isinstance(card, Card)
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context_with_data)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context_with_data.get_render_context())
+    svg = renderer.render(render_node)
     assert "Ada Lovelace" in svg
     assert "First Programmer" in svg
 
@@ -144,9 +144,9 @@ def test_social_widget_transform_and_render(mock_theme):
     assert isinstance(card, Card)
     assert card.title == "Connect & Socials"
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Connect &amp; Socials" in svg
 
 
@@ -182,9 +182,9 @@ def test_skills_widget_transform_and_render(mock_theme):
     assert isinstance(card, Card)
     assert card.title == "Technical Skills"
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Technical Skills" in svg
     assert "Python" in svg
 
@@ -224,9 +224,9 @@ def test_now_widget_transform_and_render(mock_theme):
     assert isinstance(card, Card)
     assert card.title == "What I'm Doing Now"
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Next-gen CLI compiler" in svg
     assert "Crafting Interpreters" in svg
 
@@ -271,9 +271,9 @@ def test_experience_widget_transform_and_render(mock_theme):
     assert isinstance(card, Card)
     assert card.title == "Work Experience"
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Principal Architect" in svg
     assert "NextGen Systems" in svg
 
@@ -331,9 +331,9 @@ def test_repositories_widget_fetch_and_render(mock_theme):
     assert isinstance(card, Card)
     assert "torvalds" in card.title
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "linux" in svg
     assert "180,000" in svg
 
@@ -347,9 +347,9 @@ def test_repositories_widget_fallback_when_unauthenticated(mock_theme):
     assert isinstance(card, Component)
     assert isinstance(card, Card)
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Featured Repositories" in svg
     assert "profileforge" in svg
 
@@ -365,9 +365,9 @@ def test_streak_widget_metadata_and_render(mock_theme):
     card = widget.render_safe(context)
     assert isinstance(card, Card)
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Contribution Streak" in svg
     assert "Current Streak" in svg
 
@@ -383,9 +383,9 @@ def test_activity_timeline_widget_metadata_and_render(mock_theme):
     card = widget.render_safe(context)
     assert isinstance(card, Card)
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Recent Activity" in svg
     assert "PR Merge" in svg or "Release" in svg
 
@@ -401,9 +401,9 @@ def test_achievements_widget_metadata_and_render(mock_theme):
     card = widget.render_safe(context)
     assert isinstance(card, Card)
 
-    LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context)
-    svg = renderer.render(card)
+    render_node = LayoutEngine.calculate(card)
+    renderer = SVGRenderer(context.get_render_context())
+    svg = renderer.render(render_node)
     assert "Developer Achievements" in svg
     assert "Pull Shark" in svg
 

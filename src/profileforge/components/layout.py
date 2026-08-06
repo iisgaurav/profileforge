@@ -31,22 +31,22 @@ class VisualComponent(Component):
 
 class Row(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, style: Style | None = None, constraints: Constraints | None = None
+        self, children: list[Component], gap: int = 0, spacing: int | None = None, style: Style | None = None, constraints: Constraints | None = None
     ):
         super().__init__(constraints, style)
         self.children = children
-        self.gap = gap
-        self.spacing = gap  # For backward compatibility during migration
+        self.gap = spacing if spacing is not None else gap
+        self.spacing = self.gap  # For backward compatibility during migration
 
 
 class Column(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, style: Style | None = None, constraints: Constraints | None = None
+        self, children: list[Component], gap: int = 0, spacing: int | None = None, style: Style | None = None, constraints: Constraints | None = None
     ):
         super().__init__(constraints, style)
         self.children = children
-        self.gap = gap
-        self.spacing = gap  # For backward compatibility
+        self.gap = spacing if spacing is not None else gap
+        self.spacing = self.gap  # For backward compatibility
 
 
 class Inline(LayoutComponent):

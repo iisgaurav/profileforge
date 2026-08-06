@@ -303,7 +303,7 @@ def _run_single_pass(
     context = BuildContext(theme=theme, config=config, services=services)
     pass_timings["connector_fetch"] = (time.perf_counter() - t0) * 1000
 
-    svg_renderer = SVGRenderer(context)
+    svg_renderer = SVGRenderer(context.get_render_context())
     defs_block = svg_renderer.get_defs()
 
     widget_build_ms = 0.0
@@ -323,18 +323,18 @@ def _run_single_pass(
 
         # Layout pass
         tl0 = time.perf_counter()
-        LayoutEngine.calculate(component_tree)
+        render_node = LayoutEngine.calculate(component_tree)
         layout_pass_ms += (time.perf_counter() - tl0) * 1000
 
         # Render pass
         tr0 = time.perf_counter()
-        inner_svg = svg_renderer.render(component_tree)
+        inner_svg = svg_renderer.render(render_node)
         render_pass_ms += (time.perf_counter() - tr0) * 1000
 
         # SVG Output formatting
         to0 = time.perf_counter()
-        total_w = component_tree.computed_width
-        total_h = component_tree.computed_height
+        total_w = render_node.width
+        total_h = render_node.height
         escaped_title = html.escape(w_config.name.title())
         _ = (
             f'<svg width="{total_w}" height="{total_h}" '
