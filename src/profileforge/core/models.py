@@ -1,7 +1,39 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import Any, Optional, Union
+
+class HorizontalAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+
+class VerticalAlign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+class PercentageDisplay(Enum):
+    NONE = "none"
+    RIGHT = "right"
+    TOP = "top"
+    INSIDE = "inside"
+
+class Size(Enum):
+    SM = "sm"
+    MD = "md"
+    LG = "lg"
+    XL = "xl"
+
+class TypographyRole(Enum):
+    TITLE = "title"
+    HEADING = "heading"
+    LABEL = "label"
+    VALUE = "value"
+    BODY = "body"
+    CAPTION = "caption"
 
 
 @dataclass
@@ -22,18 +54,33 @@ class ColorTokens:
 @dataclass
 class TypographyTokens:
     font_family: str
-    heading: int
-    body: int
-    small: int
+    title: int = 24
+    heading: int = 18
+    label: int = 14
+    value: int = 28
+    body: int = 15
+    caption: int = 13
+    small: int = 12
 
 
 @dataclass
+class OpticalSpacingTokens:
+    text_icon: int = 10
+    label_value: int = 6
+    badge_icon: int = 8
+
+@dataclass
 class SpacingTokens:
-    xs: int
-    sm: int
-    md: int
-    lg: int
-    xl: int
+    xs: int = 4
+    sm: int = 8
+    md: int = 16
+    lg: int = 24
+    xl: int = 32
+    card_padding: int = 24
+    inline_gap: int = 10
+    section_gap: int = 18
+    group_gap: int = 24
+    optical: OpticalSpacingTokens = field(default_factory=OpticalSpacingTokens)
 
 
 @dataclass
@@ -91,6 +138,35 @@ class Theme:
     fonts: Optional[dict[str, Any]] = None
     assets: Optional[dict[str, Any]] = None
     variables: Optional[dict[str, Any]] = None
+
+@dataclass
+class RendererCapabilities:
+    supports_gradients: bool = True
+    supports_filters: bool = True
+    supports_animation: bool = True
+    supports_masks: bool = True
+    supports_fonts: bool = True
+    supports_accessibility: bool = True
+
+@dataclass
+class ResolvedTheme:
+    colors: ColorTokens
+    typography: TypographyTokens
+    spacing: SpacingTokens
+    radius: RadiusTokens
+    shadows: ShadowTokens
+    motion: MotionTokens
+    effects: EffectsTokens
+
+@dataclass
+class RenderContext:
+    theme: ResolvedTheme
+    typography: TypographyTokens
+    spacing: SpacingTokens
+    effects: EffectsTokens
+    renderer: str = "svg"
+    api_version: int = 1
+    capabilities: RendererCapabilities = field(default_factory=RendererCapabilities)
 
 
 @dataclass

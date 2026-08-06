@@ -14,6 +14,7 @@ from profileforge.core.models import (
     GridConfig,
     MetricsConfig,
     MotionTokens,
+    OpticalSpacingTokens,
     OutputConfig,
     Outputs,
     ProfileForgeConfig,
@@ -196,7 +197,13 @@ class ConfigLoader:
 
         colors = ColorTokens(**data.get("colors", {}))
         typography = TypographyTokens(**data.get("typography", {}))
-        spacing = SpacingTokens(**data.get("spacing", {}))
+        
+        spacing_data = data.get("spacing", {})
+        optical_data = spacing_data.pop("optical", {}) if isinstance(spacing_data, dict) else {}
+        
+        spacing = SpacingTokens(**(spacing_data if isinstance(spacing_data, dict) else {}))
+        spacing.optical = OpticalSpacingTokens(**optical_data)
+        
         radius = RadiusTokens(**data.get("radius", {}))
         shadows = ShadowTokens(**data.get("shadows", {}))
         motion = MotionTokens(**data.get("motion", {}))

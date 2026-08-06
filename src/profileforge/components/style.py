@@ -1,6 +1,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Union
+
+from profileforge.core.models import HorizontalAlign, VerticalAlign, TypographyRole
+
+
+@dataclass
+class Constraints:
+    """Universal constraints for any component."""
+    min_width: int | None = None
+    max_width: int | None = None
+    preferred_width: int | None = None
+    fill: bool = False
 
 
 @dataclass
@@ -13,12 +25,16 @@ class Style:
     margin: int | None = None
     border_radius: int | None = None
     border_color: str | None = None
-    font_size: int | None = None
+    font_size: Union[TypographyRole, int, None] = None
     font_weight: str | None = None
+    
     width: int | str | None = None
     height: int | str | None = None
+    
     variant: str | None = None
     state: str | None = None
     elevation: str | None = None
-    justify: str | None = None
-    align: str | None = None
+    
+    justify: Union[HorizontalAlign, str, None] = None
+    align: Union[HorizontalAlign, VerticalAlign, str, None] = None
+    valign: Union[VerticalAlign, str, None] = None
