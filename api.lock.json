@@ -5863,7 +5863,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "profileforge.core.models.TypographyRole | int | None",
+                  "annotation": "TypographyRole | int | None",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "role_or_int"
@@ -8825,7 +8825,7 @@
                   "name": "self"
                 },
                 {
-                  "annotation": "profileforge.core.models.TypographyRole | int | None",
+                  "annotation": "TypographyRole | int | None",
                   "default": "<empty>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "role_or_int"
