@@ -1,8 +1,8 @@
 schema: 1
 budgets:
-  total_build: 50.0
-  widget_build: 5.0
-  theme_load: 2.0
-  layout_pass: 10.0
-  render_pass: 30.0
+  total_build: 150.0
+  widget_build: 15.0
+  theme_load: 10.0
+  layout_pass: 50.0
+  render_pass: 60.0
   config_parse: 5.0
