@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 
 try:
     import cairosvg
-except ImportError:
+except (ImportError, OSError):
     cairosvg = None
 
 try:

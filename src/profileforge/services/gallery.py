@@ -424,7 +424,7 @@ class GalleryExporter:
         component_tree = widget.render_safe(context)
         render_node = LayoutEngine.calculate(component_tree)
 
-        inner_svg = svg_renderer.render(render_node)
+        inner_svg = svg_renderer._render_node(render_node, [0])
         defs_block = svg_renderer.get_defs()
         total_w = render_node.width
         total_h = render_node.height
@@ -437,8 +437,8 @@ class GalleryExporter:
             f'role="img">\n'
             f"  <title>{escaped_title}</title>\n"
             f"  <desc>ProfileForge widget preview</desc>\n"
-            f"  {defs_block}\n"
-            f"  {inner_svg}\n"
+            f"{defs_block}\n"
+            f"{inner_svg}\n"
             f"</svg>"
         )
         return svg_content
