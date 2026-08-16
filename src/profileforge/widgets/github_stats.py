@@ -63,6 +63,7 @@ class GithubStatsWidget(Widget):
         stars = stats.stars if stats else 2480
         prs = stats.prs if stats else 385
         commits = stats.commits if stats else 3120
+        repos = stats.repos if stats else 25
 
         # Build mock series so the SVGs render lines instead of 'No data'
         return {
@@ -74,7 +75,8 @@ class GithubStatsWidget(Widget):
             "stars_series": MockSeries([100, 200, 300, 400, 500, stars]),
             "prs_series": MockSeries([10, 20, 30, 40, 50, prs]),
             "commits_series": MockSeries([100, 500, 1000, 2000, 3000, commits]),
-            "repos_series": MockSeries([10, 10, 12, 12, 14, 14, 16, 20, 25]),
+            "repos": repos,
+            "repos_series": MockSeries([10, 10, 12, 12, 14, 14, 16, 20, repos]),
             "profile": data.get("profile"),
             "contributions": data.get("contributions"),
         }
@@ -128,7 +130,7 @@ class GithubStatsWidget(Widget):
                 ),
                 SparklineMetric(
                     label="Repositories",
-                    value="--",
+                    value=data.get("repos", 0),
                     icon="repo",
                     series=data.get("repos_series"),
                     tone="warning",

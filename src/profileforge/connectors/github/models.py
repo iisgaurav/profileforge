@@ -12,6 +12,7 @@ class GitHubStats:
     stars: int
     prs: int
     commits: int
+    repos: int = 0
     stars_series: MetricSeries | None = None
     prs_series: MetricSeries | None = None
     commits_series: MetricSeries | None = None

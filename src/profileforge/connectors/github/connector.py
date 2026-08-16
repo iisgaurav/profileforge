@@ -69,15 +69,26 @@ class GithubConnector(Connector):
                 )
 
                 # 3. Stars (Need to iterate over repos, or just fetch first page for simplicity)
-                repos_resp = client.get(
+                repos_list_resp = client.get(
                     f"https://api.github.com/users/{username}/repos?per_page=100"
                 )
                 stars = 0
-                if repos_resp.status_code == 200:
-                    repos = repos_resp.json()
-                    stars = sum(repo.get("stargazers_count", 0) for repo in repos)
+                if repos_list_resp.status_code == 200:
+                    repos_list = repos_list_resp.json()
+                    stars = sum(repo.get("stargazers_count", 0) for repo in repos_list)
+                    
+                # 4. Total Repos (Private + Public) using Search API
+                repos_search_resp = client.get(
+                    "https://api.github.com/search/repositories",
+                    params={"q": f"owner:{username}"},
+                )
+                total_repos = (
+                    repos_search_resp.json().get("total_count", 0)
+                    if repos_search_resp.status_code == 200
+                    else 0
+                )
 
-                return GitHubStats(stars=stars, prs=prs, commits=commits)
+                return GitHubStats(stars=stars, prs=prs, commits=commits, repos=total_repos)
         except Exception as e:
             raise ConnectorError(f"Failed to fetch GitHub stats: {e}")
 
