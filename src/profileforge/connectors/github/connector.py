@@ -76,7 +76,7 @@ class GithubConnector(Connector):
                 if repos_list_resp.status_code == 200:
                     repos_list = repos_list_resp.json()
                     stars = sum(repo.get("stargazers_count", 0) for repo in repos_list)
-                    
+
                 # 4. Total Repos (Private + Public) using Search API
                 repos_search_resp = client.get(
                     "https://api.github.com/search/repositories",
@@ -88,7 +88,9 @@ class GithubConnector(Connector):
                     else 0
                 )
 
-                return GitHubStats(stars=stars, prs=prs, commits=commits, repos=total_repos)
+                return GitHubStats(
+                    stars=stars, prs=prs, commits=commits, repos=total_repos
+                )
         except Exception as e:
             raise ConnectorError(f"Failed to fetch GitHub stats: {e}")
 
