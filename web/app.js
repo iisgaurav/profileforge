@@ -110,9 +110,9 @@ async function init() {
   setLoading(true);
   try {
     const [themes, widgets, templates] = await Promise.all([
-      fetchJSON('../gallery/themes.json'),
-      fetchJSON('../gallery/widgets.json'),
-      fetchJSON('../gallery/templates.json'),
+      fetchJSON('./gallery/themes.json'),
+      fetchJSON('./gallery/widgets.json'),
+      fetchJSON('./gallery/templates.json'),
     ]);
 
     state.themes = themes;
@@ -331,7 +331,7 @@ function buildWidgetPreviewCard(widgetId, themeId) {
   svgContainer.className = 'preview-widget-svg-container';
 
   // Add cache-buster to ensure we see newly generated SVGs instead of stale cached ones
-  const assetUrl = `../gallery/assets/${widgetId}_${themeId}.svg?v=${Date.now()}`;
+  const assetUrl = `./gallery/assets/${widgetId}_${themeId}.svg?v=${Date.now()}`;
   const img = document.createElement('img');
   img.alt = `${widgetId} widget in ${themeId} theme`;
   img.loading = 'lazy';
@@ -520,7 +520,7 @@ async function downloadSVGBundle() {
   const downloads = [];
   for (const widgetId of state.activeWidgets) {
     try {
-      const url = `../gallery/assets/${widgetId}_${state.theme}.svg`;
+      const url = `./gallery/assets/${widgetId}_${state.theme}.svg`;
       const res = await fetch(url);
       if (!res.ok) throw new Error('Not found');
       const svg = await res.text();

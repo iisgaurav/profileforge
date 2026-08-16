@@ -128,35 +128,35 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_9dd191">
+<g role="group" data-pf-id="card_bd2baa">
     <rect x="0.5" y="0.5" width="819" height="515" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#1e66f5" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#4c4f69" letter-spacing="0.3">Featured Repositories (@iisgaurav)</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#1e66f5" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_d13bb4"><g data-pf-id="column_23d693"><g data-pf-id="inline_e1c628"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_ee6eb6">📦 profileforge</text><text x="657.0" y="77.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_ed56cb">★  1,420    ⑂  184</text></g>
-<text x="24" y="110" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_437cac">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
-<g data-pf-id="inline_d4a175"><g role="term" data-pf-id="badge_a73c7f">
+    <g data-pf-id="column_e2e336"><g data-pf-id="column_be1d50"><g data-pf-id="inline_adf62d"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_ddc63a">📦 profileforge</text><text x="657.0" y="77.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_04b7cc">★  1,420    ⑂  184</text></g>
+<text x="24" y="110" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_4bd05c">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
+<g data-pf-id="inline_7e7bd3"><g role="term" data-pf-id="badge_3fc4b7">
     <rect x="24" y="130" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="144.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g></g></g>
-<g data-pf-id="column_51dab8"><g data-pf-id="inline_4fe73f"><text x="24" y="189" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_a08974">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_f05d05">★  830    ⑂  95</text></g>
-<text x="24" y="221" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_a096ea">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
-<g data-pf-id="inline_514d71"><g role="term" data-pf-id="badge_d6d202">
+<g data-pf-id="column_028fba"><g data-pf-id="inline_fb55e3"><text x="24" y="189" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_d7aaff">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_0390d5">★  830    ⑂  95</text></g>
+<text x="24" y="221" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_a8cf99">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
+<g data-pf-id="inline_738d20"><g role="term" data-pf-id="badge_57e831">
     <rect x="24" y="241" width="60" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="54.0" y="255.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Rust</text>
 </g></g></g>
-<g data-pf-id="column_6f55e0"><g data-pf-id="inline_a9e209"><text x="24" y="300" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_0723c2">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_35d2d9">★  612    ⑂  52</text></g>
-<text x="24" y="332" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_787264">Dynamic design token management and SVG theming primitives for modern web apps.</text>
-<g data-pf-id="inline_7484d2"><g role="term" data-pf-id="badge_cbbea9">
+<g data-pf-id="column_cba692"><g data-pf-id="inline_01b668"><text x="24" y="300" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_a56508">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_bbbce7">★  612    ⑂  52</text></g>
+<text x="24" y="332" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_3fc771">Dynamic design token management and SVG theming primitives for modern web apps.</text>
+<g data-pf-id="inline_a413cc"><g role="term" data-pf-id="badge_e7268f">
     <rect x="24" y="352" width="108" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="78.0" y="366.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g></g></g>
-<g data-pf-id="column_4c54eb"><g data-pf-id="inline_1bba71"><text x="24" y="411" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_b1d856">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_724554">★  425    ⑂  38</text></g>
-<text x="24" y="443" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_b4ea11">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
-<g data-pf-id="inline_904c1c"><g role="term" data-pf-id="badge_7e1b7f">
+<g data-pf-id="column_b0fb6c"><g data-pf-id="inline_ef85cd"><text x="24" y="411" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1e66f5"  data-pf-id="text_961b23">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#4c4f69"  data-pf-id="text_083438">★  425    ⑂  38</text></g>
+<text x="24" y="443" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#7c7f93"  data-pf-id="text_182863">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
+<g data-pf-id="inline_8a41fd"><g role="term" data-pf-id="badge_db3e3c">
     <rect x="24" y="463" width="44" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="46.0" y="477.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Go</text>

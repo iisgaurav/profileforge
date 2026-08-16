@@ -128,19 +128,19 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_e354e0">
+<g role="group" data-pf-id="card_595589">
     <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="24" font-weight="700" fill="#EDEDED" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_c7d455"><g data-pf-id="inline_454a7f"><text x="24" y="78" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#EDEDED"  data-pf-id="text_e98a5e">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF"  data-pf-id="text_305ade">2023 — Present</text></g>
-<text x="24" y="110" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_6142ea">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-<text x="24" y="142" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_d8beb7">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-<text x="24" y="174" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_de614e">▸ Mentored team of 12 engineers across systems engineering.</text>
-<g data-pf-id="inline_494791"><text x="24" y="208" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#EDEDED"  data-pf-id="text_aac34f">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF"  data-pf-id="text_78beba">2020 — 2023</text></g>
-<text x="24" y="240" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_7a052a">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-<text x="24" y="272" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_d885e9">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-<text x="24" y="304" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_de55fd">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+    <g data-pf-id="column_579b15"><g data-pf-id="inline_e16e6a"><text x="24" y="78" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#EDEDED"  data-pf-id="text_495140">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF"  data-pf-id="text_ecbd14">2023 — Present</text></g>
+<text x="24" y="110" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_7e36da">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_fe019b">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_81a1f9">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_b3bdd4"><text x="24" y="208" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#EDEDED"  data-pf-id="text_422555">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF"  data-pf-id="text_40e6d1">2020 — 2023</text></g>
+<text x="24" y="240" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_785477">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_ecc324">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_43e415">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
 </g>
 </svg>
 </svg>

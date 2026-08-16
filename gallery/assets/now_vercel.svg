@@ -128,20 +128,20 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_2156b4">
+<g role="group" data-pf-id="card_232344">
     <rect x="0.5" y="0.5" width="819" height="367" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="24" font-weight="700" fill="#EDEDED" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_5b2e95"><text x="24" y="77" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_dd2b87">🔨 Building</text>
-<text x="24" y="110" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_56d634">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
-<text x="24" y="143" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_3dd396">🧠 Learning</text>
-<text x="24" y="176" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_46733f">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
-<text x="24" y="209" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_e2581a">📚 Reading</text>
-<text x="24" y="242" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_80b678">Designing Data-Intensive Applications by Martin Kleppmann</text>
-<text x="24" y="275" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_7c897a">🎯 Focusing On</text>
-<text x="24" y="308" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_01970e">Developer tooling, open-source maintainability, and declarative UI design</text>
-<g data-pf-id="inline_8bc01b"><text x="24" y="340" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_30e17a">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_fb1cb6">🕒 Updated: August 2026</text></g></g>
+    <g data-pf-id="column_cbf4c9"><text x="24" y="77" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_8ff8b5">🔨 Building</text>
+<text x="24" y="110" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_a85d87">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+<text x="24" y="143" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_0c586a">🧠 Learning</text>
+<text x="24" y="176" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_16416c">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+<text x="24" y="209" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_5f3ca9">📚 Reading</text>
+<text x="24" y="242" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_6f298b">Designing Data-Intensive Applications by Martin Kleppmann</text>
+<text x="24" y="275" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_c6d343">🎯 Focusing On</text>
+<text x="24" y="308" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" font-weight="normal" fill="#EDEDED"  data-pf-id="text_436bdc">Developer tooling, open-source maintainability, and declarative UI design</text>
+<g data-pf-id="inline_40f394"><text x="24" y="340" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_e71fe9">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="12" font-weight="normal" fill="#A1A1AA"  data-pf-id="text_ba7e25">🕒 Updated: August 2026</text></g></g>
 </g>
 </svg>
 </svg>

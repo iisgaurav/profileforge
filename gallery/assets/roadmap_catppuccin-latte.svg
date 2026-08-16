@@ -128,27 +128,27 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_193bcb">
+<g role="group" data-pf-id="card_9ea8d8">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#1e66f5" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#4c4f69" letter-spacing="0.3">Learning Roadmap</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#1e66f5" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_84b7d1"><g data-pf-id="column_c95e7d"><g data-pf-id="inline_025d29"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_209296">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_b7c99d">90%</text></g>
-<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_c2a87b">
+    <g data-pf-id="column_60c8ae"><g data-pf-id="column_94a2c0"><g data-pf-id="inline_0d35d9"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_c19fe5">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_673f5f">90%</text></g>
+<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_fd2aac">
     <rect x="24" y="88" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="88" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="694.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_58ebb4"><g data-pf-id="inline_0023fb"><text x="24" y="126" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_9d431d">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_c512fd">65%</text></g>
-<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_96dc8f">
+<g data-pf-id="column_ac043d"><g data-pf-id="inline_f8598c"><text x="24" y="126" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_b75fb9">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_4e30e2">65%</text></g>
+<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_92fa97">
     <rect x="24" y="136" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="136" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="501.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_23f5a1"><g data-pf-id="inline_70f568"><text x="24" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_ec3658">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_cd77ff">40%</text></g>
-<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_262a62">
+<g data-pf-id="column_d108ab"><g data-pf-id="inline_4b8ece"><text x="24" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#4c4f69"  data-pf-id="text_33ea6e">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="normal" fill="#7c7f93"  data-pf-id="text_dabc9c">40%</text></g>
+<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d3f39f">
     <rect x="24" y="184" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="184" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="308.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

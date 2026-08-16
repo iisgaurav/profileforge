@@ -128,19 +128,19 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_299fea">
+<g role="group" data-pf-id="card_c461e1">
     <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#3B82F6" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#F8FAFC" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_30b0ed"><g data-pf-id="inline_074178"><text x="24" y="78" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC"  data-pf-id="text_7661e7">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3B82F6"  data-pf-id="text_bee7ef">2023 — Present</text></g>
-<text x="24" y="110" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_5129f7">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-<text x="24" y="142" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_c9eff3">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-<text x="24" y="174" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_26f34b">▸ Mentored team of 12 engineers across systems engineering.</text>
-<g data-pf-id="inline_9110b0"><text x="24" y="208" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC"  data-pf-id="text_32b363">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3B82F6"  data-pf-id="text_f228d7">2020 — 2023</text></g>
-<text x="24" y="240" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_a29ad8">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-<text x="24" y="272" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_31b5d9">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-<text x="24" y="304" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_9330bb">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+    <g data-pf-id="column_0be173"><g data-pf-id="inline_294c38"><text x="24" y="78" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC"  data-pf-id="text_174aa2">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3B82F6"  data-pf-id="text_ff11fe">2023 — Present</text></g>
+<text x="24" y="110" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_3cdd8e">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_1bbdfa">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_caf6bf">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_05086a"><text x="24" y="208" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC"  data-pf-id="text_fd6ac2">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3B82F6"  data-pf-id="text_ba66b9">2020 — 2023</text></g>
+<text x="24" y="240" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_5988c5">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_e9b01c">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#94A3B8"  data-pf-id="text_0c4a9f">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
 </g>
 </svg>
 </svg>
