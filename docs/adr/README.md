@@ -9,3 +9,4 @@ This directory contains the formal Architecture Decision Records for the Profile
 | [ADR-003](ADR-003-two-pass-flex-layout-engine.md) | Two-Pass Flexbox & Grid Layout Engine for SVG | Accepted | 2026-08-02 |
 | [ADR-004](ADR-004-pluggable-connector-architecture.md) | Pluggable Connector Architecture and Data Abstraction | Accepted | 2026-08-02 |
 | [ADR-005](ADR-005-standard-widget-lifecycle-and-failure-isolation.md) | Standard Widget Lifecycle and Failure Isolation Mechanism | Accepted | 2026-08-02 |
+| [ADR-006](ADR-006-multiple-measurement-engines.md) | Abstracting Intrinsic Measurement and Future Pluggable Engines | Proposed | Unknown |
