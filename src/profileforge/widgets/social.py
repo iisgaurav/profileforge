@@ -88,7 +88,7 @@ class SocialWidget(Widget):
             "website": "🌐 Website",
             "site": "🌐 Website",
             "blog": "✍️ Blog",
-            "discord": "💬 Discord",
+            "instagram": "Instagram",
             "email": "✉️ Email",
             "mail": "✉️ Email",
             "youtube": "▶️ YouTube",

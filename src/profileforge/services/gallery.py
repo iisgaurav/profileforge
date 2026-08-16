@@ -207,7 +207,7 @@ SAMPLE_LOCAL_DATA = {
         "twitter": "iisgaurav",
         "linkedin": "iisgaurav",
         "website": "https://iisgaurav.vercel.app",
-        "discord": "iisgaurav",
+        "instagram": "iisgaurav",
         "email": "gauravv2504@gmail.com",
     },
 

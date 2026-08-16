@@ -128,29 +128,29 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_06f527">
+<g role="group" data-pf-id="card_1c72da">
     <rect x="0.5" y="0.5" width="399" height="311" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#0969DA" opacity="0.9"/>
     <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#24292F" letter-spacing="0.3">Currently Doing</text>
     <line x1="24" y1="60" x2="376" y2="60" stroke="#0969DA" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_1a3bc5"><g data-pf-id="column_4a58ca"><text x="24" y="76" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0969DA"  data-pf-id="text_22bfa8">BUILDING</text>
-<g data-pf-id="column_4515bc"><text x="24" y="114" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_2d0667">ProfileForge — Developer Profile Engine</text>
-<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_55753f">
+    <g data-pf-id="column_342a8e"><g data-pf-id="column_121f00"><text x="24" y="76" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0969DA"  data-pf-id="text_85444d">BUILDING</text>
+<g data-pf-id="column_64382c"><text x="24" y="114" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_91be53">ProfileForge — Developer Profile Engine</text>
+<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_e3aa28">
     <rect x="24" y="128" width="350" height="6" fill="url(#pf-track-bg)" rx="4"/>
     <rect x="24" y="128" width="297.5" height="6" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="297.5" dur="1.28s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_7fd0ec"><text x="24" y="168" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_ed3d4f">Async Telemetry Streamer</text>
-<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_600e46">
+<g data-pf-id="column_c52823"><text x="24" y="168" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_d2f07a">Async Telemetry Streamer</text>
+<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d98e19">
     <rect x="24" y="182" width="350" height="6" fill="url(#pf-track-bg)" rx="4"/>
     <rect x="24" y="182" width="210.0" height="6" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="210.0" dur="1.08s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g></g>
-<g data-pf-id="column_b8899a"><text x="24" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0969DA"  data-pf-id="text_b7ae25">LEARNING</text>
-<g data-pf-id="column_b66b5a"><text x="24" y="268" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_f9dc0b">Rust Systems Programming &amp; WASM</text>
-<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_280891">
+<g data-pf-id="column_58de66"><text x="24" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0969DA"  data-pf-id="text_88e4a3">LEARNING</text>
+<g data-pf-id="column_328449"><text x="24" y="268" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#24292F"  data-pf-id="text_c63151">Rust Systems Programming &amp; WASM</text>
+<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_9a9530">
     <rect x="24" y="282" width="350" height="6" fill="url(#pf-track-bg)" rx="4"/>
     <rect x="24" y="282" width="262.5" height="6" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="262.5" dur="1.20s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

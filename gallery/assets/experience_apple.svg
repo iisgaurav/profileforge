@@ -128,19 +128,19 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_c6906e">
+<g role="group" data-pf-id="card_fdc7ce">
     <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="18"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#0071E3" opacity="0.9"/>
     <text x="36" y="40" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24" font-weight="700" fill="#1D1D1F" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#0071E3" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_5f6a6f"><g data-pf-id="inline_308311"><text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700" fill="#1D1D1F"  data-pf-id="text_22b398">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="600" fill="#0071E3"  data-pf-id="text_b32651">2023 — Present</text></g>
-<text x="24" y="110" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_63fcd5">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-<text x="24" y="142" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_a7ad8d">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-<text x="24" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_5aef73">▸ Mentored team of 12 engineers across systems engineering.</text>
-<g data-pf-id="inline_2814fe"><text x="24" y="208" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700" fill="#1D1D1F"  data-pf-id="text_5675b5">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="600" fill="#0071E3"  data-pf-id="text_e72cc4">2020 — 2023</text></g>
-<text x="24" y="240" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_2a19c3">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-<text x="24" y="272" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_251782">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-<text x="24" y="304" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_027d28">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+    <g data-pf-id="column_927239"><g data-pf-id="inline_2a37ae"><text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700" fill="#1D1D1F"  data-pf-id="text_52d64b">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="600" fill="#0071E3"  data-pf-id="text_ee27e6">2023 — Present</text></g>
+<text x="24" y="110" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_514221">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_d43e55">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_164b3f">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_77d6eb"><text x="24" y="208" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700" fill="#1D1D1F"  data-pf-id="text_17d9d6">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="600" fill="#0071E3"  data-pf-id="text_6a91e9">2020 — 2023</text></g>
+<text x="24" y="240" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_283755">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_beee9f">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_60bf33">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
 </g>
 </svg>
 </svg>

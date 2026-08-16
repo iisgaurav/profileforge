@@ -128,19 +128,19 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_7b4398">
+<g role="group" data-pf-id="card_5bd4cd">
     <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFD700" opacity="0.9"/>
     <text x="36" y="40" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#E0E0E0" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFD700" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_b72537"><g data-pf-id="inline_1bb9a8"><text x="24" y="78" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#E0E0E0"  data-pf-id="text_82462c">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFD700"  data-pf-id="text_5c0fee">2023 — Present</text></g>
-<text x="24" y="110" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_04cb70">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-<text x="24" y="142" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_971d60">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-<text x="24" y="174" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_5a0b3b">▸ Mentored team of 12 engineers across systems engineering.</text>
-<g data-pf-id="inline_6914cd"><text x="24" y="208" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#E0E0E0"  data-pf-id="text_44765f">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFD700"  data-pf-id="text_c42632">2020 — 2023</text></g>
-<text x="24" y="240" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_3f2f2f">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-<text x="24" y="272" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_b3ffe9">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-<text x="24" y="304" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_318e21">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+    <g data-pf-id="column_da5d65"><g data-pf-id="inline_7493a4"><text x="24" y="78" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#E0E0E0"  data-pf-id="text_e2641c">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFD700"  data-pf-id="text_630d40">2023 — Present</text></g>
+<text x="24" y="110" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_4f36e5">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_9fc5fb">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_378bb3">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_2a756a"><text x="24" y="208" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#E0E0E0"  data-pf-id="text_344a02">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFD700"  data-pf-id="text_8d27a7">2020 — 2023</text></g>
+<text x="24" y="240" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_4e4475">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_e6b4d7">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_38fbc5">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
 </g>
 </svg>
 </svg>

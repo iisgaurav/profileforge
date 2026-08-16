@@ -128,34 +128,34 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_48c78d">
+<g role="group" data-pf-id="card_81029b">
     <rect x="0.5" y="0.5" width="819" height="303" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="24"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#22E892" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#D6DEEB" letter-spacing="0.3">Language Distribution</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#22E892" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_87ebad"><g data-pf-id="column_84ea04"><g data-pf-id="inline_c34e67"><text x="24" y="78" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_3b9967">Python</text><text x="686.0" y="77.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_3f29ae">35.1% (1 repos)</text></g>
-<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_55718f">
+    <g data-pf-id="column_6fba53"><g data-pf-id="column_1a320e"><g data-pf-id="inline_a0d152"><text x="24" y="78" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_d47abe">Python</text><text x="686.0" y="77.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_f196c0">35.1% (1 repos)</text></g>
+<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_b40007">
     <rect x="24" y="98" width="772" height="8" fill="url(#pf-track-bg)" rx="12"/>
     <rect x="24" y="98" width="270.97200000000004" height="8" fill="url(#pf-progress-grad)" rx="12">
         <animate attributeName="width" from="0" to="270.97200000000004" dur="0.88s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_effd30"><g data-pf-id="inline_db6727"><text x="24" y="136" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_4af9b6">Rust</text><text x="686.0" y="135.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_15f644">26.9% (1 repos)</text></g>
-<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_c43998">
+<g data-pf-id="column_3ae1b5"><g data-pf-id="inline_81b134"><text x="24" y="136" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_84ad08">Rust</text><text x="686.0" y="135.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_9f7fa3">26.9% (1 repos)</text></g>
+<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_37b26f">
     <rect x="24" y="156" width="772" height="8" fill="url(#pf-track-bg)" rx="12"/>
     <rect x="24" y="156" width="207.66799999999998" height="8" fill="url(#pf-progress-grad)" rx="12">
         <animate attributeName="width" from="0" to="207.66799999999998" dur="0.82s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_cc24dd"><g data-pf-id="inline_81116f"><text x="24" y="194" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_e27de7">TypeScript</text><text x="686.0" y="193.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_5b88d5">18.6% (1 repos)</text></g>
-<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_75f7e3">
+<g data-pf-id="column_149a46"><g data-pf-id="inline_eeae2b"><text x="24" y="194" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_d0d9ae">TypeScript</text><text x="686.0" y="193.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_26a166">18.6% (1 repos)</text></g>
+<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_db299a">
     <rect x="24" y="214" width="772" height="8" fill="url(#pf-track-bg)" rx="12"/>
     <rect x="24" y="214" width="143.592" height="8" fill="url(#pf-progress-grad)" rx="12">
         <animate attributeName="width" from="0" to="143.592" dur="0.75s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_328e28"><g data-pf-id="inline_74246c"><text x="24" y="252" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_a5c48b">Go</text><text x="686.0" y="251.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_2d8fba">14.5% (1 repos)</text></g>
-<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_8eaa0d">
+<g data-pf-id="column_8f9e3f"><g data-pf-id="inline_d26b7c"><text x="24" y="252" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#D6DEEB"  data-pf-id="text_351b3a">Go</text><text x="686.0" y="251.0" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_0a92b5">14.5% (1 repos)</text></g>
+<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_0bef59">
     <rect x="24" y="272" width="772" height="8" fill="url(#pf-track-bg)" rx="12"/>
     <rect x="24" y="272" width="111.94" height="8" fill="url(#pf-progress-grad)" rx="12">
         <animate attributeName="width" from="0" to="111.94" dur="0.72s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

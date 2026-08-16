@@ -53,8 +53,11 @@ def cmd_dev(args):
             time.sleep(1)
     except KeyboardInterrupt:
         print(f"\n{Fore.YELLOW}Stopping dev server...{Style.RESET_ALL}")
-        observer.stop()
-        if server_httpd:
-            server_httpd.shutdown()
-            
-    observer.join()
+        try:
+            observer.stop()
+            if server_httpd:
+                server_httpd.shutdown()
+            observer.join()
+        except KeyboardInterrupt:
+            import sys
+            sys.exit(0)

@@ -67,10 +67,10 @@ def test_social_widget_transform_and_render(mock_theme):
     # Test dict input
     test_dict = {
         "github": "iisgaurav",
-        "twitter": "iisgaurav_x",
-        "linkedin": "in/iisgaurav",
-        "website": "https://iisgaurav.dev",
-        "discord": "iisgaurav#0001",
+        "twitter": "iisgaurav",
+        "linkedin": "iisgaurav",
+        "website": "https://iisgaurav.vercel.app",
+        "instagram": "iisgaurav",
     }
     context = create_test_context(mock_theme)
     items = widget.transform(test_dict, context)

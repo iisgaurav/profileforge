@@ -128,29 +128,29 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_b51797">
+<g role="group" data-pf-id="card_1f9f80">
     <rect x="0.5" y="0.5" width="399" height="311" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#8caaee" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#c6d0f5" letter-spacing="0.3">Currently Doing</text>
     <line x1="24" y1="60" x2="376" y2="60" stroke="#8caaee" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_392e15"><g data-pf-id="column_8f2aa5"><text x="24" y="76" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#8caaee"  data-pf-id="text_10c3bb">BUILDING</text>
-<g data-pf-id="column_199ef6"><text x="24" y="114" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_0149cf">ProfileForge — Developer Profile Engine</text>
-<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_e25c17">
+    <g data-pf-id="column_408b49"><g data-pf-id="column_9df975"><text x="24" y="76" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#8caaee"  data-pf-id="text_423b92">BUILDING</text>
+<g data-pf-id="column_97b044"><text x="24" y="114" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_3dbaa3">ProfileForge — Developer Profile Engine</text>
+<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d4064e">
     <rect x="24" y="128" width="350" height="6" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="128" width="297.5" height="6" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="297.5" dur="1.28s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_9d4f00"><text x="24" y="168" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_e6822c">Async Telemetry Streamer</text>
-<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d85b56">
+<g data-pf-id="column_80fc4c"><text x="24" y="168" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_cbc4d4">Async Telemetry Streamer</text>
+<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_960283">
     <rect x="24" y="182" width="350" height="6" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="182" width="210.0" height="6" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="210.0" dur="1.08s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g></g>
-<g data-pf-id="column_7a5774"><text x="24" y="230" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#8caaee"  data-pf-id="text_dbe860">LEARNING</text>
-<g data-pf-id="column_2d58be"><text x="24" y="268" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_174e33">Rust Systems Programming &amp; WASM</text>
-<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_128e40">
+<g data-pf-id="column_e24a8d"><text x="24" y="230" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#8caaee"  data-pf-id="text_95e6e8">LEARNING</text>
+<g data-pf-id="column_275acc"><text x="24" y="268" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#c6d0f5"  data-pf-id="text_3c65fc">Rust Systems Programming &amp; WASM</text>
+<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_4b7286">
     <rect x="24" y="282" width="350" height="6" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="282" width="262.5" height="6" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="262.5" dur="1.20s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

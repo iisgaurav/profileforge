@@ -128,35 +128,35 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_2f24e3">
+<g role="group" data-pf-id="card_d6ff8d">
     <rect x="0.5" y="0.5" width="819" height="515" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FF79C6" opacity="0.9"/>
     <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">Featured Repositories (@iisgaurav)</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_d9af13"><g data-pf-id="column_1bb71c"><g data-pf-id="inline_3ea33d"><text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_73affc">📦 profileforge</text><text x="657.0" y="77.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_ebd359">★  1,420    ⑂  184</text></g>
-<text x="24" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_e69bfb">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
-<g data-pf-id="inline_b53396"><g role="term" data-pf-id="badge_5af875">
+    <g data-pf-id="column_2828c0"><g data-pf-id="column_7410e2"><g data-pf-id="inline_3cf87e"><text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_98323f">📦 profileforge</text><text x="657.0" y="77.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_9c8ab2">★  1,420    ⑂  184</text></g>
+<text x="24" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_e3a96c">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
+<g data-pf-id="inline_c0d8dd"><g role="term" data-pf-id="badge_c29d38">
     <rect x="24" y="130" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="144.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g></g></g>
-<g data-pf-id="column_b20b81"><g data-pf-id="inline_e8d001"><text x="24" y="189" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_e17a8b">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_97d39a">★  830    ⑂  95</text></g>
-<text x="24" y="221" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_289942">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
-<g data-pf-id="inline_648bcd"><g role="term" data-pf-id="badge_5403f2">
+<g data-pf-id="column_351523"><g data-pf-id="inline_8d2e5d"><text x="24" y="189" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_d19323">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_95a063">★  830    ⑂  95</text></g>
+<text x="24" y="221" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_9de8bc">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
+<g data-pf-id="inline_6574a2"><g role="term" data-pf-id="badge_0c4db5">
     <rect x="24" y="241" width="60" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="54.0" y="255.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Rust</text>
 </g></g></g>
-<g data-pf-id="column_d6162a"><g data-pf-id="inline_334b79"><text x="24" y="300" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_efb416">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_8d4bc9">★  612    ⑂  52</text></g>
-<text x="24" y="332" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_9af7ed">Dynamic design token management and SVG theming primitives for modern web apps.</text>
-<g data-pf-id="inline_91aa93"><g role="term" data-pf-id="badge_e42f15">
+<g data-pf-id="column_7e98b6"><g data-pf-id="inline_18c965"><text x="24" y="300" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_2dba92">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_4ccb05">★  612    ⑂  52</text></g>
+<text x="24" y="332" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_58b784">Dynamic design token management and SVG theming primitives for modern web apps.</text>
+<g data-pf-id="inline_bd31f6"><g role="term" data-pf-id="badge_7e0901">
     <rect x="24" y="352" width="108" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="78.0" y="366.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g></g></g>
-<g data-pf-id="column_3ab514"><g data-pf-id="inline_e2f7a8"><text x="24" y="411" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_a82ee7">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_c20df2">★  425    ⑂  38</text></g>
-<text x="24" y="443" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_70b158">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
-<g data-pf-id="inline_df9750"><g role="term" data-pf-id="badge_9b2279">
+<g data-pf-id="column_ddda95"><g data-pf-id="inline_87efe5"><text x="24" y="411" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FF79C6"  data-pf-id="text_cc621b">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#F8F8F2"  data-pf-id="text_5df9a5">★  425    ⑂  38</text></g>
+<text x="24" y="443" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6272A4"  data-pf-id="text_788679">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
+<g data-pf-id="inline_e97df7"><g role="term" data-pf-id="badge_e0ab71">
     <rect x="24" y="463" width="44" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="46.0" y="477.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Go</text>

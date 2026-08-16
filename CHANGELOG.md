@@ -26,7 +26,7 @@ have been implemented, tested, and verified against strict quality gates.
 | **Benchmarks** | Multi-stage performance benchmark service with `budget.yaml` gate (<15ms mean total build) |
 | **Governance** | `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CONTRIBUTING.md`, RFC Process, ADRs (5) |
 | **Brand** | Full brand system: logo, wordmark, banner, favicon, icon, color palette, typography, voice guide |
-| **Launch Assets** | 14 launch assets: Product Hunt, HackerNews, Reddit, Twitter thread, LinkedIn, YouTube, Discord, FAQ, press kit |
+| **Launch Assets** | 14 launch assets: Product Hunt, HackerNews, Reddit, Twitter thread, LinkedIn, YouTube, Instagram, FAQ, press kit |
 | **Docs** | Widget Authoring Guide, Theme System, ADR index, comparison matrix, RFC Process, Release Guide, community docs (10 files) |
 | **Good First Issues** | 10 curated good-first-issues for new contributors |
 

@@ -128,24 +128,24 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_1409e5">
+<g role="group" data-pf-id="card_309c9d">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-gradient)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     
     
     
-    <g data-pf-id="column_16a8ea"><text x="410.0" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="32" font-weight="800" fill="#24292F" text-anchor="middle"  data-pf-id="text_7dcac1">Hi, I&#x27;m Gaurav Verma 👋</text>
-<text x="410.0" y="99" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#0969DA" text-anchor="middle"  data-pf-id="text_0556cf">Principal Systems Architect</text>
-<g data-pf-id="inline_13aaba"><g role="term" data-pf-id="badge_44de17">
+    <g data-pf-id="column_21ee57"><text x="410.0" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="32" font-weight="800" fill="#24292F" text-anchor="middle"  data-pf-id="text_cf1b1c">Hi, I&#x27;m Gaurav Verma 👋</text>
+<text x="410.0" y="99" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#0969DA" text-anchor="middle"  data-pf-id="text_d96a86">Principal Systems Architect</text>
+<g data-pf-id="inline_68747b"><g role="term" data-pf-id="badge_e244a3">
     <rect x="181.0" y="120" width="255" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="308.5" y="134.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
-</g><g role="term" data-pf-id="badge_070e65">
+</g><g role="term" data-pf-id="badge_f64f4e">
     <rect x="446.0" y="120" width="193" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="542.5" y="134.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
 </g></g>
-<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#0969DA" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_b613a3"/>
-<text x="410.0" y="196" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#57606A" text-anchor="middle"  data-pf-id="text_2cc91c">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
+<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#0969DA" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_dd215e"/>
+<text x="410.0" y="196" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#57606A" text-anchor="middle"  data-pf-id="text_5b49ce">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
 </g>
 </svg>
 </svg>

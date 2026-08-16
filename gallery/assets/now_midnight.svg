@@ -128,20 +128,20 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_a5a37a">
+<g role="group" data-pf-id="card_3fcca5">
     <rect x="0.5" y="0.5" width="819" height="367" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="8"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#FAFAFA" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_f5271c"><text x="24" y="77" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_348a35">🔨 Building</text>
-<text x="24" y="110" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_dc428c">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
-<text x="24" y="143" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_3b0e9d">🧠 Learning</text>
-<text x="24" y="176" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_ee2975">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
-<text x="24" y="209" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_7c5955">📚 Reading</text>
-<text x="24" y="242" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_cdaac7">Designing Data-Intensive Applications by Martin Kleppmann</text>
-<text x="24" y="275" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_6b53c6">🎯 Focusing On</text>
-<text x="24" y="308" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_2e2e44">Developer tooling, open-source maintainability, and declarative UI design</text>
-<g data-pf-id="inline_a9c6e3"><text x="24" y="340" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#666666"  data-pf-id="text_eb91d5">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#666666"  data-pf-id="text_97cdc6">🕒 Updated: August 2026</text></g></g>
+    <g data-pf-id="column_9bc91c"><text x="24" y="77" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_d4e11a">🔨 Building</text>
+<text x="24" y="110" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_861354">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+<text x="24" y="143" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_bc9895">🧠 Learning</text>
+<text x="24" y="176" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_f29723">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+<text x="24" y="209" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_7e6176">📚 Reading</text>
+<text x="24" y="242" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_1d8c1a">Designing Data-Intensive Applications by Martin Kleppmann</text>
+<text x="24" y="275" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"  data-pf-id="text_c089cb">🎯 Focusing On</text>
+<text x="24" y="308" font-family="Inter, sans-serif" font-size="13" font-weight="normal" fill="#FAFAFA"  data-pf-id="text_1d664e">Developer tooling, open-source maintainability, and declarative UI design</text>
+<g data-pf-id="inline_2fa2c4"><text x="24" y="340" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#666666"  data-pf-id="text_3d1252">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#666666"  data-pf-id="text_9a4133">🕒 Updated: August 2026</text></g></g>
 </g>
 </svg>
 </svg>

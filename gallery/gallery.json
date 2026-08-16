@@ -1261,7 +1261,6 @@
       ],
       "file_list": [
         "config/experience.yaml",
-        "config/hero.yaml",
         "config/now.yaml",
         "config/roadmap.yaml",
         "config/skills.yaml",
@@ -1290,7 +1289,6 @@
       ],
       "file_list": [
         "config/experience.yaml",
-        "config/hero.yaml",
         "config/now.yaml",
         "config/roadmap.yaml",
         "config/skills.yaml",
@@ -1319,7 +1317,6 @@
       ],
       "file_list": [
         "config/experience.yaml",
-        "config/hero.yaml",
         "config/now.yaml",
         "config/roadmap.yaml",
         "config/skills.yaml",
@@ -1346,7 +1343,6 @@
       ],
       "file_list": [
         "config/focus.yaml",
-        "config/hero.yaml",
         "config/social.yaml",
         "manifest.yaml",
         "profileforge.yaml",
@@ -1368,7 +1364,6 @@
       "file_list": [
         "config/about.yaml",
         "config/experience.yaml",
-        "config/hero.yaml",
         "config/now.yaml",
         "config/roadmap.yaml",
         "config/skills.yaml",
@@ -1394,7 +1389,6 @@
       ],
       "file_list": [
         "config/activity_timeline.yaml",
-        "config/hero.yaml",
         "config/social.yaml",
         "manifest.yaml",
         "profileforge.yaml",
@@ -1417,7 +1411,6 @@
       ],
       "file_list": [
         "config/expertise.yaml",
-        "config/hero.yaml",
         "config/skills.yaml",
         "config/social.yaml",
         "manifest.yaml",
@@ -1441,7 +1434,6 @@
       ],
       "file_list": [
         "config/experience.yaml",
-        "config/hero.yaml",
         "config/now.yaml",
         "config/roadmap.yaml",
         "config/skills.yaml",

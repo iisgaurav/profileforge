@@ -128,35 +128,35 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_236560">
+<g role="group" data-pf-id="card_daa39e">
     <rect x="0.5" y="0.5" width="819" height="515" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFD700" opacity="0.9"/>
     <text x="36" y="40" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#E0E0E0" letter-spacing="0.3">Featured Repositories (@iisgaurav)</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FFD700" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_0fcc76"><g data-pf-id="column_b61664"><g data-pf-id="inline_aabc94"><text x="24" y="78" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_5482e2">📦 profileforge</text><text x="657.0" y="77.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_15eed9">★  1,420    ⑂  184</text></g>
-<text x="24" y="110" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_585c7d">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
-<g data-pf-id="inline_460fd9"><g role="term" data-pf-id="badge_c0c53e">
+    <g data-pf-id="column_6acfa2"><g data-pf-id="column_6bd24c"><g data-pf-id="inline_525060"><text x="24" y="78" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_fa3541">📦 profileforge</text><text x="657.0" y="77.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_d0e988">★  1,420    ⑂  184</text></g>
+<text x="24" y="110" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_b47fe6">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
+<g data-pf-id="inline_640d78"><g role="term" data-pf-id="badge_e9ffad">
     <rect x="24" y="130" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="144.5" font-family="Roboto, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g></g></g>
-<g data-pf-id="column_73fb14"><g data-pf-id="inline_06be07"><text x="24" y="189" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_e53378">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_047f79">★  830    ⑂  95</text></g>
-<text x="24" y="221" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_3c7cd9">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
-<g data-pf-id="inline_c9db8d"><g role="term" data-pf-id="badge_3fd31e">
+<g data-pf-id="column_0a6fba"><g data-pf-id="inline_ad57b5"><text x="24" y="189" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_6d1f2e">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_249451">★  830    ⑂  95</text></g>
+<text x="24" y="221" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_0adc9d">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
+<g data-pf-id="inline_b61fff"><g role="term" data-pf-id="badge_5905f5">
     <rect x="24" y="241" width="60" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="54.0" y="255.5" font-family="Roboto, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Rust</text>
 </g></g></g>
-<g data-pf-id="column_ed7b13"><g data-pf-id="inline_36ba25"><text x="24" y="300" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_6b7be5">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_fb4520">★  612    ⑂  52</text></g>
-<text x="24" y="332" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_86718a">Dynamic design token management and SVG theming primitives for modern web apps.</text>
-<g data-pf-id="inline_fd8d96"><g role="term" data-pf-id="badge_6eec26">
+<g data-pf-id="column_48f13b"><g data-pf-id="inline_a27eb6"><text x="24" y="300" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_a42d39">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_ce73f9">★  612    ⑂  52</text></g>
+<text x="24" y="332" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_fda9aa">Dynamic design token management and SVG theming primitives for modern web apps.</text>
+<g data-pf-id="inline_808f36"><g role="term" data-pf-id="badge_ac75da">
     <rect x="24" y="352" width="108" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="78.0" y="366.5" font-family="Roboto, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g></g></g>
-<g data-pf-id="column_355d30"><g data-pf-id="inline_f6e515"><text x="24" y="411" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_d7fb58">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_7e623a">★  425    ⑂  38</text></g>
-<text x="24" y="443" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_a07f24">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
-<g data-pf-id="inline_4a53ca"><g role="term" data-pf-id="badge_bad894">
+<g data-pf-id="column_93549e"><g data-pf-id="inline_e561bb"><text x="24" y="411" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFD700"  data-pf-id="text_1aa4f9">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#E0E0E0"  data-pf-id="text_c72655">★  425    ⑂  38</text></g>
+<text x="24" y="443" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_eedefb">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
+<g data-pf-id="inline_ec4db5"><g role="term" data-pf-id="badge_fdc576">
     <rect x="24" y="463" width="44" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="46.0" y="477.5" font-family="Roboto, sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Go</text>

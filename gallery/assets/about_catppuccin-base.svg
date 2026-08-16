@@ -128,24 +128,24 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_428b6b">
+<g role="group" data-pf-id="card_92e647">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-gradient)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     
     
     
-    <g data-pf-id="column_70e31e"><text x="410.0" y="56" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#C9D1D9" text-anchor="middle"  data-pf-id="text_de2f77">Hi, I&#x27;m Gaurav Verma 👋</text>
-<text x="410.0" y="99" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#58A6FF" text-anchor="middle"  data-pf-id="text_354b7f">Principal Systems Architect</text>
-<g data-pf-id="inline_ce814b"><g role="term" data-pf-id="badge_b82cee">
+    <g data-pf-id="column_78a5f4"><text x="410.0" y="56" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="32" font-weight="800" fill="#C9D1D9" text-anchor="middle"  data-pf-id="text_0f6297">Hi, I&#x27;m Gaurav Verma 👋</text>
+<text x="410.0" y="99" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#58A6FF" text-anchor="middle"  data-pf-id="text_aaf18e">Principal Systems Architect</text>
+<g data-pf-id="inline_beb4df"><g role="term" data-pf-id="badge_0b915a">
     <rect x="181.0" y="120" width="255" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="308.5" y="134.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
-</g><g role="term" data-pf-id="badge_c4952f">
+</g><g role="term" data-pf-id="badge_bfc901">
     <rect x="446.0" y="120" width="193" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="542.5" y="134.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
 </g></g>
-<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#58A6FF" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_05be78"/>
-<text x="410.0" y="196" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#8B949E" text-anchor="middle"  data-pf-id="text_751c82">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
+<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#58A6FF" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_5672fc"/>
+<text x="410.0" y="196" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="normal" fill="#8B949E" text-anchor="middle"  data-pf-id="text_473909">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
 </g>
 </svg>
 </svg>

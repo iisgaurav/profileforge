@@ -1,4 +1,4 @@
-<svg width="820" height="228" viewBox="0 0 820 228" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="224" viewBox="0 0 820 224" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>social - dracula</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -64,7 +64,7 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-  <svg width="820" height="228" viewBox="0 0 820 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="820" height="224" viewBox="0 0 820 224" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" stop-color="#FF79C6" stop-opacity="0.75"/>
@@ -128,41 +128,42 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_89d37f">
-    <rect x="0.5" y="0.5" width="819" height="227" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
+<g role="group" data-pf-id="card_bf8557">
+    <rect x="0.5" y="0.5" width="819" height="223" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FF79C6" opacity="0.9"/>
     <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">Connect &amp; Socials</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_2e5813"><text x="410.0" y="77" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#6272A4" text-anchor="middle"  data-pf-id="text_55cd4b">Let&#x27;s connect and build together:</text>
-<g data-pf-id="wrap_16ef1e"><g role="term" data-pf-id="badge_3b4d82">
-    <rect x="24" y="97" width="196" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    <g data-pf-id="column_1a66b4"><text x="410.0" y="77" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#6272A4" text-anchor="middle"  data-pf-id="text_bb8256">Let&#x27;s connect and build together:</text>
+
+<g data-pf-id="wrap_b276cb"><g role="term" data-pf-id="badge_273b58">
+    <rect x="24" y="93" width="196" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="122.0" y="111.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
+    <text x="122.0" y="107.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
 </g>
-<g role="term" data-pf-id="badge_7db6a2">
-    <rect x="230" y="97" width="202" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+<g role="term" data-pf-id="badge_ffeb58">
+    <rect x="230" y="93" width="202" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="331.0" y="111.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
+    <text x="331.0" y="107.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
 </g>
-<g role="term" data-pf-id="badge_c14c16">
-    <rect x="442" y="97" width="205" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+<g role="term" data-pf-id="badge_0aeca7">
+    <rect x="442" y="93" width="205" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="544.5" y="111.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: iisgaurav</text>
+    <text x="544.5" y="107.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: iisgaurav</text>
 </g>
-<g role="term" data-pf-id="badge_86d097">
-    <rect x="24" y="136" width="343" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+<g role="term" data-pf-id="badge_69f22b">
+    <rect x="24" y="132" width="343" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="195.5" y="150.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.vercel.app</text>
+    <text x="195.5" y="146.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.vercel.app</text>
 </g>
-<g role="term" data-pf-id="badge_db1871">
-    <rect x="377" y="136" width="194" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+<g role="term" data-pf-id="badge_b9f865">
+    <rect x="377" y="132" width="185" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="474.0" y="150.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: iisgaurav</text>
+    <text x="469.5" y="146.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Instagram: iisgaurav</text>
 </g>
-<g role="term" data-pf-id="badge_25f1ac">
-    <rect x="24" y="175" width="290" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+<g role="term" data-pf-id="badge_34e056">
+    <rect x="24" y="171" width="290" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
     
-    <text x="169.0" y="189.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: gauravv2504@gmail.com</text>
+    <text x="169.0" y="185.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: gauravv2504@gmail.com</text>
 </g></g></g>
 </g>
 </svg>

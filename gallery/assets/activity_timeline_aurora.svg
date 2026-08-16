@@ -128,32 +128,32 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_1088ee">
+<g role="group" data-pf-id="card_fca782">
     <rect x="0.5" y="0.5" width="819" height="392" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="24"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#22E892" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#D6DEEB" letter-spacing="0.3">Recent Activity &amp; Milestones</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#22E892" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_7aa65d"><g data-pf-id="inline_610b1c"><g data-pf-id="inline_30d55c"><g role="term" data-pf-id="badge_66dad4">
+    <g data-pf-id="column_aba08f"><g data-pf-id="inline_9c2e91"><g data-pf-id="inline_d3d45d"><g role="term" data-pf-id="badge_3d7cf8">
     <rect x="24" y="64" width="95" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="71.5" y="78.5" font-family="Inter, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">PR Merge</text>
-</g><text x="129" y="83.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_20e50d">Merged PR #142: High-throughput stream engine</text></g><text x="720.0" y="82.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_65a141">2 hours ago</text></g>
-<text x="24" y="120" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_9242bf">📦 profileforge/core</text>
-<text x="24" y="151" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_0cc887">▸ Implemented zero-copy serialization for SVG component tree layout calculation.</text>
-<g data-pf-id="inline_51d70e"><g data-pf-id="inline_b1208f"><g role="term" data-pf-id="badge_4aa455">
+</g><text x="129" y="83.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_2159b9">Merged PR #142: High-throughput stream engine</text></g><text x="720.0" y="82.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_f55336">2 hours ago</text></g>
+<text x="24" y="120" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_c26bcf">📦 profileforge/core</text>
+<text x="24" y="151" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_5a1590">▸ Implemented zero-copy serialization for SVG component tree layout calculation.</text>
+<g data-pf-id="inline_e36d72"><g data-pf-id="inline_683138"><g role="term" data-pf-id="badge_9506e9">
     <rect x="24" y="171" width="83" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="65.5" y="185.5" font-family="Inter, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Release</text>
-</g><text x="117" y="190.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_00815b">Tagged Release v1.0.0 (Production Launch)</text></g><text x="731.0" y="189.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_2ebb1b">Yesterday</text></g>
-<text x="24" y="227" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_d19e16">📦 profileforge/profileforge</text>
-<text x="24" y="258" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_099829">▸ Official launch of ProfileForge Studio, interactive web builder, and widget catalog.</text>
-<g data-pf-id="inline_f36af5"><g data-pf-id="inline_87a15b"><g role="term" data-pf-id="badge_10d53f">
+</g><text x="117" y="190.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_736c18">Tagged Release v1.0.0 (Production Launch)</text></g><text x="731.0" y="189.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_ebf709">Yesterday</text></g>
+<text x="24" y="227" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_7bf3e2">📦 profileforge/profileforge</text>
+<text x="24" y="258" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_4b8518">▸ Official launch of ProfileForge Studio, interactive web builder, and widget catalog.</text>
+<g data-pf-id="inline_138414"><g data-pf-id="inline_bf4313"><g role="term" data-pf-id="badge_0af375">
     <rect x="24" y="278" width="75" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="292.5" font-family="Inter, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Commit</text>
-</g><text x="109" y="297.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_794b12">Pushed 8 commits to main</text></g><text x="727.0" y="296.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_b1e1a5">3 days ago</text></g>
-<text x="24" y="334" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_56c17e">📦 distributed-systems/telemetry</text>
-<text x="24" y="365" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_600ff8">▸ Optimized memory layout and reduced garbage collection pause times by 35%.</text></g>
+</g><text x="109" y="297.0" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D6DEEB"  data-pf-id="text_0c7fab">Pushed 8 commits to main</text></g><text x="727.0" y="296.5" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#22E892"  data-pf-id="text_e5d913">3 days ago</text></g>
+<text x="24" y="334" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5F7E97"  data-pf-id="text_572b70">📦 distributed-systems/telemetry</text>
+<text x="24" y="365" font-family="Inter, sans-serif" font-size="12" font-weight="normal" fill="#5F7E97"  data-pf-id="text_3507b4">▸ Optimized memory layout and reduced garbage collection pause times by 35%.</text></g>
 </g>
 </svg>
 </svg>
