@@ -128,35 +128,35 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_dd8f81">
+<g role="group" data-pf-id="card_e689db">
     <rect x="0.5" y="0.5" width="819" height="515" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="4"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#000000" opacity="0.9"/>
     <text x="36" y="40" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">Featured Repositories (@iisgaurav)</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_5622b9"><g data-pf-id="column_a800ca"><g data-pf-id="inline_0e6543"><text x="24" y="78" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_3adc1c">📦 profileforge</text><text x="657.0" y="77.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_caf74e">★  1,420    ⑂  184</text></g>
-<text x="24" y="110" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_532adb">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
-<g data-pf-id="inline_96dc6a"><g role="term" data-pf-id="badge_34e0e7">
+    <g data-pf-id="column_c5007a"><g data-pf-id="column_ad35cc"><g data-pf-id="inline_c90249"><text x="24" y="78" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_f42cb4">📦 profileforge</text><text x="657.0" y="77.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_7c7095">★  1,420    ⑂  184</text></g>
+<text x="24" y="110" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_e9473b">Declarative, extensible developer profile card &amp; SVG generation engine.</text>
+<g data-pf-id="inline_c7f29b"><g role="term" data-pf-id="badge_525d11">
     <rect x="24" y="130" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="144.5" font-family="sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g></g></g>
-<g data-pf-id="column_2e5fc2"><g data-pf-id="inline_abfdf2"><text x="24" y="189" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_cdf896">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_2c0d11">★  830    ⑂  95</text></g>
-<text x="24" y="221" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_db93a9">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
-<g data-pf-id="inline_2e0198"><g role="term" data-pf-id="badge_ca5feb">
+<g data-pf-id="column_d236c5"><g data-pf-id="inline_6c49a4"><text x="24" y="189" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_66000a">📦 async-data-pipeline</text><text x="677.0" y="188.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_f473dd">★  830    ⑂  95</text></g>
+<text x="24" y="221" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_ba919c">High-throughput asynchronous event streamer with zero-copy deserialization.</text>
+<g data-pf-id="inline_a030c2"><g role="term" data-pf-id="badge_0f92e1">
     <rect x="24" y="241" width="60" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="54.0" y="255.5" font-family="sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Rust</text>
 </g></g></g>
-<g data-pf-id="column_f58923"><g data-pf-id="inline_3293ac"><text x="24" y="300" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_90ca9d">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_07b8d1">★  612    ⑂  52</text></g>
-<text x="24" y="332" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_93d0a2">Dynamic design token management and SVG theming primitives for modern web apps.</text>
-<g data-pf-id="inline_55b05f"><g role="term" data-pf-id="badge_640ddf">
+<g data-pf-id="column_75498f"><g data-pf-id="inline_732d99"><text x="24" y="300" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_db63a5">📦 reactive-design-tokens</text><text x="677.0" y="299.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_013539">★  612    ⑂  52</text></g>
+<text x="24" y="332" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_7c4e1f">Dynamic design token management and SVG theming primitives for modern web apps.</text>
+<g data-pf-id="inline_a0dd4e"><g role="term" data-pf-id="badge_e5dbec">
     <rect x="24" y="352" width="108" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="78.0" y="366.5" font-family="sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g></g></g>
-<g data-pf-id="column_7fe576"><g data-pf-id="inline_86bdb5"><text x="24" y="411" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_afc315">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_85f14e">★  425    ⑂  38</text></g>
-<text x="24" y="443" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_b31756">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
-<g data-pf-id="inline_50e13b"><g role="term" data-pf-id="badge_de9834">
+<g data-pf-id="column_4d1d82"><g data-pf-id="inline_a41bb5"><text x="24" y="411" font-family="sans-serif" font-size="14" font-weight="700" fill="#000000"  data-pf-id="text_920b61">📦 cloud-operator-kit</text><text x="677.0" y="410.0" font-family="sans-serif" font-size="12" font-weight="600" fill="#111111"  data-pf-id="text_fa9b57">★  425    ⑂  38</text></g>
+<text x="24" y="443" font-family="sans-serif" font-size="12" font-weight="normal" fill="#888888"  data-pf-id="text_cfdc04">Kubernetes custom controller framework with automated lifecycle reconciliation.</text>
+<g data-pf-id="inline_ca9ae2"><g role="term" data-pf-id="badge_b431b6">
     <rect x="24" y="463" width="44" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="46.0" y="477.5" font-family="sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Go</text>

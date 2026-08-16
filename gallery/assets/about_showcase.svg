@@ -128,24 +128,24 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_31bc13">
+<g role="group" data-pf-id="card_4abffb">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-gradient)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     
     
     
-    <g data-pf-id="column_72e5ec"><text x="410.0" y="56" font-family="Roboto, sans-serif" font-size="32" font-weight="800" fill="#E0E0E0" text-anchor="middle"  data-pf-id="text_06d310">Hi, I&#x27;m Gaurav Verma 👋</text>
-<text x="410.0" y="99" font-family="Roboto, sans-serif" font-size="16" font-weight="600" fill="#FFD700" text-anchor="middle"  data-pf-id="text_62854d">Principal Systems Architect</text>
-<g data-pf-id="inline_5a4976"><g role="term" data-pf-id="badge_e1e354">
+    <g data-pf-id="column_55f357"><text x="410.0" y="56" font-family="Roboto, sans-serif" font-size="32" font-weight="800" fill="#E0E0E0" text-anchor="middle"  data-pf-id="text_493fcc">Hi, I&#x27;m Gaurav Verma 👋</text>
+<text x="410.0" y="99" font-family="Roboto, sans-serif" font-size="16" font-weight="600" fill="#FFD700" text-anchor="middle"  data-pf-id="text_1ebc8a">Principal Systems Architect</text>
+<g data-pf-id="inline_f61d0f"><g role="term" data-pf-id="badge_1436ff">
     <rect x="181.0" y="120" width="255" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="308.5" y="134.5" font-family="Roboto, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
-</g><g role="term" data-pf-id="badge_f57fde">
+</g><g role="term" data-pf-id="badge_9547ad">
     <rect x="446.0" y="120" width="193" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="542.5" y="134.5" font-family="Roboto, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
 </g></g>
-<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#FFD700" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_2a35fc"/>
-<text x="410.0" y="196" font-family="Roboto, sans-serif" font-size="14" font-weight="normal" fill="#757575" text-anchor="middle"  data-pf-id="text_a6890a">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
+<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#FFD700" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_d8ed3e"/>
+<text x="410.0" y="196" font-family="Roboto, sans-serif" font-size="14" font-weight="normal" fill="#757575" text-anchor="middle"  data-pf-id="text_096df1">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
 </g>
 </svg>
 </svg>

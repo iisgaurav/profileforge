@@ -128,146 +128,146 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_5bde2a">
+<g role="group" data-pf-id="card_261702">
     <rect x="0.5" y="0.5" width="819" height="403" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#89b4fa" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#cdd6f4" letter-spacing="0.3">Technical Skills</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#89b4fa" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_ad3f97"><text x="24" y="77" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_18cf06">Languages</text>
+    <g data-pf-id="column_8797b0"><text x="24" y="77" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_ef9878">Languages</text>
 
-<g data-pf-id="wrap_072a41"><g role="term" data-pf-id="badge_60e6c6">
+<g data-pf-id="wrap_e2e0c3"><g role="term" data-pf-id="badge_5eb8dc">
     <rect x="24" y="87" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Python</text>
 </g>
-<g role="term" data-pf-id="badge_3901c1">
+<g role="term" data-pf-id="badge_a8fafa">
     <rect x="107" y="87" width="108" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="161.0" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">TypeScript</text>
 </g>
-<g role="term" data-pf-id="badge_49bcf3">
+<g role="term" data-pf-id="badge_cf0a81">
     <rect x="223" y="87" width="60" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="253.0" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Rust</text>
 </g>
-<g role="term" data-pf-id="badge_e0216f">
+<g role="term" data-pf-id="badge_ef1c6c">
     <rect x="291" y="87" width="44" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="313.0" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Go</text>
 </g>
-<g role="term" data-pf-id="badge_2f7782">
+<g role="term" data-pf-id="badge_9e5dad">
     <rect x="343" y="87" width="51" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="368.5" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">C++</text>
 </g>
-<g role="term" data-pf-id="badge_fe18de">
+<g role="term" data-pf-id="badge_14f052">
     <rect x="402" y="87" width="56" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="430.0" y="101.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">SQL</text>
 </g></g>
 
-<text x="24" y="143" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_6462dd">Frameworks &amp; Libraries</text>
+<text x="24" y="143" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_3b6a34">Frameworks &amp; Libraries</text>
 
-<g data-pf-id="wrap_9ced5d"><g role="term" data-pf-id="badge_9f6509">
+<g data-pf-id="wrap_7eb126"><g role="term" data-pf-id="badge_d02865">
     <rect x="24" y="153" width="90" height="29" rx="14" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="69.0" y="167.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">FastAPI</text>
 </g>
-<g role="term" data-pf-id="badge_225ed0">
+<g role="term" data-pf-id="badge_b149d0">
     <rect x="122" y="153" width="67" height="29" rx="14" fill="url(#pf-badge-7)" stroke="#84CC16" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="155.5" y="167.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#84CC16" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">React</text>
 </g>
-<g role="term" data-pf-id="badge_b14a52">
+<g role="term" data-pf-id="badge_0c703e">
     <rect x="197" y="153" width="83" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="238.5" y="167.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Next.js</text>
 </g>
-<g role="term" data-pf-id="badge_8b2aaa">
+<g role="term" data-pf-id="badge_025bd3">
     <rect x="288" y="153" width="75" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="325.5" y="167.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Django</text>
 </g>
-<g role="term" data-pf-id="badge_fd282e">
+<g role="term" data-pf-id="badge_420e42">
     <rect x="371" y="153" width="83" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="412.5" y="167.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Node.js</text>
 </g></g>
 
-<text x="24" y="209" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_cc7031">Cloud &amp; Devops</text>
+<text x="24" y="209" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_4e6058">Cloud &amp; Devops</text>
 
-<g data-pf-id="wrap_701767"><g role="term" data-pf-id="badge_714c00">
+<g data-pf-id="wrap_83c51c"><g role="term" data-pf-id="badge_37045f">
     <rect x="24" y="219" width="75" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="61.5" y="233.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Docker</text>
 </g>
-<g role="term" data-pf-id="badge_d5fa17">
+<g role="term" data-pf-id="badge_427ac6">
     <rect x="107" y="219" width="106" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="160.0" y="233.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Kubernetes</text>
 </g>
-<g role="term" data-pf-id="badge_eef39f">
+<g role="term" data-pf-id="badge_f6ceb6">
     <rect x="221" y="219" width="56" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="249.0" y="233.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">AWS</text>
 </g>
-<g role="term" data-pf-id="badge_e9ac6e">
+<g role="term" data-pf-id="badge_b0bf91">
     <rect x="285" y="219" width="143" height="29" rx="14" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="356.5" y="233.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">GitHub Actions</text>
 </g>
-<g role="term" data-pf-id="badge_0104d8">
+<g role="term" data-pf-id="badge_1d0d4f">
     <rect x="436" y="219" width="99" height="29" rx="14" fill="url(#pf-badge-7)" stroke="#84CC16" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="485.5" y="233.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#84CC16" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Terraform</text>
 </g></g>
 
-<text x="24" y="275" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_eff694">Databases</text>
+<text x="24" y="275" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_a80752">Databases</text>
 
-<g data-pf-id="wrap_46ac48"><g role="term" data-pf-id="badge_395917">
+<g data-pf-id="wrap_d773d1"><g role="term" data-pf-id="badge_7f411f">
     <rect x="24" y="285" width="113" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="80.5" y="299.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">PostgreSQL</text>
 </g>
-<g role="term" data-pf-id="badge_2e4a33">
+<g role="term" data-pf-id="badge_21f1ff">
     <rect x="145" y="285" width="67" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="178.5" y="299.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Redis</text>
 </g>
-<g role="term" data-pf-id="badge_90fbca">
+<g role="term" data-pf-id="badge_766af7">
     <rect x="220" y="285" width="88" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="264.0" y="299.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">MongoDB</text>
 </g>
-<g role="term" data-pf-id="badge_ba4acf">
+<g role="term" data-pf-id="badge_8a6ab6">
     <rect x="316" y="285" width="108" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="370.0" y="299.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">ClickHouse</text>
 </g></g>
 
-<text x="24" y="341" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_8cfd5f">Tools &amp; Architecture</text>
+<text x="24" y="341" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#89b4fa"  data-pf-id="text_7c6b1c">Tools &amp; Architecture</text>
 
-<g data-pf-id="wrap_ddbef8"><g role="term" data-pf-id="badge_f979d6">
+<g data-pf-id="wrap_a7f2b6"><g role="term" data-pf-id="badge_4510d0">
     <rect x="24" y="351" width="51" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="49.5" y="365.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Git</text>
 </g>
-<g role="term" data-pf-id="badge_f95056">
+<g role="term" data-pf-id="badge_4d3827">
     <rect x="83" y="351" width="67" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="116.5" y="365.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Linux</text>
 </g>
-<g role="term" data-pf-id="badge_4df073">
+<g role="term" data-pf-id="badge_6d0bd4">
     <rect x="158" y="351" width="88" height="29" rx="14" fill="url(#pf-badge-6)" stroke="#EC4899" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="202.0" y="365.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#EC4899" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">GraphQL</text>
 </g>
-<g role="term" data-pf-id="badge_981cf0">
+<g role="term" data-pf-id="badge_43165b">
     <rect x="254" y="351" width="112" height="29" rx="14" fill="url(#pf-badge-7)" stroke="#84CC16" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="310.0" y="365.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#84CC16" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">REST APIs</text>
 </g>
-<g role="term" data-pf-id="badge_c7782a">
+<g role="term" data-pf-id="badge_2a13f3">
     <rect x="374" y="351" width="75" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="411.5" y="365.5" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">Neovim</text>

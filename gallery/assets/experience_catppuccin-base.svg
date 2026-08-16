@@ -128,19 +128,19 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_0f8b43">
+<g role="group" data-pf-id="card_2281ed">
     <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#58A6FF" opacity="0.9"/>
     <text x="36" y="40" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#C9D1D9" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#58A6FF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_7e459c"><g data-pf-id="inline_f93c06"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#C9D1D9"  data-pf-id="text_8f4755">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#58A6FF"  data-pf-id="text_e0913f">2023 — Present</text></g>
-<text x="24" y="110" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_a4478b">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-<text x="24" y="142" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_447200">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-<text x="24" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_c27d70">▸ Mentored team of 12 engineers across systems engineering.</text>
-<g data-pf-id="inline_f6a700"><text x="24" y="208" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#C9D1D9"  data-pf-id="text_a3a328">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#58A6FF"  data-pf-id="text_5e010a">2020 — 2023</text></g>
-<text x="24" y="240" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_e79db7">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-<text x="24" y="272" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_ecc5d9">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-<text x="24" y="304" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_0e9b19">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+    <g data-pf-id="column_1dce45"><g data-pf-id="inline_559747"><text x="24" y="78" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#C9D1D9"  data-pf-id="text_ea0766">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#58A6FF"  data-pf-id="text_c9fbf0">2023 — Present</text></g>
+<text x="24" y="110" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_62a4ae">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_8c5ef3">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_ae03bf">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_6f3688"><text x="24" y="208" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#C9D1D9"  data-pf-id="text_341d36">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#58A6FF"  data-pf-id="text_4de3e9">2020 — 2023</text></g>
+<text x="24" y="240" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_15ffe8">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_9930af">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="normal" fill="#8B949E"  data-pf-id="text_ce5193">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
 </g>
 </svg>
 </svg>

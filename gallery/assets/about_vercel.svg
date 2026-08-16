@@ -128,24 +128,24 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_9e9c8f">
+<g role="group" data-pf-id="card_ad6b97">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-gradient)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     
     
     
-    <g data-pf-id="column_996fee"><text x="410.0" y="56" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#EDEDED" text-anchor="middle"  data-pf-id="text_de6a85">Hi, I&#x27;m Gaurav Verma 👋</text>
-<text x="410.0" y="99" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle"  data-pf-id="text_59ca35">Principal Systems Architect</text>
-<g data-pf-id="inline_b64295"><g role="term" data-pf-id="badge_c8fda4">
+    <g data-pf-id="column_352e5d"><text x="410.0" y="56" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#EDEDED" text-anchor="middle"  data-pf-id="text_4a1ec0">Hi, I&#x27;m Gaurav Verma 👋</text>
+<text x="410.0" y="99" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle"  data-pf-id="text_7b254c">Principal Systems Architect</text>
+<g data-pf-id="inline_02e953"><g role="term" data-pf-id="badge_2093a0">
     <rect x="181.0" y="120" width="255" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="308.5" y="134.5" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">● Available for opportunities</text>
-</g><g role="term" data-pf-id="badge_86257c">
+</g><g role="term" data-pf-id="badge_ae9fbb">
     <rect x="446.0" y="120" width="193" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
     
     <text x="542.5" y="134.5" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">📍 San Francisco, CA</text>
 </g></g>
-<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_1c8418"/>
-<text x="410.0" y="196" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="normal" fill="#A1A1AA" text-anchor="middle"  data-pf-id="text_dc862c">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
+<line x1="110" y1="165.5" x2="710" y2="165.5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" data-pf-id="divider_a497e1"/>
+<text x="410.0" y="196" font-family="Inter, 'SF Pro Display', -apple-system, sans-serif" font-size="14" font-weight="normal" fill="#A1A1AA" text-anchor="middle"  data-pf-id="text_6ec6ee">&quot;Building resilient distributed systems and open-source developer tooling.&quot;</text></g>
 </g>
 </svg>
 </svg>

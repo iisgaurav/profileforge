@@ -54,12 +54,12 @@ jobs:
       
     - name: Verify All Starter Template Builds
       run: |
-        profileforge build --config examples/backend/profileforge.yaml
-        profileforge build --config examples/frontend/profileforge.yaml
-        profileforge build --config examples/minimal/profileforge.yaml
-        profileforge build --config examples/student/profileforge.yaml
-        profileforge build --config examples/opensource/profileforge.yaml
-        profileforge build --config examples/ai-engineer/profileforge.yaml
+        profileforge build --config src/profileforge/templates/backend/profileforge.yaml
+        profileforge build --config src/profileforge/templates/frontend/profileforge.yaml
+        profileforge build --config src/profileforge/templates/minimal/profileforge.yaml
+        profileforge build --config src/profileforge/templates/student/profileforge.yaml
+        profileforge build --config src/profileforge/templates/open-source-maintainer/profileforge.yaml
+        profileforge build --config src/profileforge/templates/ai-engineer/profileforge.yaml
 
     - name: Install Cairo (Ubuntu Only)
       if: matrix.os == 'ubuntu-latest'

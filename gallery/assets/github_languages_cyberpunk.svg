@@ -136,34 +136,34 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_631f68">
+<g role="group" data-pf-id="card_895efd">
     <rect x="0.5" y="0.5" width="819" height="303" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="0"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#00F0FF" opacity="0.9"/>
     <text x="36" y="40" font-family="JetBrains Mono, monospace" font-size="24" font-weight="700" fill="#E0E0FF" letter-spacing="0.3">Language Distribution</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_974037"><g data-pf-id="column_b55cc8"><g data-pf-id="inline_9d3bc1"><text x="24" y="78" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_e837c8">Python</text><text x="686.0" y="77.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_87b1d1">35.1% (1 repos)</text></g>
-<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_e7901a">
+    <g data-pf-id="column_d42e61"><g data-pf-id="column_7c3e90"><g data-pf-id="inline_44b61e"><text x="24" y="78" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_f38ab6">Python</text><text x="686.0" y="77.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_0cf7d8">35.1% (1 repos)</text></g>
+<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_dc3996">
     <rect x="24" y="98" width="772" height="8" fill="url(#pf-track-bg)" rx="0"/>
     <rect x="24" y="98" width="270.97200000000004" height="8" fill="url(#pf-progress-grad)" rx="0" filter="url(#pf-glow)">
         <animate attributeName="width" from="0" to="270.97200000000004" dur="0.88s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_de5e72"><g data-pf-id="inline_7348eb"><text x="24" y="136" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_b287a7">Rust</text><text x="686.0" y="135.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_547ad2">26.9% (1 repos)</text></g>
-<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_f7b440">
+<g data-pf-id="column_95ed63"><g data-pf-id="inline_c6947d"><text x="24" y="136" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_10b9ea">Rust</text><text x="686.0" y="135.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_d403ca">26.9% (1 repos)</text></g>
+<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_8063b1">
     <rect x="24" y="156" width="772" height="8" fill="url(#pf-track-bg)" rx="0"/>
     <rect x="24" y="156" width="207.66799999999998" height="8" fill="url(#pf-progress-grad)" rx="0" filter="url(#pf-glow)">
         <animate attributeName="width" from="0" to="207.66799999999998" dur="0.82s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_c8031c"><g data-pf-id="inline_cccb8f"><text x="24" y="194" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_26ff94">TypeScript</text><text x="686.0" y="193.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_7b3ee0">18.6% (1 repos)</text></g>
-<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_412935">
+<g data-pf-id="column_2ee51e"><g data-pf-id="inline_0a39f7"><text x="24" y="194" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_25201c">TypeScript</text><text x="686.0" y="193.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_43c4c6">18.6% (1 repos)</text></g>
+<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_dca732">
     <rect x="24" y="214" width="772" height="8" fill="url(#pf-track-bg)" rx="0"/>
     <rect x="24" y="214" width="143.592" height="8" fill="url(#pf-progress-grad)" rx="0" filter="url(#pf-glow)">
         <animate attributeName="width" from="0" to="143.592" dur="0.75s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_af629a"><g data-pf-id="inline_822022"><text x="24" y="252" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_afcae0">Go</text><text x="686.0" y="251.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_0c8168">14.5% (1 repos)</text></g>
-<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_2ab0c2">
+<g data-pf-id="column_9842c1"><g data-pf-id="inline_b6ba9e"><text x="24" y="252" font-family="JetBrains Mono, monospace" font-size="14" font-weight="bold" fill="#E0E0FF"  data-pf-id="text_00599d">Go</text><text x="686.0" y="251.0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_ff518f">14.5% (1 repos)</text></g>
+<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_707826">
     <rect x="24" y="272" width="772" height="8" fill="url(#pf-track-bg)" rx="0"/>
     <rect x="24" y="272" width="111.94" height="8" fill="url(#pf-progress-grad)" rx="0" filter="url(#pf-glow)">
         <animate attributeName="width" from="0" to="111.94" dur="0.72s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

@@ -128,29 +128,29 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_0b144a">
+<g role="group" data-pf-id="card_a2cd19">
     <rect x="0.5" y="0.5" width="399" height="311" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#3B82F6" opacity="0.9"/>
     <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#F8FAFC" letter-spacing="0.3">Currently Doing</text>
     <line x1="24" y1="60" x2="376" y2="60" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_bf6119"><g data-pf-id="column_13f6ff"><text x="24" y="76" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#3B82F6"  data-pf-id="text_a92581">BUILDING</text>
-<g data-pf-id="column_d81079"><text x="24" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_bd3f1a">ProfileForge — Developer Profile Engine</text>
-<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_71621c">
+    <g data-pf-id="column_89bc22"><g data-pf-id="column_53b712"><text x="24" y="76" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#3B82F6"  data-pf-id="text_b347a6">BUILDING</text>
+<g data-pf-id="column_1202fc"><text x="24" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_5eaf03">ProfileForge — Developer Profile Engine</text>
+<g role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_abb75c">
     <rect x="24" y="128" width="350" height="6" fill="url(#pf-track-bg)" rx="6"/>
     <rect x="24" y="128" width="297.5" height="6" fill="url(#pf-progress-grad)" rx="6">
         <animate attributeName="width" from="0" to="297.5" dur="1.28s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_0e5a00"><text x="24" y="168" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_66a39d">Async Telemetry Streamer</text>
-<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_3b8a7b">
+<g data-pf-id="column_1ccc0d"><text x="24" y="168" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_efdf53">Async Telemetry Streamer</text>
+<g role="meter" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_a8bd14">
     <rect x="24" y="182" width="350" height="6" fill="url(#pf-track-bg)" rx="6"/>
     <rect x="24" y="182" width="210.0" height="6" fill="url(#pf-progress-grad)" rx="6">
         <animate attributeName="width" from="0" to="210.0" dur="1.08s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g></g>
-<g data-pf-id="column_a801df"><text x="24" y="230" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#3B82F6"  data-pf-id="text_e9c68c">LEARNING</text>
-<g data-pf-id="column_e42a19"><text x="24" y="268" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_4dff96">Rust Systems Programming &amp; WASM</text>
-<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_a1e9b1">
+<g data-pf-id="column_722957"><text x="24" y="230" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#3B82F6"  data-pf-id="text_69c62a">LEARNING</text>
+<g data-pf-id="column_e754ba"><text x="24" y="268" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#F8FAFC"  data-pf-id="text_722c92">Rust Systems Programming &amp; WASM</text>
+<g role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_c52da6">
     <rect x="24" y="282" width="350" height="6" fill="url(#pf-track-bg)" rx="6"/>
     <rect x="24" y="282" width="262.5" height="6" fill="url(#pf-progress-grad)" rx="6">
         <animate attributeName="width" from="0" to="262.5" dur="1.20s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

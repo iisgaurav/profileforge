@@ -136,20 +136,20 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_e19ebf">
+<g role="group" data-pf-id="card_8dad5c">
     <rect x="0.5" y="0.5" width="819" height="367" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="0"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#00F0FF" opacity="0.9"/>
     <text x="36" y="40" font-family="JetBrains Mono, monospace" font-size="24" font-weight="700" fill="#E0E0FF" letter-spacing="0.3">What I&#x27;m Doing Now</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_5c8b40"><text x="24" y="77" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_105bd0">🔨 Building</text>
-<text x="24" y="110" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_b4260c">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
-<text x="24" y="143" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_d07f8f">🧠 Learning</text>
-<text x="24" y="176" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_9e9ba3">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
-<text x="24" y="209" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_0bde52">📚 Reading</text>
-<text x="24" y="242" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_42e6e3">Designing Data-Intensive Applications by Martin Kleppmann</text>
-<text x="24" y="275" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_142b59">🎯 Focusing On</text>
-<text x="24" y="308" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_14c497">Developer tooling, open-source maintainability, and declarative UI design</text>
-<g data-pf-id="inline_5e594c"><text x="24" y="340" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_a794f3">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_61376e">🕒 Updated: August 2026</text></g></g>
+    <g data-pf-id="column_b8471f"><text x="24" y="77" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_6e330b">🔨 Building</text>
+<text x="24" y="110" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_04ee17">ProfileForge — Declarative GitHub profile engine with responsive SVG themes</text>
+<text x="24" y="143" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_67a4a9">🧠 Learning</text>
+<text x="24" y="176" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_fe8730">Rust systems programming, WebAssembly &amp; high-concurrency architectures</text>
+<text x="24" y="209" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_eecf4c">📚 Reading</text>
+<text x="24" y="242" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_67a510">Designing Data-Intensive Applications by Martin Kleppmann</text>
+<text x="24" y="275" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#00F0FF"  data-pf-id="text_4dbdad">🎯 Focusing On</text>
+<text x="24" y="308" font-family="JetBrains Mono, monospace" font-size="13" font-weight="normal" fill="#E0E0FF"  data-pf-id="text_24f237">Developer tooling, open-source maintainability, and declarative UI design</text>
+<g data-pf-id="inline_5bc022"><text x="24" y="340" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_7ce2cf">📍 San Francisco, CA</text><text x="625.0" y="340" font-family="JetBrains Mono, monospace" font-size="12" font-weight="normal" fill="#7A7A99"  data-pf-id="text_4a6e3d">🕒 Updated: August 2026</text></g></g>
 </g>
 </svg>
 </svg>

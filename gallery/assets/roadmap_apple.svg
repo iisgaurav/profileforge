@@ -128,27 +128,27 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_022870">
+<g role="group" data-pf-id="card_372731">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="18"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#0071E3" opacity="0.9"/>
     <text x="36" y="40" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24" font-weight="700" fill="#1D1D1F" letter-spacing="0.3">Learning Roadmap</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#0071E3" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_5ee2ae"><g data-pf-id="column_2518e3"><g data-pf-id="inline_d6663c"><text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_2635ff">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_733f13">90%</text></g>
-<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_6dd988">
+    <g data-pf-id="column_2f6cf4"><g data-pf-id="column_598eb4"><g data-pf-id="inline_0a5f5e"><text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_6ac5bf">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_359d48">90%</text></g>
+<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_8c2a84">
     <rect x="24" y="88" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="88" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="694.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_89896f"><g data-pf-id="inline_4ed96d"><text x="24" y="126" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_c7d9e0">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_a51fc8">65%</text></g>
-<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_9a6c8e">
+<g data-pf-id="column_c6effa"><g data-pf-id="inline_4d8304"><text x="24" y="126" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_484231">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_8d6ecf">65%</text></g>
+<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_29bc3e">
     <rect x="24" y="136" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="136" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="501.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_a5866f"><g data-pf-id="inline_5e1e15"><text x="24" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_f4b397">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_7f5ded">40%</text></g>
-<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_16e5ab">
+<g data-pf-id="column_666733"><g data-pf-id="inline_8728a4"><text x="24" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600" fill="#1D1D1F"  data-pf-id="text_53b3f3">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="13" font-weight="normal" fill="#86868B"  data-pf-id="text_232616">40%</text></g>
+<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_eb3788">
     <rect x="24" y="184" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
     <rect x="24" y="184" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="308.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>

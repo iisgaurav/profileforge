@@ -31,7 +31,7 @@ REPO_ROOT = Path(__file__).parent.parent
 
 
 def test_benchmark_service_execution():
-    backend_config = REPO_ROOT / "examples" / "backend" / "profileforge.yaml"
+    backend_config = REPO_ROOT / "src" / "profileforge" / "templates" / "backend" / "profileforge.yaml"
     result = run_benchmark(backend_config, iterations=3, warmup=1)
 
     assert isinstance(result, BenchmarkResult)
@@ -90,7 +90,7 @@ def test_benchmark_connector_wrapper():
 
 def test_template_loader_manifests():
     template_ids = TemplateLoader.list_templates()
-    assert len(template_ids) == 9
+    assert len(template_ids) == 8
 
     for tid in template_ids:
         manifest = TemplateLoader.load_manifest(tid)

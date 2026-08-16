@@ -327,13 +327,13 @@ def _run_single_pass(
         # Layout pass
         tl0 = time.perf_counter()
         render_node = LayoutEngine.calculate(
-            component_tree, measurer=create_text_measurer(theme.typography)
+            component_tree
         )
         layout_pass_ms += (time.perf_counter() - tl0) * 1000
 
         # Render pass
         tr0 = time.perf_counter()
-        inner_svg = svg_renderer.render_body(render_node)
+        inner_svg = svg_renderer.render(render_node)
         render_pass_ms += (time.perf_counter() - tr0) * 1000
 
         # SVG Output formatting

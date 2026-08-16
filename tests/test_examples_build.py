@@ -18,7 +18,7 @@ from profileforge.render.svg.renderer import SVGRenderer
 from profileforge.services.gallery import GalleryExporter, export_gallery
 
 REPO_ROOT = Path(__file__).parent.parent
-EXAMPLES_DIR = REPO_ROOT / "examples"
+EXAMPLES_DIR = REPO_ROOT / "src" / "profileforge" / "templates"
 
 
 def get_all_example_dirs() -> List[Path]:
@@ -191,7 +191,7 @@ def test_gallery_export_pipeline(tmp_path: Path):
     with open(gallery_out / "templates.json", "r", encoding="utf-8") as f:
         templates = json.load(f)
     assert isinstance(templates, list)
-    assert len(templates) == 9
+    assert len(templates) == 8
     first_template = templates[0]
     for key in ["id", "name", "description", "active_theme", "widgets", "file_list"]:
         assert key in first_template, f"Missing key '{key}' in template metadata"
@@ -223,7 +223,7 @@ def test_gallery_exporter_class():
     assert "apple" in theme_ids
 
     widgets_meta = exporter.extract_widgets_metadata()
-    assert len(widgets_meta) == 15
+    assert len(widgets_meta) == 11
 
     templates_meta = exporter.extract_templates_metadata()
-    assert len(templates_meta) == 9
+    assert len(templates_meta) == 8

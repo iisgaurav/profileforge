@@ -128,27 +128,27 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-<g role="group" data-pf-id="card_e1057c">
+<g role="group" data-pf-id="card_48324c">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="4"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#000000" opacity="0.9"/>
     <text x="36" y="40" font-family="sans-serif" font-size="24" font-weight="700" fill="#111111" letter-spacing="0.3">Learning Roadmap</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#000000" stroke-width="0.5" stroke-opacity="0.25"/>
-    <g data-pf-id="column_b611d3"><g data-pf-id="column_435d63"><g data-pf-id="inline_042b25"><text x="24" y="78" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_dca46e">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_1cecab">90%</text></g>
-<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_7e2ace">
+    <g data-pf-id="column_afe543"><g data-pf-id="column_299207"><g data-pf-id="inline_f9d4ae"><text x="24" y="78" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_749fe9">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_e2a299">90%</text></g>
+<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_3df334">
     <rect x="24" y="88" width="772" height="8" fill="url(#pf-track-bg)" rx="2"/>
     <rect x="24" y="88" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="2">
         <animate attributeName="width" from="0" to="694.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_0a70df"><g data-pf-id="inline_74864a"><text x="24" y="126" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_ae50d9">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_8b28b0">65%</text></g>
-<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_aa2e67">
+<g data-pf-id="column_a22af7"><g data-pf-id="inline_3687cc"><text x="24" y="126" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_f0d9c2">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_51f89f">65%</text></g>
+<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_3098d0">
     <rect x="24" y="136" width="772" height="8" fill="url(#pf-track-bg)" rx="2"/>
     <rect x="24" y="136" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="2">
         <animate attributeName="width" from="0" to="501.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
 </g></g>
-<g data-pf-id="column_bf7c2a"><g data-pf-id="inline_bc1efb"><text x="24" y="174" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_b08704">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_852aa7">40%</text></g>
-<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_8775d2">
+<g data-pf-id="column_0ded26"><g data-pf-id="inline_3acf40"><text x="24" y="174" font-family="sans-serif" font-size="14" font-weight="600" fill="#111111"  data-pf-id="text_ad320c">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="sans-serif" font-size="13" font-weight="normal" fill="#888888"  data-pf-id="text_9930a3">40%</text></g>
+<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_df82bf">
     <rect x="24" y="184" width="772" height="8" fill="url(#pf-track-bg)" rx="2"/>
     <rect x="24" y="184" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="2">
         <animate attributeName="width" from="0" to="308.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
