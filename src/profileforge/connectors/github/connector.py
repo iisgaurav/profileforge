@@ -68,25 +68,59 @@ class GithubConnector(Connector):
                     else 0
                 )
 
-                # 3. Stars (Need to iterate over repos, or just fetch first page for simplicity)
-                repos_list_resp = client.get(
-                    f"https://api.github.com/users/{username}/repos?per_page=100"
-                )
                 stars = 0
-                if repos_list_resp.status_code == 200:
-                    repos_list = repos_list_resp.json()
-                    stars = sum(repo.get("stargazers_count", 0) for repo in repos_list)
+                total_repos = 0
 
-                # 4. Total Repos (Private + Public) using Search API
-                repos_search_resp = client.get(
-                    "https://api.github.com/search/repositories",
-                    params={"q": f"owner:{username}"},
-                )
-                total_repos = (
-                    repos_search_resp.json().get("total_count", 0)
-                    if repos_search_resp.status_code == 200
-                    else 0
-                )
+                # 3. Stars & Repos (Prefer GraphQL if token exists to get private repos reliably)
+                if token:
+                    gql_query = """
+                    query($username: String!) {
+                        user(login: $username) {
+                            repositories(ownerAffiliations: OWNER, first: 100) {
+                                totalCount
+                                nodes {
+                                    stargazerCount
+                                }
+                            }
+                            contributionsCollection {
+                                restrictedContributionsCount
+                            }
+                        }
+                    }
+                    """
+                    gql_resp = client.post(
+                        "https://api.github.com/graphql",
+                        json={"query": gql_query, "variables": {"username": username}},
+                    )
+                    if gql_resp.status_code == 200:
+                        data = gql_resp.json().get("data", {}).get("user", {})
+                        repos_data = data.get("repositories", {})
+                        total_repos = repos_data.get("totalCount", 0)
+                        stars = sum(
+                            node.get("stargazerCount", 0)
+                            for node in repos_data.get("nodes", [])
+                        )
+                        commits += data.get("contributionsCollection", {}).get(
+                            "restrictedContributionsCount", 0
+                        )
+
+                # Fallback to REST if GraphQL failed or no token
+                if total_repos == 0:
+                    repos_list_resp = client.get(
+                        f"https://api.github.com/users/{username}/repos?per_page=100"
+                    )
+                    if repos_list_resp.status_code == 200:
+                        repos_list = repos_list_resp.json()
+                        stars = sum(
+                            repo.get("stargazers_count", 0) for repo in repos_list
+                        )
+
+                    repos_search_resp = client.get(
+                        "https://api.github.com/search/repositories",
+                        params={"q": f"owner:{username}"},
+                    )
+                    if repos_search_resp.status_code == 200:
+                        total_repos = repos_search_resp.json().get("total_count", 0)
 
                 return GitHubStats(
                     stars=stars, prs=prs, commits=commits, repos=total_repos
