@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" role="img" aria-label="ProfileForge logo">
-  <defs>
-    <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FF9F6B"/>
-      <stop offset="100%" stop-color="#FF6B35"/>
-    </linearGradient>
-  </defs>
-  <g transform="translate(4, 2)">
-    <path d="M20 42 C8 36 4 26 8 16 C10 10 14 6 16 4 C16 10 18 14 20 16 C22 10 24 4 26 0 C30 8 36 14 36 24 C36 34 30 40 20 42 Z" fill="url(#flameGrad)"/>
-    <path d="M20 38 C14 34 12 28 14 22 C15 18 17 16 18 14 C18 18 20 20 20 22 C21 19 22 16 24 14 C26 18 28 22 28 26 C28 32 24 37 20 38 Z" fill="#FFD4BC" opacity="0.5"/>
-  </g>
-  <text x="52" y="30" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#E6EDF3" letter-spacing="0.3">ProfileForge</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="48" aria-label="ProfileForge logo" role="img" viewBox="0 0 240 48"><defs><linearGradient id="flameGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#FF9F6B"/><stop offset="100%" stop-color="#FF6B35"/></linearGradient></defs><g><path fill="url(#flameGrad)" d="M20 42 C8 36 4 26 8 16 C10 10 14 6 16 4 C16 10 18 14 20 16 C22 10 24 4 26 0 C30 8 36 14 36 24 C36 34 30 40 20 42 Z" transform="translate(4, 2)"/><path fill="#FFD4BC" d="M20 38 C14 34 12 28 14 22 C15 18 17 16 18 14 C18 18 20 20 20 22 C21 19 22 16 24 14 C26 18 28 22 28 26 C28 32 24 37 20 38 Z" opacity=".5" transform="translate(4, 2)"/></g><text x="52" y="30" fill="#E6EDF3" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing=".3">ProfileForge</text></svg>
