@@ -14,7 +14,6 @@ from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
 from profileforge.core.registry import WIDGET_REGISTRY, ConnectorRegistry
 from profileforge.render.layout import LayoutEngine
-from profileforge.render.measurer import create_text_measurer
 from profileforge.render.svg.renderer import SVGRenderer
 
 

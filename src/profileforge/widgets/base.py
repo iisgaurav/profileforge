@@ -121,7 +121,7 @@ class Widget(ABC):
             widget_name = self.__class__.__name__
             req_connectors = "Unknown"
 
-        from profileforge.components.layout import Column, Padding, Spacer
+        from profileforge.components.layout import Column, Spacer
         from profileforge.components.style import Style
         from profileforge.components.widgets import Card, Text
 

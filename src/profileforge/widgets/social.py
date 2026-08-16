@@ -1,6 +1,6 @@
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Spacer, Wrap
+from profileforge.components.layout import Column, Component, Spacer, Wrap
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
