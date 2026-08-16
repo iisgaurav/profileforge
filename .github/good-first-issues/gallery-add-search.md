@@ -2,7 +2,7 @@
 
 ## 🌟 Background
 
-ProfileForge Studio (`web/index.html`) currently renders all 15 widgets and 14 themes in a single static gallery list without filtering. As the widget ecosystem grows, real-time search and filtering are necessary to improve discoverability.
+ProfileForge Studio (`web/index.html`) currently renders all 11 widgets and 17 themes in a single static gallery list without filtering. As the widget ecosystem grows, real-time search and filtering are necessary to improve discoverability.
 
 ## 🎯 Key Features Required
 

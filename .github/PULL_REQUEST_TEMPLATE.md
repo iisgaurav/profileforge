@@ -17,6 +17,14 @@ According to the ProfileForge Architecture Specification (`ARCHITECTURE.md`), ev
 - [ ] **Layer 7: Widgets** (`profileforge.widgets`)
 - [ ] **Layer 8: CLI / Application Orchestration** (`profileforge.cli`)
 - [ ] **Documentation & Tooling** (`docs/`, `tools/`, `.github/`)
+**Primary Layer:**
+<!-- E.g., Layer 4 - Layout -->
+
+**Affected Layers:**
+<!-- E.g., Layer 7 - Widgets -->
+
+**Reason:**
+<!-- E.g., Introduced new wrapping behavior required by multiple widgets. -->
 
 ---
 
@@ -52,3 +60,17 @@ Before submitting, please ensure the following pass locally:
 - [ ] API Snapshot Lock passes: `python tools/api_lock.py --check`
 - [ ] New unit tests added for new features or bug fixes
 - [ ] Documentation updated in `docs/` where applicable
+
+---
+
+## 🎨 Visual QA & Design Regression Checklist
+
+If your PR touches **Themes**, **Layout**, **Components**, or **Widgets**, you MUST complete this section:
+
+- [ ] Generated `before.png/svg` and `after.png/svg`
+- [ ] Attached completed `DESIGN_QA.md` report
+- [ ] I attempted to solve this at the lowest reusable architectural layer.
+- [ ] No hardcoded spacing or absolute math (uses design tokens)
+- [ ] No renderer hacks or one-off layout exceptions
+- [ ] Generated visual regression diffs
+- [ ] Gallery regenerated successfully

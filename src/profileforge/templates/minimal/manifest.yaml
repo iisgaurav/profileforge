@@ -1,13 +1,12 @@
 schema: 1
 id: "minimal"
 name: "Minimalist"
-description: "Clean, elegant monochromatic layout with essential hero identity, about bio, and featured repositories."
+description: "Clean, elegant monochromatic layout with essential about bio, and featured repositories."
 version: "1.0.0"
 minimum_profileforge: "1.0.0"
 author: "ProfileForge Team"
 license: "MIT"
 widgets:
-  - hero
   - about
   - repositories
 themes:

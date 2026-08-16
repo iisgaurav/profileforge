@@ -1,6 +1,6 @@
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
 *.so
 .Python
 env/
@@ -24,3 +24,7 @@ htmlcov/
 .tox/
 .nox/
 .ruff_cache/
+artifacts/
+#profileforge-*/
+web/gallery/
+.internal-notes/

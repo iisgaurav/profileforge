@@ -1,3 +1,4 @@
+__layer__ = "Layer 6 — Connectors"
 from pathlib import Path
 from typing import Any
 

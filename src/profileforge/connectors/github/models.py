@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+__layer__ = "Layer 6 — Connectors"
+
 from dataclasses import dataclass, field
+
+from profileforge.connectors.models import MetricSeries, ProfileMetadata
 
 
 @dataclass
@@ -8,6 +12,11 @@ class GitHubStats:
     stars: int
     prs: int
     commits: int
+    stars_series: MetricSeries | None = None
+    prs_series: MetricSeries | None = None
+    commits_series: MetricSeries | None = None
+    repos_series: MetricSeries | None = None
+    profile_metadata: ProfileMetadata | None = None
 
 
 @dataclass

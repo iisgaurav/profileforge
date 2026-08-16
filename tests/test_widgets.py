@@ -151,11 +151,9 @@ def test_builtin_widgets_metadata():
     expected_widgets = [
         "about",
         "experience",
-        "expertise",
         "focus",
         "github_languages",
         "github_stats",
-        "hero",
         "now",
         "repositories",
         "roadmap",
@@ -191,11 +189,9 @@ def test_builtin_widgets_render_safe(mock_theme):
     for name in [
         "about",
         "experience",
-        "expertise",
         "focus",
         "github_languages",
         "github_stats",
-        "hero",
         "now",
         "repositories",
         "roadmap",

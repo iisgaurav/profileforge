@@ -30,7 +30,7 @@ EXPECTED_TEMPLATES = [
     "backend",
     "frontend",
     "minimal",
-    "opensource",
+    "open-source-maintainer",
     "student",
 ]
 
@@ -105,7 +105,7 @@ def test_template_configs_load_and_build(tmp_path):
             widget = widget_cls()
             tree = widget.render_safe(context)
             assert tree is not None
-            node = render_node = LayoutEngine.calculate(tree)
+            node = LayoutEngine.calculate(tree)
             svg = svg_renderer.render(node)
             assert svg is not None
             assert len(svg) > 0
@@ -117,7 +117,7 @@ def test_scaffold_template(tmp_path):
     assert result == target
     assert (target / "profileforge.yaml").exists()
     assert (target / "README.md").exists()
-    assert (target / "config" / "hero.yaml").exists()
+    assert (target / "config" / "social.yaml").exists()
     assert (target / "config" / "skills.yaml").exists()
     assert (target / "config" / "experience.yaml").exists()
 
@@ -158,7 +158,7 @@ def test_cli_new_command(tmp_path, capsys):
     captured = capsys.readouterr()
     assert "Created new ProfileForge project" in captured.out
     assert (target_dir / "profileforge.yaml").exists()
-    assert (target_dir / "config" / "hero.yaml").exists()
+    assert (target_dir / "config" / "social.yaml").exists()
 
 
 def test_cli_new_unknown_template(tmp_path, capsys):

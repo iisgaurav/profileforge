@@ -1,4 +1,4 @@
-<svg width="820" height="171" viewBox="0 0 820 171" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="228" viewBox="0 0 820 228" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>social - modern</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -19,10 +19,10 @@
     <stop offset="100%" stop-color="#1E293B" stop-opacity="0.8"/>
   </linearGradient>
 
-  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#3b0918"/>
-    <stop offset="50%" stop-color="#1e1333"/>
-    <stop offset="100%" stop-color="#091629"/>
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1E293B"/>
+    <stop offset="50%" stop-color="#0F172A"/>
+    <stop offset="100%" stop-color="#1E293B"/>
   </linearGradient>
 
   <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,45 +64,106 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-  
-<svg x="0" y="0" width="820" height="171" viewBox="0 0 820 171" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
-    <title>Connect &amp; Socials Card</title>
-    <desc>Card component for Connect &amp; Socials</desc>
-    <rect x="0.5" y="0.5" width="819" height="170" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
+  <svg width="820" height="228" viewBox="0 0 820 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#334155" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#334155" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#1E293B" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1E293B"/>
+    <stop offset="50%" stop-color="#0F172A"/>
+    <stop offset="100%" stop-color="#1E293B"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#94A3B8" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+<g role="group" data-pf-id="card_38bc1d">
+    <rect x="0.5" y="0.5" width="819" height="227" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="12"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#3B82F6" opacity="0.9"/>
-    <text x="36" y="40" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" letter-spacing="0.3">Connect &amp; Socials</text>
+    <text x="36" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#F8FAFC" letter-spacing="0.3">Connect &amp; Socials</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="141.5" y="77" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="middle">Let&#x27;s connect and build together:</text>
-
-
-<g role="term">
-    <rect x="24" y="89" width="172" height="24" rx="12" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="110.0" y="101.0" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
+    <g data-pf-id="column_59ff17"><text x="410.0" y="77" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="middle"  data-pf-id="text_1e97df">Let&#x27;s connect and build together:</text>
+<g data-pf-id="wrap_304a53"><g role="term" data-pf-id="badge_4e771b">
+    <rect x="24" y="97" width="196" height="29" rx="14" fill="url(#pf-badge-0)" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="122.0" y="111.5" font-family="Inter, sans-serif" font-size="13" fill="#3B82F6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🐙 GitHub: @iisgaurav</text>
 </g>
-
-<g role="term">
-    <rect x="206" y="89" width="178" height="24" rx="12" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="295.0" y="101.0" font-family="Inter, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
+<g role="term" data-pf-id="badge_c5bf93">
+    <rect x="230" y="97" width="202" height="29" rx="14" fill="url(#pf-badge-1)" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="331.0" y="111.5" font-family="Inter, sans-serif" font-size="13" fill="#10B981" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">𝕏 Twitter: @iisgaurav</text>
 </g>
-
-<g role="term">
-    <rect x="394" y="89" width="198" height="24" rx="12" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="493.0" y="101.0" font-family="Inter, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: in/iisgaurav</text>
+<g role="term" data-pf-id="badge_3daa75">
+    <rect x="442" y="97" width="205" height="29" rx="14" fill="url(#pf-badge-2)" stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="544.5" y="111.5" font-family="Inter, sans-serif" font-size="13" fill="#8B5CF6" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💼 LinkedIn: iisgaurav</text>
 </g>
-
-<g role="term">
-    <rect x="24" y="123" width="251" height="24" rx="12" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="149.5" y="135.0" font-family="Inter, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.dev</text>
+<g role="term" data-pf-id="badge_a693f3">
+    <rect x="24" y="136" width="343" height="29" rx="14" fill="url(#pf-badge-3)" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="195.5" y="150.5" font-family="Inter, sans-serif" font-size="13" fill="#F59E0B" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">🌐 Website: https://iisgaurav.vercel.app</text>
 </g>
-
-<g role="term">
-    <rect x="285" y="123" width="172" height="24" rx="12" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="371.0" y="135.0" font-family="Inter, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: iisgaurav</text>
+<g role="term" data-pf-id="badge_32acbb">
+    <rect x="377" y="136" width="194" height="29" rx="14" fill="url(#pf-badge-4)" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="474.0" y="150.5" font-family="Inter, sans-serif" font-size="13" fill="#EF4444" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">💬 Discord: iisgaurav</text>
 </g>
-
-<g role="term">
-    <rect x="467" y="123" width="231" height="24" rx="12" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="582.5" y="135.0" font-family="Inter, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: hello@iisgaurav.dev</text>
+<g role="term" data-pf-id="badge_fb4253">
+    <rect x="24" y="175" width="290" height="29" rx="14" fill="url(#pf-badge-5)" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.5"/>
+    
+    <text x="169.0" y="189.5" font-family="Inter, sans-serif" font-size="13" fill="#06B6D4" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">✉️ Email: gauravv2504@gmail.com</text>
+</g></g></g>
 </g>
 </svg>
 </svg>

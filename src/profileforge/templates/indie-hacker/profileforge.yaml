@@ -1,26 +1,19 @@
 version: 1
 project:
-  name: "Indie Hacker Profile"
-  title: "Full-Stack Bootstrapper & Solopreneur"
-
+  name: Indie Hacker Profile
+  title: Full-Stack Bootstrapper & Solopreneur
 themes:
-  active: "modern"
-
+  active: modern
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: streak
-  - name: repositories
-  - name: focus
-  - name: achievements
-  - name: social
-
+- name: repositories
+- name: focus
+- name: social
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

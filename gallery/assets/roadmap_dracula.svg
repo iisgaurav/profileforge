@@ -19,10 +19,10 @@
     <stop offset="100%" stop-color="#44475A" stop-opacity="0.8"/>
   </linearGradient>
 
-  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#3b0918"/>
-    <stop offset="50%" stop-color="#1e1333"/>
-    <stop offset="100%" stop-color="#091629"/>
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#44475A"/>
+    <stop offset="50%" stop-color="#282A36"/>
+    <stop offset="100%" stop-color="#44475A"/>
   </linearGradient>
 
   <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,40 +64,96 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-  
-<svg x="0" y="0" width="820" height="250" viewBox="0 0 820 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
-    <title>Learning Roadmap Card</title>
-    <desc>Card component for Learning Roadmap</desc>
+  <svg width="820" height="250" viewBox="0 0 820 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FF79C6" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#FF79C6"/>
+    <stop offset="100%" stop-color="#FFB86C" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FF79C6" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#6272A4" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#6272A4" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#44475A" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#44475A" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#44475A"/>
+    <stop offset="50%" stop-color="#282A36"/>
+    <stop offset="100%" stop-color="#44475A"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#6272A4" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#6272A4" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+<g role="group" data-pf-id="card_a9f0a3">
     <rect x="0.5" y="0.5" width="819" height="249" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#FF79C6" opacity="0.9"/>
-    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">Learning Roadmap</text>
+    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#F8F8F2" letter-spacing="0.3">Learning Roadmap</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#FF79C6" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2">Distributed Stream Processing Engine</text>
-<text x="775" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4">90%</text>
-
-<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="84" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
-    <rect x="24" y="84" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="4">
+    <g data-pf-id="column_e7e7d4"><g data-pf-id="column_d85dae"><g data-pf-id="inline_60df2b"><text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2"  data-pf-id="text_042520">Distributed Stream Processing Engine</text><text x="768.0" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4"  data-pf-id="text_637503">90%</text></g>
+<g role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_04c4a7">
+    <rect x="24" y="88" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
+    <rect x="24" y="88" width="694.8000000000001" height="8" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="694.8000000000001" dur="1.32s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-<text x="24" y="122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2">Custom JIT Compiler in Rust</text>
-<text x="775" y="122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4">65%</text>
-
-<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="128" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
-    <rect x="24" y="128" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="4">
+</g></g>
+<g data-pf-id="column_8d6e30"><g data-pf-id="inline_df4b90"><text x="24" y="126" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2"  data-pf-id="text_33161f">Custom JIT Compiler in Rust</text><text x="768.0" y="126" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4"  data-pf-id="text_a3a5ab">65%</text></g>
+<g role="meter" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_276438">
+    <rect x="24" y="136" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
+    <rect x="24" y="136" width="501.8" height="8" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="501.8" dur="1.12s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-<text x="24" y="166" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2">Vector Database Indexing Primitives</text>
-<text x="775" y="166" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4">40%</text>
-
-<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="172" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
-    <rect x="24" y="172" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="4">
+</g></g>
+<g data-pf-id="column_04b626"><g data-pf-id="inline_99d906"><text x="24" y="174" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F8F8F2"  data-pf-id="text_7e96f1">Vector Database Indexing Primitives</text><text x="768.0" y="174" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#6272A4"  data-pf-id="text_798fc1">40%</text></g>
+<g role="meter" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d8b27b">
+    <rect x="24" y="184" width="772" height="8" fill="url(#pf-track-bg)" rx="4"/>
+    <rect x="24" y="184" width="308.8" height="8" fill="url(#pf-progress-grad)" rx="4">
         <animate attributeName="width" from="0" to="308.8" dur="0.92s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
+</g></g></g>
 </g>
 </svg>
 </svg>

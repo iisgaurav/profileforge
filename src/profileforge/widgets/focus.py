@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding
+from profileforge.components.layout import Column, Component
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
@@ -53,14 +54,14 @@ class FocusWidget(Widget):
                             Text(name, style=Style(font_weight="500")),
                             ProgressBar(progress, style=Style(width=350, height=6)),
                         ],
-                        spacing=10,
+                        gap=10,
                     )
                 )
 
-            category_col = Column(children=[cat_label, *item_rows], spacing=20)
+            category_col = Column(children=[cat_label, *item_rows], gap=20)
             sections.append(category_col)
 
-        content = Column(children=sections, spacing=30)
+        content = Column(children=sections, gap=30)
         return Card(
             title="Currently Doing",
             child=content,

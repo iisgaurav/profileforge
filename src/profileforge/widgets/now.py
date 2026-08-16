@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, Text
 from profileforge.core.context import BuildContext
@@ -100,7 +101,7 @@ class NowWidget(Widget):
                 str(sec["content"]),
                 style=Style(font_size=13, font_weight="normal", color="text"),
             )
-            rows.extend([header, Spacer(height=3), body, Spacer(height=12)])
+            rows.extend([header, body])
 
         meta_items = []
         if location:
@@ -113,18 +114,15 @@ class NowWidget(Widget):
             )
 
         if meta_items:
-            meta_row = Row(
+            meta_row = Inline(
                 children=meta_items,
-                spacing=16,
+                gap=16,
                 style=Style(width="fill", justify="space-between", align="center"),
             )
-            rows.extend([Spacer(height=4), meta_row])
-        elif rows and isinstance(rows[-1], Spacer):
-            rows.pop()
-
+            rows.extend([meta_row])
         content = Column(
             children=rows,
-            spacing=0,
+            gap=16,
             style=Style(width="fill"),
         )
 

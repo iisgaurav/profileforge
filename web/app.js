@@ -9,9 +9,9 @@
 // STATE
 // ============================================================
 const state = {
-  username: 'octocat',
+  username: 'iisgaurav',
   template: null,
-  activeWidgets: new Set(),
+  activeWidgets: [],
   theme: 'github-dark',
   themes: [],
   widgets: [],
@@ -66,25 +66,71 @@ async function fetchJSON(url) {
 }
 
 // ============================================================
+// URL STATE SYNC
+// ============================================================
+function updateUrlState() {
+  const params = new URLSearchParams();
+  if (state.username !== 'iisgaurav') params.set('username', state.username);
+  if (state.theme !== 'github-dark') params.set('theme', state.theme);
+  if (state.activeWidgets.length > 0) params.set('widgets', state.activeWidgets.join(','));
+  
+  const hash = params.toString();
+  window.history.replaceState(null, '', hash ? `#${hash}` : window.location.pathname);
+}
+
+function loadUrlState() {
+  if (!window.location.hash) return false;
+  
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  let changed = false;
+  
+  if (params.has('username')) {
+    state.username = params.get('username');
+    $('username-input').value = state.username;
+    changed = true;
+  }
+  
+  if (params.has('theme')) {
+    state.theme = params.get('theme');
+    changed = true;
+  }
+  
+  if (params.has('widgets')) {
+    state.activeWidgets = params.get('widgets').split(',').filter(Boolean);
+    changed = true;
+  }
+  
+  return changed;
+}
+
+// ============================================================
 // INITIALIZATION
 // ============================================================
 async function init() {
   setLoading(true);
   try {
     const [themes, widgets, templates] = await Promise.all([
-      fetchJSON('./gallery/themes.json'),
-      fetchJSON('./gallery/widgets.json'),
-      fetchJSON('./gallery/templates.json'),
+      fetchJSON('../gallery/themes.json'),
+      fetchJSON('../gallery/widgets.json'),
+      fetchJSON('../gallery/templates.json'),
     ]);
 
     state.themes = themes;
     state.widgets = widgets;
     state.templates = templates;
 
+    // If URL has state, load it. Otherwise, load default template.
+    if (!loadUrlState()) {
+      if (state.templates && state.templates.length > 0) {
+        applyTemplate(state.templates[0].id);
+      }
+    }
+
     renderThemeGrid();
     renderWidgetList();
     renderTemplateSelector();
     setupEventListeners();
+    setupDragAndDrop();
     renderPreview();
   } catch (err) {
     console.error('Failed to load gallery data:', err);
@@ -134,6 +180,7 @@ function selectTheme(themeId) {
     card.classList.toggle('selected', card.dataset.themeId === themeId);
   });
   renderPreview();
+  updateUrlState();
 }
 
 // ============================================================
@@ -161,13 +208,13 @@ function renderWidgetList() {
 
     widgets.forEach(w => {
       const item = document.createElement('label');
-      item.className = `widget-check-item ${state.activeWidgets.has(w.id) ? 'active' : ''}`;
+      item.className = `widget-check-item ${state.activeWidgets.includes(w.id) ? 'active' : ''}`;
       item.htmlFor = `widget-check-${w.id}`;
 
       const connector = w.required_connectors?.[0] || 'local';
       item.innerHTML = `
         <input type="checkbox" id="widget-check-${w.id}" data-widget-id="${w.id}"
-          ${state.activeWidgets.has(w.id) ? 'checked' : ''}
+          ${state.activeWidgets.includes(w.id) ? 'checked' : ''}
           aria-label="Enable ${w.name} widget">
         <span class="widget-label">${w.id}</span>
         <span class="widget-connector-badge ${connector}">${connector}</span>
@@ -176,14 +223,15 @@ function renderWidgetList() {
       const checkbox = item.querySelector('input');
       checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
-          state.activeWidgets.add(w.id);
+          if (!state.activeWidgets.includes(w.id)) state.activeWidgets.push(w.id);
           item.classList.add('active');
         } else {
-          state.activeWidgets.delete(w.id);
+          state.activeWidgets = state.activeWidgets.filter(id => id !== w.id);
           item.classList.remove('active');
         }
         updateWidgetCountBadge();
         renderPreview();
+        updateUrlState();
       });
 
       groupEl.appendChild(item);
@@ -195,7 +243,7 @@ function renderWidgetList() {
 
 function updateWidgetCountBadge() {
   const badge = $('widget-count-badge');
-  badge.textContent = state.activeWidgets.size;
+  badge.textContent = state.activeWidgets.length;
 }
 
 // ============================================================
@@ -220,8 +268,8 @@ function applyTemplate(templateId) {
   if (!template) return;
 
   // Apply widgets
-  state.activeWidgets.clear();
-  (template.widgets || []).forEach(w => state.activeWidgets.add(w));
+  state.activeWidgets = [];
+  (template.widgets || []).forEach(w => state.activeWidgets.push(w));
 
   // Apply theme
   if (template.active_theme) {
@@ -248,7 +296,7 @@ function renderPreview() {
 
   updateWidgetCountBadge();
 
-  if (state.activeWidgets.size === 0) {
+  if (state.activeWidgets.length === 0) {
     renderEmptyState('Select a persona template or enable widgets to preview your profile.');
     return;
   }
@@ -264,6 +312,12 @@ function renderPreview() {
 function buildWidgetPreviewCard(widgetId, themeId) {
   const card = document.createElement('div');
   card.className = 'preview-widget-card';
+  card.draggable = true;
+  card.dataset.widgetId = widgetId;
+
+  // Drag and Drop Events
+  card.addEventListener('dragstart', handleDragStart);
+  card.addEventListener('dragend', handleDragEnd);
 
   const label = document.createElement('div');
   label.className = 'preview-widget-label';
@@ -276,7 +330,8 @@ function buildWidgetPreviewCard(widgetId, themeId) {
   const svgContainer = document.createElement('div');
   svgContainer.className = 'preview-widget-svg-container';
 
-  const assetUrl = `./gallery/assets/${widgetId}_${themeId}.svg`;
+  // Add cache-buster to ensure we see newly generated SVGs instead of stale cached ones
+  const assetUrl = `../gallery/assets/${widgetId}_${themeId}.svg?v=${Date.now()}`;
   const img = document.createElement('img');
   img.alt = `${widgetId} widget in ${themeId} theme`;
   img.loading = 'lazy';
@@ -303,6 +358,59 @@ function buildWidgetPreviewCard(widgetId, themeId) {
   return card;
 }
 
+// ============================================================
+// DRAG AND DROP HANDLERS
+// ============================================================
+function handleDragStart(e) {
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', this.dataset.widgetId);
+  setTimeout(() => this.classList.add('dragging'), 0);
+}
+
+function handleDragEnd(e) {
+  this.classList.remove('dragging');
+  // Re-sync state.activeWidgets based on new DOM order
+  const newOrder = [];
+  document.querySelectorAll('.preview-widget-card').forEach(card => {
+    newOrder.push(card.dataset.widgetId);
+  });
+  
+  // Update state and UI
+  state.activeWidgets = newOrder;
+  renderWidgetList(); // Re-render sidebar to match new order
+  updateUrlState(); // Save to URL
+}
+
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll('.preview-widget-card:not(.dragging)')];
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child };
+    } else {
+      return closest;
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+function setupDragAndDrop() {
+  const container = $('preview-canvas');
+  
+  container.addEventListener('dragover', e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container, e.clientY);
+    const draggable = document.querySelector('.dragging');
+    if (!draggable) return;
+    
+    if (afterElement == null) {
+      container.appendChild(draggable);
+    } else {
+      container.insertBefore(draggable, afterElement);
+    }
+  });
+}
+
 function renderEmptyState(message) {
   $('preview-canvas').innerHTML = `
     <div id="empty-state">
@@ -316,12 +424,12 @@ function renderEmptyState(message) {
 // EXPORT: COPY README MARKDOWN
 // ============================================================
 function copyReadmeMarkdown() {
-  if (state.activeWidgets.size === 0) {
+  if (state.activeWidgets.length === 0) {
     showToast('Enable at least one widget first!', 'error');
     return;
   }
 
-  const baseUrl = 'https://raw.githubusercontent.com/iisgaurav/profileforge/main/gallery/assets';
+  const baseUrl = 'https://iisgaurav.github.io/profileforge/gallery/assets';
   let md = `<!-- ProfileForge | Generated by ProfileForge Studio -->\n\n`;
   md += `<div align="center">\n\n`;
 
@@ -353,12 +461,12 @@ function copyReadmeMarkdown() {
 // EXPORT: DOWNLOAD PROFILEFORGE.YAML
 // ============================================================
 function exportProfileforgeYaml() {
-  if (state.activeWidgets.size === 0) {
+  if (state.activeWidgets.length === 0) {
     showToast('Enable at least one widget first!', 'error');
     return;
   }
 
-  const widgetLines = [...state.activeWidgets].map(w => `  - name: ${w}`).join('\n');
+  const widgetLines = state.activeWidgets.map(w => `  - name: ${w}`).join('\n');
 
   const yaml = `# profileforge.yaml — Generated by ProfileForge Studio
 # https://github.com/iisgaurav/profileforge
@@ -402,17 +510,17 @@ outputs:
 // EXPORT: DOWNLOAD SVG BUNDLE
 // ============================================================
 async function downloadSVGBundle() {
-  if (state.activeWidgets.size === 0) {
+  if (state.activeWidgets.length === 0) {
     showToast('Enable at least one widget first!', 'error');
     return;
   }
 
-  showToast(`Downloading ${state.activeWidgets.size} SVG files...`, 'info', 4000);
+  showToast(`Downloading ${state.activeWidgets.length} SVG files...`, 'info', 4000);
 
   const downloads = [];
   for (const widgetId of state.activeWidgets) {
     try {
-      const url = `./gallery/assets/${widgetId}_${state.theme}.svg`;
+      const url = `../gallery/assets/${widgetId}_${state.theme}.svg`;
       const res = await fetch(url);
       if (!res.ok) throw new Error('Not found');
       const svg = await res.text();
@@ -435,7 +543,7 @@ async function downloadSVGBundle() {
   if (downloads.length > 0) {
     showToast(`${downloads.length} SVG(s) not found (run gallery export first): ${downloads.join(', ')}`, 'error', 5000);
   } else {
-    showToast(`All ${state.activeWidgets.size} SVGs downloaded!`, 'success');
+    showToast(`All ${state.activeWidgets.length} SVGs downloaded!`, 'success');
   }
 }
 
@@ -449,8 +557,9 @@ function setupEventListeners() {
   usernameInput.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
-      state.username = usernameInput.value.trim() || 'octocat';
+      state.username = usernameInput.value.trim() || 'iisgaurav';
       renderPreview();
+      updateUrlState();
     }, 400);
   });
 
@@ -459,6 +568,7 @@ function setupEventListeners() {
   templateSelect.addEventListener('change', () => {
     state.template = templateSelect.value;
     applyTemplate(state.template);
+    updateUrlState();
   });
 
   // Export buttons
@@ -477,6 +587,57 @@ function setupEventListeners() {
 }
 
 // ============================================================
+// IMPORT: YAML
+// ============================================================
+function handleYamlImport(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    try {
+      const doc = jsyaml.load(evt.target.result);
+      if (!doc || !doc.widgets) {
+        showToast('Invalid YAML: missing widgets list', 'error');
+        return;
+      }
+
+      if (doc.profile && doc.profile.username) {
+        state.username = doc.profile.username;
+        $('username-input').value = state.username;
+      }
+      
+      if (doc.themes && doc.themes.active) {
+        state.theme = doc.themes.active;
+      } else if (doc.profile && doc.profile.theme) {
+        state.theme = doc.profile.theme;
+      }
+
+      state.activeWidgets = [];
+      doc.widgets.forEach(w => {
+        const name = typeof w === 'string' ? w : w.name;
+        if (name) state.activeWidgets.push(name);
+      });
+
+      renderThemeGrid();
+      renderWidgetList();
+      renderPreview();
+      updateUrlState();
+      
+      showToast('Profile configuration imported successfully!', 'success');
+    } catch (err) {
+      console.error(err);
+      showToast('Error parsing YAML file', 'error');
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = ''; // Reset input
+}
+
+// ============================================================
 // BOOT
 // ============================================================
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+  $('import-yaml-input').addEventListener('change', handleYamlImport);
+  init();
+});

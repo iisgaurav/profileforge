@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+__layer__ = "Layer 1 — Core"
+
 from pathlib import Path
 
 import yaml
@@ -195,7 +197,8 @@ class ConfigLoader:
     ) -> Theme:
         data, extends = ConfigLoader._load_raw_theme(theme_name, themes_dir, visited)
 
-        colors = ColorTokens(**data.get("colors", {}))
+        color_data = ConfigLoader._resolve_semantic_colors(data.get("colors", {}))
+        colors = ColorTokens(**color_data)
         typography = TypographyTokens(**data.get("typography", {}))
         
         spacing_data = data.get("spacing", {})
@@ -234,3 +237,51 @@ class ConfigLoader:
             assets=data.get("assets"),
             variables=data.get("variables"),
         )
+
+    @staticmethod
+    def _resolve_semantic_colors(colors: dict) -> dict:
+        """Fill semantic visual tokens and guarantee readable hero foregrounds.
+
+        Older themes only expose primitive colours.  Resolving semantic tokens at
+        the theme boundary keeps the renderer free of mode-specific colour hacks
+        while preserving backwards compatibility with existing theme YAML.
+        """
+        resolved = dict(colors)
+        surface = resolved.get("surface", resolved.get("background", "#111827"))
+        hero_surface = resolved.get("hero_surface") or surface
+        hero_on_surface = resolved.get("hero_on_surface") or resolved.get("text")
+        if not ConfigLoader._has_contrast(hero_on_surface, hero_surface, 4.5):
+            hero_on_surface = "#FFFFFF" if ConfigLoader._relative_luminance(hero_surface) < 0.45 else "#111827"
+
+        resolved.update(
+            {
+                "hero_surface": hero_surface,
+                "hero_on_surface": hero_on_surface,
+                "badge_primary": resolved.get("badge_primary") or resolved.get("primary"),
+                "badge_secondary": resolved.get("badge_secondary") or resolved.get("accent"),
+                "badge_success": resolved.get("badge_success") or resolved.get("success"),
+                "badge_info": resolved.get("badge_info") or resolved.get("info"),
+                "badge_warning": resolved.get("badge_warning") or resolved.get("warning"),
+                "badge_neutral": resolved.get("badge_neutral") or resolved.get("muted"),
+                "progress_start": resolved.get("progress_start") or resolved.get("primary"),
+                "progress_end": resolved.get("progress_end") or resolved.get("accent"),
+            }
+        )
+        return resolved
+
+    @staticmethod
+    def _relative_luminance(color: str | None) -> float:
+        if not color or not color.startswith("#") or len(color) not in (4, 7):
+            return 0.0
+        raw = color[1:]
+        if len(raw) == 3:
+            raw = "".join(channel * 2 for channel in raw)
+        channels = [int(raw[index:index + 2], 16) / 255 for index in range(0, 6, 2)]
+        linear = [channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4 for channel in channels]
+        return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+    @staticmethod
+    def _has_contrast(foreground: str | None, background: str | None, minimum: float) -> bool:
+        fg_lum = ConfigLoader._relative_luminance(foreground)
+        bg_lum = ConfigLoader._relative_luminance(background)
+        return (max(fg_lum, bg_lum) + 0.05) / (min(fg_lum, bg_lum) + 0.05) >= minimum

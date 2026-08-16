@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+__layer__ = "Layer 1 — Core"
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Optional, Union
+
 
 class HorizontalAlign(Enum):
     LEFT = "left"
@@ -21,11 +24,16 @@ class PercentageDisplay(Enum):
     TOP = "top"
     INSIDE = "inside"
 
-class Size(Enum):
+class ThemeSize(Enum):
     SM = "sm"
     MD = "md"
     LG = "lg"
     XL = "xl"
+
+@dataclass(frozen=True)
+class Size:
+    width: int
+    height: int
 
 class TypographyRole(Enum):
     TITLE = "title"
@@ -49,6 +57,18 @@ class ColorTokens:
     warning: str
     info: str
     accent: str
+    # Semantic rendering tokens.  They are resolved by ConfigLoader for legacy
+    # themes, so every rendered surface has an intentional foreground colour.
+    hero_surface: str | None = None
+    hero_on_surface: str | None = None
+    badge_primary: str | None = None
+    badge_secondary: str | None = None
+    badge_success: str | None = None
+    badge_info: str | None = None
+    badge_warning: str | None = None
+    badge_neutral: str | None = None
+    progress_start: str | None = None
+    progress_end: str | None = None
 
 
 @dataclass

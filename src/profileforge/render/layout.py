@@ -3,7 +3,17 @@ from __future__ import annotations
 import uuid
 from typing import Optional
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer, Wrap, Inline, Grid, Stack
+from profileforge.components.layout import (
+    Column,
+    Component,
+    Grid,
+    Inline,
+    Padding,
+    Row,
+    Spacer,
+    Stack,
+    Wrap,
+)
 from profileforge.components.widgets import (
     Badge,
     Card,
@@ -16,8 +26,8 @@ from profileforge.components.widgets import (
     ProgressMetric,
     Text,
 )
-from profileforge.render.base import RenderNode
 from profileforge.core.models import HorizontalAlign, VerticalAlign
+from profileforge.render.base import RenderNode
 
 
 class LayoutEngine:
@@ -121,13 +131,61 @@ class LayoutEngine:
                 children_nodes = new_children
 
         elif isinstance(component, Inline):
-            # Inline allocates available width, does not layout children internally with strict geometry.
-            # Intrinsic sizing deferred to Renderer/Browser.
-            w = w or parent_w or 400
-            h = h or 24
+            current_x = x
+            max_h = 0
+            
             for child in component.children:
-                # We just pass 0 width/height nodes to renderer, renderer will handle flow natively
-                children_nodes.append(LayoutEngine.calculate(child, x, y, 0, 0))
+                child_node = LayoutEngine.calculate(child, current_x, y, None, None)
+                children_nodes.append(child_node)
+                current_x += child_node.width + component.gap
+                max_h = max(max_h, child_node.height)
+                
+            w_intrinsic = current_x - x - (component.gap if component.children else 0)
+            w = w if component.style.width == "fill" and parent_w else (w or parent_w or w_intrinsic)
+            h = h or max_h
+
+            justify = component.style.justify
+            if justify == "space-between" and w > w_intrinsic and len(children_nodes) > 1:
+                extra = w - w_intrinsic
+                space = extra / (len(children_nodes) - 1)
+                new_children = []
+                curr_x = x
+                for child_node in children_nodes:
+                    new_children.append(LayoutEngine._shift_node(child_node, curr_x - child_node.x, 0))
+                    curr_x += child_node.width + component.gap + space
+                children_nodes = new_children
+                
+            elif justify == "space-evenly" and w > w_intrinsic and len(children_nodes) > 0:
+                extra = w - w_intrinsic
+                space = extra / (len(children_nodes) + 1)
+                new_children = []
+                curr_x = x + space
+                for child_node in children_nodes:
+                    new_children.append(LayoutEngine._shift_node(child_node, curr_x - child_node.x, 0))
+                    curr_x += child_node.width + component.gap + space
+                children_nodes = new_children
+                
+            elif justify in ("center", "center") and w > w_intrinsic:
+                offset = (w - w_intrinsic) / 2
+                children_nodes = [LayoutEngine._shift_node(c, offset, 0) for c in children_nodes]
+
+            align = component.style.align
+            if align in (VerticalAlign.MIDDLE, "center") and h > 0:
+                children_nodes = [
+                    LayoutEngine._shift_node(child_node, 0, (h - child_node.height) / 2)
+                    for child_node in children_nodes
+                ]
+            elif align in (VerticalAlign.BOTTOM, "end") and h > 0:
+                children_nodes = [
+                    LayoutEngine._shift_node(child_node, 0, h - child_node.height)
+                    for child_node in children_nodes
+                ]
+            elif align in (VerticalAlign.BASELINE, "baseline") and children_nodes:
+                target = max(LayoutEngine._baseline(child_node) for child_node in children_nodes)
+                children_nodes = [
+                    LayoutEngine._shift_node(child_node, 0, target - LayoutEngine._baseline(child_node))
+                    for child_node in children_nodes
+                ]
                 
         elif isinstance(component, Stack):
             w = w or 0
@@ -208,28 +266,43 @@ class LayoutEngine:
             w = w or 300
             h = h or 40
 
-        elif isinstance(component, Text):
-            # No width estimation anymore. Default to constraints or 0.
-            # Intrinsic text bounds cannot be calculated without font metrics.
-            w = w or 0
-            h = h or 20 # Fallback
+        measurer = getattr(LayoutEngine, "_measurer", None)
+        if measurer is None:
+            from profileforge.render.measurer import ApproximateTextMeasurer
+            measurer = ApproximateTextMeasurer()
+            LayoutEngine._measurer = measurer
+
+        if isinstance(component, Text):
+            if w is None or w == 0:
+                w = component.intrinsic_size(measurer).width
+            if h is None or h == 0:
+                h = component.intrinsic_size(measurer).height
 
         elif isinstance(component, ProgressBar):
-            w = w or 300
-            h = h or 8
+            if w is None or w == 0:
+                w = component.intrinsic_size(measurer).width
+            if h is None or h == 0:
+                h = component.intrinsic_size(measurer).height
 
         elif isinstance(component, Divider):
-            w = w or 400
-            h = h or 1
+            if getattr(component, "orientation", "horizontal") == "vertical":
+                w = w or 1
+                h = h or 40
+            else:
+                w = w or 400
+                h = h or 1
 
         elif isinstance(component, Badge):
-            # Arbitrary fixed default to satisfy older widgets before migration
-            w = w or 100
-            h = h or 24
+            if w is None or w == 0:
+                w = component.intrinsic_size(measurer).width
+            if h is None or h == 0:
+                h = component.intrinsic_size(measurer).height
 
         elif isinstance(component, Icon):
-            w = w or 16
-            h = h or 16
+            if w is None or w == 0:
+                w = component.intrinsic_size(measurer).width
+            if h is None or h == 0:
+                h = component.intrinsic_size(measurer).height
 
         elif isinstance(component, Metric):
             w = w or 140
@@ -238,6 +311,10 @@ class LayoutEngine:
         elif isinstance(component, CircularMetric):
             w = w or 120
             h = h or 120
+            
+        elif component.__class__.__name__ == "SparklineMetric":
+            w = w or 230
+            h = h or 88
 
         # Construct AST node
         return RenderNode(

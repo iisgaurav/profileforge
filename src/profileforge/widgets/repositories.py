@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
@@ -147,9 +148,9 @@ class RepositoriesWidget(Widget):
                 style=Style(font_size=12, font_weight="600", color="text"),
             )
 
-            header_row = Row(
+            header_row = Inline(
                 children=[repo_title, stats_text],
-                spacing=0,
+                gap=16,
                 style=Style(width="fill", justify="space-between", align="center"),
             )
 
@@ -163,22 +164,18 @@ class RepositoriesWidget(Widget):
             item_col = Column(
                 children=[
                     header_row,
-                    Spacer(height=4),
                     desc_text,
-                    Spacer(height=6),
-                    lang_badge,
+                    Inline(children=[lang_badge], style=Style(align="center")),
                 ],
-                spacing=0,
+                gap=16,
                 style=Style(width="fill"),
             )
 
             rows.append(item_col)
-            if i < len(repos) - 1:
-                rows.append(Spacer(height=16))
 
         content = Column(
             children=rows,
-            spacing=0,
+            gap=16,
             style=Style(width="fill"),
         )
 

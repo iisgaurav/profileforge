@@ -22,15 +22,77 @@
       "success": "#34C759",
       "warning": "#FF9500",
       "info": "#5AC8FA",
-      "accent": "#AF52DE"
+      "accent": "#AF52DE",
+      "hero_surface": "#FFFFFF",
+      "hero_on_surface": "#1D1D1F",
+      "badge_primary": "#0071E3",
+      "badge_secondary": "#AF52DE",
+      "badge_success": "#34C759",
+      "badge_info": "#5AC8FA",
+      "badge_warning": "#FF9500",
+      "badge_neutral": "#86868B",
+      "progress_start": "#0071E3",
+      "progress_end": "#AF52DE"
     },
     "typography": {
       "font_family": "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/apple.svg"
+    "preview_url": "assets/github_stats_apple.svg"
+  },
+  {
+    "id": "aurora",
+    "name": "aurora",
+    "mode": "aurora",
+    "tags": [
+      "premium",
+      "dark"
+    ],
+    "author": "ProfileForge Team",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Official aurora theme for ProfileForge.",
+    "extends": null,
+    "colors": {
+      "primary": "#22E892",
+      "secondary": "#00E6E6",
+      "background": "#011627",
+      "surface": "#0A2540",
+      "border": "#1E3A5F",
+      "text": "#D6DEEB",
+      "muted": "#5F7E97",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "info": "#3B82F6",
+      "accent": "#A78BFA",
+      "hero_surface": "#0A2540",
+      "hero_on_surface": "#D6DEEB",
+      "badge_primary": "#22E892",
+      "badge_secondary": "#A78BFA",
+      "badge_success": "#10B981",
+      "badge_info": "#3B82F6",
+      "badge_warning": "#F59E0B",
+      "badge_neutral": "#5F7E97",
+      "progress_start": "#22E892",
+      "progress_end": "#A78BFA"
+    },
+    "typography": {
+      "font_family": "Inter, sans-serif",
+      "title": 24,
+      "heading": 32,
+      "label": 14,
+      "value": 28,
+      "body": 16,
+      "caption": 13,
+      "small": 14
+    },
+    "preview_url": "assets/github_stats_aurora.svg"
   },
   {
     "id": "catppuccin-base",
@@ -55,15 +117,29 @@
       "success": "#2EA043",
       "warning": "#D29922",
       "info": "#388BFD",
-      "accent": "#D2A8FF"
+      "accent": "#D2A8FF",
+      "hero_surface": "transparent",
+      "hero_on_surface": "#C9D1D9",
+      "badge_primary": "#58A6FF",
+      "badge_secondary": "#D2A8FF",
+      "badge_success": "#2EA043",
+      "badge_info": "#388BFD",
+      "badge_warning": "#D29922",
+      "badge_neutral": "#8B949E",
+      "progress_start": "#58A6FF",
+      "progress_end": "#D2A8FF"
     },
     "typography": {
       "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/catppuccin-base.svg"
+    "preview_url": "assets/github_stats_catppuccin-base.svg"
   },
   {
     "id": "catppuccin-frappe",
@@ -88,15 +164,29 @@
       "success": "#a6d189",
       "warning": "#e5c890",
       "info": "#81c8be",
-      "accent": "#ca9ee6"
+      "accent": "#ca9ee6",
+      "hero_surface": "#292c3c",
+      "hero_on_surface": "#c6d0f5",
+      "badge_primary": "#8caaee",
+      "badge_secondary": "#ca9ee6",
+      "badge_success": "#a6d189",
+      "badge_info": "#81c8be",
+      "badge_warning": "#e5c890",
+      "badge_neutral": "#a5adce",
+      "progress_start": "#8caaee",
+      "progress_end": "#ca9ee6"
     },
     "typography": {
       "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/catppuccin-frappe.svg"
+    "preview_url": "assets/github_stats_catppuccin-frappe.svg"
   },
   {
     "id": "catppuccin-latte",
@@ -121,15 +211,29 @@
       "success": "#40a02b",
       "warning": "#df8e1d",
       "info": "#209fb5",
-      "accent": "#8839ef"
+      "accent": "#8839ef",
+      "hero_surface": "#e6e9ef",
+      "hero_on_surface": "#4c4f69",
+      "badge_primary": "#1e66f5",
+      "badge_secondary": "#8839ef",
+      "badge_success": "#40a02b",
+      "badge_info": "#209fb5",
+      "badge_warning": "#df8e1d",
+      "badge_neutral": "#7c7f93",
+      "progress_start": "#1e66f5",
+      "progress_end": "#8839ef"
     },
     "typography": {
       "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/catppuccin-latte.svg"
+    "preview_url": "assets/github_stats_catppuccin-latte.svg"
   },
   {
     "id": "catppuccin-macchiato",
@@ -154,15 +258,29 @@
       "success": "#a6da95",
       "warning": "#eed49f",
       "info": "#8bd5ca",
-      "accent": "#c6a0f6"
+      "accent": "#c6a0f6",
+      "hero_surface": "#1e2030",
+      "hero_on_surface": "#cad3f5",
+      "badge_primary": "#8aadf4",
+      "badge_secondary": "#c6a0f6",
+      "badge_success": "#a6da95",
+      "badge_info": "#8bd5ca",
+      "badge_warning": "#eed49f",
+      "badge_neutral": "#a5adcb",
+      "progress_start": "#8aadf4",
+      "progress_end": "#c6a0f6"
     },
     "typography": {
       "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/catppuccin-macchiato.svg"
+    "preview_url": "assets/github_stats_catppuccin-macchiato.svg"
   },
   {
     "id": "catppuccin-mocha",
@@ -187,15 +305,77 @@
       "success": "#a6e3a1",
       "warning": "#f9e2af",
       "info": "#94e2d5",
-      "accent": "#cba6f7"
+      "accent": "#cba6f7",
+      "hero_surface": "#181825",
+      "hero_on_surface": "#cdd6f4",
+      "badge_primary": "#89b4fa",
+      "badge_secondary": "#cba6f7",
+      "badge_success": "#a6e3a1",
+      "badge_info": "#94e2d5",
+      "badge_warning": "#f9e2af",
+      "badge_neutral": "#a6adc8",
+      "progress_start": "#89b4fa",
+      "progress_end": "#cba6f7"
     },
     "typography": {
       "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/catppuccin-mocha.svg"
+    "preview_url": "assets/github_stats_catppuccin-mocha.svg"
+  },
+  {
+    "id": "cyberpunk",
+    "name": "cyberpunk",
+    "mode": "cyberpunk",
+    "tags": [
+      "premium",
+      "dark"
+    ],
+    "author": "ProfileForge Team",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Official cyberpunk theme for ProfileForge.",
+    "extends": null,
+    "colors": {
+      "primary": "#00F0FF",
+      "secondary": "#FF007F",
+      "background": "#0B0B1A",
+      "surface": "#15152B",
+      "border": "#2C2C54",
+      "text": "#E0E0FF",
+      "muted": "#7A7A99",
+      "success": "#39FF14",
+      "warning": "#FFEA00",
+      "info": "#00C3FF",
+      "accent": "#B026FF",
+      "hero_surface": "#15152B",
+      "hero_on_surface": "#E0E0FF",
+      "badge_primary": "#00F0FF",
+      "badge_secondary": "#B026FF",
+      "badge_success": "#39FF14",
+      "badge_info": "#00C3FF",
+      "badge_warning": "#FFEA00",
+      "badge_neutral": "#7A7A99",
+      "progress_start": "#00F0FF",
+      "progress_end": "#B026FF"
+    },
+    "typography": {
+      "font_family": "JetBrains Mono, monospace",
+      "title": 24,
+      "heading": 32,
+      "label": 14,
+      "value": 28,
+      "body": 16,
+      "caption": 13,
+      "small": 14
+    },
+    "preview_url": "assets/github_stats_cyberpunk.svg"
   },
   {
     "id": "dracula",
@@ -220,15 +400,29 @@
       "success": "#50FA7B",
       "warning": "#F1FA8C",
       "info": "#8BE9FD",
-      "accent": "#FFB86C"
+      "accent": "#FFB86C",
+      "hero_surface": "#44475A",
+      "hero_on_surface": "#F8F8F2",
+      "badge_primary": "#FF79C6",
+      "badge_secondary": "#FFB86C",
+      "badge_success": "#50FA7B",
+      "badge_info": "#8BE9FD",
+      "badge_warning": "#F1FA8C",
+      "badge_neutral": "#6272A4",
+      "progress_start": "#FF79C6",
+      "progress_end": "#FFB86C"
     },
     "typography": {
       "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/dracula.svg"
+    "preview_url": "assets/github_stats_dracula.svg"
   },
   {
     "id": "github-dark",
@@ -254,15 +448,29 @@
       "success": "#2EA043",
       "warning": "#D29922",
       "info": "#388BFD",
-      "accent": "#D2A8FF"
+      "accent": "#D2A8FF",
+      "hero_surface": "transparent",
+      "hero_on_surface": "#C9D1D9",
+      "badge_primary": "#58A6FF",
+      "badge_secondary": "#D2A8FF",
+      "badge_success": "#2EA043",
+      "badge_info": "#388BFD",
+      "badge_warning": "#D29922",
+      "badge_neutral": "#8B949E",
+      "progress_start": "#58A6FF",
+      "progress_end": "#D2A8FF"
     },
     "typography": {
       "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/github-dark.svg"
+    "preview_url": "assets/github_stats_github-dark.svg"
   },
   {
     "id": "github-light",
@@ -288,15 +496,77 @@
       "success": "#1A7F37",
       "warning": "#BF8700",
       "info": "#0969DA",
-      "accent": "#8250DF"
+      "accent": "#8250DF",
+      "hero_surface": "transparent",
+      "hero_on_surface": "#FFFFFF",
+      "badge_primary": "#0969DA",
+      "badge_secondary": "#8250DF",
+      "badge_success": "#1A7F37",
+      "badge_info": "#0969DA",
+      "badge_warning": "#BF8700",
+      "badge_neutral": "#57606A",
+      "progress_start": "#0969DA",
+      "progress_end": "#8250DF"
     },
     "typography": {
       "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/github-light.svg"
+    "preview_url": "assets/github_stats_github-light.svg"
+  },
+  {
+    "id": "midnight",
+    "name": "midnight",
+    "mode": "midnight",
+    "tags": [
+      "premium",
+      "dark"
+    ],
+    "author": "ProfileForge Team",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Official midnight theme for ProfileForge.",
+    "extends": null,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#8B5CF6",
+      "background": "#050505",
+      "surface": "#111111",
+      "border": "#222222",
+      "text": "#FAFAFA",
+      "muted": "#666666",
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "info": "#3B82F6",
+      "accent": "#EC4899",
+      "hero_surface": "#111111",
+      "hero_on_surface": "#FAFAFA",
+      "badge_primary": "#FFFFFF",
+      "badge_secondary": "#EC4899",
+      "badge_success": "#22C55E",
+      "badge_info": "#3B82F6",
+      "badge_warning": "#F59E0B",
+      "badge_neutral": "#666666",
+      "progress_start": "#FFFFFF",
+      "progress_end": "#EC4899"
+    },
+    "typography": {
+      "font_family": "Inter, sans-serif",
+      "title": 24,
+      "heading": 32,
+      "label": 14,
+      "value": 28,
+      "body": 16,
+      "caption": 13,
+      "small": 14
+    },
+    "preview_url": "assets/github_stats_midnight.svg"
   },
   {
     "id": "minimal",
@@ -322,15 +592,29 @@
       "success": "#00CC00",
       "warning": "#FFCC00",
       "info": "#0099FF",
-      "accent": "#FF0055"
+      "accent": "#FF0055",
+      "hero_surface": "#F9F9F9",
+      "hero_on_surface": "#111111",
+      "badge_primary": "#000000",
+      "badge_secondary": "#FF0055",
+      "badge_success": "#00CC00",
+      "badge_info": "#0099FF",
+      "badge_warning": "#FFCC00",
+      "badge_neutral": "#888888",
+      "progress_start": "#000000",
+      "progress_end": "#FF0055"
     },
     "typography": {
       "font_family": "sans-serif",
+      "title": 24,
       "heading": 24,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/minimal.svg"
+    "preview_url": "assets/github_stats_minimal.svg"
   },
   {
     "id": "modern",
@@ -356,15 +640,29 @@
       "success": "#10B981",
       "warning": "#F59E0B",
       "info": "#0EA5E9",
-      "accent": "#EC4899"
+      "accent": "#EC4899",
+      "hero_surface": "#1E293B",
+      "hero_on_surface": "#F8FAFC",
+      "badge_primary": "#3B82F6",
+      "badge_secondary": "#EC4899",
+      "badge_success": "#10B981",
+      "badge_info": "#0EA5E9",
+      "badge_warning": "#F59E0B",
+      "badge_neutral": "#94A3B8",
+      "progress_start": "#3B82F6",
+      "progress_end": "#EC4899"
     },
     "typography": {
       "font_family": "Inter, sans-serif",
+      "title": 24,
       "heading": 20,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/modern.svg"
+    "preview_url": "assets/github_stats_modern.svg"
   },
   {
     "id": "nord",
@@ -389,15 +687,29 @@
       "success": "#A3BE8C",
       "warning": "#EBCB8B",
       "info": "#81A1C1",
-      "accent": "#B48EAD"
+      "accent": "#B48EAD",
+      "hero_surface": "#3B4252",
+      "hero_on_surface": "#ECEFF4",
+      "badge_primary": "#88C0D0",
+      "badge_secondary": "#B48EAD",
+      "badge_success": "#A3BE8C",
+      "badge_info": "#81A1C1",
+      "badge_warning": "#EBCB8B",
+      "badge_neutral": "#D8DEE9",
+      "progress_start": "#88C0D0",
+      "progress_end": "#B48EAD"
     },
     "typography": {
       "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/nord.svg"
+    "preview_url": "assets/github_stats_nord.svg"
   },
   {
     "id": "showcase",
@@ -423,15 +735,29 @@
       "success": "#4CAF50",
       "warning": "#FFC107",
       "info": "#2196F3",
-      "accent": "#E91E63"
+      "accent": "#E91E63",
+      "hero_surface": "#242424",
+      "hero_on_surface": "#E0E0E0",
+      "badge_primary": "#FFD700",
+      "badge_secondary": "#E91E63",
+      "badge_success": "#4CAF50",
+      "badge_info": "#2196F3",
+      "badge_warning": "#FFC107",
+      "badge_neutral": "#757575",
+      "progress_start": "#FFD700",
+      "progress_end": "#E91E63"
     },
     "typography": {
       "font_family": "Roboto, sans-serif",
+      "title": 24,
       "heading": 32,
+      "label": 14,
+      "value": 28,
       "body": 18,
+      "caption": 13,
       "small": 14
     },
-    "preview_url": "assets/showcase.svg"
+    "preview_url": "assets/github_stats_showcase.svg"
   },
   {
     "id": "vercel",
@@ -456,14 +782,28 @@
       "success": "#3291FF",
       "warning": "#F5A623",
       "info": "#0070F3",
-      "accent": "#0070F3"
+      "accent": "#0070F3",
+      "hero_surface": "#111111",
+      "hero_on_surface": "#EDEDED",
+      "badge_primary": "#FFFFFF",
+      "badge_secondary": "#0070F3",
+      "badge_success": "#3291FF",
+      "badge_info": "#0070F3",
+      "badge_warning": "#F5A623",
+      "badge_neutral": "#A1A1AA",
+      "progress_start": "#FFFFFF",
+      "progress_end": "#0070F3"
     },
     "typography": {
       "font_family": "Inter, 'SF Pro Display', -apple-system, sans-serif",
+      "title": 24,
       "heading": 18,
+      "label": 14,
+      "value": 28,
       "body": 14,
+      "caption": 13,
       "small": 12
     },
-    "preview_url": "assets/vercel.svg"
+    "preview_url": "assets/github_stats_vercel.svg"
   }
 ]

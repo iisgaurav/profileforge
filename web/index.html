@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
   <title>ProfileForge Studio — Visual GitHub Profile Builder</title>
-  <meta name="description" content="Visually build your GitHub profile with 15 widgets, 9 persona templates, 14 themes, and instant SVG export. No code required." />
+  <meta name="description"
+    content="Visually build your GitHub profile with 15 widgets, 9 persona templates, 14 themes, and instant SVG export. No code required." />
   <meta name="keywords" content="github profile, svg widgets, profile readme, profileforge, github readme generator" />
   <meta name="author" content="ProfileForge Team" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="ProfileForge Studio — Visual GitHub Profile Builder" />
-  <meta property="og:description" content="Build stunning GitHub profile READMEs with 15 widgets, 14 themes, and instant SVG export." />
+  <meta property="og:description"
+    content="Build stunning GitHub profile READMEs with 15 widgets, 14 themes, and instant SVG export." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://github.com/iisgaurav/profileforge" />
 
@@ -22,12 +25,24 @@
   <meta name="twitter:description" content="Visual GitHub profile builder. 15 widgets. 14 themes. Zero code." />
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
 
   <!-- Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+
+  <!-- ==================== BACKGROUND MESH ==================== -->
+  <div class="bg-mesh">
+    <div class="mesh-orb orb-1"></div>
+    <div class="mesh-orb orb-2"></div>
+    <div class="mesh-orb orb-3"></div>
+  </div>
 
   <!-- ==================== LOADING OVERLAY ==================== -->
   <div id="loading-overlay" aria-label="Loading ProfileForge Studio" role="status">
@@ -35,34 +50,29 @@
     <div class="loading-text">Loading ProfileForge Studio…</div>
   </div>
 
-  <!-- ==================== HEADER ==================== -->
-  <header id="app-header" role="banner">
-    <div class="header-logo">
-      <span class="header-logo-icon" aria-hidden="true">🔥</span>
-      <div>
-        <h1>ProfileForge Studio</h1>
-        <span>Visual GitHub Profile Builder</span>
+  <!-- ==================== FLOATING HEADER ==================== -->
+  <div class="header-container">
+    <header id="app-header" role="banner">
+      <div class="header-logo">
+        <span class="header-logo-icon" aria-hidden="true">🔥</span>
+        <div>
+          <h1>ProfileForge</h1>
+          <span>Studio</span>
+        </div>
       </div>
-    </div>
-    <nav class="header-actions" role="navigation" aria-label="Header links">
-      <a id="header-github-link"
-         href="https://github.com/iisgaurav/profileforge"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="header-link"
-         aria-label="View ProfileForge on GitHub">
-        ⭐ Star on GitHub
-      </a>
-      <a id="header-docs-link"
-         href="https://github.com/iisgaurav/profileforge#readme"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="header-link"
-         aria-label="Read the docs">
-        📄 Docs
-      </a>
-    </nav>
-  </header>
+      <nav class="header-actions" role="navigation" aria-label="Header links">
+        <a id="header-github-link" href="https://github.com/iisgaurav/profileforge" target="_blank"
+          rel="noopener noreferrer" class="header-link" aria-label="View ProfileForge on GitHub">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 0.67-.01 1.3-.01 1.49 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+          Star on GitHub
+        </a>
+        <a id="header-docs-link" href="https://github.com/iisgaurav/profileforge#readme" target="_blank"
+          rel="noopener noreferrer" class="header-link btn-glow" aria-label="Read the docs">
+          Documentation
+        </a>
+      </nav>
+    </header>
+  </div>
 
   <!-- ==================== MAIN LAYOUT ==================== -->
   <div id="app-layout">
@@ -76,19 +86,13 @@
           <span class="icon">👤</span> GitHub Username
         </div>
         <label for="username-input" class="visually-hidden">GitHub username</label>
-        <input
-          type="text"
-          id="username-input"
-          name="username"
-          placeholder="octocat"
-          value="octocat"
-          autocomplete="off"
-          spellcheck="false"
-          aria-label="Enter your GitHub username"
-          title="Press Ctrl+K or Cmd+K to focus"
-        />
+        <input type="text" id="username-input" name="username" placeholder="iisgaurav" value="iisgaurav"
+          autocomplete="off" spellcheck="false" aria-label="Enter your GitHub username"
+          title="Press Ctrl+K or Cmd+K to focus" />
         <small style="color:var(--text-muted);font-size:11px;margin-top:6px;display:block;">
-          ⌨️ <kbd style="background:var(--bg-elevated);padding:1px 4px;border-radius:3px;border:1px solid var(--border)">Ctrl+K</kbd> to focus
+          ⌨️ <kbd
+            style="background:var(--bg-elevated);padding:1px 4px;border-radius:3px;border:1px solid var(--border)">Ctrl+K</kbd>
+          to focus
         </small>
       </section>
 
@@ -134,7 +138,7 @@
           Live Preview
           <span id="widget-count-badge" aria-live="polite" aria-label="Active widget count">0</span>
         </div>
-        <div id="preview-username-display" aria-live="polite">@octocat · github-dark</div>
+        <div id="preview-username-display" aria-live="polite">@iisgaurav · github-dark</div>
       </div>
 
       <!-- Widget Cards -->
@@ -147,30 +151,25 @@
 
       <!-- Export Bar -->
       <div id="export-bar" role="group" aria-label="Export actions">
-        <button
-          id="btn-copy-readme"
-          class="btn btn-primary"
-          type="button"
-          aria-label="Copy README markdown to clipboard"
-          title="Copy the ready-to-paste README snippet">
+        <button id="btn-copy-readme" class="btn btn-primary" type="button"
+          aria-label="Copy README markdown to clipboard" title="Copy the ready-to-paste README snippet">
           <span class="btn-icon">📋</span>
           Copy README Markdown
         </button>
-        <button
-          id="btn-export-yaml"
-          class="btn btn-accent"
-          type="button"
-          aria-label="Download profileforge.yaml configuration file"
-          title="Download profileforge.yaml for local use">
+        <button id="btn-export-yaml" class="btn btn-accent" type="button"
+          aria-label="Download profileforge.yaml configuration file" title="Download profileforge.yaml for local use">
           <span class="btn-icon">📥</span>
           Export profileforge.yaml
         </button>
-        <button
-          id="btn-download-svg"
-          class="btn btn-success"
-          type="button"
-          aria-label="Download all enabled widget SVG files"
-          title="Download all enabled widget SVGs">
+        <button id="btn-import-yaml" class="btn btn-secondary" type="button"
+          aria-label="Import existing profileforge.yaml" title="Import an existing profileforge.yaml configuration"
+          onclick="document.getElementById('import-yaml-input').click()">
+          <span class="btn-icon">📤</span>
+          Import YAML
+        </button>
+        <input type="file" id="import-yaml-input" accept=".yaml,.yml" style="display:none;" />
+        <button id="btn-download-svg" class="btn btn-success" type="button"
+          aria-label="Download all enabled widget SVG files" title="Download all enabled widget SVGs">
           <span class="btn-icon">📦</span>
           Download SVG Bundle
         </button>
@@ -183,6 +182,8 @@
   <div id="toast-container" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
   <!-- ==================== APP SCRIPT ==================== -->
-  <script src="./app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>

@@ -1,27 +1,20 @@
 version: 1
 project:
-  name: "Open Source Maintainer Profile"
-  title: "Open Source Library Author & Foundation Contributor"
-
+  name: Open Source Maintainer Profile
+  title: Open Source Library Author & Foundation Contributor
 themes:
-  active: "github-dark"
-
+  active: github-dark
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: github_stats
-  - name: repositories
-  - name: activity_timeline
-  - name: streak
-  - name: achievements
-  - name: social
-
+- name: github_stats
+- name: repositories
+- name: activity_timeline
+- name: social
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

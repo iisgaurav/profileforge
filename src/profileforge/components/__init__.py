@@ -2,8 +2,6 @@ from profileforge.components.layout import (
     Column,
     Component,
     Padding,
-    Row,
-    Spacer,
     Wrap,
 )
 from profileforge.components.style import Style
@@ -29,8 +27,6 @@ __all__ = [
     "MetricGroup",
     "Padding",
     "ProgressBar",
-    "Row",
-    "Spacer",
     "Style",
     "Text",
     "Wrap",

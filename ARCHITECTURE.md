@@ -12,6 +12,7 @@ To maintain long-term stability, extensibility, and maintainability across a glo
 3. **Deterministic Two-Pass Layout**: Layout coordinates `(x, y, width, height)` are mathematically computed before passing to renderers.
 4. **Fault Isolation**: A failure in one widget or connector (e.g. GitHub API rate limits, missing local files) never crashes profile generation.
 5. **Frozen API Surface**: Core layers are protected by an automated API Snapshot Lock (`tools/api_lock.py`). Breaking changes require a formal Request for Comments (RFC).
+6. **Design System Hierarchy**: Visual QA and aesthetic architecture strictly adhere to the priority stack (Theme -> Renderer -> Layout -> Component -> Widget) as outlined in `docs/DESIGN_ENGINEERING.md`.
 
 ---
 
@@ -43,7 +44,7 @@ graph TD
     end
 
     subgraph L3["Layer 3: Components"]
-        Components["Declarative Primitives (Card, Row, Column, Text, Badge, Metric)"]
+        Components["Declarative Primitives (Card, Inline, Column, Text, Badge, Metric)"]
         Style["Style Tokens & Modifiers"]
     end
 
@@ -95,7 +96,7 @@ graph TD
 ### Layer 3: Components (`profileforge.components`)
 - **Responsibilities**:
   - Declarative UI component primitives.
-  - **Structural Components**: `Row`, `Column`, `Padding`, `Spacer`, `Wrap`.
+  - **Structural Components**: `Inline`, `Column`, `Padding`, `Constraints`, `Wrap`.
   - **Visual Components**: `Card`, `Text`, `Badge`, `Icon`, `ProgressBar`, `Metric`, `MetricGroup`, `CircularMetric`.
   - **Styling**: `Style` dataclass supporting semantic token mapping, margins, padding, radii, elevation, and flex alignments (`start`, `center`, `end`).
 - **Constraints**: Components are pure data structures holding children and computed dimensions. They execute no I/O, no network calls, and no direct string rendering.

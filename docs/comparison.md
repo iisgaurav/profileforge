@@ -38,7 +38,7 @@ None of these are bugs. They are natural consequences of the generator's design 
 
 ProfileForge is not a generator. It is a **declarative framework** — a structured set of building blocks, contracts, and conventions for producing GitHub profile SVGs.
 
-**Composability.** Every widget in ProfileForge is an independent Python class with a defined interface: it receives a config object and a theme token set, and it returns an SVG fragment with known dimensions. You can combine any subset of the 15 widgets, in any order, in any layout grid, without touching rendering code. The layout engine handles the coordinate math.
+**Composability.** Every widget in ProfileForge is an independent Python class with a defined interface: it receives a config object and a theme token set, and it returns an SVG fragment with known dimensions. You can combine any subset of the 11 widgets, in any order, in any layout grid, without touching rendering code. The layout engine handles the coordinate math.
 
 **Token-based design system.** Themes in ProfileForge are not a bag of hex values — they are a structured set of semantic design tokens: `primary`, `surface`, `border`, `muted`, `success`, and so on. A widget never references a raw color; it references a token. This means swapping a theme swaps the entire visual language consistently, including hover states, borders, and text hierarchy. Creating a custom theme requires only a YAML file that maps token names to colors.
 
@@ -56,7 +56,7 @@ ProfileForge is the right tool when:
 
 - **You need a custom layout.** You want your hero widget full-width at the top, a two-column grid of stats in the middle, and your social links as a footer row. That is not possible with a generator without a fork.
 
-- **You are composing multiple widgets.** You want a hero, a skills section, a GitHub stats card, a streak tracker, and a featured repos list — all styled consistently with a shared theme. Managing five separate generator URLs and making them look cohesive is difficult.
+- **You are composing multiple widgets.** You want a hero, a skills section, a GitHub stats card, and a featured repos list — all styled consistently with a shared theme. Managing four separate generator URLs and making them look cohesive is difficult.
 
 - **You work on a team.** Your company or open-source project maintains a shared profile with multiple contributors. ProfileForge's YAML configs, CLI, and test suite make team workflows tractable.
 
@@ -154,7 +154,7 @@ layout:
 
 ```yaml
 # config/hero.yaml  (equivalent of &username=)
-name: Your Name
+name: <your-name>
 username: yourusername
 ```
 

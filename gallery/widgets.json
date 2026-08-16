@@ -3,36 +3,15 @@
     "id": "about",
     "name": "About",
     "category": "identity",
-    "description": "Hero card: name, role, status badge, tagline, and location.",
+    "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
     "version": "1.0.0",
     "author": "ProfileForge Team",
     "tags": [
-      "about",
       "hero",
       "identity",
-      "bio"
-    ],
-    "required_connectors": [
-      "local"
-    ],
-    "experimental": false,
-    "deprecated": false
-  },
-  {
-    "id": "achievements",
-    "name": "Achievements",
-    "category": "stats",
-    "description": "Developer unlock badges showcasing milestones, GitHub awards, and technical accomplishments.",
-    "version": "1.0.0",
-    "author": "ProfileForge Team",
-    "tags": [
-      "achievements",
-      "badges",
-      "awards",
-      "stats",
-      "unlocks",
-      "gamification",
-      "github"
+      "bio",
+      "banner",
+      "developer"
     ],
     "required_connectors": [
       "local"
@@ -77,25 +56,6 @@
       "timeline",
       "resume",
       "jobs"
-    ],
-    "required_connectors": [
-      "local"
-    ],
-    "experimental": false,
-    "deprecated": false
-  },
-  {
-    "id": "expertise",
-    "name": "Expertise",
-    "category": "career",
-    "description": "Technical skills and expertise grouped by domain.",
-    "version": "1.0.0",
-    "author": "ProfileForge Team",
-    "tags": [
-      "skills",
-      "expertise",
-      "stack",
-      "career"
     ],
     "required_connectors": [
       "local"
@@ -156,26 +116,6 @@
     ],
     "required_connectors": [
       "github"
-    ],
-    "experimental": false,
-    "deprecated": false
-  },
-  {
-    "id": "hero",
-    "name": "Hero",
-    "category": "identity",
-    "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
-    "version": "1.0.0",
-    "author": "ProfileForge Team",
-    "tags": [
-      "hero",
-      "identity",
-      "bio",
-      "banner",
-      "developer"
-    ],
-    "required_connectors": [
-      "local"
     ],
     "experimental": false,
     "deprecated": false
@@ -281,27 +221,6 @@
     ],
     "required_connectors": [
       "local"
-    ],
-    "experimental": false,
-    "deprecated": false
-  },
-  {
-    "id": "streak",
-    "name": "Contribution Streak",
-    "category": "stats",
-    "description": "Tracks daily GitHub contribution streaks, longest continuous activity, and consistency rate.",
-    "version": "1.0.0",
-    "author": "ProfileForge Team",
-    "tags": [
-      "streak",
-      "stats",
-      "github",
-      "contributions",
-      "habits",
-      "activity"
-    ],
-    "required_connectors": [
-      "github"
     ],
     "experimental": false,
     "deprecated": false

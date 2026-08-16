@@ -102,7 +102,7 @@ graph TD
 
 ### 5. `build(self, data: Any, context: BuildContext) -> Component`
 - Pure UI building hook.
-- Constructs the declarative layout tree using ProfileForge components (`Card`, `Column`, `Row`, `Wrap`, `Text`, `Badge`, `ProgressBar`, `MetricGroup`, etc.).
+- Constructs the declarative layout tree using ProfileForge components (`Card`, `Column`, `Inline`, `Wrap`, `Text`, `Badge`, `ProgressMetric`, `MetricGroup`, etc.).
 
 ### 6. `post_build(self, component: Component, context: BuildContext) -> Component`
 - Optional post-processing hook for layout overrides, responsive adjustments, or wrapping.
@@ -139,10 +139,10 @@ Use the `@register_widget("slug")` decorator.
 ```python
 from typing import Any
 from profileforge.components.layout import Column, Component, Padding
-from profileforge.components.style import Style
+from profileforge.components.style import Style, Constraints
 from profileforge.components.widgets import Card, Text
 from profileforge.core.context import BuildContext
-from profileforge.core.models import DataRequest
+from profileforge.core.models import DataRequest, TypographyRole
 from profileforge.core.registry import register_widget
 from profileforge.widgets.base import Widget, WidgetCategory, WidgetMetadata
 
@@ -156,7 +156,7 @@ class ProjectSpotlightWidget(Widget):
             category=WidgetCategory.PROJECTS,
             description="Highlights featured open-source repositories.",
             version="1.0.0",
-            author="Your Name",
+            author="<your-name>",
             tags=["projects", "showcase", "open-source"],
             required_connectors=["local"],
         )
@@ -185,15 +185,20 @@ class ProjectSpotlightWidget(Widget):
             rows.append(
                 Text(
                     f"⭐ {p['name']} - {p['description']}",
-                    style=Style(font_size=13, color="text"),
+                    style=Style(font_size=TypographyRole.BODY, color="text"),
                 )
             )
 
-        content = Column(children=rows, spacing=8, style=Style(width="fill"))
+        content = Column(
+            children=rows, 
+            gap=context.theme.spacing.sm, 
+            constraints=Constraints(fill=True)
+        )
         return Card(
             title="Featured Projects",
-            child=Padding(child=content, value=20, style=Style(width="fill")),
-            style=Style(width=820, elevation="medium", variant="solid"),
+            child=Padding(child=content, value=context.theme.spacing.md, constraints=Constraints(fill=True)),
+            style=Style(elevation="medium", variant="solid"),
+            constraints=Constraints(preferred_width=820)
         )
 ```
 

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from abc import ABC
 
-from profileforge.components.style import Style, Constraints
+from profileforge.components.style import Constraints, Style
 
 
 class Component(ABC):

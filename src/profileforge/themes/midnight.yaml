@@ -1,0 +1,48 @@
+name: midnight
+id: midnight
+schema: 1
+tags:
+- premium
+- dark
+mode: midnight
+colors:
+  primary: '#FFFFFF'
+  secondary: '#8B5CF6'
+  background: '#050505'
+  surface: '#111111'
+  border: '#222222'
+  text: '#FAFAFA'
+  muted: '#666666'
+  success: '#22C55E'
+  warning: '#F59E0B'
+  info: '#3B82F6'
+  accent: '#EC4899'
+typography:
+  font_family: Inter, sans-serif
+  heading: 32
+  body: 16
+  small: 14
+spacing:
+  xs: 8
+  sm: 16
+  md: 24
+  lg: 40
+  xl: 64
+radius:
+  card: 8
+  progress: 4
+  badge: 4
+shadows:
+  none: none
+  low: 0 4px 6px rgba(0,0,0,0.5)
+  medium: 0 10px 15px rgba(0,0,0,0.8)
+  high: 0 20px 25px rgba(0,0,0,1.0)
+motion:
+  duration_fast: 150
+  duration_normal: 250
+  duration_slow: 400
+  easing: ease-out
+effects:
+  glow: none
+  shadow: none
+  glass: none

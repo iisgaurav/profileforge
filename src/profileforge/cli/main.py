@@ -4,25 +4,7 @@ import sys
 import time
 from pathlib import Path
 
-import profileforge.connectors.github.connector
-
 # Ensure registries populate via side-effects
-import profileforge.connectors.local
-import profileforge.widgets.about
-import profileforge.widgets.achievements
-import profileforge.widgets.activity_timeline
-import profileforge.widgets.experience
-import profileforge.widgets.expertise
-import profileforge.widgets.focus
-import profileforge.widgets.github_languages
-import profileforge.widgets.github_stats
-import profileforge.widgets.hero
-import profileforge.widgets.now
-import profileforge.widgets.repositories
-import profileforge.widgets.roadmap
-import profileforge.widgets.skills
-import profileforge.widgets.social
-import profileforge.widgets.streak  # noqa: F401
 from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
 from profileforge.core.exceptions import ProfileForgeError
@@ -829,6 +811,14 @@ def main():
         help="ID of the widget to inspect (e.g. github_stats, hero, skills)",
     )
 
+    # 11. dev
+    dev_parser = subparsers.add_parser(
+        "dev", help="Start local development server with live-reloading"
+    )
+    dev_parser.add_argument("--port", type=int, default=8000, help="Port for the Studio server (default: 8000)")
+    dev_parser.add_argument("--no-browser", action="store_true", help="Disable the Studio web server")
+    dev_parser.add_argument("--full", action="store_true", help="Force full rebuilds on every file change")
+
     args = parser.parse_args()
 
     if args.command == "build":
@@ -881,6 +871,9 @@ def main():
                 hint="Run 'profileforge widgets list' or 'profileforge widgets info <id>'.",
             )
             sys.exit(1)
+    elif args.command == "dev":
+        from profileforge.cli.dev import cmd_dev
+        cmd_dev(args)
     else:
         print_error(f"Command '{args.command}' is not recognized.")
         sys.exit(1)

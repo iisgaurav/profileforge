@@ -1,7 +1,14 @@
+__layer__ = "Layer 1 — Core"
 from dataclasses import dataclass, field
 from typing import Any
 
-from profileforge.core.models import ProfileForgeConfig, Theme, RenderContext, ResolvedTheme, RendererCapabilities
+from profileforge.core.models import (
+    ProfileForgeConfig,
+    RenderContext,
+    RendererCapabilities,
+    ResolvedTheme,
+    Theme,
+)
 
 
 @dataclass

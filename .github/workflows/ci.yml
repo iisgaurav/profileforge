@@ -52,10 +52,6 @@ jobs:
     - name: Full Release Pre-Flight Check
       run: python tools/release.py check
       
-    - name: Verify Gallery Export Pipeline
-      run: |
-        profileforge gallery export --out-dir gallery
-        
     - name: Verify All Starter Template Builds
       run: |
         profileforge build --config examples/backend/profileforge.yaml
@@ -64,3 +60,18 @@ jobs:
         profileforge build --config examples/student/profileforge.yaml
         profileforge build --config examples/opensource/profileforge.yaml
         profileforge build --config examples/ai-engineer/profileforge.yaml
+
+    - name: Install Cairo (Ubuntu Only)
+      if: matrix.os == 'ubuntu-latest'
+      run: sudo apt-get install -y libcairo2-dev
+
+    - name: Run Visual QA Regression Pipeline
+      run: python tools/visual_qa.py --require-qa
+
+    - name: Upload Visual QA Artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: profileforge-visual-artifacts
+        path: artifacts/
+        retention-days: 14

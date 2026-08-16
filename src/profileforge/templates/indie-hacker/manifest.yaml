@@ -7,12 +7,9 @@ minimum_profileforge: "1.0.0"
 author: "ProfileForge Team"
 license: "MIT"
 widgets:
-  - hero
-  - streak
   - repositories
   - focus
-  - achievements
-  - social
+    - social
 themes:
   - modern
   - vercel

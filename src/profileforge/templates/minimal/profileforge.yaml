@@ -1,23 +1,18 @@
 version: 1
 project:
-  name: "Minimal Developer Profile"
-  title: "Software Craftsman"
-
+  name: Minimal Developer Profile
+  title: Software Craftsman
 themes:
-  active: "minimal"
-
+  active: minimal
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: about
-  - name: repositories
-
+- name: about
+- name: repositories
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

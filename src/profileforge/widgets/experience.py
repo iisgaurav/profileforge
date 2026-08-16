@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, Text
 from profileforge.core.context import BuildContext
@@ -122,13 +123,12 @@ class ExperienceWidget(Widget):
                 style=Style(font_size=12, font_weight="600", color="primary"),
             )
 
-            header_row = Row(
+            header_row = Inline(
                 children=[role_text, period_text],
-                spacing=0,
+                gap=16,
                 style=Style(width="fill", justify="space-between", align="center"),
             )
             rows.append(header_row)
-            rows.append(Spacer(height=4))
 
             if exp.get("description"):
                 desc_text = Text(
@@ -136,7 +136,6 @@ class ExperienceWidget(Widget):
                     style=Style(font_size=12, color="muted"),
                 )
                 rows.append(desc_text)
-                rows.append(Spacer(height=3))
 
             for hl in exp.get("highlights", []):
                 hl_text = Text(
@@ -144,17 +143,12 @@ class ExperienceWidget(Widget):
                     style=Style(font_size=12, color="muted"),
                 )
                 rows.append(hl_text)
-                rows.append(Spacer(height=2))
 
-            if i < len(experiences) - 1:
-                rows.append(Spacer(height=14))
 
-        if rows and isinstance(rows[-1], Spacer):
-            rows.pop()
 
         content = Column(
             children=rows,
-            spacing=0,
+            gap=16,
             style=Style(width="fill"),
         )
 

@@ -8,8 +8,6 @@ This template is tailored for open-source library authors, foundation contributo
 2. **GitHub Stats:** Commit velocity, total stars earned, PRs merged, and developer ranking.
 3. **Featured Repositories:** Pinned library repos with star counts, forks, and language badges.
 4. **Activity Timeline:** Chronological log of recent releases, PR merges, and issue resolutions.
-5. **Contribution Streak 🔥:** Daily commit streaks and consistency rate.
-6. **Achievements:** Documented milestones like 1K GitHub stars, first 100 contributors, and npm weekly downloads.
 7. **Social Links:** GitHub, npm, PyPI, Discord, and mailing list.
 
 ## Quick Start

@@ -1,0 +1,166 @@
+<svg width="820" height="304" viewBox="0 0 820 304" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>github_languages - showcase</title>
+  <desc>ProfileForge widget preview</desc>
+  <defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#E91E63" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#424242" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#424242" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#242424" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#242424"/>
+    <stop offset="50%" stop-color="#121212"/>
+    <stop offset="100%" stop-color="#242424"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#757575" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#757575" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+  <svg width="820" height="304" viewBox="0 0 820 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#E91E63" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#424242" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#424242" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#242424" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#242424"/>
+    <stop offset="50%" stop-color="#121212"/>
+    <stop offset="100%" stop-color="#242424"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#757575" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#757575" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+<g role="group" data-pf-id="card_df0e41">
+    <rect x="0.5" y="0.5" width="819" height="303" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="16"/>
+    <rect x="24" y="24" width="4" height="20" rx="2" fill="#FFD700" opacity="0.9"/>
+    <text x="36" y="40" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#E0E0E0" letter-spacing="0.3">Language Distribution</text>
+    <line x1="24" y1="60" x2="796" y2="60" stroke="#FFD700" stroke-width="0.5" stroke-opacity="0.25"/>
+    <g data-pf-id="column_4fc54a"><g data-pf-id="column_569b3f"><g data-pf-id="inline_2b5b57"><text x="24" y="78" font-family="Roboto, sans-serif" font-size="14" font-weight="bold" fill="#E0E0E0"  data-pf-id="text_c9f78a">Python</text><text x="686.0" y="77.0" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_80af2a">35.1% (1 repos)</text></g>
+<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_bfdbfc">
+    <rect x="24" y="98" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="98" width="270.97200000000004" height="8" fill="url(#pf-progress-grad)" rx="8">
+        <animate attributeName="width" from="0" to="270.97200000000004" dur="0.88s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    </rect>
+</g></g>
+<g data-pf-id="column_4aeb8c"><g data-pf-id="inline_03f1bc"><text x="24" y="136" font-family="Roboto, sans-serif" font-size="14" font-weight="bold" fill="#E0E0E0"  data-pf-id="text_90cfbe">Rust</text><text x="686.0" y="135.0" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_b0b58d">26.9% (1 repos)</text></g>
+<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_d9fa7f">
+    <rect x="24" y="156" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="156" width="207.66799999999998" height="8" fill="url(#pf-progress-grad)" rx="8">
+        <animate attributeName="width" from="0" to="207.66799999999998" dur="0.82s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    </rect>
+</g></g>
+<g data-pf-id="column_bbebe5"><g data-pf-id="inline_2ce1c3"><text x="24" y="194" font-family="Roboto, sans-serif" font-size="14" font-weight="bold" fill="#E0E0E0"  data-pf-id="text_c248d6">TypeScript</text><text x="686.0" y="193.0" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_60a1fa">18.6% (1 repos)</text></g>
+<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_063f28">
+    <rect x="24" y="214" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="214" width="143.592" height="8" fill="url(#pf-progress-grad)" rx="8">
+        <animate attributeName="width" from="0" to="143.592" dur="0.75s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    </rect>
+</g></g>
+<g data-pf-id="column_dd64bf"><g data-pf-id="inline_b6f111"><text x="24" y="252" font-family="Roboto, sans-serif" font-size="14" font-weight="bold" fill="#E0E0E0"  data-pf-id="text_e40918">Go</text><text x="686.0" y="251.0" font-family="Roboto, sans-serif" font-size="12" font-weight="normal" fill="#757575"  data-pf-id="text_865597">14.5% (1 repos)</text></g>
+<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_0881d2">
+    <rect x="24" y="272" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="272" width="111.94" height="8" fill="url(#pf-progress-grad)" rx="8">
+        <animate attributeName="width" from="0" to="111.94" dur="0.72s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+    </rect>
+</g></g></g>
+</g>
+</svg>
+</svg>

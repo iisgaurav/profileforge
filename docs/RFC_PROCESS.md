@@ -90,7 +90,7 @@ Use the following markdown template when creating an RFC document in `docs/rfcs/
 # RFC: [Short Title of the Proposal]
 
 - **RFC ID**: [YYYY-MM-DD-short-name]
-- **Author(s)**: [Your Name / GitHub Handle]
+- **Author(s)**: [<your-name> / GitHub Handle]
 - **Target Layers**: [e.g. Core / Models, Components, Layout]
 - **Status**: [Proposed | In Review | Accepted | Rejected | Postponed]
 - **Created**: [YYYY-MM-DD]

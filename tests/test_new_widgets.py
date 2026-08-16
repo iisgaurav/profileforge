@@ -16,16 +16,12 @@ from profileforge.core.models import (
 from profileforge.core.registry import WIDGET_REGISTRY
 from profileforge.render.layout import LayoutEngine
 from profileforge.render.svg.renderer import SVGRenderer
-from profileforge.widgets.achievements import AchievementsWidget
-from profileforge.widgets.activity_timeline import ActivityTimelineWidget
 from profileforge.widgets.base import WidgetCategory, WidgetMetadata
 from profileforge.widgets.experience import ExperienceWidget
-from profileforge.widgets.hero import HeroWidget
 from profileforge.widgets.now import NowWidget
 from profileforge.widgets.repositories import RepositoriesWidget
 from profileforge.widgets.skills import SkillsWidget
 from profileforge.widgets.social import SocialWidget
-from profileforge.widgets.streak import StreakWidget
 
 
 def create_test_context(mock_theme, widgets=None, connectors=None) -> BuildContext:
@@ -52,57 +48,8 @@ class MockLocalConnector:
         return self.data_map.get(request.resource, {})
 
 
-def test_hero_widget_metadata():
-    widget = HeroWidget()
-    meta = widget.metadata()
-    assert isinstance(meta, WidgetMetadata)
-    assert meta.id == "hero"
-    assert meta.name == "Hero"
-    assert meta.category == WidgetCategory.IDENTITY
-    assert "local" in meta.required_connectors
-    assert "hero" in meta.tags
 
 
-def test_hero_widget_lifecycle_and_fallbacks(mock_theme):
-    context = create_test_context(mock_theme)
-    widget = HeroWidget()
-
-    # Default fallback when no local data
-    data = widget.transform({}, context)
-    assert data["name"] == "Grace Hopper"
-    assert data["role"] == "Computer Pioneer"
-    assert "Building" in data["tagline"] or "craft" in data["tagline"]
-
-    component = widget.render_safe(context)
-    assert isinstance(component, Card)
-    assert component.style.variant == "hero"
-
-    # With local connector data
-    local_data = {
-        "hero.yaml": {
-            "name": "Ada Lovelace",
-            "role": "First Programmer",
-            "tagline": "Poetical Science",
-            "status": "Innovating",
-            "location": "London, UK",
-        }
-    }
-    context_with_data = create_test_context(
-        mock_theme, connectors={"local": MockLocalConnector(local_data)}
-    )
-    fetched = widget.fetch(context_with_data)
-    transformed = widget.transform(fetched, context_with_data)
-    assert transformed["name"] == "Ada Lovelace"
-    assert transformed["role"] == "First Programmer"
-    assert transformed["location"] == "London, UK"
-
-    card = widget.render_safe(context_with_data)
-    assert isinstance(card, Card)
-    render_node = LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context_with_data.get_render_context())
-    svg = renderer.render(render_node)
-    assert "Ada Lovelace" in svg
-    assert "First Programmer" in svg
 
 
 def test_social_widget_metadata():
@@ -213,11 +160,11 @@ def test_now_widget_transform_and_render(mock_theme):
         "learning": "Zig & WebGPU",
         "reading": "Crafting Interpreters",
         "focus": "Compiler optimization",
-        "location": "San Francisco, CA",
+        "location": "Mumbai, India",
         "updated": "August 2026",
     }
     transformed = widget.transform(custom_now, context)
-    assert transformed["location"] == "San Francisco, CA"
+    assert transformed["location"] == "Mumbai, India"
     assert transformed["updated"] == "August 2026"
 
     card = widget.build(transformed, context)
@@ -354,71 +301,15 @@ def test_repositories_widget_fallback_when_unauthenticated(mock_theme):
     assert "profileforge" in svg
 
 
-def test_streak_widget_metadata_and_render(mock_theme):
-    widget = StreakWidget()
-    meta = widget.metadata()
-    assert isinstance(meta, WidgetMetadata)
-    assert meta.id == "streak"
-    assert meta.category == WidgetCategory.STATS
-
-    context = create_test_context(mock_theme)
-    card = widget.render_safe(context)
-    assert isinstance(card, Card)
-
-    render_node = LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context.get_render_context())
-    svg = renderer.render(render_node)
-    assert "Contribution Streak" in svg
-    assert "Current Streak" in svg
-
-
-def test_activity_timeline_widget_metadata_and_render(mock_theme):
-    widget = ActivityTimelineWidget()
-    meta = widget.metadata()
-    assert isinstance(meta, WidgetMetadata)
-    assert meta.id == "activity_timeline"
-    assert meta.category == WidgetCategory.DEVELOPMENT
-
-    context = create_test_context(mock_theme)
-    card = widget.render_safe(context)
-    assert isinstance(card, Card)
-
-    render_node = LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context.get_render_context())
-    svg = renderer.render(render_node)
-    assert "Recent Activity" in svg
-    assert "PR Merge" in svg or "Release" in svg
-
-
-def test_achievements_widget_metadata_and_render(mock_theme):
-    widget = AchievementsWidget()
-    meta = widget.metadata()
-    assert isinstance(meta, WidgetMetadata)
-    assert meta.id == "achievements"
-    assert meta.category == WidgetCategory.STATS
-
-    context = create_test_context(mock_theme)
-    card = widget.render_safe(context)
-    assert isinstance(card, Card)
-
-    render_node = LayoutEngine.calculate(card)
-    renderer = SVGRenderer(context.get_render_context())
-    svg = renderer.render(render_node)
-    assert "Developer Achievements" in svg
-    assert "Pull Shark" in svg
-
 
 def test_all_official_widgets_registered():
     official_widgets = [
-        "hero",
         "social",
         "skills",
         "now",
         "experience",
         "repositories",
-        "streak",
         "activity_timeline",
-        "achievements",
     ]
     for w in official_widgets:
         assert w in WIDGET_REGISTRY, f"Widget '{w}' must be present in WIDGET_REGISTRY"

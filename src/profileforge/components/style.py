@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+__layer__ = "Layer 3 — Components"
+
 from dataclasses import dataclass
 from typing import Union
 
-from profileforge.core.models import HorizontalAlign, VerticalAlign, TypographyRole
+from profileforge.core.models import HorizontalAlign, TypographyRole, VerticalAlign
 
 
 @dataclass
@@ -27,6 +29,8 @@ class Style:
     border_color: str | None = None
     font_size: Union[TypographyRole, int, None] = None
     font_weight: str | None = None
+    max_lines: int | None = None
+    overflow: str | None = None  # "wrap", "ellipsis", or "clip"
     
     width: int | str | None = None
     height: int | str | None = None

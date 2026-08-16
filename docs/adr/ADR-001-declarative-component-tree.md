@@ -17,7 +17,7 @@ We decided to introduce a **Declarative Component Tree** architecture (Layer 3) 
 
 Key elements of this decision:
 1. **Base Component**: An abstract `Component` base class that holds a `Style` descriptor and layout state fields (`computed_x`, `computed_y`, `computed_width`, `computed_height`).
-2. **Structural Primitives**: Declarative container components (`Row`, `Column`, `Padding`, `Spacer`, `Wrap`) that encapsulate child hierarchies and spacing properties.
+2. **Structural Primitives**: Declarative container components (`Inline`, `Column`, `Padding`, `Constraints`, `Wrap`) that encapsulate child hierarchies and spacing properties.
 3. **Visual Primitives**: High-level semantic components (`Card`, `Text`, `Badge`, `Icon`, `ProgressBar`, `Metric`, `MetricGroup`, `CircularMetric`) that encapsulate visual intent without emitting raw XML.
 4. **Style Abstraction**: A strongly typed `Style` dataclass that normalizes colors, margins, padding, radii, font weights, and flex alignment flags (`align`, `justify`, `width="fill"`).
 
@@ -27,7 +27,7 @@ content = Column(
     children=[
         Text("Weekly Velocity", style=Style(font_size=14, color="text")),
         ProgressBar(progress=75, style=Style(height=8, border_radius=4)),
-        Row(
+        Inline(
             children=[
                 Badge(label="Python", style=Style(color="primary")),
                 Badge(label="FastAPI", style=Style(color="secondary")),

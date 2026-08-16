@@ -1,4 +1,4 @@
-<svg width="820" height="282" viewBox="0 0 820 282" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="304" viewBox="0 0 820 304" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>github_languages - apple</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -19,10 +19,10 @@
     <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8"/>
   </linearGradient>
 
-  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#3b0918"/>
-    <stop offset="50%" stop-color="#1e1333"/>
-    <stop offset="100%" stop-color="#091629"/>
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="50%" stop-color="#F5F5F7"/>
+    <stop offset="100%" stop-color="#FFFFFF"/>
   </linearGradient>
 
   <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,72 +64,103 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-  
-<svg x="0" y="0" width="820" height="282" viewBox="0 0 820 282" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
-    <title>Language Distribution Card</title>
-    <desc>Card component for Language Distribution</desc>
-    <rect x="0.5" y="0.5" width="819" height="281" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="18"/>
+  <svg width="820" height="304" viewBox="0 0 820 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#0071E3" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#0071E3"/>
+    <stop offset="100%" stop-color="#AF52DE" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0071E3" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#D2D2D7" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#D2D2D7" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="50%" stop-color="#F5F5F7"/>
+    <stop offset="100%" stop-color="#FFFFFF"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#86868B" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#86868B" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+<g role="group" data-pf-id="card_525b66">
+    <rect x="0.5" y="0.5" width="819" height="303" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="18"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#0071E3" opacity="0.9"/>
-    <text x="36" y="40" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="18" font-weight="700" fill="#1D1D1F" letter-spacing="0.3">Language Distribution</text>
+    <text x="36" y="40" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24" font-weight="700" fill="#1D1D1F" letter-spacing="0.3">Language Distribution</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#0071E3" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F">Python</text>
-
-<text x="696" y="77" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B">35.1% (1 repos)</text>
-
-
-<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="82" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
-    <rect x="24" y="82" width="270.97200000000004" height="8" fill="url(#pf-progress-grad)" rx="8">
+    <g data-pf-id="column_7fdc93"><g data-pf-id="column_1efa10"><g data-pf-id="inline_a27005"><text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F"  data-pf-id="text_00cb8a">Python</text><text x="686.0" y="77.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_7a70c5">35.1% (1 repos)</text></g>
+<g role="meter" aria-valuenow="35.1" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_0ffdec">
+    <rect x="24" y="98" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="98" width="270.97200000000004" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="270.97200000000004" dur="0.88s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-
-<text x="24" y="120" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F">Rust</text>
-
-<text x="696" y="119" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B">26.9% (1 repos)</text>
-
-
-<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="124" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
-    <rect x="24" y="124" width="207.66799999999998" height="8" fill="url(#pf-progress-grad)" rx="8">
+</g></g>
+<g data-pf-id="column_1ea820"><g data-pf-id="inline_de5acc"><text x="24" y="136" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F"  data-pf-id="text_7421da">Rust</text><text x="686.0" y="135.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_e4d34d">26.9% (1 repos)</text></g>
+<g role="meter" aria-valuenow="26.9" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_915841">
+    <rect x="24" y="156" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="156" width="207.66799999999998" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="207.66799999999998" dur="0.82s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-
-<text x="24" y="162" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F">TypeScript</text>
-
-<text x="697" y="161" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B">18.6% (1 repos)</text>
-
-
-<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="166" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
-    <rect x="24" y="166" width="143.592" height="8" fill="url(#pf-progress-grad)" rx="8">
+</g></g>
+<g data-pf-id="column_74422b"><g data-pf-id="inline_d852d3"><text x="24" y="194" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F"  data-pf-id="text_b9236d">TypeScript</text><text x="686.0" y="193.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_04774c">18.6% (1 repos)</text></g>
+<g role="meter" aria-valuenow="18.6" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_1a8c3a">
+    <rect x="24" y="214" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="214" width="143.592" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="143.592" dur="0.75s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-
-<text x="24" y="204" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F">Go</text>
-
-<text x="697" y="203" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B">14.5% (1 repos)</text>
-
-
-<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="208" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
-    <rect x="24" y="208" width="111.94" height="8" fill="url(#pf-progress-grad)" rx="8">
+</g></g>
+<g data-pf-id="column_0f7b68"><g data-pf-id="inline_8dfad3"><text x="24" y="252" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F"  data-pf-id="text_f1cf49">Go</text><text x="686.0" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B"  data-pf-id="text_f88c46">14.5% (1 repos)</text></g>
+<g role="meter" aria-valuenow="14.5" aria-valuemin="0" aria-valuemax="100" data-pf-id="progressbar_b4caeb">
+    <rect x="24" y="272" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
+    <rect x="24" y="272" width="111.94" height="8" fill="url(#pf-progress-grad)" rx="8">
         <animate attributeName="width" from="0" to="111.94" dur="0.72s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
     </rect>
-</g>
-
-<text x="24" y="246" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="bold" fill="#1D1D1F">HTML</text>
-
-<text x="704" y="245" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="normal" fill="#86868B">5.0% (1 repos)</text>
-
-
-<g role="meter" aria-valuenow="5.0" aria-valuemin="0" aria-valuemax="100">
-    <rect x="24" y="250" width="772" height="8" fill="url(#pf-track-bg)" rx="8"/>
-    <rect x="24" y="250" width="38.6" height="8" fill="url(#pf-progress-grad)" rx="8">
-        <animate attributeName="width" from="0" to="38.6" dur="0.64s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
-    </rect>
+</g></g></g>
 </g>
 </svg>
 </svg>

@@ -1,0 +1,48 @@
+name: aurora
+id: aurora
+schema: 1
+tags:
+- premium
+- dark
+mode: aurora
+colors:
+  primary: '#22E892'
+  secondary: '#00E6E6'
+  background: '#011627'
+  surface: '#0A2540'
+  border: '#1E3A5F'
+  text: '#D6DEEB'
+  muted: '#5F7E97'
+  success: '#10B981'
+  warning: '#F59E0B'
+  info: '#3B82F6'
+  accent: '#A78BFA'
+typography:
+  font_family: Inter, sans-serif
+  heading: 32
+  body: 16
+  small: 14
+spacing:
+  xs: 8
+  sm: 16
+  md: 24
+  lg: 40
+  xl: 64
+radius:
+  card: 24
+  progress: 12
+  badge: 12
+shadows:
+  none: none
+  low: 0 8px 16px rgba(0,0,0,0.2)
+  medium: 0 16px 32px rgba(0,0,0,0.3)
+  high: 0 24px 48px rgba(0,0,0,0.4)
+motion:
+  duration_fast: 300
+  duration_normal: 500
+  duration_slow: 800
+  easing: cubic-bezier(0.25, 1, 0.5, 1)
+effects:
+  glow: none
+  shadow: none
+  glass: 'backdrop-filter: blur(10px); background: rgba(10, 37, 64, 0.7);'

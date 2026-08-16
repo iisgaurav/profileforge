@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+__layer__ = "Layer 8 — CLI"
+
 import html
 import statistics
 import time
@@ -12,6 +14,7 @@ from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
 from profileforge.core.registry import WIDGET_REGISTRY, ConnectorRegistry
 from profileforge.render.layout import LayoutEngine
+from profileforge.render.measurer import create_text_measurer
 from profileforge.render.svg.renderer import SVGRenderer
 
 
@@ -323,12 +326,14 @@ def _run_single_pass(
 
         # Layout pass
         tl0 = time.perf_counter()
-        render_node = LayoutEngine.calculate(component_tree)
+        render_node = LayoutEngine.calculate(
+            component_tree, measurer=create_text_measurer(theme.typography)
+        )
         layout_pass_ms += (time.perf_counter() - tl0) * 1000
 
         # Render pass
         tr0 = time.perf_counter()
-        inner_svg = svg_renderer.render(render_node)
+        inner_svg = svg_renderer.render_body(render_node)
         render_pass_ms += (time.perf_counter() - tr0) * 1000
 
         # SVG Output formatting

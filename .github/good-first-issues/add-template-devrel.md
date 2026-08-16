@@ -12,7 +12,7 @@ Developer Relations (DevRel) engineers, developer advocates, and technical commu
 
 ## 🧩 Suggested Widget Set & Theme
 
-- **Widgets**: `hero`, `about`, `social`, `repositories`, `streak`, `skills`, `activity_timeline`
+- **Widgets**: `hero`, `about`, `social`, `repositories`, `skills`, `activity_timeline`
 - **Default Theme**: `github-dark` or `modern`
 
 ## 📁 Required Directory & File Structure
@@ -44,8 +44,7 @@ widgets:
   - about
   - social
   - repositories
-  - streak
-  - skills
+    - skills
   - activity_timeline
 tags:
   - devrel

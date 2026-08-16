@@ -7,7 +7,6 @@ minimum_profileforge: "1.0.0"
 author: "ProfileForge Team"
 license: "MIT"
 widgets:
-  - hero
   - skills
   - roadmap
   - repositories

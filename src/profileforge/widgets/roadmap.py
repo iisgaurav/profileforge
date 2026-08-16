@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
@@ -43,7 +44,7 @@ class RoadmapWidget(Widget):
             skill = item.get("skill", "Unknown")
             progress = item.get("progress", 0)
 
-            label_row = Row(
+            label_row = Inline(
                 children=[
                     Text(skill, style=Style(font_weight="600", color="text")),
                     Text(f"{progress}%", style=Style(font_size=13, color="muted")),
@@ -56,11 +57,11 @@ class RoadmapWidget(Widget):
             )
 
             item_col = Column(
-                children=[label_row, bar], spacing=6, style=Style(width="fill")
+                children=[label_row, bar], gap=6, style=Style(width="fill")
             )
             rows.append(item_col)
 
-        content = Column(children=rows, spacing=16, style=Style(width="fill"))
+        content = Column(children=rows, gap=16, style=Style(width="fill"))
         return Card(
             title="Learning Roadmap",
             child=content,

@@ -37,7 +37,7 @@ REQUIRED_EXAMPLES = [
     "frontend",
     "minimal",
     "student",
-    "opensource",
+    "open-source-maintainer",
     "ai-engineer",
 ]
 

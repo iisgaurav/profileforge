@@ -8,13 +8,13 @@ Thank you for your interest in contributing to ProfileForge! Whether you're fixi
 
 | I want to... | Guide |
 |---|---|
-| Make my first open-source contribution | [FIRST_CONTRIBUTION.md](docs/community/FIRST_CONTRIBUTION.md) |
-| Submit a new visual theme | [SUBMIT_THEME.md](docs/community/SUBMIT_THEME.md) |
-| Submit a custom SVG widget | [SUBMIT_WIDGET.md](docs/community/SUBMIT_WIDGET.md) |
-| Submit a persona profile template | [SUBMIT_TEMPLATE.md](docs/community/SUBMIT_TEMPLATE.md) |
-| Submit a data connector | [SUBMIT_CONNECTOR.md](docs/community/SUBMIT_CONNECTOR.md) |
-| Join the core team as a maintainer | [BECOME_MAINTAINER.md](docs/community/BECOME_MAINTAINER.md) |
-| Understand the overall architecture | [ECOSYSTEM.md](docs/community/ECOSYSTEM.md) |
+| Make my first open-source contribution | [FIRST_CONTRIBUTION.md](CONTRIBUTING.md) |
+| Submit a new visual theme | [SUBMIT_THEME.md](docs/contributing/themes.md) |
+| Submit a custom SVG widget | [SUBMIT_WIDGET.md](docs/contributing/widgets.md) |
+| Submit a persona profile template | [SUBMIT_TEMPLATE.md](docs/contributing/templates.md) |
+| Submit a data connector | [SUBMIT_CONNECTOR.md](docs/contributing/connectors.md) |
+| Join the core team as a maintainer | [BECOME_MAINTAINER.md](CONTRIBUTING.md) |
+| Understand the overall architecture | [ECOSYSTEM.md](ARCHITECTURE.md) |
 
 ---
 
@@ -117,7 +117,8 @@ Before submitting complex changes, take time to review our technical design docs
 
 - **High-Level Architecture**: Read [`ARCHITECTURE.md`](ARCHITECTURE.md) to understand rendering lifecycle, two-pass layout math, and caching pipelines.
 - **Architectural Decision Records**: Browse [`docs/adr/`](docs/adr/) for historical design choices regarding SVG generation and YAML schema validation.
-- **Ecosystem Overview**: Read [`ECOSYSTEM.md`](docs/community/ECOSYSTEM.md) for details on plugins, connectors, and Studio web integrations.
+- **Ecosystem Overview**: Read [`ECOSYSTEM.md`](ARCHITECTURE.md) for details on plugins, connectors, and Studio web integrations.
+- **Design & Visual Engineering**: Any PR modifying themes, layout, SVGs, or components MUST adhere to the 10 rules outlined in [`docs/DESIGN_ENGINEERING.md`](docs/DESIGN_ENGINEERING.md) and pass visual regression CI.
 
 ---
 
@@ -125,7 +126,7 @@ Before submitting complex changes, take time to review our technical design docs
 
 Every contributor is valued!
 - All merged code and documentation contributions are automatically acknowledged in [`CHANGELOG.md`](CHANGELOG.md).
-- Significant contributors are invited to join the ProfileForge organization as maintainers (see [`BECOME_MAINTAINER.md`](docs/community/BECOME_MAINTAINER.md)).
+- Significant contributors are invited to join the ProfileForge organization as maintainers (see [`BECOME_MAINTAINER.md`](CONTRIBUTING.md)).
 
 ---
 

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+__layer__ = "Layer 5 — Render"
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any

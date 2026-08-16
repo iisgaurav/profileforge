@@ -1,3 +1,4 @@
+__layer__ = "Layer 1 — Core"
 from typing import Callable
 
 WIDGET_REGISTRY: dict[str, type] = {}

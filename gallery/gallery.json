@@ -25,15 +25,77 @@
         "success": "#34C759",
         "warning": "#FF9500",
         "info": "#5AC8FA",
-        "accent": "#AF52DE"
+        "accent": "#AF52DE",
+        "hero_surface": "#FFFFFF",
+        "hero_on_surface": "#1D1D1F",
+        "badge_primary": "#0071E3",
+        "badge_secondary": "#AF52DE",
+        "badge_success": "#34C759",
+        "badge_info": "#5AC8FA",
+        "badge_warning": "#FF9500",
+        "badge_neutral": "#86868B",
+        "progress_start": "#0071E3",
+        "progress_end": "#AF52DE"
       },
       "typography": {
         "font_family": "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/apple.svg"
+      "preview_url": "assets/github_stats_apple.svg"
+    },
+    {
+      "id": "aurora",
+      "name": "aurora",
+      "mode": "aurora",
+      "tags": [
+        "premium",
+        "dark"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official aurora theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#22E892",
+        "secondary": "#00E6E6",
+        "background": "#011627",
+        "surface": "#0A2540",
+        "border": "#1E3A5F",
+        "text": "#D6DEEB",
+        "muted": "#5F7E97",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "info": "#3B82F6",
+        "accent": "#A78BFA",
+        "hero_surface": "#0A2540",
+        "hero_on_surface": "#D6DEEB",
+        "badge_primary": "#22E892",
+        "badge_secondary": "#A78BFA",
+        "badge_success": "#10B981",
+        "badge_info": "#3B82F6",
+        "badge_warning": "#F59E0B",
+        "badge_neutral": "#5F7E97",
+        "progress_start": "#22E892",
+        "progress_end": "#A78BFA"
+      },
+      "typography": {
+        "font_family": "Inter, sans-serif",
+        "title": 24,
+        "heading": 32,
+        "label": 14,
+        "value": 28,
+        "body": 16,
+        "caption": 13,
+        "small": 14
+      },
+      "preview_url": "assets/github_stats_aurora.svg"
     },
     {
       "id": "catppuccin-base",
@@ -58,15 +120,29 @@
         "success": "#2EA043",
         "warning": "#D29922",
         "info": "#388BFD",
-        "accent": "#D2A8FF"
+        "accent": "#D2A8FF",
+        "hero_surface": "transparent",
+        "hero_on_surface": "#C9D1D9",
+        "badge_primary": "#58A6FF",
+        "badge_secondary": "#D2A8FF",
+        "badge_success": "#2EA043",
+        "badge_info": "#388BFD",
+        "badge_warning": "#D29922",
+        "badge_neutral": "#8B949E",
+        "progress_start": "#58A6FF",
+        "progress_end": "#D2A8FF"
       },
       "typography": {
         "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/catppuccin-base.svg"
+      "preview_url": "assets/github_stats_catppuccin-base.svg"
     },
     {
       "id": "catppuccin-frappe",
@@ -91,15 +167,29 @@
         "success": "#a6d189",
         "warning": "#e5c890",
         "info": "#81c8be",
-        "accent": "#ca9ee6"
+        "accent": "#ca9ee6",
+        "hero_surface": "#292c3c",
+        "hero_on_surface": "#c6d0f5",
+        "badge_primary": "#8caaee",
+        "badge_secondary": "#ca9ee6",
+        "badge_success": "#a6d189",
+        "badge_info": "#81c8be",
+        "badge_warning": "#e5c890",
+        "badge_neutral": "#a5adce",
+        "progress_start": "#8caaee",
+        "progress_end": "#ca9ee6"
       },
       "typography": {
         "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/catppuccin-frappe.svg"
+      "preview_url": "assets/github_stats_catppuccin-frappe.svg"
     },
     {
       "id": "catppuccin-latte",
@@ -124,15 +214,29 @@
         "success": "#40a02b",
         "warning": "#df8e1d",
         "info": "#209fb5",
-        "accent": "#8839ef"
+        "accent": "#8839ef",
+        "hero_surface": "#e6e9ef",
+        "hero_on_surface": "#4c4f69",
+        "badge_primary": "#1e66f5",
+        "badge_secondary": "#8839ef",
+        "badge_success": "#40a02b",
+        "badge_info": "#209fb5",
+        "badge_warning": "#df8e1d",
+        "badge_neutral": "#7c7f93",
+        "progress_start": "#1e66f5",
+        "progress_end": "#8839ef"
       },
       "typography": {
         "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/catppuccin-latte.svg"
+      "preview_url": "assets/github_stats_catppuccin-latte.svg"
     },
     {
       "id": "catppuccin-macchiato",
@@ -157,15 +261,29 @@
         "success": "#a6da95",
         "warning": "#eed49f",
         "info": "#8bd5ca",
-        "accent": "#c6a0f6"
+        "accent": "#c6a0f6",
+        "hero_surface": "#1e2030",
+        "hero_on_surface": "#cad3f5",
+        "badge_primary": "#8aadf4",
+        "badge_secondary": "#c6a0f6",
+        "badge_success": "#a6da95",
+        "badge_info": "#8bd5ca",
+        "badge_warning": "#eed49f",
+        "badge_neutral": "#a5adcb",
+        "progress_start": "#8aadf4",
+        "progress_end": "#c6a0f6"
       },
       "typography": {
         "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/catppuccin-macchiato.svg"
+      "preview_url": "assets/github_stats_catppuccin-macchiato.svg"
     },
     {
       "id": "catppuccin-mocha",
@@ -190,15 +308,77 @@
         "success": "#a6e3a1",
         "warning": "#f9e2af",
         "info": "#94e2d5",
-        "accent": "#cba6f7"
+        "accent": "#cba6f7",
+        "hero_surface": "#181825",
+        "hero_on_surface": "#cdd6f4",
+        "badge_primary": "#89b4fa",
+        "badge_secondary": "#cba6f7",
+        "badge_success": "#a6e3a1",
+        "badge_info": "#94e2d5",
+        "badge_warning": "#f9e2af",
+        "badge_neutral": "#a6adc8",
+        "progress_start": "#89b4fa",
+        "progress_end": "#cba6f7"
       },
       "typography": {
         "font_family": "'Fira Code', 'JetBrains Mono', monospace",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/catppuccin-mocha.svg"
+      "preview_url": "assets/github_stats_catppuccin-mocha.svg"
+    },
+    {
+      "id": "cyberpunk",
+      "name": "cyberpunk",
+      "mode": "cyberpunk",
+      "tags": [
+        "premium",
+        "dark"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official cyberpunk theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#00F0FF",
+        "secondary": "#FF007F",
+        "background": "#0B0B1A",
+        "surface": "#15152B",
+        "border": "#2C2C54",
+        "text": "#E0E0FF",
+        "muted": "#7A7A99",
+        "success": "#39FF14",
+        "warning": "#FFEA00",
+        "info": "#00C3FF",
+        "accent": "#B026FF",
+        "hero_surface": "#15152B",
+        "hero_on_surface": "#E0E0FF",
+        "badge_primary": "#00F0FF",
+        "badge_secondary": "#B026FF",
+        "badge_success": "#39FF14",
+        "badge_info": "#00C3FF",
+        "badge_warning": "#FFEA00",
+        "badge_neutral": "#7A7A99",
+        "progress_start": "#00F0FF",
+        "progress_end": "#B026FF"
+      },
+      "typography": {
+        "font_family": "JetBrains Mono, monospace",
+        "title": 24,
+        "heading": 32,
+        "label": 14,
+        "value": 28,
+        "body": 16,
+        "caption": 13,
+        "small": 14
+      },
+      "preview_url": "assets/github_stats_cyberpunk.svg"
     },
     {
       "id": "dracula",
@@ -223,15 +403,29 @@
         "success": "#50FA7B",
         "warning": "#F1FA8C",
         "info": "#8BE9FD",
-        "accent": "#FFB86C"
+        "accent": "#FFB86C",
+        "hero_surface": "#44475A",
+        "hero_on_surface": "#F8F8F2",
+        "badge_primary": "#FF79C6",
+        "badge_secondary": "#FFB86C",
+        "badge_success": "#50FA7B",
+        "badge_info": "#8BE9FD",
+        "badge_warning": "#F1FA8C",
+        "badge_neutral": "#6272A4",
+        "progress_start": "#FF79C6",
+        "progress_end": "#FFB86C"
       },
       "typography": {
         "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/dracula.svg"
+      "preview_url": "assets/github_stats_dracula.svg"
     },
     {
       "id": "github-dark",
@@ -257,15 +451,29 @@
         "success": "#2EA043",
         "warning": "#D29922",
         "info": "#388BFD",
-        "accent": "#D2A8FF"
+        "accent": "#D2A8FF",
+        "hero_surface": "transparent",
+        "hero_on_surface": "#C9D1D9",
+        "badge_primary": "#58A6FF",
+        "badge_secondary": "#D2A8FF",
+        "badge_success": "#2EA043",
+        "badge_info": "#388BFD",
+        "badge_warning": "#D29922",
+        "badge_neutral": "#8B949E",
+        "progress_start": "#58A6FF",
+        "progress_end": "#D2A8FF"
       },
       "typography": {
         "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/github-dark.svg"
+      "preview_url": "assets/github_stats_github-dark.svg"
     },
     {
       "id": "github-light",
@@ -291,15 +499,77 @@
         "success": "#1A7F37",
         "warning": "#BF8700",
         "info": "#0969DA",
-        "accent": "#8250DF"
+        "accent": "#8250DF",
+        "hero_surface": "transparent",
+        "hero_on_surface": "#FFFFFF",
+        "badge_primary": "#0969DA",
+        "badge_secondary": "#8250DF",
+        "badge_success": "#1A7F37",
+        "badge_info": "#0969DA",
+        "badge_warning": "#BF8700",
+        "badge_neutral": "#57606A",
+        "progress_start": "#0969DA",
+        "progress_end": "#8250DF"
       },
       "typography": {
         "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/github-light.svg"
+      "preview_url": "assets/github_stats_github-light.svg"
+    },
+    {
+      "id": "midnight",
+      "name": "midnight",
+      "mode": "midnight",
+      "tags": [
+        "premium",
+        "dark"
+      ],
+      "author": "ProfileForge Team",
+      "version": "1.0.0",
+      "license": "MIT",
+      "description": "Official midnight theme for ProfileForge.",
+      "extends": null,
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#8B5CF6",
+        "background": "#050505",
+        "surface": "#111111",
+        "border": "#222222",
+        "text": "#FAFAFA",
+        "muted": "#666666",
+        "success": "#22C55E",
+        "warning": "#F59E0B",
+        "info": "#3B82F6",
+        "accent": "#EC4899",
+        "hero_surface": "#111111",
+        "hero_on_surface": "#FAFAFA",
+        "badge_primary": "#FFFFFF",
+        "badge_secondary": "#EC4899",
+        "badge_success": "#22C55E",
+        "badge_info": "#3B82F6",
+        "badge_warning": "#F59E0B",
+        "badge_neutral": "#666666",
+        "progress_start": "#FFFFFF",
+        "progress_end": "#EC4899"
+      },
+      "typography": {
+        "font_family": "Inter, sans-serif",
+        "title": 24,
+        "heading": 32,
+        "label": 14,
+        "value": 28,
+        "body": 16,
+        "caption": 13,
+        "small": 14
+      },
+      "preview_url": "assets/github_stats_midnight.svg"
     },
     {
       "id": "minimal",
@@ -325,15 +595,29 @@
         "success": "#00CC00",
         "warning": "#FFCC00",
         "info": "#0099FF",
-        "accent": "#FF0055"
+        "accent": "#FF0055",
+        "hero_surface": "#F9F9F9",
+        "hero_on_surface": "#111111",
+        "badge_primary": "#000000",
+        "badge_secondary": "#FF0055",
+        "badge_success": "#00CC00",
+        "badge_info": "#0099FF",
+        "badge_warning": "#FFCC00",
+        "badge_neutral": "#888888",
+        "progress_start": "#000000",
+        "progress_end": "#FF0055"
       },
       "typography": {
         "font_family": "sans-serif",
+        "title": 24,
         "heading": 24,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/minimal.svg"
+      "preview_url": "assets/github_stats_minimal.svg"
     },
     {
       "id": "modern",
@@ -359,15 +643,29 @@
         "success": "#10B981",
         "warning": "#F59E0B",
         "info": "#0EA5E9",
-        "accent": "#EC4899"
+        "accent": "#EC4899",
+        "hero_surface": "#1E293B",
+        "hero_on_surface": "#F8FAFC",
+        "badge_primary": "#3B82F6",
+        "badge_secondary": "#EC4899",
+        "badge_success": "#10B981",
+        "badge_info": "#0EA5E9",
+        "badge_warning": "#F59E0B",
+        "badge_neutral": "#94A3B8",
+        "progress_start": "#3B82F6",
+        "progress_end": "#EC4899"
       },
       "typography": {
         "font_family": "Inter, sans-serif",
+        "title": 24,
         "heading": 20,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/modern.svg"
+      "preview_url": "assets/github_stats_modern.svg"
     },
     {
       "id": "nord",
@@ -392,15 +690,29 @@
         "success": "#A3BE8C",
         "warning": "#EBCB8B",
         "info": "#81A1C1",
-        "accent": "#B48EAD"
+        "accent": "#B48EAD",
+        "hero_surface": "#3B4252",
+        "hero_on_surface": "#ECEFF4",
+        "badge_primary": "#88C0D0",
+        "badge_secondary": "#B48EAD",
+        "badge_success": "#A3BE8C",
+        "badge_info": "#81A1C1",
+        "badge_warning": "#EBCB8B",
+        "badge_neutral": "#D8DEE9",
+        "progress_start": "#88C0D0",
+        "progress_end": "#B48EAD"
       },
       "typography": {
         "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/nord.svg"
+      "preview_url": "assets/github_stats_nord.svg"
     },
     {
       "id": "showcase",
@@ -426,15 +738,29 @@
         "success": "#4CAF50",
         "warning": "#FFC107",
         "info": "#2196F3",
-        "accent": "#E91E63"
+        "accent": "#E91E63",
+        "hero_surface": "#242424",
+        "hero_on_surface": "#E0E0E0",
+        "badge_primary": "#FFD700",
+        "badge_secondary": "#E91E63",
+        "badge_success": "#4CAF50",
+        "badge_info": "#2196F3",
+        "badge_warning": "#FFC107",
+        "badge_neutral": "#757575",
+        "progress_start": "#FFD700",
+        "progress_end": "#E91E63"
       },
       "typography": {
         "font_family": "Roboto, sans-serif",
+        "title": 24,
         "heading": 32,
+        "label": 14,
+        "value": 28,
         "body": 18,
+        "caption": 13,
         "small": 14
       },
-      "preview_url": "assets/showcase.svg"
+      "preview_url": "assets/github_stats_showcase.svg"
     },
     {
       "id": "vercel",
@@ -459,15 +785,29 @@
         "success": "#3291FF",
         "warning": "#F5A623",
         "info": "#0070F3",
-        "accent": "#0070F3"
+        "accent": "#0070F3",
+        "hero_surface": "#111111",
+        "hero_on_surface": "#EDEDED",
+        "badge_primary": "#FFFFFF",
+        "badge_secondary": "#0070F3",
+        "badge_success": "#3291FF",
+        "badge_info": "#0070F3",
+        "badge_warning": "#F5A623",
+        "badge_neutral": "#A1A1AA",
+        "progress_start": "#FFFFFF",
+        "progress_end": "#0070F3"
       },
       "typography": {
         "font_family": "Inter, 'SF Pro Display', -apple-system, sans-serif",
+        "title": 24,
         "heading": 18,
+        "label": 14,
+        "value": 28,
         "body": 14,
+        "caption": 13,
         "small": 12
       },
-      "preview_url": "assets/vercel.svg"
+      "preview_url": "assets/github_stats_vercel.svg"
     }
   ],
   "widgets": [
@@ -475,14 +815,15 @@
       "id": "about",
       "name": "About",
       "category": "identity",
-      "description": "Hero card: name, role, status badge, tagline, and location.",
+      "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
       "version": "1.0.0",
       "author": "ProfileForge Team",
       "tags": [
-        "about",
         "hero",
         "identity",
-        "bio"
+        "bio",
+        "banner",
+        "developer"
       ],
       "required_connectors": [
         "local"
@@ -490,46 +831,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/about_github-dark.svg",
-        "vercel": "assets/about_vercel.svg",
         "apple": "assets/about_apple.svg",
+        "aurora": "assets/about_aurora.svg",
+        "catppuccin-base": "assets/about_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/about_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/about_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/about_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/about_catppuccin-mocha.svg",
+        "cyberpunk": "assets/about_cyberpunk.svg",
         "dracula": "assets/about_dracula.svg",
-        "nord": "assets/about_nord.svg",
-        "modern": "assets/about_modern.svg",
+        "github-dark": "assets/about_github-dark.svg",
+        "github-light": "assets/about_github-light.svg",
+        "midnight": "assets/about_midnight.svg",
         "minimal": "assets/about_minimal.svg",
-        "catppuccin-mocha": "assets/about_catppuccin-mocha.svg"
-      }
-    },
-    {
-      "id": "achievements",
-      "name": "Achievements",
-      "category": "stats",
-      "description": "Developer unlock badges showcasing milestones, GitHub awards, and technical accomplishments.",
-      "version": "1.0.0",
-      "author": "ProfileForge Team",
-      "tags": [
-        "achievements",
-        "badges",
-        "awards",
-        "stats",
-        "unlocks",
-        "gamification",
-        "github"
-      ],
-      "required_connectors": [
-        "local"
-      ],
-      "experimental": false,
-      "deprecated": false,
-      "renders": {
-        "github-dark": "assets/achievements_github-dark.svg",
-        "vercel": "assets/achievements_vercel.svg",
-        "apple": "assets/achievements_apple.svg",
-        "dracula": "assets/achievements_dracula.svg",
-        "nord": "assets/achievements_nord.svg",
-        "modern": "assets/achievements_modern.svg",
-        "minimal": "assets/achievements_minimal.svg",
-        "catppuccin-mocha": "assets/achievements_catppuccin-mocha.svg"
+        "modern": "assets/about_modern.svg",
+        "nord": "assets/about_nord.svg",
+        "showcase": "assets/about_showcase.svg",
+        "vercel": "assets/about_vercel.svg"
       }
     },
     {
@@ -554,14 +872,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/activity_timeline_github-dark.svg",
-        "vercel": "assets/activity_timeline_vercel.svg",
         "apple": "assets/activity_timeline_apple.svg",
+        "aurora": "assets/activity_timeline_aurora.svg",
+        "catppuccin-base": "assets/activity_timeline_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/activity_timeline_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/activity_timeline_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/activity_timeline_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/activity_timeline_catppuccin-mocha.svg",
+        "cyberpunk": "assets/activity_timeline_cyberpunk.svg",
         "dracula": "assets/activity_timeline_dracula.svg",
-        "nord": "assets/activity_timeline_nord.svg",
-        "modern": "assets/activity_timeline_modern.svg",
+        "github-dark": "assets/activity_timeline_github-dark.svg",
+        "github-light": "assets/activity_timeline_github-light.svg",
+        "midnight": "assets/activity_timeline_midnight.svg",
         "minimal": "assets/activity_timeline_minimal.svg",
-        "catppuccin-mocha": "assets/activity_timeline_catppuccin-mocha.svg"
+        "modern": "assets/activity_timeline_modern.svg",
+        "nord": "assets/activity_timeline_nord.svg",
+        "showcase": "assets/activity_timeline_showcase.svg",
+        "vercel": "assets/activity_timeline_vercel.svg"
       }
     },
     {
@@ -586,43 +913,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/experience_github-dark.svg",
-        "vercel": "assets/experience_vercel.svg",
         "apple": "assets/experience_apple.svg",
+        "aurora": "assets/experience_aurora.svg",
+        "catppuccin-base": "assets/experience_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/experience_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/experience_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/experience_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/experience_catppuccin-mocha.svg",
+        "cyberpunk": "assets/experience_cyberpunk.svg",
         "dracula": "assets/experience_dracula.svg",
-        "nord": "assets/experience_nord.svg",
-        "modern": "assets/experience_modern.svg",
+        "github-dark": "assets/experience_github-dark.svg",
+        "github-light": "assets/experience_github-light.svg",
+        "midnight": "assets/experience_midnight.svg",
         "minimal": "assets/experience_minimal.svg",
-        "catppuccin-mocha": "assets/experience_catppuccin-mocha.svg"
-      }
-    },
-    {
-      "id": "expertise",
-      "name": "Expertise",
-      "category": "career",
-      "description": "Technical skills and expertise grouped by domain.",
-      "version": "1.0.0",
-      "author": "ProfileForge Team",
-      "tags": [
-        "skills",
-        "expertise",
-        "stack",
-        "career"
-      ],
-      "required_connectors": [
-        "local"
-      ],
-      "experimental": false,
-      "deprecated": false,
-      "renders": {
-        "github-dark": "assets/expertise_github-dark.svg",
-        "vercel": "assets/expertise_vercel.svg",
-        "apple": "assets/expertise_apple.svg",
-        "dracula": "assets/expertise_dracula.svg",
-        "nord": "assets/expertise_nord.svg",
-        "modern": "assets/expertise_modern.svg",
-        "minimal": "assets/expertise_minimal.svg",
-        "catppuccin-mocha": "assets/expertise_catppuccin-mocha.svg"
+        "modern": "assets/experience_modern.svg",
+        "nord": "assets/experience_nord.svg",
+        "showcase": "assets/experience_showcase.svg",
+        "vercel": "assets/experience_vercel.svg"
       }
     },
     {
@@ -644,14 +951,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/focus_github-dark.svg",
-        "vercel": "assets/focus_vercel.svg",
         "apple": "assets/focus_apple.svg",
+        "aurora": "assets/focus_aurora.svg",
+        "catppuccin-base": "assets/focus_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/focus_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/focus_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/focus_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/focus_catppuccin-mocha.svg",
+        "cyberpunk": "assets/focus_cyberpunk.svg",
         "dracula": "assets/focus_dracula.svg",
-        "nord": "assets/focus_nord.svg",
-        "modern": "assets/focus_modern.svg",
+        "github-dark": "assets/focus_github-dark.svg",
+        "github-light": "assets/focus_github-light.svg",
+        "midnight": "assets/focus_midnight.svg",
         "minimal": "assets/focus_minimal.svg",
-        "catppuccin-mocha": "assets/focus_catppuccin-mocha.svg"
+        "modern": "assets/focus_modern.svg",
+        "nord": "assets/focus_nord.svg",
+        "showcase": "assets/focus_showcase.svg",
+        "vercel": "assets/focus_vercel.svg"
       }
     },
     {
@@ -673,14 +989,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/github_languages_github-dark.svg",
-        "vercel": "assets/github_languages_vercel.svg",
         "apple": "assets/github_languages_apple.svg",
+        "aurora": "assets/github_languages_aurora.svg",
+        "catppuccin-base": "assets/github_languages_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/github_languages_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/github_languages_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/github_languages_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/github_languages_catppuccin-mocha.svg",
+        "cyberpunk": "assets/github_languages_cyberpunk.svg",
         "dracula": "assets/github_languages_dracula.svg",
-        "nord": "assets/github_languages_nord.svg",
-        "modern": "assets/github_languages_modern.svg",
+        "github-dark": "assets/github_languages_github-dark.svg",
+        "github-light": "assets/github_languages_github-light.svg",
+        "midnight": "assets/github_languages_midnight.svg",
         "minimal": "assets/github_languages_minimal.svg",
-        "catppuccin-mocha": "assets/github_languages_catppuccin-mocha.svg"
+        "modern": "assets/github_languages_modern.svg",
+        "nord": "assets/github_languages_nord.svg",
+        "showcase": "assets/github_languages_showcase.svg",
+        "vercel": "assets/github_languages_vercel.svg"
       }
     },
     {
@@ -702,44 +1027,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/github_stats_github-dark.svg",
-        "vercel": "assets/github_stats_vercel.svg",
         "apple": "assets/github_stats_apple.svg",
+        "aurora": "assets/github_stats_aurora.svg",
+        "catppuccin-base": "assets/github_stats_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/github_stats_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/github_stats_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/github_stats_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/github_stats_catppuccin-mocha.svg",
+        "cyberpunk": "assets/github_stats_cyberpunk.svg",
         "dracula": "assets/github_stats_dracula.svg",
-        "nord": "assets/github_stats_nord.svg",
-        "modern": "assets/github_stats_modern.svg",
+        "github-dark": "assets/github_stats_github-dark.svg",
+        "github-light": "assets/github_stats_github-light.svg",
+        "midnight": "assets/github_stats_midnight.svg",
         "minimal": "assets/github_stats_minimal.svg",
-        "catppuccin-mocha": "assets/github_stats_catppuccin-mocha.svg"
-      }
-    },
-    {
-      "id": "hero",
-      "name": "Hero",
-      "category": "identity",
-      "description": "Hero banner displaying developer name, role, status badge, tagline, and location.",
-      "version": "1.0.0",
-      "author": "ProfileForge Team",
-      "tags": [
-        "hero",
-        "identity",
-        "bio",
-        "banner",
-        "developer"
-      ],
-      "required_connectors": [
-        "local"
-      ],
-      "experimental": false,
-      "deprecated": false,
-      "renders": {
-        "github-dark": "assets/hero_github-dark.svg",
-        "vercel": "assets/hero_vercel.svg",
-        "apple": "assets/hero_apple.svg",
-        "dracula": "assets/hero_dracula.svg",
-        "nord": "assets/hero_nord.svg",
-        "modern": "assets/hero_modern.svg",
-        "minimal": "assets/hero_minimal.svg",
-        "catppuccin-mocha": "assets/hero_catppuccin-mocha.svg"
+        "modern": "assets/github_stats_modern.svg",
+        "nord": "assets/github_stats_nord.svg",
+        "showcase": "assets/github_stats_showcase.svg",
+        "vercel": "assets/github_stats_vercel.svg"
       }
     },
     {
@@ -764,14 +1068,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/now_github-dark.svg",
-        "vercel": "assets/now_vercel.svg",
         "apple": "assets/now_apple.svg",
+        "aurora": "assets/now_aurora.svg",
+        "catppuccin-base": "assets/now_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/now_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/now_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/now_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/now_catppuccin-mocha.svg",
+        "cyberpunk": "assets/now_cyberpunk.svg",
         "dracula": "assets/now_dracula.svg",
-        "nord": "assets/now_nord.svg",
-        "modern": "assets/now_modern.svg",
+        "github-dark": "assets/now_github-dark.svg",
+        "github-light": "assets/now_github-light.svg",
+        "midnight": "assets/now_midnight.svg",
         "minimal": "assets/now_minimal.svg",
-        "catppuccin-mocha": "assets/now_catppuccin-mocha.svg"
+        "modern": "assets/now_modern.svg",
+        "nord": "assets/now_nord.svg",
+        "showcase": "assets/now_showcase.svg",
+        "vercel": "assets/now_vercel.svg"
       }
     },
     {
@@ -796,14 +1109,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/repositories_github-dark.svg",
-        "vercel": "assets/repositories_vercel.svg",
         "apple": "assets/repositories_apple.svg",
+        "aurora": "assets/repositories_aurora.svg",
+        "catppuccin-base": "assets/repositories_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/repositories_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/repositories_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/repositories_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/repositories_catppuccin-mocha.svg",
+        "cyberpunk": "assets/repositories_cyberpunk.svg",
         "dracula": "assets/repositories_dracula.svg",
-        "nord": "assets/repositories_nord.svg",
-        "modern": "assets/repositories_modern.svg",
+        "github-dark": "assets/repositories_github-dark.svg",
+        "github-light": "assets/repositories_github-light.svg",
+        "midnight": "assets/repositories_midnight.svg",
         "minimal": "assets/repositories_minimal.svg",
-        "catppuccin-mocha": "assets/repositories_catppuccin-mocha.svg"
+        "modern": "assets/repositories_modern.svg",
+        "nord": "assets/repositories_nord.svg",
+        "showcase": "assets/repositories_showcase.svg",
+        "vercel": "assets/repositories_vercel.svg"
       }
     },
     {
@@ -825,14 +1147,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/roadmap_github-dark.svg",
-        "vercel": "assets/roadmap_vercel.svg",
         "apple": "assets/roadmap_apple.svg",
+        "aurora": "assets/roadmap_aurora.svg",
+        "catppuccin-base": "assets/roadmap_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/roadmap_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/roadmap_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/roadmap_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/roadmap_catppuccin-mocha.svg",
+        "cyberpunk": "assets/roadmap_cyberpunk.svg",
         "dracula": "assets/roadmap_dracula.svg",
-        "nord": "assets/roadmap_nord.svg",
-        "modern": "assets/roadmap_modern.svg",
+        "github-dark": "assets/roadmap_github-dark.svg",
+        "github-light": "assets/roadmap_github-light.svg",
+        "midnight": "assets/roadmap_midnight.svg",
         "minimal": "assets/roadmap_minimal.svg",
-        "catppuccin-mocha": "assets/roadmap_catppuccin-mocha.svg"
+        "modern": "assets/roadmap_modern.svg",
+        "nord": "assets/roadmap_nord.svg",
+        "showcase": "assets/roadmap_showcase.svg",
+        "vercel": "assets/roadmap_vercel.svg"
       }
     },
     {
@@ -857,14 +1188,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/skills_github-dark.svg",
-        "vercel": "assets/skills_vercel.svg",
         "apple": "assets/skills_apple.svg",
+        "aurora": "assets/skills_aurora.svg",
+        "catppuccin-base": "assets/skills_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/skills_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/skills_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/skills_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/skills_catppuccin-mocha.svg",
+        "cyberpunk": "assets/skills_cyberpunk.svg",
         "dracula": "assets/skills_dracula.svg",
-        "nord": "assets/skills_nord.svg",
-        "modern": "assets/skills_modern.svg",
+        "github-dark": "assets/skills_github-dark.svg",
+        "github-light": "assets/skills_github-light.svg",
+        "midnight": "assets/skills_midnight.svg",
         "minimal": "assets/skills_minimal.svg",
-        "catppuccin-mocha": "assets/skills_catppuccin-mocha.svg"
+        "modern": "assets/skills_modern.svg",
+        "nord": "assets/skills_nord.svg",
+        "showcase": "assets/skills_showcase.svg",
+        "vercel": "assets/skills_vercel.svg"
       }
     },
     {
@@ -887,45 +1227,23 @@
       "experimental": false,
       "deprecated": false,
       "renders": {
-        "github-dark": "assets/social_github-dark.svg",
-        "vercel": "assets/social_vercel.svg",
         "apple": "assets/social_apple.svg",
+        "aurora": "assets/social_aurora.svg",
+        "catppuccin-base": "assets/social_catppuccin-base.svg",
+        "catppuccin-frappe": "assets/social_catppuccin-frappe.svg",
+        "catppuccin-latte": "assets/social_catppuccin-latte.svg",
+        "catppuccin-macchiato": "assets/social_catppuccin-macchiato.svg",
+        "catppuccin-mocha": "assets/social_catppuccin-mocha.svg",
+        "cyberpunk": "assets/social_cyberpunk.svg",
         "dracula": "assets/social_dracula.svg",
-        "nord": "assets/social_nord.svg",
-        "modern": "assets/social_modern.svg",
+        "github-dark": "assets/social_github-dark.svg",
+        "github-light": "assets/social_github-light.svg",
+        "midnight": "assets/social_midnight.svg",
         "minimal": "assets/social_minimal.svg",
-        "catppuccin-mocha": "assets/social_catppuccin-mocha.svg"
-      }
-    },
-    {
-      "id": "streak",
-      "name": "Contribution Streak",
-      "category": "stats",
-      "description": "Tracks daily GitHub contribution streaks, longest continuous activity, and consistency rate.",
-      "version": "1.0.0",
-      "author": "ProfileForge Team",
-      "tags": [
-        "streak",
-        "stats",
-        "github",
-        "contributions",
-        "habits",
-        "activity"
-      ],
-      "required_connectors": [
-        "github"
-      ],
-      "experimental": false,
-      "deprecated": false,
-      "renders": {
-        "github-dark": "assets/streak_github-dark.svg",
-        "vercel": "assets/streak_vercel.svg",
-        "apple": "assets/streak_apple.svg",
-        "dracula": "assets/streak_dracula.svg",
-        "nord": "assets/streak_nord.svg",
-        "modern": "assets/streak_modern.svg",
-        "minimal": "assets/streak_minimal.svg",
-        "catppuccin-mocha": "assets/streak_catppuccin-mocha.svg"
+        "modern": "assets/social_modern.svg",
+        "nord": "assets/social_nord.svg",
+        "showcase": "assets/social_showcase.svg",
+        "vercel": "assets/social_vercel.svg"
       }
     }
   ],
@@ -936,7 +1254,6 @@
       "description": "Specialized for AI/ML engineers and researchers featuring deep learning frameworks, CUDA, LLM agents, and active research focus.",
       "active_theme": "dracula",
       "widgets": [
-        "hero",
         "skills",
         "repositories",
         "now",
@@ -954,7 +1271,6 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_dracula.svg",
         "skills": "assets/skills_dracula.svg",
         "repositories": "assets/repositories_dracula.svg",
         "now": "assets/now_dracula.svg",
@@ -967,7 +1283,6 @@
       "description": "Tailored for backend and distributed systems engineers with skills, repositories, stats, and work experience.",
       "active_theme": "github-dark",
       "widgets": [
-        "hero",
         "skills",
         "repositories",
         "github_stats",
@@ -985,7 +1300,6 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_github-dark.svg",
         "skills": "assets/skills_github-dark.svg",
         "repositories": "assets/repositories_github-dark.svg",
         "github_stats": "assets/github_stats_github-dark.svg",
@@ -998,7 +1312,6 @@
       "description": "Tailored for frontend, design technologist, and UI/UX developers with modern UI stack, projects, and now widget.",
       "active_theme": "modern",
       "widgets": [
-        "hero",
         "skills",
         "repositories",
         "github_stats",
@@ -1016,7 +1329,6 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_modern.svg",
         "skills": "assets/skills_modern.svg",
         "repositories": "assets/repositories_modern.svg",
         "github_stats": "assets/github_stats_modern.svg",
@@ -1029,39 +1341,27 @@
       "description": "Tailored for indie hackers, bootstrappers, and solopreneurs building micro-SaaS and products in public.",
       "active_theme": "modern",
       "widgets": [
-        "hero",
-        "streak",
         "repositories",
-        "focus",
-        "achievements",
-        "social"
+        "focus - social"
       ],
       "file_list": [
-        "config/achievements.yaml",
         "config/focus.yaml",
         "config/hero.yaml",
         "config/social.yaml",
-        "config/streak.yaml",
         "manifest.yaml",
         "profileforge.yaml",
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_modern.svg",
-        "streak": "assets/streak_modern.svg",
-        "repositories": "assets/repositories_modern.svg",
-        "focus": "assets/focus_modern.svg",
-        "achievements": "assets/achievements_modern.svg",
-        "social": "assets/social_modern.svg"
+        "repositories": "assets/repositories_modern.svg"
       }
     },
     {
       "id": "minimal",
       "name": "Minimalist",
-      "description": "Clean, elegant monochromatic layout with essential hero identity, about bio, and featured repositories.",
+      "description": "Clean, elegant monochromatic layout with essential about bio, and featured repositories.",
       "active_theme": "minimal",
       "widgets": [
-        "hero",
         "about",
         "repositories"
       ],
@@ -1078,7 +1378,6 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_minimal.svg",
         "about": "assets/about_minimal.svg",
         "repositories": "assets/repositories_minimal.svg"
       }
@@ -1086,66 +1385,24 @@
     {
       "id": "open-source-maintainer",
       "name": "Open Source Maintainer",
-      "description": "Tailored for open-source library authors and foundation maintainers with pinned repositories, activity timeline, and streak stats.",
+      "description": "Tailored for open-source library authors and foundation maintainers with pinned repositories and activity timeline.",
       "active_theme": "dracula",
       "widgets": [
-        "hero",
         "github_stats",
         "repositories",
-        "activity_timeline",
-        "streak",
-        "achievements",
-        "social"
+        "activity_timeline - social"
       ],
       "file_list": [
-        "config/achievements.yaml",
         "config/activity_timeline.yaml",
         "config/hero.yaml",
         "config/social.yaml",
-        "config/streak.yaml",
         "manifest.yaml",
         "profileforge.yaml",
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_dracula.svg",
         "github_stats": "assets/github_stats_dracula.svg",
-        "repositories": "assets/repositories_dracula.svg",
-        "activity_timeline": "assets/activity_timeline_dracula.svg",
-        "streak": "assets/streak_dracula.svg",
-        "achievements": "assets/achievements_dracula.svg",
-        "social": "assets/social_dracula.svg"
-      }
-    },
-    {
-      "id": "opensource",
-      "name": "Open Source Maintainer",
-      "description": "Showcase-focused template highlighting pinned OSS repositories, language breakdowns, GitHub stats, and community channels.",
-      "active_theme": "github-dark",
-      "widgets": [
-        "hero",
-        "repositories",
-        "github_stats",
-        "github_languages",
-        "social"
-      ],
-      "file_list": [
-        "config/experience.yaml",
-        "config/hero.yaml",
-        "config/now.yaml",
-        "config/roadmap.yaml",
-        "config/skills.yaml",
-        "config/social.yaml",
-        "manifest.yaml",
-        "profileforge.yaml",
-        "README.md"
-      ],
-      "renders": {
-        "hero": "assets/hero_github-dark.svg",
-        "repositories": "assets/repositories_github-dark.svg",
-        "github_stats": "assets/github_stats_github-dark.svg",
-        "github_languages": "assets/github_languages_github-dark.svg",
-        "social": "assets/social_github-dark.svg"
+        "repositories": "assets/repositories_dracula.svg"
       }
     },
     {
@@ -1154,15 +1411,11 @@
       "description": "Tailored for cybersecurity researchers, AppSec engineers, and bug bounty hunters with CTF rankings, CVEs, and security tooling.",
       "active_theme": "cyberpunk",
       "widgets": [
-        "hero",
         "expertise",
-        "skills",
-        "achievements",
-        "repositories",
+        "skills - repositories",
         "social"
       ],
       "file_list": [
-        "config/achievements.yaml",
         "config/expertise.yaml",
         "config/hero.yaml",
         "config/skills.yaml",
@@ -1172,12 +1425,7 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_github-dark.svg",
-        "expertise": "assets/expertise_github-dark.svg",
-        "skills": "assets/skills_github-dark.svg",
-        "achievements": "assets/achievements_github-dark.svg",
-        "repositories": "assets/repositories_github-dark.svg",
-        "social": "assets/social_github-dark.svg"
+        "social": "assets/social_cyberpunk.svg"
       }
     },
     {
@@ -1186,7 +1434,6 @@
       "description": "Designed for students and early-career developers with learning roadmaps, skills, projects, and social contacts.",
       "active_theme": "catppuccin-mocha",
       "widgets": [
-        "hero",
         "skills",
         "roadmap",
         "repositories",
@@ -1204,7 +1451,6 @@
         "README.md"
       ],
       "renders": {
-        "hero": "assets/hero_catppuccin-mocha.svg",
         "skills": "assets/skills_catppuccin-mocha.svg",
         "roadmap": "assets/roadmap_catppuccin-mocha.svg",
         "repositories": "assets/repositories_catppuccin-mocha.svg",

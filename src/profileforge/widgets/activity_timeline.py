@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+__layer__ = "Layer 7 — Widgets"
+
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Badge, Card, Text
 from profileforge.core.context import BuildContext
@@ -117,19 +119,18 @@ class ActivityTimelineWidget(Widget):
                 style=Style(font_size=11, font_weight="600", color="primary"),
             )
 
-            badges_and_title = Row(
+            badges_and_title = Inline(
                 children=[type_badge, title_text],
-                spacing=10,
+                gap=10,
                 style=Style(align="center"),
             )
 
-            header_row = Row(
+            header_row = Inline(
                 children=[badges_and_title, date_text],
-                spacing=0,
+                gap=16,
                 style=Style(width="fill", justify="space-between", align="center"),
             )
             rows.append(header_row)
-            rows.append(Spacer(height=4))
 
             if ev.get("repo"):
                 repo_text = Text(
@@ -137,7 +138,6 @@ class ActivityTimelineWidget(Widget):
                     style=Style(font_size=11, font_weight="600", color="muted"),
                 )
                 rows.append(repo_text)
-                rows.append(Spacer(height=3))
 
             if ev.get("description"):
                 desc_text = Text(
@@ -145,17 +145,12 @@ class ActivityTimelineWidget(Widget):
                     style=Style(font_size=12, color="muted"),
                 )
                 rows.append(desc_text)
-                rows.append(Spacer(height=2))
 
-            if i < len(events) - 1:
-                rows.append(Spacer(height=12))
 
-        if rows and isinstance(rows[-1], Spacer):
-            rows.pop()
 
         content = Column(
             children=rows,
-            spacing=0,
+            gap=16,
             style=Style(width="fill"),
         )
 

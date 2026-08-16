@@ -1,25 +1,20 @@
 version: 1
 project:
-  name: "Frontend Engineer Profile"
-  title: "Senior Frontend Architect & UI/UX Engineer"
-
+  name: Frontend Engineer Profile
+  title: Senior Frontend Architect & UI/UX Engineer
 themes:
-  active: "modern"
-
+  active: modern
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: skills
-  - name: repositories
-  - name: github_stats
-  - name: now
-
+- name: skills
+- name: repositories
+- name: github_stats
+- name: now
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

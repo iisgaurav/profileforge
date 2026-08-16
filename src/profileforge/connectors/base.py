@@ -1,3 +1,4 @@
+__layer__ = "Layer 6 — Connectors"
 from abc import ABC, abstractmethod
 from typing import Any
 

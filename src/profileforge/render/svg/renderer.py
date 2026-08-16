@@ -1,7 +1,13 @@
 import html
 from typing import List, Tuple
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer, Wrap, Inline, Grid, Stack
+from profileforge.components.layout import (
+    Column,
+    Inline,
+    Padding,
+    Spacer,
+    Wrap,
+)
 from profileforge.components.widgets import (
     Badge,
     Card,
@@ -12,12 +18,17 @@ from profileforge.components.widgets import (
     MetricGroup,
     ProgressBar,
     ProgressMetric,
+    SparklineMetric,
     Text,
 )
+from profileforge.core.models import (
+    HorizontalAlign,
+    PercentageDisplay,
+    TypographyRole,
+    VerticalAlign,
+)
 from profileforge.render.base import Renderer, RenderNode
-from profileforge.core.models import TypographyRole, HorizontalAlign, VerticalAlign, PercentageDisplay
 from profileforge.services.icons import IconRegistry
-
 
 TECH_COLORS: List[Tuple[str, str]] = [
     ("#3B82F6", "#1D3557"),
@@ -46,6 +57,7 @@ class SVGRenderer(Renderer):
         primary = self.get_color("primary")
         accent = self.get_color("accent")
         surface = self.get_color("surface")
+        bg = self.get_color("background")
         border = self.get_color("border")
         muted = self.get_color("muted")
 
@@ -90,10 +102,10 @@ class SVGRenderer(Renderer):
     <stop offset="100%" stop-color="{surface}" stop-opacity="0.8"/>
   </linearGradient>
 
-  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#3b0918"/>
-    <stop offset="50%" stop-color="#1e1333"/>
-    <stop offset="100%" stop-color="#091629"/>
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="{surface}"/>
+    <stop offset="50%" stop-color="{bg}"/>
+    <stop offset="100%" stop-color="{surface}"/>
   </linearGradient>
 
   <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -140,7 +152,7 @@ class SVGRenderer(Renderer):
                 title_el = (
                     f'<text x="{x + 36}" y="{y + 40}" '
                     f'font-family="{self.typography.font_family}" '
-                    f'font-size="{self.typography.heading}" '
+                    f'font-size="{self.typography.title}" '
                     f'font-weight="700" fill="{text_color}" '
                     f'letter-spacing="0.3">{escaped_title}</text>'
                 )
@@ -165,7 +177,17 @@ class SVGRenderer(Renderer):
         elif isinstance(component, Icon):
             color = self.get_color(component.style.color or "primary")
             path = IconRegistry.get(component.svg_path) or component.svg_path
-            return f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 16 16" fill="{color}" data-pf-id="{node.debug.get('id', '')}">{path}</svg>'
+            
+            # Determine correct viewBox (GitHub Primer icons are 16x16, others are 24x24)
+            viewbox = "0 0 24 24" if component.svg_path in ("trophy", "plane", "lightning", "brain", "gift", "shield", "diamond", "crown") else "0 0 16 16"
+            
+            if "currentColor" in path:
+                path = path.replace("currentColor", color)
+                fill_attr = 'fill="none"'
+            else:
+                fill_attr = f'fill="{color}"'
+                
+            return f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{viewbox}" {fill_attr} data-pf-id="{node.debug.get("id", "")}">{path}</svg>'
 
         elif isinstance(component, Metric):
             bg_fill = "url(#pf-card-bg)"
@@ -202,6 +224,67 @@ class SVGRenderer(Renderer):
     {trend_svg}
 </g>"""
 
+        elif isinstance(component, SparklineMetric):
+            bg_fill = "url(#pf-card-bg)"
+            radius = getattr(self.theme.radius, "card", 10)
+            text_color = self.get_color("text")
+            muted = self.get_color("muted")
+            
+            if component.tone == "default":
+                primary = self.get_color("primary")
+            else:
+                primary = self.get_color(component.tone)
+                
+            escaped_label = html.escape(component.label)
+            
+            try:
+                formatted_value = f"{int(component.value):,}"
+            except ValueError:
+                formatted_value = html.escape(str(component.value))
+
+            icon_svg = ""
+            if component.icon:
+                path = IconRegistry.get(component.icon) or component.icon
+                icon_svg = f'<svg x="{x + 32}" y="{y + 32}" width="16" height="16" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+
+            sparkline_svg = f'<text x="{x + w - 16}" y="{y + h/2 + 4}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" text-anchor="end">No data</text>'
+            
+            if component.series and component.series.points:
+                pts = component.series.points
+                if len(pts) > 1:
+                    max_pt = max(pts)
+                    min_pt = min(pts)
+                    range_pt = (max_pt - min_pt) or 1
+                    sl_w = 60
+                    sl_h = 24
+                    sl_x = x + w - sl_w - 16
+                    sl_y = y + h/2 - sl_h/2
+                    dx = sl_w / (len(pts) - 1)
+                    
+                    path_d = []
+                    for i, pt in enumerate(pts):
+                        px = sl_x + i * dx
+                        py = sl_y + sl_h - ((pt - min_pt) / range_pt * sl_h)
+                        if i == 0:
+                            path_d.append(f"M {px} {py}")
+                        else:
+                            path_d.append(f"L {px} {py}")
+                            
+                    # Note: You can use a gradient here derived from primary, but we stick to primary for simplicity
+                    sparkline_svg = f'<path d="{" ".join(path_d)}" fill="none" stroke="{primary}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>'
+
+            filter_attr = ' filter="url(#pf-shadow)"' if self.context.effects.shadow != "none" else ""
+
+            return f"""<g{filter_attr} data-pf-id="{node.debug.get('id', '')}">
+    <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
+    <rect x="{x + 16}" y="{y + 16}" width="48" height="48" fill="{primary}" opacity="0.1" rx="12"/>
+    {icon_svg}
+    <text x="{x + 80}" y="{y + 30}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" font-weight="500">{escaped_label}</text>
+    <text x="{x + 80}" y="{y + 54}" font-family="{self.typography.font_family}" font-size="{self.typography.title}" font-weight="700" fill="{text_color}">{formatted_value}</text>
+    <text x="{x + 80}" y="{y + 70}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}">All time</text>
+    {sparkline_svg}
+</g>"""
+
         elif isinstance(component, CircularMetric):
             cx, cy = x + w / 2, y + h / 2
             r = min(w, h) / 2 - 8
@@ -210,14 +293,21 @@ class SVGRenderer(Renderer):
             dashoffset = circumference * (1 - progress)
 
             muted = self.get_color("muted")
-            primary = self.get_color("primary")
             text_color = self.get_color("text")
+            
+            if component.tone == "primary":
+                primary = "url(#pf-progress-grad)"
+                icon_fill = self.get_color("primary")
+            else:
+                primary = self.get_color(component.tone)
+                icon_fill = primary
+                
             glow_attr = ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
 
             icon_svg = ""
             if component.icon:
                 path = IconRegistry.get(component.icon) or component.icon
-                icon_svg = f'<svg x="{cx - 10}" y="{cy - 24}" width="20" height="20" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
+                icon_svg = f'<svg x="{cx - 10}" y="{cy - 24}" width="20" height="20" viewBox="0 0 16 16" fill="{icon_fill}">{path}</svg>'
                 
             try:
                 formatted_value = f"{int(component.value):,}"
@@ -230,8 +320,8 @@ class SVGRenderer(Renderer):
         <animate attributeName="stroke-dashoffset" from="{circumference}" to="{dashoffset}" dur="1s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
     </circle>
     {icon_svg}
-    <text x="{cx}" y="{cy + 12}" font-family="{self.typography.font_family}" font-size="{self.typography.heading}" font-weight="700" fill="{text_color}" text-anchor="middle">{formatted_value}</text>
-    <text x="{cx}" y="{cy + 28}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" text-anchor="middle">{html.escape(component.label)}</text>
+    <text x="{cx}" y="{cy + 12}" font-family="{self.typography.font_family}" font-size="24" font-weight="700" fill="{text_color}" text-anchor="middle">{formatted_value}</text>
+    <text x="{cx}" y="{cy + 28}" font-family="{self.typography.font_family}" font-size="12" fill="{muted}" text-anchor="middle">{html.escape(component.label)}</text>
 </g>"""
 
         elif isinstance(component, Text):
@@ -307,51 +397,53 @@ class SVGRenderer(Renderer):
             return f'<g data-pf-id="{node.debug.get("id", "")}">{label_text}{pct_text}{bar_svg}</g>'
 
         elif isinstance(component, Badge):
-            idx = badge_idx[0]
-            badge_idx[0] += 1
-            fg_color, grad_id = self._badge_color(idx)
+            if hasattr(component, "tone") and component.tone:
+                fg_color = self.get_color(component.tone)
+                fill_str = f'fill="{fg_color}" fill-opacity="0.15"'
+            else:
+                idx = badge_idx[0]
+                badge_idx[0] += 1
+                fg_color, grad_id = self._badge_color(idx)
+                fill_str = f'fill="url(#{grad_id})"'
+
             escaped_label = html.escape(component.label)
             br = h // 2
+            
+            icon_svg = ""
+            icon_shift = 0
+            if hasattr(component, "icon") and component.icon:
+                icon_path = IconRegistry.get(component.icon) or component.icon
+                icon_svg = f'<svg x="{x + 10}" y="{y + h/2 - 8}" width="16" height="16" viewBox="0 0 16 16" fill="{fg_color}">{icon_path}</svg>'
+                icon_shift = 10
 
             return f"""<g role="term" data-pf-id="{node.debug.get('id', '')}">
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{br}" fill="url(#{grad_id})" stroke="{fg_color}" stroke-width="0.8" stroke-opacity="0.5"/>
-    <text x="{x + w / 2}" y="{y + h / 2}" font-family="{self.typography.font_family}" font-size="{self.typography.caption}" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
+    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{br}" {fill_str} stroke="{fg_color}" stroke-width="0.8" stroke-opacity="0.5"/>
+    {icon_svg}
+    <text x="{x + w / 2 + icon_shift}" y="{y + h / 2}" font-family="{self.typography.font_family}" font-size="{self.typography.caption}" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
 </g>"""
 
         elif isinstance(component, Divider):
             primary = self.get_color("primary")
+            if getattr(component, "orientation", "horizontal") == "vertical":
+                return f'<line x1="{x + w/2}" y1="{y}" x2="{x + w/2}" y2="{y + h}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
             return f'<line x1="{x}" y1="{y + h/2}" x2="{x + w}" y2="{y + h/2}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
 
-        elif isinstance(component, Inline):
-            # Special renderer logic for Inline. Renders text + icon using layout hacks (native SVG flow).
-            # For simplicity, we just render children with hardcoded internal offset in this pass.
+        elif isinstance(component, (Column, Inline, Padding, Wrap, MetricGroup)):
             parts = []
-            curr_x = x
-            for child_node in node.children:
-                child_node_copy = RenderNode(
-                    component=child_node.component,
-                    x=curr_x,
-                    y=y,
-                    width=child_node.width,
-                    height=child_node.height,
-                    children=child_node.children,
-                    debug=child_node.debug
-                )
-                parts.append(self._render_node(child_node_copy, badge_idx))
-                # Very rough intrinsic estimation for inline layout within the renderer
-                if isinstance(child_node.component, Text):
-                    curr_x += len(child_node.component.value) * (self.get_typography_size(child_node.component.style.font_size) * 0.55) + component.gap
-                elif isinstance(child_node.component, Icon):
-                    curr_x += (child_node.width or 16) + component.gap
-                elif isinstance(child_node.component, Badge):
-                    curr_x += (child_node.width or 100) + component.gap
-            return f'<g data-pf-id="{node.debug.get("id", "")}">' + "".join(parts) + "</g>"
-
-        elif isinstance(component, (Row, Column, Padding, Wrap, Stack, MetricGroup)):
-            parts = []
+            if hasattr(component, "style") and component.style and component.style.background_color:
+                bg_color = self.get_color(component.style.background_color)
+                radius = component.style.border_radius or 0
+                border_str = ""
+                if component.style.border_color:
+                    border_color = self.get_color(component.style.border_color)
+                    border_str = f' stroke="{border_color}" stroke-width="1"'
+                parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_color}" rx="{radius}"{border_str}/>')
+                
             for child_node in node.children:
                 parts.append(self._render_node(child_node, badge_idx))
-            return f'<g data-pf-id="{node.debug.get("id", "")}">' + "\n".join(parts) + "</g>"
+            
+            separator = "" if isinstance(component, Inline) else "\n"
+            return f'<g data-pf-id="{node.debug.get("id", "")}">' + separator.join(parts) + "</g>"
 
         elif isinstance(component, Spacer):
             return ""

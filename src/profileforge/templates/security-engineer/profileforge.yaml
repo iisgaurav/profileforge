@@ -1,26 +1,20 @@
 version: 1
 project:
-  name: "Security Engineer Profile"
-  title: "Application Security Engineer & Vulnerability Researcher"
-
+  name: Security Engineer Profile
+  title: Application Security Engineer & Vulnerability Researcher
 themes:
-  active: "cyberpunk"
-
+  active: cyberpunk
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: expertise
-  - name: skills
-  - name: achievements
-  - name: repositories
-  - name: social
-
+- name: expertise
+- name: skills
+- name: repositories
+- name: social
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

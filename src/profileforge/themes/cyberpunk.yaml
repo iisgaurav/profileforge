@@ -1,0 +1,48 @@
+name: cyberpunk
+id: cyberpunk
+schema: 1
+tags:
+- premium
+- dark
+mode: cyberpunk
+colors:
+  primary: '#00F0FF'
+  secondary: '#FF007F'
+  background: '#0B0B1A'
+  surface: '#15152B'
+  border: '#2C2C54'
+  text: '#E0E0FF'
+  muted: '#7A7A99'
+  success: '#39FF14'
+  warning: '#FFEA00'
+  info: '#00C3FF'
+  accent: '#B026FF'
+typography:
+  font_family: JetBrains Mono, monospace
+  heading: 32
+  body: 16
+  small: 14
+spacing:
+  xs: 8
+  sm: 16
+  md: 24
+  lg: 40
+  xl: 64
+radius:
+  card: 0
+  progress: 0
+  badge: 0
+shadows:
+  none: none
+  low: 0 0 8px rgba(0, 240, 255, 0.2)
+  medium: 0 0 16px rgba(255, 0, 127, 0.3)
+  high: 0 0 32px rgba(176, 38, 255, 0.4)
+motion:
+  duration_fast: 150
+  duration_normal: 300
+  duration_slow: 600
+  easing: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+effects:
+  glow: 0 0 10px rgba(0,240,255,0.8)
+  shadow: none
+  glass: none

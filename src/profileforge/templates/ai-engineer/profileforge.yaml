@@ -1,25 +1,20 @@
 version: 1
 project:
-  name: "AI & ML Engineer Profile"
-  title: "Senior AI Research & ML Systems Engineer"
-
+  name: AI & ML Engineer Profile
+  title: Senior AI Research & ML Systems Engineer
 themes:
-  active: "dracula"
-
+  active: dracula
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: skills
-  - name: repositories
-  - name: now
-  - name: github_stats
-
+- name: skills
+- name: repositories
+- name: now
+- name: github_stats
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

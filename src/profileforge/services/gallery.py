@@ -13,23 +13,6 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-import profileforge.connectors.github.connector
-import profileforge.connectors.local
-import profileforge.widgets.about
-import profileforge.widgets.achievements
-import profileforge.widgets.activity_timeline
-import profileforge.widgets.experience
-import profileforge.widgets.expertise
-import profileforge.widgets.focus
-import profileforge.widgets.github_languages
-import profileforge.widgets.github_stats
-import profileforge.widgets.hero
-import profileforge.widgets.now
-import profileforge.widgets.repositories
-import profileforge.widgets.roadmap
-import profileforge.widgets.skills
-import profileforge.widgets.social
-import profileforge.widgets.streak  # noqa: F401
 from profileforge.connectors.base import Connector
 from profileforge.connectors.github.models import (
     GitHubLanguageStats,
@@ -222,17 +205,12 @@ SAMPLE_LOCAL_DATA = {
     "social.yaml": {
         "github": "iisgaurav",
         "twitter": "iisgaurav",
-        "linkedin": "in/iisgaurav",
-        "website": "https://iisgaurav.dev",
+        "linkedin": "iisgaurav",
+        "website": "https://iisgaurav.vercel.app",
         "discord": "iisgaurav",
-        "email": "hello@iisgaurav.dev",
+        "email": "gauravv2504@gmail.com",
     },
-    "streak.yaml": {
-        "current_streak": 42,
-        "longest_streak": 180,
-        "total_active_days": 312,
-        "consistency": "98.4%",
-    },
+
     "activity_timeline.yaml": [
         {
             "title": "Merged PR #142: High-throughput stream engine",
@@ -256,28 +234,7 @@ SAMPLE_LOCAL_DATA = {
             "description": "Optimized memory layout and reduced garbage collection pause times by 35%.",
         },
     ],
-    "achievements.yaml": [
-        {
-            "name": "🦈 Pull Shark",
-            "tier": "Gold (x4)",
-            "description": "Merged 250+ pull requests with continuous test coverage & zero rollbacks.",
-        },
-        {
-            "name": "⚡ Quickdraw",
-            "tier": "Gold",
-            "description": "Reviewed and responded to incoming code reviews within 5 minutes.",
-        },
-        {
-            "name": "🧠 Galaxy Brain",
-            "tier": "Diamond",
-            "description": "Authored and answered 50+ technical architectural proposals & discussions.",
-        },
-        {
-            "name": "🔥 1,000+ Commits",
-            "tier": "Legendary",
-            "description": "Continuous code contribution across high-impact production repositories.",
-        },
-    ],
+
 }
 
 
@@ -348,6 +305,7 @@ class GalleryExporter:
                 colors_dict = asdict(theme.colors)
                 typography_dict = asdict(theme.typography)
 
+                showcase_widget = "github_stats" if "github_stats" in WIDGET_REGISTRY else "about"
                 theme_obj = {
                     "id": theme.id or theme_id,
                     "name": theme.name,
@@ -361,7 +319,7 @@ class GalleryExporter:
                     "extends": theme.extends,
                     "colors": colors_dict,
                     "typography": typography_dict,
-                    "preview_url": f"assets/{theme_id}.svg",
+                    "preview_url": f"assets/{showcase_widget}_{theme_id}.svg",
                 }
                 themes_meta.append(theme_obj)
             except Exception:
@@ -519,9 +477,7 @@ class GalleryExporter:
 
         # Determine themes to render
         available_theme_ids = set(self.get_all_theme_ids())
-        render_themes = [t for t in self.top_themes if t in available_theme_ids]
-        if not render_themes:
-            render_themes = self.get_all_theme_ids()[:8]
+        render_themes = sorted(list(available_theme_ids))
 
         loaded_themes: Dict[str, Theme] = {}
         for t_id in self.get_all_theme_ids():
@@ -543,36 +499,16 @@ class GalleryExporter:
                 if t_id not in loaded_themes:
                     continue
                 theme = loaded_themes[t_id]
-                try:
-                    svg_str = self.render_widget_svg(w_id, theme, base_config)
-                    out_filename = f"{w_id}_{t_id}.svg"
-                    out_path = assets_dir / out_filename
-                    with open(out_path, "w", encoding="utf-8") as f:
-                        f.write(svg_str)
-                    widget_renders_map[w_id][t_id] = f"assets/{out_filename}"
-                    rendered_assets_count += 1
-                except Exception:
-                    continue
+                svg_str = self.render_widget_svg(w_id, theme, base_config)
+                out_filename = f"{w_id}_{t_id}.svg"
+                out_path = assets_dir / out_filename
+                with open(out_path, "w", encoding="utf-8") as f:
+                    f.write(svg_str)
+                widget_renders_map[w_id][t_id] = f"assets/{out_filename}"
+                rendered_assets_count += 1
 
-        # 2. Render theme preview SVGs (using github_stats widget showcase)
-        for t_meta in themes_meta:
-            t_id = t_meta["id"]
-            if t_id in loaded_themes:
-                theme = loaded_themes[t_id]
-                try:
-                    showcase_widget = (
-                        "github_stats" if "github_stats" in WIDGET_REGISTRY else "hero"
-                    )
-                    svg_str = self.render_widget_svg(
-                        showcase_widget, theme, base_config
-                    )
-                    out_filename = f"{t_id}.svg"
-                    out_path = assets_dir / out_filename
-                    with open(out_path, "w", encoding="utf-8") as f:
-                        f.write(svg_str)
-                    rendered_assets_count += 1
-                except Exception:
-                    pass
+        # 2. Render theme preview SVGs (Skipped to avoid duplicating widget rendering)
+        # The preview URL now simply points to the standard showcase widget generated above.
 
         # 3. Write themes.json
         themes_file = self.out_dir / "themes.json"

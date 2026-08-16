@@ -1,3 +1,4 @@
+__layer__ = "Layer 1 — Core"
 class ProfileForgeError(Exception):
     """Base exception for ProfileForge"""
 

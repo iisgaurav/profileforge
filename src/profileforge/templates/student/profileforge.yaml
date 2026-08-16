@@ -1,25 +1,20 @@
 version: 1
 project:
-  name: "Student Developer Profile"
-  title: "CS Undergrad & Aspiring Software Engineer"
-
+  name: Student Developer Profile
+  title: CS Undergrad & Aspiring Software Engineer
 themes:
-  active: "catppuccin-mocha"
-
+  active: catppuccin-mocha
 connectors:
   local:
-    root: "./config"
+    root: ./config
   github:
-    username: "iisgaurav"
-
+    username: iisgaurav
 widgets:
-  - name: hero
-  - name: skills
-  - name: roadmap
-  - name: repositories
-  - name: social
-
+- name: skills
+- name: roadmap
+- name: repositories
+- name: social
 outputs:
   svg:
     enabled: true
-    dir: "assets"
+    dir: assets

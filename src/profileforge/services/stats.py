@@ -1,3 +1,4 @@
+__layer__ = "Layer 8 — CLI"
 from profileforge.core.models import MetricsConfig
 
 
@@ -25,3 +26,4 @@ class ScoreCalculator:
             return score
 
         return float(sum(stats.values())) if stats else 0.0
+

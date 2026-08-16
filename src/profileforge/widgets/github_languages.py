@@ -1,6 +1,7 @@
+__layer__ = "Layer 7 — Widgets"
 from typing import Any
 
-from profileforge.components.layout import Column, Component, Padding, Row, Spacer
+from profileforge.components.layout import Column, Component, Inline
 from profileforge.components.style import Style
 from profileforge.components.widgets import Card, ProgressBar, Text
 from profileforge.core.context import BuildContext
@@ -68,19 +69,18 @@ class GithubLanguagesWidget(Widget):
             skill = item.name
             progress = item.percentage
 
-            label_row = Row(
+            label_row = Inline(
                 children=[
                     Text(
                         skill,
                         style=Style(font_size=14, font_weight="bold", color="text"),
                     ),
-                    Spacer(width=4),
                     Text(
                         f"{progress}% ({item.repo_count} repos)",
                         style=Style(font_size=12, color="muted"),
                     ),
                 ],
-                spacing=0,
+                gap=16,
                 style=Style(justify="space-between", align="center", width="fill"),
             )
 
@@ -88,19 +88,17 @@ class GithubLanguagesWidget(Widget):
                 Column(
                     children=[
                         label_row,
-                        Spacer(height=4),
                         ProgressBar(progress=progress, style=Style(width="fill")),
                     ],
-                    spacing=0,
+                    gap=16,
                     style=Style(width="fill"),
                 )
             )
-            rows.append(Spacer(height=16))
 
         if rows:
             rows.pop()
 
-        content = Column(children=rows, spacing=0, style=Style(width="fill"))
+        content = Column(children=rows, gap=16, style=Style(width="fill"))
         title = (
             "Estimated Language Distribution"
             if is_estimated

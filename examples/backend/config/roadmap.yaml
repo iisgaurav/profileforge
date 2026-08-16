@@ -1,8 +1,0 @@
-- skill: "Distributed Consensus (Raft/Paxos)"
-  progress: 85
-- skill: "Rust Async Runtime Internals"
-  progress: 70
-- skill: "eBPF Kernel Telemetry"
-  progress: 60
-- skill: "Multi-Region Kubernetes Federation"
-  progress: 75

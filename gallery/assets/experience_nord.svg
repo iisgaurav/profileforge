@@ -1,4 +1,4 @@
-<svg width="820" height="222" viewBox="0 0 820 222" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="820" height="332" viewBox="0 0 820 332" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>experience - nord</title>
   <desc>ProfileForge widget preview</desc>
   <defs>
@@ -19,10 +19,10 @@
     <stop offset="100%" stop-color="#3B4252" stop-opacity="0.8"/>
   </linearGradient>
 
-  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#3b0918"/>
-    <stop offset="50%" stop-color="#1e1333"/>
-    <stop offset="100%" stop-color="#091629"/>
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B4252"/>
+    <stop offset="50%" stop-color="#2E3440"/>
+    <stop offset="100%" stop-color="#3B4252"/>
   </linearGradient>
 
   <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,31 +64,83 @@
     <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
   </linearGradient>
 </defs>
-  
-<svg x="0" y="0" width="820" height="222" viewBox="0 0 820 222" fill="none" xmlns="http://www.w3.org/2000/svg" role="group">
-    <title>Work Experience Card</title>
-    <desc>Card component for Work Experience</desc>
-    <rect x="0.5" y="0.5" width="819" height="221" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
+  <svg width="820" height="332" viewBox="0 0 820 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="pf-progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#88C0D0" stop-opacity="0.75"/>
+    <stop offset="70%" stop-color="#88C0D0"/>
+    <stop offset="100%" stop-color="#B48EAD" stop-opacity="0.9"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#88C0D0" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#434C5E" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#434C5E" stop-opacity="0.4"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#3B4252" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#3B4252" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <linearGradient id="pf-card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B4252"/>
+    <stop offset="50%" stop-color="#2E3440"/>
+    <stop offset="100%" stop-color="#3B4252"/>
+  </linearGradient>
+
+  <linearGradient id="pf-track-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#D8DEE9" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#D8DEE9" stop-opacity="0.08"/>
+  </linearGradient>
+
+
+  <linearGradient id="pf-badge-0" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#EC4899" stop-opacity="0.1"/>
+  </linearGradient>
+  <linearGradient id="pf-badge-7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#84CC16" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#84CC16" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+<g role="group" data-pf-id="card_29c7be">
+    <rect x="0.5" y="0.5" width="819" height="331" fill="url(#pf-card-bg)" stroke="url(#pf-card-border)" stroke-width="1" rx="6"/>
     <rect x="24" y="24" width="4" height="20" rx="2" fill="#88C0D0" opacity="0.9"/>
-    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ECEFF4" letter-spacing="0.3">Work Experience</text>
+    <text x="36" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#ECEFF4" letter-spacing="0.3">Work Experience</text>
     <line x1="24" y1="60" x2="796" y2="60" stroke="#88C0D0" stroke-width="0.5" stroke-opacity="0.25"/>
-    <text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ECEFF4">Staff Software Engineer · CloudScale Infrastructure</text>
-<text x="704" y="77" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#88C0D0">2023 — Present</text>
-
-<text x="24" y="94" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
-
-<text x="24" y="109" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
-
-<text x="24" y="123" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">▸ Mentored team of 12 engineers across systems engineering.</text>
-
-
-<text x="24" y="153" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ECEFF4">Senior Full-Stack Engineer · Nexus Technologies</text>
-<text x="724" y="152" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#88C0D0">2020 — 2023</text>
-
-<text x="24" y="169" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
-
-<text x="24" y="184" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
-
-<text x="24" y="198" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9">▸ Created automated CI/CD pipeline reducing deployment time.</text>
+    <g data-pf-id="column_c870d0"><g data-pf-id="inline_148b60"><text x="24" y="78" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ECEFF4"  data-pf-id="text_8f8872">Staff Software Engineer · CloudScale Infrastructure</text><text x="691.0" y="77.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#88C0D0"  data-pf-id="text_095277">2023 — Present</text></g>
+<text x="24" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_155668">Leading architecture for distributed telemetry and real-time event ingestion pipelines.</text>
+<text x="24" y="142" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_529b4a">▸ Scaled high-throughput stream processing to 1M+ req/sec.</text>
+<text x="24" y="174" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_19d7fd">▸ Mentored team of 12 engineers across systems engineering.</text>
+<g data-pf-id="inline_06c42f"><text x="24" y="208" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ECEFF4"  data-pf-id="text_6982c2">Senior Full-Stack Engineer · Nexus Technologies</text><text x="714.0" y="207.0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#88C0D0"  data-pf-id="text_6bf573">2020 — 2023</text></g>
+<text x="24" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_70d9e4">Architected modern web micro-frontends and robust asynchronous Python backends.</text>
+<text x="24" y="272" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_a19710">▸ Reduced end-to-end latency by 45% using efficient caching.</text>
+<text x="24" y="304" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#D8DEE9"  data-pf-id="text_0d78bc">▸ Created automated CI/CD pipeline reducing deployment time.</text></g>
+</g>
 </svg>
 </svg>
