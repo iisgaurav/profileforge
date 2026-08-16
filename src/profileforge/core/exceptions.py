@@ -1,4 +1,6 @@
 __layer__ = "Layer 1 — Core"
+
+
 class ProfileForgeError(Exception):
     """Base exception for ProfileForge"""
 
@@ -9,9 +11,6 @@ class ConfigurationError(ProfileForgeError):
 
 class ThemeError(ProfileForgeError):
     """Raised when a theme fails to load or parse"""
-
-
-
 
 
 class ConnectorError(ProfileForgeError):

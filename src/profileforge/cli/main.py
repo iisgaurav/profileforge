@@ -815,9 +815,18 @@ def main():
     dev_parser = subparsers.add_parser(
         "dev", help="Start local development server with live-reloading"
     )
-    dev_parser.add_argument("--port", type=int, default=8000, help="Port for the Studio server (default: 8000)")
-    dev_parser.add_argument("--no-browser", action="store_true", help="Disable the Studio web server")
-    dev_parser.add_argument("--full", action="store_true", help="Force full rebuilds on every file change")
+    dev_parser.add_argument(
+        "--port",
+        type=int,
+        default=8000,
+        help="Port for the Studio server (default: 8000)",
+    )
+    dev_parser.add_argument(
+        "--no-browser", action="store_true", help="Disable the Studio web server"
+    )
+    dev_parser.add_argument(
+        "--full", action="store_true", help="Force full rebuilds on every file change"
+    )
 
     args = parser.parse_args()
 
@@ -873,6 +882,7 @@ def main():
             sys.exit(1)
     elif args.command == "dev":
         from profileforge.cli.dev import cmd_dev
+
         cmd_dev(args)
     else:
         print_error(f"Command '{args.command}' is not recognized.")

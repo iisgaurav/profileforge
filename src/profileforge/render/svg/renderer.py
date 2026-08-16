@@ -70,7 +70,10 @@ class SVGRenderer(Renderer):
         badge_grad_xml = "\n".join(badge_grads)
 
         glow_filter = ""
-        if self.context.effects.glow != "none" and self.context.capabilities.supports_filters:
+        if (
+            self.context.effects.glow != "none"
+            and self.context.capabilities.supports_filters
+        ):
             glow_filter = """
   <filter id="pf-glow" x="-5%" y="-100%" width="110%" height="300%">
     <feGaussianBlur stdDeviation="1.5" result="blur"/>
@@ -78,7 +81,10 @@ class SVGRenderer(Renderer):
   </filter>"""
 
         shadow_filter = ""
-        if self.context.effects.shadow != "none" and self.context.capabilities.supports_filters:
+        if (
+            self.context.effects.shadow != "none"
+            and self.context.capabilities.supports_filters
+        ):
             shadow_filter = f"""
   <filter id="pf-shadow" x="-4%" y="-4%" width="108%" height="114%">
     <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="{primary}" flood-opacity="0.07"/>
@@ -125,11 +131,11 @@ class SVGRenderer(Renderer):
         """Entrypoint for the Render Pass Pipeline."""
         # Pass 1: Definitions
         defs = self.get_defs()
-        
+
         # Pass 2 -> N: Traversal
         badge_idx = [0]
         body = self._render_node(root_node, badge_idx)
-        
+
         w, h = root_node.width, root_node.height
         return f"""<svg width="{w}" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg">
 {defs}
@@ -141,8 +147,12 @@ class SVGRenderer(Renderer):
         x, y, w, h = node.x, node.y, node.width, node.height
 
         if isinstance(component, Card):
-            child_svg = "\n".join(self._render_node(c, badge_idx) for c in node.children)
-            radius = component.style.border_radius or getattr(self.theme.radius, "card", 10)
+            child_svg = "\n".join(
+                self._render_node(c, badge_idx) for c in node.children
+            )
+            radius = component.style.border_radius or getattr(
+                self.theme.radius, "card", 10
+            )
             text_color = self.get_color("text")
             primary = self.get_color("primary")
             escaped_title = html.escape(component.title)
@@ -163,10 +173,18 @@ class SVGRenderer(Renderer):
             else:
                 accent_bar = title_el = sep = ""
 
-            bg_fill = "url(#pf-card-gradient)" if component.style.variant == "hero" else "url(#pf-card-bg)"
-            filter_attr = ' filter="url(#pf-shadow)"' if self.context.effects.shadow != "none" else ""
+            bg_fill = (
+                "url(#pf-card-gradient)"
+                if component.style.variant == "hero"
+                else "url(#pf-card-bg)"
+            )
+            filter_attr = (
+                ' filter="url(#pf-shadow)"'
+                if self.context.effects.shadow != "none"
+                else ""
+            )
 
-            return f"""<g role="group"{filter_attr} data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g role="group"{filter_attr} data-pf-id="{node.debug.get("id", "")}">
     <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{h - 1}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
     {accent_bar}
     {title_el}
@@ -177,16 +195,30 @@ class SVGRenderer(Renderer):
         elif isinstance(component, Icon):
             color = self.get_color(component.style.color or "primary")
             path = IconRegistry.get(component.svg_path) or component.svg_path
-            
+
             # Determine correct viewBox (GitHub Primer icons are 16x16, others are 24x24)
-            viewbox = "0 0 24 24" if component.svg_path in ("trophy", "plane", "lightning", "brain", "gift", "shield", "diamond", "crown") else "0 0 16 16"
-            
+            viewbox = (
+                "0 0 24 24"
+                if component.svg_path
+                in (
+                    "trophy",
+                    "plane",
+                    "lightning",
+                    "brain",
+                    "gift",
+                    "shield",
+                    "diamond",
+                    "crown",
+                )
+                else "0 0 16 16"
+            )
+
             if "currentColor" in path:
                 path = path.replace("currentColor", color)
                 fill_attr = 'fill="none"'
             else:
                 fill_attr = f'fill="{color}"'
-                
+
             return f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{viewbox}" {fill_attr} data-pf-id="{node.debug.get("id", "")}">{path}</svg>'
 
         elif isinstance(component, Metric):
@@ -196,7 +228,7 @@ class SVGRenderer(Renderer):
             muted = self.get_color("muted")
             primary = self.get_color("primary")
             escaped_label = html.escape(component.label)
-            
+
             try:
                 formatted_value = f"{int(component.value):,}"
             except ValueError:
@@ -209,14 +241,26 @@ class SVGRenderer(Renderer):
                 icon_svg = f'<svg x="{x + 16}" y="{y + 16}" width="18" height="18" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
                 label_x += 18 + self.spacing.optical.text_icon
 
-            filter_attr = ' filter="url(#pf-shadow)"' if self.context.effects.shadow != "none" else ""
+            filter_attr = (
+                ' filter="url(#pf-shadow)"'
+                if self.context.effects.shadow != "none"
+                else ""
+            )
             trend_svg = ""
             if component.trend is not None:
-                trend_color = self.get_color("success") if component.trend > 0 else self.get_color("warning")
-                trend_text = f"+{component.trend}%" if component.trend > 0 else f"{component.trend}%"
+                trend_color = (
+                    self.get_color("success")
+                    if component.trend > 0
+                    else self.get_color("warning")
+                )
+                trend_text = (
+                    f"+{component.trend}%"
+                    if component.trend > 0
+                    else f"{component.trend}%"
+                )
                 trend_svg = f'<text x="{x + w - 16}" y="{y + h - 20}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" font-weight="600" fill="{trend_color}" text-anchor="end">{trend_text}</text>'
 
-            return f"""<g{filter_attr} data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g{filter_attr} data-pf-id="{node.debug.get("id", "")}">
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
     {icon_svg}
     <text x="{label_x}" y="{y + 30}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" font-weight="600">{escaped_label}</text>
@@ -229,14 +273,14 @@ class SVGRenderer(Renderer):
             radius = getattr(self.theme.radius, "card", 10)
             text_color = self.get_color("text")
             muted = self.get_color("muted")
-            
+
             if component.tone == "default":
                 primary = self.get_color("primary")
             else:
                 primary = self.get_color(component.tone)
-                
+
             escaped_label = html.escape(component.label)
-            
+
             try:
                 formatted_value = f"{int(component.value):,}"
             except ValueError:
@@ -247,8 +291,8 @@ class SVGRenderer(Renderer):
                 path = IconRegistry.get(component.icon) or component.icon
                 icon_svg = f'<svg x="{x + 32}" y="{y + 32}" width="16" height="16" viewBox="0 0 16 16" fill="{primary}">{path}</svg>'
 
-            sparkline_svg = f'<text x="{x + w - 16}" y="{y + h/2 + 4}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" text-anchor="end">No data</text>'
-            
+            sparkline_svg = f'<text x="{x + w - 16}" y="{y + h / 2 + 4}" font-family="{self.typography.font_family}" font-size="{self.typography.small}" fill="{muted}" text-anchor="end">No data</text>'
+
             if component.series and component.series.points:
                 pts = component.series.points
                 if len(pts) > 1:
@@ -258,9 +302,9 @@ class SVGRenderer(Renderer):
                     sl_w = 60
                     sl_h = 24
                     sl_x = x + w - sl_w - 16
-                    sl_y = y + h/2 - sl_h/2
+                    sl_y = y + h / 2 - sl_h / 2
                     dx = sl_w / (len(pts) - 1)
-                    
+
                     path_d = []
                     for i, pt in enumerate(pts):
                         px = sl_x + i * dx
@@ -269,13 +313,17 @@ class SVGRenderer(Renderer):
                             path_d.append(f"M {px} {py}")
                         else:
                             path_d.append(f"L {px} {py}")
-                            
+
                     # Note: You can use a gradient here derived from primary, but we stick to primary for simplicity
                     sparkline_svg = f'<path d="{" ".join(path_d)}" fill="none" stroke="{primary}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>'
 
-            filter_attr = ' filter="url(#pf-shadow)"' if self.context.effects.shadow != "none" else ""
+            filter_attr = (
+                ' filter="url(#pf-shadow)"'
+                if self.context.effects.shadow != "none"
+                else ""
+            )
 
-            return f"""<g{filter_attr} data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g{filter_attr} data-pf-id="{node.debug.get("id", "")}">
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_fill}" stroke="url(#pf-card-border)" stroke-width="1" rx="{radius}"/>
     <rect x="{x + 16}" y="{y + 16}" width="48" height="48" fill="{primary}" opacity="0.1" rx="12"/>
     {icon_svg}
@@ -294,27 +342,29 @@ class SVGRenderer(Renderer):
 
             muted = self.get_color("muted")
             text_color = self.get_color("text")
-            
+
             if component.tone == "primary":
                 primary = "url(#pf-progress-grad)"
                 icon_fill = self.get_color("primary")
             else:
                 primary = self.get_color(component.tone)
                 icon_fill = primary
-                
-            glow_attr = ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
+
+            glow_attr = (
+                ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
+            )
 
             icon_svg = ""
             if component.icon:
                 path = IconRegistry.get(component.icon) or component.icon
                 icon_svg = f'<svg x="{cx - 10}" y="{cy - 24}" width="20" height="20" viewBox="0 0 16 16" fill="{icon_fill}">{path}</svg>'
-                
+
             try:
                 formatted_value = f"{int(component.value):,}"
             except ValueError:
                 formatted_value = str(int(component.value))
 
-            return f"""<g data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g data-pf-id="{node.debug.get("id", "")}">
     <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{muted}" stroke-width="6" stroke-opacity="0.15"/>
     <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{primary}" stroke-width="6" stroke-dasharray="{circumference}" stroke-dashoffset="{circumference}" transform="rotate(-90 {cx} {cy})" stroke-linecap="round"{glow_attr}>
         <animate attributeName="stroke-dashoffset" from="{circumference}" to="{dashoffset}" dur="1s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
@@ -358,11 +408,15 @@ class SVGRenderer(Renderer):
 
         elif isinstance(component, ProgressBar):
             filled_w = max(4, (component.progress / 100.0) * w)
-            radius = component.style.border_radius or getattr(self.theme.radius, "progress", 4)
+            radius = component.style.border_radius or getattr(
+                self.theme.radius, "progress", 4
+            )
             dur_s = 0.6 + (component.progress / 100.0) * 0.8
-            glow_attr = ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
+            glow_attr = (
+                ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
+            )
 
-            return f"""<g role="meter" aria-valuenow="{component.progress}" aria-valuemin="0" aria-valuemax="100" data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g role="meter" aria-valuenow="{component.progress}" aria-valuemin="0" aria-valuemax="100" data-pf-id="{node.debug.get("id", "")}">
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#pf-track-bg)" rx="{radius}"/>
     <rect x="{x}" y="{y}" width="{filled_w}" height="{h}" fill="url(#pf-progress-grad)" rx="{radius}"{glow_attr}>
         <animate attributeName="width" from="0" to="{filled_w}" dur="{dur_s:.2f}s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
@@ -377,17 +431,19 @@ class SVGRenderer(Renderer):
             font_family = self.typography.font_family
             fs_label = self.typography.label
             fs_value = self.typography.small
-            
+
             label_text = f'<text x="{x}" y="{y + fs_label}" font-family="{font_family}" font-size="{fs_label}" fill="{text_color}">{html.escape(component.label)}</text>'
             pct_text = ""
             if component.display == PercentageDisplay.RIGHT:
                 pct_text = f'<text x="{x + w}" y="{y + fs_label}" font-family="{font_family}" font-size="{fs_value}" fill="{muted}" text-anchor="end">{component.value}%</text>'
-            
+
             bar_y = y + fs_label + self.spacing.optical.label_value
             filled_w = max(4, (component.value / 100.0) * w)
             radius = getattr(self.theme.radius, "progress", 4)
-            glow_attr = ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
-            
+            glow_attr = (
+                ' filter="url(#pf-glow)"' if self.context.effects.glow != "none" else ""
+            )
+
             bar_svg = f"""<g role="meter" aria-valuenow="{component.value}" aria-valuemin="0" aria-valuemax="100">
     <rect x="{x}" y="{bar_y}" width="{w}" height="{progress_h}" fill="url(#pf-track-bg)" rx="{radius}"/>
     <rect x="{x}" y="{bar_y}" width="{filled_w}" height="{progress_h}" fill="url(#pf-progress-grad)" rx="{radius}"{glow_attr}>
@@ -408,15 +464,15 @@ class SVGRenderer(Renderer):
 
             escaped_label = html.escape(component.label)
             br = h // 2
-            
+
             icon_svg = ""
             icon_shift = 0
             if hasattr(component, "icon") and component.icon:
                 icon_path = IconRegistry.get(component.icon) or component.icon
-                icon_svg = f'<svg x="{x + 10}" y="{y + h/2 - 8}" width="16" height="16" viewBox="0 0 16 16" fill="{fg_color}">{icon_path}</svg>'
+                icon_svg = f'<svg x="{x + 10}" y="{y + h / 2 - 8}" width="16" height="16" viewBox="0 0 16 16" fill="{fg_color}">{icon_path}</svg>'
                 icon_shift = 10
 
-            return f"""<g role="term" data-pf-id="{node.debug.get('id', '')}">
+            return f"""<g role="term" data-pf-id="{node.debug.get("id", "")}">
     <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{br}" {fill_str} stroke="{fg_color}" stroke-width="0.8" stroke-opacity="0.5"/>
     {icon_svg}
     <text x="{x + w / 2 + icon_shift}" y="{y + h / 2}" font-family="{self.typography.font_family}" font-size="{self.typography.caption}" fill="{fg_color}" text-anchor="middle" dominant-baseline="central" font-weight="600" letter-spacing="0.3">{escaped_label}</text>
@@ -425,25 +481,35 @@ class SVGRenderer(Renderer):
         elif isinstance(component, Divider):
             primary = self.get_color("primary")
             if getattr(component, "orientation", "horizontal") == "vertical":
-                return f'<line x1="{x + w/2}" y1="{y}" x2="{x + w/2}" y2="{y + h}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
-            return f'<line x1="{x}" y1="{y + h/2}" x2="{x + w}" y2="{y + h/2}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
+                return f'<line x1="{x + w / 2}" y1="{y}" x2="{x + w / 2}" y2="{y + h}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
+            return f'<line x1="{x}" y1="{y + h / 2}" x2="{x + w}" y2="{y + h / 2}" stroke="{primary}" stroke-width="1" stroke-opacity="{component.opacity}" data-pf-id="{node.debug.get("id", "")}"/>'
 
         elif isinstance(component, (Column, Inline, Padding, Wrap, MetricGroup)):
             parts = []
-            if hasattr(component, "style") and component.style and component.style.background_color:
+            if (
+                hasattr(component, "style")
+                and component.style
+                and component.style.background_color
+            ):
                 bg_color = self.get_color(component.style.background_color)
                 radius = component.style.border_radius or 0
                 border_str = ""
                 if component.style.border_color:
                     border_color = self.get_color(component.style.border_color)
                     border_str = f' stroke="{border_color}" stroke-width="1"'
-                parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_color}" rx="{radius}"{border_str}/>')
-                
+                parts.append(
+                    f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg_color}" rx="{radius}"{border_str}/>'
+                )
+
             for child_node in node.children:
                 parts.append(self._render_node(child_node, badge_idx))
-            
+
             separator = "" if isinstance(component, Inline) else "\n"
-            return f'<g data-pf-id="{node.debug.get("id", "")}">' + separator.join(parts) + "</g>"
+            return (
+                f'<g data-pf-id="{node.debug.get("id", "")}">'
+                + separator.join(parts)
+                + "</g>"
+            )
 
         elif isinstance(component, Spacer):
             return ""

@@ -31,7 +31,14 @@ REPO_ROOT = Path(__file__).parent.parent
 
 
 def test_benchmark_service_execution():
-    backend_config = REPO_ROOT / "src" / "profileforge" / "templates" / "backend" / "profileforge.yaml"
+    backend_config = (
+        REPO_ROOT
+        / "src"
+        / "profileforge"
+        / "templates"
+        / "backend"
+        / "profileforge.yaml"
+    )
     result = run_benchmark(backend_config, iterations=3, warmup=1)
 
     assert isinstance(result, BenchmarkResult)

@@ -48,10 +48,6 @@ class MockLocalConnector:
         return self.data_map.get(request.resource, {})
 
 
-
-
-
-
 def test_social_widget_metadata():
     widget = SocialWidget()
     meta = widget.metadata()
@@ -299,7 +295,6 @@ def test_repositories_widget_fallback_when_unauthenticated(mock_theme):
     svg = renderer.render(render_node)
     assert "Featured Repositories" in svg
     assert "profileforge" in svg
-
 
 
 def test_all_official_widgets_registered():

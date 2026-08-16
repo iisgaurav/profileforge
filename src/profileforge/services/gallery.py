@@ -210,7 +210,6 @@ SAMPLE_LOCAL_DATA = {
         "instagram": "iisgaurav",
         "email": "gauravv2504@gmail.com",
     },
-
     "activity_timeline.yaml": [
         {
             "title": "Merged PR #142: High-throughput stream engine",
@@ -234,7 +233,6 @@ SAMPLE_LOCAL_DATA = {
             "description": "Optimized memory layout and reduced garbage collection pause times by 35%.",
         },
     ],
-
 }
 
 
@@ -305,7 +303,9 @@ class GalleryExporter:
                 colors_dict = asdict(theme.colors)
                 typography_dict = asdict(theme.typography)
 
-                showcase_widget = "github_stats" if "github_stats" in WIDGET_REGISTRY else "about"
+                showcase_widget = (
+                    "github_stats" if "github_stats" in WIDGET_REGISTRY else "about"
+                )
                 theme_obj = {
                     "id": theme.id or theme_id,
                     "name": theme.name,

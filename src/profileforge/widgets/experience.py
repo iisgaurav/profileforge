@@ -144,8 +144,6 @@ class ExperienceWidget(Widget):
                 )
                 rows.append(hl_text)
 
-
-
         content = Column(
             children=rows,
             gap=16,

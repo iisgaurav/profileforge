@@ -12,27 +12,41 @@ if TYPE_CHECKING:
 
 
 class Card(VisualComponent):
-    def __init__(self, title: str, child: Component, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        title: str,
+        child: Component,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.title = title
         self.child = child
 
 
 class Text(VisualComponent):
-    def __init__(self, value: str, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        value: str,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.value = value
 
     def intrinsic_size(self, measurer: IntrinsicMeasurer) -> Size:
         return measurer.measure_text(
-            self.value,
-            self.style.font_size,
-            self.style.font_weight or "normal"
+            self.value, self.style.font_size, self.style.font_weight or "normal"
         )
 
 
 class ProgressBar(VisualComponent):
-    def __init__(self, progress: int, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        progress: int,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.progress = progress
 
@@ -59,7 +73,12 @@ class ProgressMetric(VisualComponent):
 
 
 class Icon(VisualComponent):
-    def __init__(self, svg_path: str, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        svg_path: str,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.svg_path = svg_path
 
@@ -68,7 +87,14 @@ class Icon(VisualComponent):
 
 
 class Badge(VisualComponent):
-    def __init__(self, label: str, tone: str | None = None, icon: str | None = None, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        label: str,
+        tone: str | None = None,
+        icon: str | None = None,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.label = label
         self.tone = tone
@@ -80,7 +106,7 @@ class Badge(VisualComponent):
         icon_width = 16 + 4 if self.icon else 0
         return Size(
             width=text_size.width + tracking + 20 + icon_width,
-            height=text_size.height + 12
+            height=text_size.height + 12,
         )
 
 
@@ -140,11 +166,11 @@ class CircularMetric(VisualComponent):
 
 class Divider(VisualComponent):
     def __init__(
-        self, 
-        opacity: float = 0.4, 
+        self,
+        opacity: float = 0.4,
         orientation: str = "horizontal",
-        style: Style | None = None, 
-        constraints: Constraints | None = None
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.opacity = opacity

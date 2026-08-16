@@ -8,20 +8,22 @@ from colorama import Fore, Style
 
 def rebuild_all():
     print(f"\n{Fore.CYAN}🚀 Full Rebuild Triggered{Style.RESET_ALL}")
-    
+
     start = time.perf_counter()
     try:
         subprocess.run(
             [sys.executable, "-m", "profileforge.cli.main", "gallery", "export"],
             check=True,
-            capture_output=True
+            capture_output=True,
         )
         t_gallery = (time.perf_counter() - start) * 1000
         print(f"  {Fore.GREEN}✓{Style.RESET_ALL} Gallery Export    : {t_gallery:.0f}ms")
-        
+
         print(f"{Fore.GREEN}✓ Rebuild complete in {t_gallery:.0f}ms{Style.RESET_ALL}")
     except subprocess.CalledProcessError as e:
-        print(f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}")
+        print(
+            f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}"
+        )
 
 
 def rebuild_incremental(modified_paths: list[str]):
@@ -47,39 +49,53 @@ def rebuild_incremental(modified_paths: list[str]):
         return
 
     start = time.perf_counter()
-    
+
     if widgets_to_rebuild:
         for w in widgets_to_rebuild:
             print(f"{Fore.CYAN}↻ Rebuilding {w} widget...{Style.RESET_ALL}")
             # Just rebuild the gallery to update all themes for this widget
-            # To be truly incremental, we'd only rebuild this specific SVG, but 
+            # To be truly incremental, we'd only rebuild this specific SVG, but
             # for now gallery export is fast enough or we can filter it.
             # A full gallery export takes ~200ms anyway.
             # Let's just run gallery export for safety in v1.
             try:
                 subprocess.run(
-                    [sys.executable, "-m", "profileforge.cli.main", "gallery", "export"],
+                    [
+                        sys.executable,
+                        "-m",
+                        "profileforge.cli.main",
+                        "gallery",
+                        "export",
+                    ],
                     check=True,
-                    capture_output=True
+                    capture_output=True,
                 )
             except subprocess.CalledProcessError as e:
-                 print(f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}")
-                 return
+                print(
+                    f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}"
+                )
+                return
 
     if themes_to_rebuild:
         for t in themes_to_rebuild:
             print(f"{Fore.CYAN}↻ Rebuilding {t} theme...{Style.RESET_ALL}")
             try:
                 subprocess.run(
-                    [sys.executable, "-m", "profileforge.cli.main", "gallery", "export"],
+                    [
+                        sys.executable,
+                        "-m",
+                        "profileforge.cli.main",
+                        "gallery",
+                        "export",
+                    ],
                     check=True,
-                    capture_output=True
+                    capture_output=True,
                 )
             except subprocess.CalledProcessError as e:
-                 print(f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}")
-                 return
-                 
-
+                print(
+                    f"{Fore.RED}✗ Build failed: {e.stderr.decode('utf-8', errors='ignore')}{Style.RESET_ALL}"
+                )
+                return
 
     elapsed = (time.perf_counter() - start) * 1000
     print(f"{Fore.GREEN}✓ Completed in {elapsed:.0f}ms{Style.RESET_ALL}")

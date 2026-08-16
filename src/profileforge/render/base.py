@@ -13,6 +13,7 @@ from profileforge.core.models import RenderContext
 @dataclass(frozen=True)
 class RenderNode:
     """Immutable AST node representing a resolved component in the layout tree."""
+
     component: Component
     x: int
     y: int

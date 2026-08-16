@@ -12,11 +12,13 @@ class HorizontalAlign(Enum):
     CENTER = "center"
     RIGHT = "right"
 
+
 class VerticalAlign(Enum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
+
 
 class PercentageDisplay(Enum):
     NONE = "none"
@@ -24,16 +26,19 @@ class PercentageDisplay(Enum):
     TOP = "top"
     INSIDE = "inside"
 
+
 class ThemeSize(Enum):
     SM = "sm"
     MD = "md"
     LG = "lg"
     XL = "xl"
 
+
 @dataclass(frozen=True)
 class Size:
     width: int
     height: int
+
 
 class TypographyRole(Enum):
     TITLE = "title"
@@ -88,6 +93,7 @@ class OpticalSpacingTokens:
     text_icon: int = 10
     label_value: int = 6
     badge_icon: int = 8
+
 
 @dataclass
 class SpacingTokens:
@@ -159,6 +165,7 @@ class Theme:
     assets: Optional[dict[str, Any]] = None
     variables: Optional[dict[str, Any]] = None
 
+
 @dataclass
 class RendererCapabilities:
     supports_gradients: bool = True
@@ -167,6 +174,7 @@ class RendererCapabilities:
     supports_masks: bool = True
     supports_fonts: bool = True
     supports_accessibility: bool = True
+
 
 @dataclass
 class ResolvedTheme:
@@ -177,6 +185,7 @@ class ResolvedTheme:
     shadows: ShadowTokens
     motion: MotionTokens
     effects: EffectsTokens
+
 
 @dataclass
 class RenderContext:

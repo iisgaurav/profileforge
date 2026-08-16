@@ -325,9 +325,7 @@ def _run_single_pass(
 
         # Layout pass
         tl0 = time.perf_counter()
-        render_node = LayoutEngine.calculate(
-            component_tree
-        )
+        render_node = LayoutEngine.calculate(component_tree)
         layout_pass_ms += (time.perf_counter() - tl0) * 1000
 
         # Render pass

@@ -26,4 +26,3 @@ class ScoreCalculator:
             return score
 
         return float(sum(stats.values())) if stats else 0.0
-

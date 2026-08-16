@@ -23,5 +23,6 @@ class EventBus:
             for q in self._subscribers:
                 q.put(message)
 
+
 # Global event bus for livereload signaling
 livereload_bus = EventBus()

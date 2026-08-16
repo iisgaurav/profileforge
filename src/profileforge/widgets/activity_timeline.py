@@ -146,8 +146,6 @@ class ActivityTimelineWidget(Widget):
                 )
                 rows.append(desc_text)
 
-
-
         content = Column(
             children=rows,
             gap=16,

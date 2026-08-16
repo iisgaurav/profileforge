@@ -83,7 +83,9 @@ class AboutWidget(Widget):
 
         role_text = Text(
             role,
-            style=Style(font_size=16, font_weight="600", color="primary", align="center"),
+            style=Style(
+                font_size=16, font_weight="600", color="primary", align="center"
+            ),
         )
 
         badges = [Badge(f"● {status}", style=Style())]
@@ -98,7 +100,9 @@ class AboutWidget(Widget):
 
         tagline_text = Text(
             f'"{tagline}"',
-            style=Style(font_size=14, color="muted", font_weight="normal", align="center"),
+            style=Style(
+                font_size=14, color="muted", font_weight="normal", align="center"
+            ),
         )
 
         children = [

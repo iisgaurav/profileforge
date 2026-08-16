@@ -48,5 +48,5 @@ class BuildContext:
                 supports_masks=True,
                 supports_fonts=True,
                 supports_accessibility=True,
-            )
+            ),
         )

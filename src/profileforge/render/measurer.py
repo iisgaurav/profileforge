@@ -11,9 +11,10 @@ from profileforge.core.models import Size, TypographyRole
 if TYPE_CHECKING:
     from profileforge.core.models import TypographyTokens
 
+
 class IntrinsicMeasurer(ABC):
     """Abstract base class for intrinsic layout measurements."""
-    
+
     @abstractmethod
     def measure_text(
         self,
@@ -64,10 +65,13 @@ class ApproximateTextMeasurer(IntrinsicMeasurer):
         emoji_count = 0
         normal_count = 0
         widest_line = 0.0
-        
+
         for c in text:
             if c == "\n":
-                widest_line = max(widest_line, normal_count * 0.58 + upper_count * 0.75 + emoji_count * 1.3)
+                widest_line = max(
+                    widest_line,
+                    normal_count * 0.58 + upper_count * 0.75 + emoji_count * 1.3,
+                )
                 upper_count = emoji_count = normal_count = 0
                 continue
             # Simple emoji detection based on high unicode code points
@@ -77,21 +81,23 @@ class ApproximateTextMeasurer(IntrinsicMeasurer):
                 upper_count += 1
             else:
                 normal_count += 1
-                
+
         # Emojis are usually square (1.3x font size to account for spacing)
         # Uppercase letters are wider (~0.75)
         # Normal characters (~0.58)
-        widest_line = max(widest_line, normal_count * 0.58 + upper_count * 0.75 + emoji_count * 1.3)
+        widest_line = max(
+            widest_line, normal_count * 0.58 + upper_count * 0.75 + emoji_count * 1.3
+        )
         w = widest_line * fs_val
-        
+
         # Semi-bold glyphs are slightly wider, but a large multiplier makes the
         # layout visibly loose compared with browser SVG text rendering.
         is_bold = str(font_weight) in ("bold", "700", "800", "900", "bolder")
         if is_bold:
             w *= 1.05
-            
+
         w = int(w)
-        
+
         # Keep a small safety buffer for font fallback differences, without
         # giving an empty string a phantom width.
         if text:
@@ -129,6 +135,7 @@ class CairoTextMeasurer(IntrinsicMeasurer):
     def is_available() -> bool:
         try:
             import importlib.util
+
             return importlib.util.find_spec("cairo") is not None
         except ImportError:
             return False
@@ -137,7 +144,9 @@ class CairoTextMeasurer(IntrinsicMeasurer):
     def _font_size(self, typography: Union[int, str, TypographyRole, None]) -> int:
         if isinstance(typography, (int, float)):
             return int(typography)
-        role = typography.value if isinstance(typography, TypographyRole) else typography
+        role = (
+            typography.value if isinstance(typography, TypographyRole) else typography
+        )
         return getattr(self.typography, role or "body", self.typography.body)
 
     def measure_text(
@@ -148,14 +157,22 @@ class CairoTextMeasurer(IntrinsicMeasurer):
         font_family: str | None = None,
     ) -> Size:
         cairo = self._cairo
-        font_name = (font_family or self.font_family).split(",")[0].strip(" '\"") or "sans-serif"
-        weight = cairo.FONT_WEIGHT_BOLD if str(font_weight) in ("bold", "700", "800", "900", "bolder", "600") else cairo.FONT_WEIGHT_NORMAL
+        font_name = (font_family or self.font_family).split(",")[0].strip(
+            " '\""
+        ) or "sans-serif"
+        weight = (
+            cairo.FONT_WEIGHT_BOLD
+            if str(font_weight) in ("bold", "700", "800", "900", "bolder", "600")
+            else cairo.FONT_WEIGHT_NORMAL
+        )
         self._context.select_font_face(font_name, cairo.FONT_SLANT_NORMAL, weight)
         size = self._font_size(typography)
         self._context.set_font_size(size)
 
         lines = text.split("\n")
-        width = max((self._context.text_extents(line).x_advance for line in lines), default=0.0)
+        width = max(
+            (self._context.text_extents(line).x_advance for line in lines), default=0.0
+        )
         line_height = max(self._context.font_extents().height, size * 1.35)
         return Size(
             width=math.ceil(width),

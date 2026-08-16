@@ -18,6 +18,7 @@ class MockSeries:
     def __init__(self, points):
         self.points = points
 
+
 @register_widget("github_stats")
 class GithubStatsWidget(Widget):
     """Widget to display GitHub statistics."""
@@ -47,17 +48,22 @@ class GithubStatsWidget(Widget):
             except Exception:
                 pass
 
-        return {"username": username, "stats": stats, "profile": None, "contributions": None}
+        return {
+            "username": username,
+            "stats": stats,
+            "profile": None,
+            "contributions": None,
+        }
 
     def transform(self, data: Any, context: BuildContext) -> Any:
         stats = data.get("stats")
         username = data.get("username", "iisgaurav")
-        
+
         # We'll use the raw stats directly or mock data
         stars = stats.stars if stats else 2480
         prs = stats.prs if stats else 385
         commits = stats.commits if stats else 3120
-        
+
         # Build mock series so the SVGs render lines instead of 'No data'
         return {
             "username": username,
@@ -70,50 +76,83 @@ class GithubStatsWidget(Widget):
             "commits_series": MockSeries([100, 500, 1000, 2000, 3000, commits]),
             "repos_series": MockSeries([10, 10, 12, 12, 14, 14, 16, 20, 25]),
             "profile": data.get("profile"),
-            "contributions": data.get("contributions")
+            "contributions": data.get("contributions"),
         }
 
     def build(self, data: Any, context: BuildContext) -> Component:
         username = data.get("username", "iisgaurav")
         total_activity = data.get("score", 0)
-        
+
         # Main Score Ring
         circular = CircularMetric(
-            value=total_activity, max_value=max(5000, total_activity), label="Activity", icon="trend-up", tone="primary"
+            value=total_activity,
+            max_value=max(5000, total_activity),
+            label="Activity",
+            icon="trend-up",
+            tone="primary",
         )
 
         # Metric Cards (with specific tones)
         col1 = Column(
             children=[
-                SparklineMetric(label="Total Stars", value=data.get("stars", 0), icon="star", series=data.get("stars_series"), tone="accent", style=Style(width=250)),
-                SparklineMetric(label="Total Commits", value=data.get("commits", 0), icon="commit", series=data.get("commits_series"), tone="success", style=Style(width=250)),
+                SparklineMetric(
+                    label="Total Stars",
+                    value=data.get("stars", 0),
+                    icon="star",
+                    series=data.get("stars_series"),
+                    tone="accent",
+                    style=Style(width=250),
+                ),
+                SparklineMetric(
+                    label="Total Commits",
+                    value=data.get("commits", 0),
+                    icon="commit",
+                    series=data.get("commits_series"),
+                    tone="success",
+                    style=Style(width=250),
+                ),
             ],
             gap=16,
-            style=Style(width=250)
+            style=Style(width=250),
         )
-        
+
         col2 = Column(
             children=[
-                SparklineMetric(label="Pull Requests", value=data.get("prs", 0), icon="pr", series=data.get("prs_series"), tone="info", style=Style(width=250)),
-                SparklineMetric(label="Repositories", value="--", icon="repo", series=data.get("repos_series"), tone="warning", style=Style(width=250)),
+                SparklineMetric(
+                    label="Pull Requests",
+                    value=data.get("prs", 0),
+                    icon="pr",
+                    series=data.get("prs_series"),
+                    tone="info",
+                    style=Style(width=250),
+                ),
+                SparklineMetric(
+                    label="Repositories",
+                    value="--",
+                    icon="repo",
+                    series=data.get("repos_series"),
+                    tone="warning",
+                    style=Style(width=250),
+                ),
             ],
             gap=16,
-            style=Style(width=250)
+            style=Style(width=250),
         )
-        
-        metrics_grid = Inline(
-            children=[col1, col2],
-            gap=16
-        )
+
+        metrics_grid = Inline(children=[col1, col2], gap=16)
 
         main_content = Inline(
             children=[circular, metrics_grid],
-            style=Style(width="fill", justify="space-between", align="center")
+            style=Style(width="fill", justify="space-between", align="center"),
         )
 
         # Footer
         profile = data.get("profile")
-        joined_text = profile.joined_at.strftime("%b %Y") if profile and profile.joined_at else "Apr 2019"
+        joined_text = (
+            profile.joined_at.strftime("%b %Y")
+            if profile and profile.joined_at
+            else "Apr 2019"
+        )
         active_text = "Recently" if profile and profile.last_active_at else "Recently"
 
         footer = Inline(
@@ -123,49 +162,59 @@ class GithubStatsWidget(Widget):
                         Icon(svg_path="calendar", style=Style(color="info")),
                         Column(
                             children=[
-                                Text("Joined GitHub", style=Style(color="muted", font_size="small")),
-                                Text(joined_text, style=Style(color="text", font_size="small", font_weight="600")),
+                                Text(
+                                    "Joined GitHub",
+                                    style=Style(color="muted", font_size="small"),
+                                ),
+                                Text(
+                                    joined_text,
+                                    style=Style(
+                                        color="text",
+                                        font_size="small",
+                                        font_weight="600",
+                                    ),
+                                ),
                             ]
-                        )
+                        ),
                     ],
                     gap=12,
-                    style=Style(align="center")
+                    style=Style(align="center"),
                 ),
                 Inline(
                     children=[
                         Icon(svg_path="clock", style=Style(color="success")),
                         Column(
                             children=[
-                                Text("Last Active", style=Style(color="muted", font_size="small")),
-                                Text(active_text, style=Style(color="text", font_size="small", font_weight="600")),
+                                Text(
+                                    "Last Active",
+                                    style=Style(color="muted", font_size="small"),
+                                ),
+                                Text(
+                                    active_text,
+                                    style=Style(
+                                        color="text",
+                                        font_size="small",
+                                        font_weight="600",
+                                    ),
+                                ),
                             ]
-                        )
+                        ),
                     ],
                     gap=12,
-                    style=Style(align="center")
-                )
+                    style=Style(align="center"),
+                ),
             ],
-            style=Style(width="fill", justify="space-between", align="center")
-        )
-        
-        footer_container = Card(
-            title="",
-            child=footer,
-            style=Style(
-                variant="outline"
-            )
+            style=Style(width="fill", justify="space-between", align="center"),
         )
 
+        footer_container = Card(title="", child=footer, style=Style(variant="outline"))
+
         layout = Column(
-            children=[
-                Padding(child=main_content, value=32),
-                footer_container
-            ],
-            gap=32
+            children=[Padding(child=main_content, value=32), footer_container], gap=32
         )
 
         return Card(
             title=f"GitHub Stats (@{username})",
             child=layout,
-            style=Style(width=820, elevation="medium", variant="solid")
+            style=Style(width=820, elevation="medium", variant="solid"),
         )

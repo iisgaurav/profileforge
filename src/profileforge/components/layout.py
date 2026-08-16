@@ -8,7 +8,9 @@ from profileforge.components.style import Constraints, Style
 class Component(ABC):
     """Base class for all components."""
 
-    def __init__(self, constraints: Constraints | None = None, style: Style | None = None):
+    def __init__(
+        self, constraints: Constraints | None = None, style: Style | None = None
+    ):
         self.constraints = constraints or Constraints()
         self.style = style or Style()
 
@@ -21,17 +23,24 @@ class Component(ABC):
 
 class LayoutComponent(Component):
     """Base class for all components that manage layout but do not render visual appearance."""
+
     pass
 
 
 class VisualComponent(Component):
     """Base class for all components that render visual appearance but do not manage layout."""
+
     pass
 
 
 class Row(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, spacing: int | None = None, style: Style | None = None, constraints: Constraints | None = None
+        self,
+        children: list[Component],
+        gap: int = 0,
+        spacing: int | None = None,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
@@ -41,7 +50,12 @@ class Row(LayoutComponent):
 
 class Column(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, spacing: int | None = None, style: Style | None = None, constraints: Constraints | None = None
+        self,
+        children: list[Component],
+        gap: int = 0,
+        spacing: int | None = None,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
@@ -51,7 +65,11 @@ class Column(LayoutComponent):
 
 class Inline(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, style: Style | None = None, constraints: Constraints | None = None
+        self,
+        children: list[Component],
+        gap: int = 0,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
@@ -60,7 +78,10 @@ class Inline(LayoutComponent):
 
 class Stack(LayoutComponent):
     def __init__(
-        self, children: list[Component], style: Style | None = None, constraints: Constraints | None = None
+        self,
+        children: list[Component],
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
@@ -68,7 +89,11 @@ class Stack(LayoutComponent):
 
 class Grid(LayoutComponent):
     def __init__(
-        self, children: list[Component], gap: int = 0, style: Style | None = None, constraints: Constraints | None = None
+        self,
+        children: list[Component],
+        gap: int = 0,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
@@ -76,14 +101,26 @@ class Grid(LayoutComponent):
 
 
 class Padding(LayoutComponent):
-    def __init__(self, child: Component, value: int = 0, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        child: Component,
+        value: int = 0,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         self.child = child
         self.value = value
 
 
 class Spacer(LayoutComponent):
-    def __init__(self, width: int = 0, height: int = 0, style: Style | None = None, constraints: Constraints | None = None):
+    def __init__(
+        self,
+        width: int = 0,
+        height: int = 0,
+        style: Style | None = None,
+        constraints: Constraints | None = None,
+    ):
         super().__init__(constraints, style)
         # Migrate width/height to constraints internally
         self.constraints.preferred_width = width
@@ -97,7 +134,7 @@ class Wrap(LayoutComponent):
         spacing: int = 0,
         run_spacing: int = 0,
         style: Style | None = None,
-        constraints: Constraints | None = None
+        constraints: Constraints | None = None,
     ):
         super().__init__(constraints, style)
         self.children = children
