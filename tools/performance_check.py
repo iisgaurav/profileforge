@@ -6,7 +6,7 @@ Runs multi-stage benchmark on target configuration, evaluates timings against
 budget.yaml limits, and enforces performance SLAs.
 
 Usage:
-    python tools/performance_check.py [--budget budget.yaml] [--config examples/backend/profileforge.yaml]
+    python tools/performance_check.py [--budget budget.yaml] [--config src/profileforge/templates/backend/profileforge.yaml]
 """
 
 from __future__ import annotations
@@ -37,8 +37,8 @@ def main() -> None:
     parser.add_argument(
         "--config",
         "-c",
-        default="examples/backend/profileforge.yaml",
-        help="Path to template config to benchmark (default: examples/backend/profileforge.yaml)",
+        default="src/profileforge/templates/backend/profileforge.yaml",
+        help="Path to template config to benchmark (default: src/profileforge/templates/backend/profileforge.yaml)",
     )
     parser.add_argument(
         "--iterations",

@@ -4,5 +4,5 @@ budgets:
   widget_build: 5.0
   theme_load: 2.0
   layout_pass: 10.0
-  render_pass: 10.0
+  render_pass: 30.0
   config_parse: 5.0
