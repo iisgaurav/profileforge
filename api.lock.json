@@ -9202,7 +9202,7 @@
         },
         "list_builtin_themes": {
           "parameters": [],
-          "return_annotation": "List"
+          "return_annotation": "typing.List[str]"
         }
       }
     },
@@ -9216,7 +9216,7 @@
             "cache": {
               "default": "<MISSING>",
               "default_factory": "dict",
-              "type": "dict"
+              "type": "dict[str, typing.Any]"
             },
             "config": {
               "default": "<MISSING>",
@@ -9263,7 +9263,7 @@
                   "name": "services"
                 },
                 {
-                  "annotation": "dict",
+                  "annotation": "dict[str, typing.Any]",
                   "default": "<factory>",
                   "kind": "POSITIONAL_OR_KEYWORD",
                   "name": "cache"
