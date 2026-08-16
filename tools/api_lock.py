@@ -47,9 +47,13 @@ DEFAULT_LOCK_FILE = Path("api.lock.json")
 def _format_annotation(annotation: Any) -> str:
     if annotation is inspect.Parameter.empty:
         return "<empty>"
+    ann_str = str(annotation)
+    # Ensure consistent cross-version formatting for Union types
+    if "Union" in ann_str or "|" in ann_str or "typing.Union" in ann_str:
+        return ann_str
     if hasattr(annotation, "__name__"):
         return annotation.__name__
-    return str(annotation)
+    return ann_str
 
 
 def _format_default(default: Any) -> str:
