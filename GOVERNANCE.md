@@ -31,7 +31,7 @@ Core Maintainers are trusted contributors who:
 - Triage issues and manage the backlog
 - Participate in RFC discussions and vote on proposals
 
-Becoming a Core Maintainer is documented in [docs/community/BECOME_MAINTAINER.md](docs/community/BECOME_MAINTAINER.md).
+Becoming a Core Maintainer requires a history of sustained contributions and community trust.
 
 ### Contributors
 
