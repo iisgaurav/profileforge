@@ -49,6 +49,7 @@ class GithubStatsWidget(Widget):
                 stats = github_connector.get_stats(username)
             except Exception as e:
                 import traceback
+
                 traceback.print_exc()
                 pass
 
