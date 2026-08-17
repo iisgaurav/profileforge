@@ -150,7 +150,7 @@ class GithubConnector(Connector):
                     query = """
                     query($username: String!) {
                         user(login: $username) {
-                            repositories(first: 100, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
+                            repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
                                 nodes {
                                     name
                                     description

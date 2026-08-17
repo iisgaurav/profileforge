@@ -95,9 +95,6 @@ class GithubLanguagesWidget(Widget):
                 )
             )
 
-        if rows:
-            rows.pop()
-
         content = Column(children=rows, gap=16, style=Style(width="fill"))
         title = (
             "Estimated Language Distribution"
