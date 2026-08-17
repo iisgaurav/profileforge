@@ -5,8 +5,8 @@ import time
 from pathlib import Path
 
 # Ensure registries populate via side-effects
-import profileforge.connectors.github.connector
-import profileforge.connectors.local
+import profileforge.connectors.github.connector  # noqa: F401
+import profileforge.connectors.local  # noqa: F401
 from profileforge.core.config import ConfigLoader
 from profileforge.core.context import BuildContext, Services
 from profileforge.core.exceptions import ProfileForgeError

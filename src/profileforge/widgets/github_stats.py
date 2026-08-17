@@ -47,7 +47,7 @@ class GithubStatsWidget(Widget):
         if github_connector:
             try:
                 stats = github_connector.get_stats(username)
-            except Exception as e:
+            except Exception:
                 import traceback
 
                 traceback.print_exc()
