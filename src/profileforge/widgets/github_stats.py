@@ -36,6 +36,8 @@ class GithubStatsWidget(Widget):
         )
 
     def fetch(self, context: BuildContext) -> Any:
+        print("FETCHING GITHUB STATS!!!")
+        print("CONNECTORS:", context.services.connectors)
         github_connector = context.services.connectors.get("github")
         username = "iisgaurav"
         if github_connector:
@@ -45,7 +47,9 @@ class GithubStatsWidget(Widget):
         if github_connector:
             try:
                 stats = github_connector.get_stats(username)
-            except Exception:
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
                 pass
 
         return {

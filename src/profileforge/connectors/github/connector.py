@@ -28,7 +28,7 @@ class GithubConnector(Connector):
                 "Please install it with: pip install profileforge[github]"
             )
 
-        token = SecretStore.get("GITHUB_TOKEN")
+        token = SecretStore.get("GITHUB_TOKEN") or SecretStore.get("PROFILEFORGE_PAT") or SecretStore.get("GH_TOKEN") or SecretStore.get("PAT")
         headers = {
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "ProfileForge",
@@ -135,7 +135,7 @@ class GithubConnector(Connector):
                 "Please install it with: pip install profileforge[github]"
             )
 
-        token = SecretStore.get("GITHUB_TOKEN")
+        token = SecretStore.get("GITHUB_TOKEN") or SecretStore.get("PROFILEFORGE_PAT") or SecretStore.get("GH_TOKEN") or SecretStore.get("PAT")
         headers = {
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "ProfileForge",
