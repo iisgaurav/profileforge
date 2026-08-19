@@ -99,14 +99,14 @@ SAMPLE_LOCAL_DATA = {
         "role": "Principal Systems Architect",
         "tagline": "Building resilient distributed systems and open-source developer tooling.",
         "status": "Available for opportunities",
-        "location": "San Francisco, CA",
+        "location": "Mumbai, India",
     },
     "hero.yaml": {
         "name": "Gaurav Verma",
         "role": "Principal Systems Architect",
         "tagline": "Building resilient distributed systems and open-source developer tooling.",
         "status": "Available for opportunities",
-        "location": "San Francisco, CA",
+        "location": "Mumbai, India",
     },
     "skills.yaml": {
         "Languages": ["Python", "TypeScript", "Rust", "Go", "C++", "SQL"],
@@ -185,7 +185,7 @@ SAMPLE_LOCAL_DATA = {
         "learning": "Rust systems programming, WebAssembly & high-concurrency architectures",
         "reading": "Designing Data-Intensive Applications by Martin Kleppmann",
         "focus": "Developer tooling, open-source maintainability, and declarative UI design",
-        "location": "San Francisco, CA",
+        "location": "Mumbai, India",
         "updated": "August 2026",
     },
     "roadmap.yaml": [
