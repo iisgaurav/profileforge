@@ -30,7 +30,7 @@
   <text x="222" y="305" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="24" fill="#8B949E">Forge your GitHub profile.</text>
   <line x1="220" y1="340" x2="600" y2="340" stroke="#30363D" stroke-width="1"/>
   <text x="222" y="375" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#FF6B35">⚡</text>
-  <text x="248" y="375" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#8B949E">13 widgets  ·  7 themes  ·  9 templates</text>
+  <text x="248" y="375" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#8B949E">11 widgets  ·  17 themes  ·  8 templates</text>
   <text x="222" y="410" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#FF6B35">🔧</text>
   <text x="248" y="410" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#8B949E">Declarative YAML  ·  Sub-15ms builds</text>
   <rect x="740" y="120" width="380" height="200" rx="12" fill="#161B22" stroke="url(#cardBorder2)" stroke-width="2" opacity="0.7" transform="rotate(-6, 930, 220)"/>
