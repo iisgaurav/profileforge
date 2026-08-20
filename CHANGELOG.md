@@ -20,7 +20,7 @@ have been implemented, tested, and verified against strict quality gates.
 | **Framework** | Declarative `Component` tree engine, two-pass Flex layout, SVG rendering pipeline |
 | **Themes** | 17 built-in production themes (github-dark, github-light, dracula, nord, catppuccin-*, vercel, modern, minimal, apple, showcase) |
 | **Widgets** | 11 registered widgets: hero, about, skills, expertise, experience, now, focus, roadmap, social, github\_stats, github\_languages, repositories, activity\_timeline |
-| **Templates** | 9 persona starter templates: backend, frontend, student, minimal, opensource, ai-engineer, indie-hacker, open-source-maintainer, security-engineer |
+| **Templates** | 8 persona starter templates: backend, frontend, student, minimal, ai-engineer, indie-hacker, open-source-maintainer, security-engineer |
 | **Studio** | ProfileForge Studio (`web/index.html`) — visual live preview and YAML editor |
 | **Gallery** | Full gallery export pipeline (`profileforge gallery export`) generating 134 SVG assets |
 | **Benchmarks** | Multi-stage performance benchmark service with `budget.yaml` gate (<15ms mean total build) |
@@ -66,7 +66,7 @@ have been implemented, tested, and verified against strict quality gates.
 - High-performance declarative component tree engine for GitHub profile SVG generation.
 - Full theme token design system with 17 built-in production themes.
 - 12 extensible widgets covering identity, stats, career, development, and social channels.
-- 6 starter template personas with typed manifest validation (`manifest.yaml`).
+- 8 starter template personas with typed manifest validation (`manifest.yaml`).
 - Sub-15ms end-to-end rendering pipeline verified by continuous performance benchmarking.
 
 ### Added

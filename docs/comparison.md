@@ -92,7 +92,7 @@ ProfileForge adds power. Power has a cost: setup time, a config file, a build st
 | **Widget Lifecycle** | ❌ Monolithic render | ⚠️ Plugin interface | ✅ Validate → Fetch → Render |
 | **Failure Isolation** | ❌ Full card fails | ⚠️ Plugin-level | ✅ Per-widget graceful fallback |
 | **Local Data / No API** | ❌ API required | ⚠️ Optional self-host | ✅ YAML-first, API optional |
-| **Template System** | ❌ None | ❌ None | ✅ 9 persona scaffolds |
+| **Template System** | ❌ None | ❌ None | ✅ 8 persona scaffolds |
 | **CLI** | ❌ None | ❌ None | ✅ `profileforge scaffold/build` |
 | **Self-Hosted** | ⚠️ GitHub Pages only | ✅ Self-hostable Action | ✅ Local + CI/CD |
 | **Open Governance** | ⚠️ Ad-hoc PRs | ⚠️ Maintainer-driven | ✅ RFC process + ADRs |
