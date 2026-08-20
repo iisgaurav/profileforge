@@ -52,6 +52,10 @@ have been implemented, tested, and verified against strict quality gates.
 
 - Fixed broken CLI command references in `docs/community/ROADMAP.md` and `docs/community/VISION.md`
   (future planned commands cited as current — updated to descriptive prose)
+- Fixed GitHub GraphQL queries failing for private repositories by scoping with `ownerAffiliations: OWNER`.
+- Fixed language widget rendering bug where the last repository language was incorrectly popped from data rows.
+- Fixed `SecretStore` to natively support reading `.env` files locally and fallback gracefully to `PROFILEFORGE_PAT` and `GH_TOKEN`.
+- Fixed CLI orchestration bug where connectors were missing from `BuildContext` registry, forcing widgets to use mock data.
 
 
 
